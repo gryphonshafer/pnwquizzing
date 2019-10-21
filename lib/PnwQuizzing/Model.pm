@@ -1,5 +1,9 @@
 package PnwQuizzing::Model;
-use exact 'PnwQuizzing';
+
+# use exact -class, 'PnwQuizzing';
+use Mojo::Base 'PnwQuizzing', -signatures;
+use Carp 'croak';
+use Try::Tiny;
 
 has data => undef;
 has name => undef;
@@ -69,8 +73,8 @@ sub save ( $self, @input ) {
         try {
             $self->prop(@input);
         }
-        catch ($e) {
-            croak( ( $e =~ /^Bad input/ ) ? 'Bad input in call to save()' : $e );
+        catch {
+            croak( ( /^Bad input/ ) ? 'Bad input in call to save()' : $_ );
         };
     }
 

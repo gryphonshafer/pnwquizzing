@@ -1,5 +1,8 @@
 package PnwQuizzing::Role::Secret;
-use exact -role;
+
+# use exact -role;
+use Mojo::Base -role, -signatures;
+use Role::Tiny::With;
 
 with qw( PnwQuizzing::Role::Bcrypt PnwQuizzing::Role::Database );
 

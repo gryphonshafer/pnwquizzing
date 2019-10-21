@@ -1,5 +1,9 @@
 package PnwQuizzing::Role::DocsNav;
-use exaxct -role;
+
+# use exact -role;
+use Mojo::Base -role, -signatures;
+use Role::Tiny::With;
+
 use File::Find 'find';
 use Mojo::File;
 

@@ -1,5 +1,10 @@
 package PnwQuizzing::Control::Main;
-use exact 'Mojolicious::Controller', 'PnwQuizzing';
+
+# use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
+use Mojo::Base 'Mojolicious::Controller', -signatures;
+use parent 'PnwQuizzing';
+use Role::Tiny::With;
+
 use Encode 'decode_utf8';
 use Mojo::Asset::File;
 use Mojo::JSON 'decode_json';

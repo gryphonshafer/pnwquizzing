@@ -1,5 +1,9 @@
 package PnwQuizzing::Role::Bcrypt;
-use exact -role;
+
+# use exact -role;
+use Mojo::Base -role, -signatures;
+use Role::Tiny::With;
+
 use Digest;
 
 with 'PnwQuizzing::Role::Conf';

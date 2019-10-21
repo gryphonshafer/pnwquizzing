@@ -1,5 +1,9 @@
 package PnwQuizzing::Role::Logging;
-use exact -role;
+
+# use exact -role;
+use Mojo::Base -role, -signatures;
+use Role::Tiny::With;
+
 use Data::Printer return_value => 'dump', colored => 1;
 use File::Path 'make_path';
 use Log::Dispatch;

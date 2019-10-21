@@ -1,5 +1,10 @@
 package PnwQuizzing::Model::Email;
-use exact 'PnwQuizzing::Model';
+
+# use exact -class, 'PnwQuizzing::Model';
+use Mojo::Base 'PnwQuizzing::Model', -signatures;
+use Carp 'croak';
+use Role::Tiny::With;
+
 use Email::Mailer;
 
 with 'PnwQuizzing::Role::Template';

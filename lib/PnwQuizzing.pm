@@ -1,5 +1,8 @@
 package PnwQuizzing;
-use exact -class;
+
+# use exact -class;
+use Mojo::Base -base, -signatures;
+use Role::Tiny::With;
 
 with qw(
     PnwQuizzing::Role::Conf

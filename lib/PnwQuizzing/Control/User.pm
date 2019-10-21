@@ -1,5 +1,9 @@
 package PnwQuizzing::Control::User;
-use exact 'Mojolicious::Controller', 'PnwQuizzing';
+
+# use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
+use Mojo::Base 'Mojolicious::Controller', -signatures;
+use parent 'PnwQuizzing';
+
 use PnwQuizzing::Model::User;
 
 sub login ($self) {
@@ -81,8 +85,8 @@ sub account ($self) {
                 $user = $user->create( { %form_params, active => 0 });
                 $user->roles( $self->every_param('role') );
             }
-            catch ($e) {
-                $handle_user_error->($e);
+            catch {
+                $handle_user_error->($_);
             };
 
             if ( $user and $user->data ) {
@@ -102,8 +106,8 @@ sub account ($self) {
                     }
                 );
             }
-            catch ($e) {
-                $handle_user_error->($e);
+            catch {
+                $handle_user_error->($_);
             };
         }
     }
@@ -158,8 +162,8 @@ sub reset_password ($self) {
                 }
             );
         }
-        catch ($e) {
-            $self->warn( $e->message );
+        catch {
+            $self->warn( $_->message );
             $self->stash( message => 'Unable to locate user account using the input values provided.' );
         };
     }
@@ -177,8 +181,8 @@ sub reset_password ($self) {
             $self->session_login;
             $self->stash( new_passwd => $user->data->{passwd} );
         }
-        catch ($e) {
-            $self->warn( $e->message );
+        catch {
+            $self->warn( $_->message );
             $self->stash( message =>
                 'Unable to reset user password. ' .
                 'This is likely due to an expired link in an email. ' .

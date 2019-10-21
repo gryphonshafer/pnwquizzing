@@ -1,5 +1,10 @@
 package PnwQuizzing::Control::Tool;
-use exact 'Mojolicious::Controller', 'PnwQuizzing';
+
+# use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
+use Mojo::Base 'Mojolicious::Controller', -signatures;
+use parent 'PnwQuizzing';
+use Role::Tiny::With;
+
 use Email::Mailer;
 use File::Find 'find';
 use Mojo::File;

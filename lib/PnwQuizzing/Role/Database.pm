@@ -1,5 +1,10 @@
 package PnwQuizzing::Role::Database;
-use exact -role;
+
+# use exact -role;
+use Mojo::Base -role, -signatures;
+use Role::Tiny::With;
+use Try::Tiny;
+
 use App::Dest;
 use DBIx::Query;
 use File::Path 'make_path';
