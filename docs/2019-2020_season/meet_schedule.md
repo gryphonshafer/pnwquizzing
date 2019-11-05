@@ -4,7 +4,9 @@ The following is the latest schedule for 2019-2020:
 
 **Scramble Meet**
 
-- September 14 *(with registration at 8:00 AM and worship/devotions start at 8:30 AM)*
+- September 14
+    - *Registration at 8:00 AM*
+    - *Worship/devotions start at 8:30 AM*
 - Alliance Bible Church (ABC)
 - <a href="https://www.google.com/maps/place/19320+SE+240th+St,+Covington,+WA+98042">19320 SE 240th St., Covington, WA 98042</a>
 
@@ -23,7 +25,8 @@ The following is the latest schedule for 2019-2020:
 **District Meet 3**
 
 - January 3-4
-- *(TBD location)*
+- North Seattle Alliance (NSA)
+- <a href="https://www.google.com/maps/place/2150+N+122nd+St,+Seattle,+WA+98133">2150 N 122nd St, Seattle, WA 98133</a>
 
 **District Meet 4**
 
