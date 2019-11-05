@@ -5,7 +5,7 @@ requires 'exact::class', '>= 1.05';
 
 requires 'Mojolicious', '>= 8.25';
 requires 'MojoX::ConfigAppStart', '>= 1.01';
-requires 'MojoX::Log::Dispatch::Simple', '>= 1.06';
+requires 'MojoX::Log::Dispatch::Simple', '>= 1.07';
 requires 'Mojolicious::Plugin::AccessLog', '>= 0.010';
 requires 'Mojolicious::Plugin::RequestBase', '>= 0.3';
 requires 'Mojolicious::Plugin::ToolkitRenderer', '>= 1.08';
