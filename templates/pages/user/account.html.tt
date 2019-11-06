@@ -44,8 +44,9 @@
 
             <label>
                 Ministry:
-                <select name="church">
+                <select name="church" style="width: 180px">
                     <option value=""></option>
+                    <option value="_NEW">New Ministry Not Listed</option>
                     [% FOR church IN churches %]
                         <option
                             value="[% church.acronym %]"
@@ -54,6 +55,15 @@
                     [% END %]
                 </select>
             </label>
+
+            [% UNLESS c.stash.user %]
+                <label>
+                    [% math = [ rand(10), pick( '+', 'x' ), rand(10) ] %]
+                    What is [% math.join %]?
+                    <input type="hidden" name="math" value="[% math.join %]">
+                    <input type="text" name="captcha" placeholder="Math Answer" size="20">
+                <label>
+            [% END %]
         </fieldset>
 
         [% IF roles %]
@@ -82,8 +92,19 @@
     <h1>New PNW Quizzing Site Account Created</h1>
 
     <p>
-        Your new site account is created, but it is currently inactive. An email
-        was sent to the email address you supplied. Find that email, and click
-        on the link in the email. This will activate your account.
+        Your new site account is created,
+        <b><span class="red">but it is currently inactive</span></b>.
+        An email was sent to the email address you supplied.
     </p>
+
+    <ol>
+        <li>Find that email</li>
+        <li>Click on the link in the email</li>
+        <li>This will activate your account</li>
+    </ol>
+
+    <p><b>
+        You cannot login to this web site with your account
+        until you activate your account via the link in the email.
+    </b></p>
 [% END %]

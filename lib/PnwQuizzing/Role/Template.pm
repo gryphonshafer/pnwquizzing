@@ -42,6 +42,8 @@ sub tt_settings ( $self, $type = 'web' ) {
             },
             VARIABLES => {
                 time => sub { return time },
+                rand => sub { return int( rand( $_[0] // 2 ) + ( $_[1] // 0 ) ) },
+                pick => sub { return ( map { $_->[1] } sort { $a->[0] <=> $b->[0] } map { [ rand, $_ ] } @_ )[0] },
             },
         },
         context => sub ($context) {

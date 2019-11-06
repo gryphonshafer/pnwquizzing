@@ -71,6 +71,12 @@ sub account ($self) {
 
         unless ( $self->stash('user') ) {
             try {
+                my @math = split( /\s+/, $self->param('math') );
+                my $answer = ( $math[1] eq '+' ) ? $math[0] + $math[2] : $math[0] * $math[2];
+                ( my $captcha = $self->param('captcha') ) =~ s/\D+//g;
+                die "The math answer provided (used to help verify you're human) is incorrect"
+                    if ( $captcha ne $answer );
+
                 $user = $user->create( { %form_params, active => 0 });
                 $user->roles( $self->every_param('role') );
             }
