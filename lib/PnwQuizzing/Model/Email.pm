@@ -1,10 +1,6 @@
 package PnwQuizzing::Model::Email;
 
-# use exact -class, 'PnwQuizzing::Model';
-use Mojo::Base 'PnwQuizzing::Model', -signatures;
-use Carp 'croak';
-use Role::Tiny::With;
-
+use exact -class, 'PnwQuizzing::Model';
 use Email::Mailer;
 
 with 'PnwQuizzing::Role::Template';
@@ -19,6 +15,7 @@ my $mailer;
 
 sub new ( $self, @params ) {
     $self = $self->SUPER::new(@params);
+
     croak('Failed new() because "type" must be defined') unless ( $self->type );
 
     $settings ||= $self->tt_settings('email');

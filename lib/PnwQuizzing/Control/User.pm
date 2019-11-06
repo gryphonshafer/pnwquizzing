@@ -1,9 +1,6 @@
 package PnwQuizzing::Control::User;
 
-# use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
-use Mojo::Base 'Mojolicious::Controller', -signatures;
-use parent 'PnwQuizzing';
-
+use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
 use PnwQuizzing::Model::User;
 
 sub login ($self) {

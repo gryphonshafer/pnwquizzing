@@ -1,10 +1,6 @@
 package PnwQuizzing::Model::User;
 
-# use exact -class, 'PnwQuizzing::Model';
-use Mojo::Base 'PnwQuizzing::Model', -signatures;
-use Carp 'croak';
-use Try::Tiny;
-
+use exact -class, 'PnwQuizzing::Model';
 use PnwQuizzing::Model::Email;
 
 has name => 'user';

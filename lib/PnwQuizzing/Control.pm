@@ -1,11 +1,6 @@
 package PnwQuizzing::Control;
 
-# use exact -class, 'Mojolicious', 'PnwQuizzing';
-use Mojo::Base 'Mojolicious', -signatures;
-use Role::Tiny::With;
-use parent 'PnwQuizzing';
-use Try::Tiny;
-
+use exact -class, 'Mojolicious', 'PnwQuizzing';
 use CSS::Sass;
 use File::Path 'make_path';
 use Mojo::File;

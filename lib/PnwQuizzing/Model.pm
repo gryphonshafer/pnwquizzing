@@ -1,9 +1,6 @@
 package PnwQuizzing::Model;
 
-# use exact -class, 'PnwQuizzing';
-use Mojo::Base 'PnwQuizzing', -signatures;
-use Carp 'croak';
-use Try::Tiny;
+use exact -class, 'PnwQuizzing';
 
 has data => undef;
 has name => undef;

@@ -1,0 +1,25 @@
+#!/usr/bin/env perl
+
+use lib qw(
+    /home/gryphon/cpan/exact/lib
+    /home/gryphon/cpan/exact-class/lib
+    /home/gryphon/pnwquizzing/lib
+);
+
+# use PnwQuizzing::Model::Email;
+
+# PnwQuizzing::Model::Email->new( type => 'verify_email' )->send({
+#     to   => 'Gryphon Shafer <g@shfr.us>',
+#     data => {
+#         username   => 'EXAMPLE username',
+#         first_name => 'EXAMPLE first_name',
+#         last_name  => 'EXAMPLE last_name',
+#         email      => 'EXAMPLE email',
+#         url        => 'http://example.com',
+#     },
+# });
+
+# use PnwQuizzing::Model::Register;
+# my $meet = PnwQuizzing::Model::Register->new->next_meet;
+
+use PnwQuizzing::Model::User;
