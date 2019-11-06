@@ -1,7 +1,7 @@
 requires 'exact', '>= 1.12';
 requires 'exact::conf', '>= 1.03';
 requires 'exact::cli', '>= 1.03';
-requires 'exact::class', '>= 1.06';
+requires 'exact::class', '>= 1.07';
 
 requires 'Mojolicious', '>= 8.25';
 requires 'MojoX::ConfigAppStart', '>= 1.01';
