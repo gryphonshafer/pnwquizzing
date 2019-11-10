@@ -293,8 +293,8 @@ sub save_registration ( $self, $data, $user, $next_meet = undef ) {
             $self->dq->sql(q{
                 UPDATE schedule_church
                 SET last_modified = STRFTIME( '%Y-%m-%d %H:%M:%S:%s', 'NOW', 'LOCALTIME' )
-                WHERE schedule_id = ?
-            })->run( $next_meet->{schedule_id} );
+                WHERE schedule_church_id = ?
+            })->run($schedule_church_id);
         }
         else {
             $self->dq->sql(q{
