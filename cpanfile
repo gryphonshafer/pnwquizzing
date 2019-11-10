@@ -30,3 +30,4 @@ requires 'App::Dest', '>= 1.25';
 
 requires 'Test::Most', '>= 0.35';
 requires 'Test::MockModule', '>= 0.170';
+requires 'Test::Output', '>= 1.031';

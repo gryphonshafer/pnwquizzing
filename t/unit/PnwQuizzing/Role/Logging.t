@@ -1,70 +1,66 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
-use Mojo::File;
+use Test::Output;
+use exact;
 
 package PnwQuizzing {
-    use Mojo::Base -base, -signatures;
+    use exact -class;
 }
 $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Logging') }, q{new->with_roles('+Logging')} );
-
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Logging Conf ) );
 ok( $obj->can($_), "can $_()" ) for ( qw(
-    log_level
-    log_dispatch
-    dp
-    log_date
-    log_levels
+    dp log_date log_level log_levels log_dispatch
+    debug info notice warning warn error err critical crit alert emergency emerg
 ) );
 
-open( my $save_out, '>&STDOUT' );
-close STDOUT;
-open( STDOUT, '>', \my $output );
+$obj->conf->put( 'logging', 'filter', [ 'log_file', 'email' ] );
 
-lives_ok( sub { $obj->debug('Test-generated message') }, 'debug()' );
-
-close STDOUT;
-open( STDOUT, '>&', $save_out );
-
-like(
-    $output,
-    qr/\w{3}\s+\d+\s+\d+:\d+:\d+\s+\d{4}\s+\[DEBUG\]\s+Test-generated message/,
-    'test-generated message looks proper',
-);
-
-my $log_file = join( '/',
-    $obj->conf->get( qw( config_app root_dir ) ),
-    $obj->conf->get( qw( logging log_dir ) ),
-    $obj->conf->get( qw( logging log_file ) ),
-);
-
-ok( -f $log_file, 'log file exists' );
-ok( index( Mojo::File->new($log_file)->slurp, $output ) != -1, 'log line exists in log file' );
-
-package MockDispatch {
-    sub new {
-        return bless( {}, $_[0] );
+output_like(
+    sub {
+        my $level = $_->[0];
+        $obj->$level('Test-generated message');
+    },
+    $_->[1][0],
+    $_->[1][1],
+    "test-generated $_->[0] message looks proper",
+) for (
+    map {
+        my $qr = qr/\w{3}\s+\d+\s+\d+:\d+:\d+\s+\d{4}\s+\[$_->[2]\]\s+Test-generated message/;
+        $_->[1] = ( $_->[1] ) ? [ undef, $qr ] : [ $qr, undef ];
+        $_;
     }
-    sub AUTOLOAD {}
-}
+    (
+        [ 'debug',     0, 'DEBUG'     ],
+        [ 'info',      0, 'INFO'      ],
+        [ 'notice',    0, 'NOTICE'    ],
+        [ 'warning',   1, 'WARNING'   ],
+        [ 'warn',      1, 'WARNING'   ],
+        [ 'error',     1, 'ERROR'     ],
+        [ 'err',       1, 'ERROR'     ],
+        [ 'critical',  1, 'CRITICAL'  ],
+        [ 'crit',      1, 'CRITICAL'  ],
+        [ 'alert',     1, 'ALERT'     ],
+        [ 'emergency', 1, 'EMERGENCY' ],
+        [ 'emerg',     1, 'EMERGENCY' ],
+    )
+);
 
-$obj->log_dispatch( MockDispatch->new );
-
-lives_ok( sub { $obj->$_('Message') }, "can $_()" ) for ( qw(
+is_deeply( [ sort $obj->log_levels ], [ sort qw(
     debug
     info
-    notice
-    warning
     warn
     error
-    err
+    fatal
+    notice
+    warning
     critical
-    crit
     alert
     emergency
     emerg
-) );
+    err
+    crit
+) ], 'log levels' );
 
 done_testing();

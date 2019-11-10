@@ -8,8 +8,8 @@ use Term::ANSIColor;
 
 with 'PnwQuizzing::Role::Conf';
 
-has log_level    => undef;
-has log_dispatch => sub ($self) {
+class_has log_level    => undef;
+class_has log_dispatch => sub ($self) {
     $self->log_level(
         $self->conf->get(
             'logging',
@@ -92,12 +92,10 @@ sub dp ( $self, $params, @np_settings ) {
     return map { ( ref $_ ) ? "\n" . np( $_, @np_settings ) . "\n" : $_ } @$params;
 }
 
-{
-    my @abbr = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
-    sub log_date ( $self = undef, $this_time = time ) {
-        my ( $year, $month, @time_bits ) = reverse( ( localtime($this_time) )[ 0 .. 5 ] );
-        return sprintf( '%3s %2d %2d:%02d:%02d %4d', $abbr[$month], @time_bits, ( $year + 1900 ) );
-    }
+my @abbr = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
+sub log_date ( $self = undef, $this_time = time ) {
+    my ( $year, $month, @time_bits ) = reverse( ( localtime($this_time) )[ 0 .. 5 ] );
+    return sprintf( '%3s %2d %2d:%02d:%02d %4d', $abbr[$month], @time_bits, ( $year + 1900 ) );
 }
 
 sub _log_cb_time (%msg) {
@@ -108,67 +106,63 @@ sub _log_cb_label (%msg) {
     return '[' . uc( $msg{level} ) . '] ' . $msg{message};
 }
 
-{
-    my $log_levels = {
-        debug => 1,
-        info  => 2,
-        warn  => 3,
-        error => 4,
-        fatal => 5,
+my $log_levels = {
+    debug => 1,
+    info  => 2,
+    warn  => 3,
+    error => 4,
+    fatal => 5,
 
-        notice    => 2,
-        warning   => 3,
-        critical  => 4,
-        alert     => 5,
-        emergency => 5,
-        emerg     => 5,
+    notice    => 2,
+    warning   => 3,
+    critical  => 4,
+    alert     => 5,
+    emergency => 5,
+    emerg     => 5,
 
-        err  => 4,
-        crit => 4,
-    };
+    err  => 4,
+    crit => 4,
+};
 
-    sub _highest_level (@input) {
-        return (
-            map { $_->[1] }
-            sort { $b->[0] <=> $a->[0] }
-            map { [ $log_levels->{$_}, $_ ] }
-            @input
-        )[0];
-    }
-
-    sub log_levels {
-        return keys %$log_levels;
-    }
+sub _highest_level (@input) {
+    return (
+        map { $_->[1] }
+        sort { $b->[0] <=> $a->[0] }
+        map { [ $log_levels->{$_}, $_ ] }
+        @input
+    )[0];
 }
 
-{
-    my %color = (
-        reset  => Term::ANSIColor::color('reset'),
-        bold   => Term::ANSIColor::color('bold'),
+sub log_levels {
+    return keys %$log_levels;
+}
 
-        debug     => 'cyan',
-        info      => 'white',
-        notice    => 'bright_white',
-        warning   => 'yellow',
-        error     => 'bright_red',
-        critical  => [ qw( underline bright_red ) ],
-        alert     => [ qw( underline bright_yellow) ],
-        emergency => [ qw( underline bright_yellow on_blue ) ],
-    );
+my %color = (
+    reset  => Term::ANSIColor::color('reset'),
+    bold   => Term::ANSIColor::color('bold'),
 
-    for ( qw( debug info notice warning error critical alert emergency ) ) {
-        next unless ( $color{$_} );
-        $color{$_} = join ( '', map {
-            $color{$_} = Term::ANSIColor::color($_) unless ( $color{$_} );
-            $color{$_};
-        } ( ( ref $color{$_} ) ? @{ $color{$_} } : $color{$_} ) );
-    }
+    debug     => 'cyan',
+    info      => 'white',
+    notice    => 'bright_white',
+    warning   => 'yellow',
+    error     => 'bright_red',
+    critical  => [ qw( underline bright_red ) ],
+    alert     => [ qw( underline bright_yellow) ],
+    emergency => [ qw( underline bright_yellow on_blue ) ],
+);
 
-    sub _log_cb_color (%msg) {
-        return ( $color{ $msg{level} } )
-            ? $color{ $msg{level} } . $msg{message} . $color{reset}
-            : $msg{message};
-    }
+for ( qw( debug info notice warning error critical alert emergency ) ) {
+    next unless ( $color{$_} );
+    $color{$_} = join ( '', map {
+        $color{$_} = Term::ANSIColor::color($_) unless ( $color{$_} );
+        $color{$_};
+    } ( ( ref $color{$_} ) ? @{ $color{$_} } : $color{$_} ) );
+}
+
+sub _log_cb_color (%msg) {
+    return ( $color{ $msg{level} } )
+        ? $color{ $msg{level} } . $msg{message} . $color{reset}
+        : $msg{message};
 }
 
 1;
