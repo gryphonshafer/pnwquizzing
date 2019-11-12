@@ -9,16 +9,18 @@ has name => 'user';
 sub _user_data_prep ( $self, $data ) {
     $data->{passwd} = $self->bcrypt( $data->{passwd} );
 
-    my $error_text = q{"ministry" appears to not be a valid input value};
-    my $church     = delete $data->{church};
+    my $church = delete $data->{church};
+    unless ( $data->{church_id} ) {
+        my $error_text = q{"ministry" appears to not be a valid input value};
 
-    if ( $church and $church ne '_NEW' ) {
-        $data->{church_id} = $self->dq->sql(q{
-            SELECT church_id FROM church WHERE acronym = ?
-        })->run($church)->value or croak($error_text);
-    }
-    elsif ( not $church or $church ne '_NEW' ) {
-        croak($error_text);
+        if ( $church and $church ne '_NEW' ) {
+            $data->{church_id} = $self->dq->sql(q{
+                SELECT church_id FROM church WHERE acronym = ?
+            })->run($church)->value or croak($error_text);
+        }
+        elsif ( not $church or $church ne '_NEW' ) {
+            croak($error_text);
+        }
     }
 
     return $data;
