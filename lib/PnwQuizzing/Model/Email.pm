@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Email;
 
-use exact -class, 'PnwQuizzing::Model';
+use exact 'PnwQuizzing::Model';
 use Email::Mailer;
 
 with 'PnwQuizzing::Role::Template';

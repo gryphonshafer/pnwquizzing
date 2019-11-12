@@ -1,9 +1,15 @@
 package PnwQuizzing::Model;
 
-use exact -class, 'PnwQuizzing';
+use exact 'PnwQuizzing';
 
-has data => undef;
+with qw(
+    PnwQuizzing::Role::Conf
+    PnwQuizzing::Role::Logging
+    PnwQuizzing::Role::Database
+);
+
 has name => undef;
+has data => undef;
 
 sub create ( $self, $data ) {
     croak('Cannot create() without has "name"') unless ( $self->name );

@@ -1,7 +1,9 @@
 package PnwQuizzing::Model::User;
 
-use exact -class, 'PnwQuizzing::Model';
+use exact 'PnwQuizzing::Model';
 use PnwQuizzing::Model::Email;
+
+with 'PnwQuizzing::Role::Bcrypt';
 
 has name => 'user';
 

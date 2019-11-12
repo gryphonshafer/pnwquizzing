@@ -9,9 +9,10 @@ $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Logging') }, q{new->with_roles('+Logging')} );
-ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Logging Conf ) );
-ok( $obj->can($_), "can $_()" ) for ( qw(
-    dp log_date log_level log_levels log_dispatch
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Conf Logging ) );
+can_ok( $obj, qw(
+    log_level log_dispatch
+    dp log_date log_levels
     debug info notice warning warn error err critical crit alert emergency emerg
 ) );
 

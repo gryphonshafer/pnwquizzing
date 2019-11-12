@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Register;
 
-use exact -class, 'PnwQuizzing::Model';
+use exact 'PnwQuizzing::Model';
 use PnwQuizzing::Model::Email;
 
 my $singleton;

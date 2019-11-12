@@ -1,20 +1,13 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
+use exact;
 
 use_ok('PnwQuizzing::Model');
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing::Model->new }, 'new()' );
-ok( $obj->can($_), "can $_()" ) for ( qw(
-    data
-    name
-    create
-    load
-    prop
-    id
-    save
-) );
+isa_ok( $obj, 'PnwQuizzing' );
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Conf Database Logging ) );
+can_ok( $obj, qw( name data create load prop id save ) );
 
 my $phrase = '__test_pnwquizzing_model_' . $$;
 my $data   = { hash => $phrase, phrase => $phrase };

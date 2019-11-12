@@ -8,8 +8,8 @@ $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Secret') }, q{new->with_roles('+Secret')} );
-ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Secret Bcrypt Database ) );
-ok( $obj->can($_), "can $_()" ) for ( qw( secret desecret translate transcode ) );
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Bcrypt Database Secret ) );
+can_ok( $obj, qw( secret desecret translate transcode ) );
 
 my $phrase = '__test_pnwquizzing_role_secret_' . $$;
 my $hash;

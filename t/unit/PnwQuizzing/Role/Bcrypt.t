@@ -9,7 +9,7 @@ $INC{'PnwQuizzing.pm'} = 1;
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Bcrypt') }, q{new->with_roles('+Bcrypt')} );
 ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Bcrypt Conf ) );
-ok( $obj->can('bcrypt'), 'can bcrypt()' );
+can_ok( $obj, 'bcrypt' );
 
 my $data = {
     alpha => {

@@ -8,8 +8,8 @@ $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Template') }, q{new->with_roles('+Template')} );
-ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Template Conf ) );
-ok( $obj->can($_), "can $_()" ) for ( qw( version tt tt_settings ) );
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Conf Template ) );
+can_ok( $obj, qw( version tt tt_settings ) );
 
 is(
     $obj->tt_settings->{config}{CONSTANTS}{version},
