@@ -71,10 +71,13 @@ sub account ($self) {
 
         unless ( $self->stash('user') ) {
             try {
+                die 'Ministry appears to not be a valid input value'
+                    if ( $form_params{church} and $form_params{church} eq '_NOT_DEFINED' );
+
                 my @math = split( /\s+/, $self->param('math') );
                 my $answer = ( $math[1] eq '+' ) ? $math[0] + $math[2] : $math[0] * $math[2];
                 ( my $captcha = $self->param('captcha') ) =~ s/\D+//g;
-                die "The math answer provided (used to help verify you're human) is incorrect"
+                die q{The math answer provided (used to help verify you're human) is incorrect}
                     if ( $captcha ne $answer );
 
                 $user = $user->create( { %form_params, active => 0 });

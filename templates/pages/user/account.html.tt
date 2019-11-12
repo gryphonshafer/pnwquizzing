@@ -45,8 +45,14 @@
             <label>
                 Ministry:
                 <select name="church" style="width: 180px">
-                    <option value=""></option>
-                    <option value="_NEW">New Ministry Not Listed</option>
+                    [% UNLESS c.stash.user %]
+                        <option value="_NOT_DEFINED"></option>
+                    [% END %]
+
+                    [% UNLESS c.stash.user.data.church_id %]
+                        <option value="">New Ministry Not Listed</option>
+                    [% END %]
+
                     [% FOR church IN churches %]
                         <option
                             value="[% church.acronym %]"

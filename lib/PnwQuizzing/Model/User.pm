@@ -7,21 +7,14 @@ use PnwQuizzing::Model::Email;
 has name => 'user';
 
 sub _user_data_prep ( $self, $data ) {
-    $data->{passwd} = $self->bcrypt( $data->{passwd} );
+    $data->{passwd} = $self->bcrypt( $data->{passwd} ) if ( $data->{passwd} );
 
     my $church = delete $data->{church};
-    unless ( $data->{church_id} ) {
-        my $error_text = q{"ministry" appears to not be a valid input value};
-
-        if ( $church and $church ne '_NEW' ) {
-            $data->{church_id} = $self->dq->sql(q{
-                SELECT church_id FROM church WHERE acronym = ?
-            })->run($church)->value or croak($error_text);
-        }
-        elsif ( not $church or $church ne '_NEW' ) {
-            croak($error_text);
-        }
-    }
+    $data->{church_id} = $self->dq->sql(q{
+        SELECT church_id FROM church WHERE acronym = ?
+    })->run($church)->value
+        or croak('church ministry appears to not be a valid input value')
+        if ( not exists $data->{church_id} and $church );
 
     return $data;
 }
@@ -45,6 +38,7 @@ sub create ( $self, $data ) {
 sub edit ( $self, $data ) {
     croak( q{"email" appears to not be a valid input value} )
         if ( length $data->{email} and $data->{email} !~ /\w\@\w/ );
+
     return $self->save( $self->_user_data_prep($data) );
 }
 
