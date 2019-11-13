@@ -1,6 +1,6 @@
 package PnwQuizzing::Control::Main;
 
-use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
+use exact 'Mojolicious::Controller', 'PnwQuizzing';
 use Encode 'decode_utf8';
 use Mojo::Asset::File;
 use Mojo::JSON 'decode_json';

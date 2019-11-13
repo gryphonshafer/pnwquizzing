@@ -2,12 +2,6 @@ package PnwQuizzing::Model;
 
 use exact 'PnwQuizzing';
 
-with qw(
-    PnwQuizzing::Role::Conf
-    PnwQuizzing::Role::Logging
-    PnwQuizzing::Role::Database
-);
-
 has name => undef;
 has data => undef;
 

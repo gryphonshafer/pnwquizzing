@@ -1,11 +1,12 @@
 package PnwQuizzing::Control::User;
 
-use exact -class, 'Mojolicious::Controller', 'PnwQuizzing';
+use exact 'Mojolicious::Controller', 'PnwQuizzing';
 use PnwQuizzing::Model::User;
 
 sub login ($self) {
     my $user = PnwQuizzing::Model::User->new;
 
+    my $redirect;
     try {
         $user = $user->login( map { $self->param($_) } qw( username passwd ) );
     }
@@ -15,8 +16,9 @@ sub login ($self) {
             'Login failed. Please try again, or try the ' .
             '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
         );
-        return $self->redirect_to('/');
+        $redirect = 1;
     };
+    return $self->redirect_to('/') if ($redirect);
 
     $self->_login($user);
     return $self->redirect_to('/');
@@ -73,9 +75,11 @@ sub account ($self) {
                 die 'Ministry appears to not be a valid input value'
                     if ( $form_params{church} and $form_params{church} eq '_NOT_DEFINED' );
 
-                my @math = split( /\s+/, $self->param('math') );
+                my @math = split( /\s+/, $self->param('math') || '' );
+                $math[$_] //= 100 for ( 0 .. 2 );
+
                 my $answer = ( $math[1] eq '+' ) ? $math[0] + $math[2] : $math[0] * $math[2];
-                ( my $captcha = $self->param('captcha') ) =~ s/\D+//g;
+                ( my $captcha = $self->param('captcha') || '' ) =~ s/\D+//g;
                 die q{The math answer provided (used to help verify you're human) is incorrect}
                     if ( $captcha ne $answer );
 

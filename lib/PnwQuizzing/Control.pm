@@ -1,6 +1,6 @@
 package PnwQuizzing::Control;
 
-use exact -class, 'Mojolicious', 'PnwQuizzing';
+use exact 'Mojolicious', 'PnwQuizzing';
 use CSS::Sass;
 use File::Path 'make_path';
 use Mojo::File;

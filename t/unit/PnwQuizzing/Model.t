@@ -6,7 +6,6 @@ use_ok('PnwQuizzing::Model');
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing::Model->new }, 'new()' );
 isa_ok( $obj, 'PnwQuizzing' );
-ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Conf Database Logging ) );
 can_ok( $obj, qw( name data create load prop id save ) );
 
 my $phrase = '__test_pnwquizzing_model_' . $$;

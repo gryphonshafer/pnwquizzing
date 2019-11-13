@@ -1,17 +1,17 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
 use Test::Mojo;
 use Test::MockModule;
+use exact -conf;
 use Mojo::File;
 
 $ENV{MOJO_LOG_LEVEL} = 'fatal';
 my $log = Test::MockModule->new('PnwQuizzing::Control');
 $log->redefine( 'setup_access_log', 1 );
+
 my $t = Test::Mojo->new('PnwQuizzing::Control');
 
 my $content = (
-    Mojo::File->new( Config::App->new->get( 'config_app', 'root_dir' ) . '/docs/index.md'
+    Mojo::File->new( conf->get( 'config_app', 'root_dir' ) . '/docs/index.md'
 )->slurp =~ /\n\s*##\s*([^\n]+)\n/ms ) ? '<h2[^>]*>' . quotemeta($1) . '</h2>' : undef;
 
 $t->get_ok('/')
