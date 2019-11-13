@@ -1,8 +1,7 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
 use Test::Mojo;
 use Test::MockModule;
+use exact;
 
 my $user = Test::MockModule->new('PnwQuizzing::Model::User');
 $user->redefine( 'load', sub {
@@ -14,6 +13,7 @@ $user->redefine( 'load', sub {
 $ENV{MOJO_LOG_LEVEL} = 'fatal';
 my $log = Test::MockModule->new('PnwQuizzing::Control');
 $log->redefine( 'setup_access_log', 1 );
+
 my $t = Test::Mojo->new('PnwQuizzing::Control');
 
 $t->get_ok('/tool/hash')

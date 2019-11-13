@@ -1,12 +1,12 @@
 package PnwQuizzing::Control::User;
-use Mojo::Base 'Mojolicious::Controller', -signatures;
-use parent 'PnwQuizzing';
+
+use exact 'Mojolicious::Controller', 'PnwQuizzing';
 use PnwQuizzing::Model::User;
-use TryCatch;
 
 sub login ($self) {
     my $user = PnwQuizzing::Model::User->new;
 
+    my $redirect;
     try {
         $user = $user->login( map { $self->param($_) } qw( username passwd ) );
     }
@@ -16,8 +16,9 @@ sub login ($self) {
             'Login failed. Please try again, or try the ' .
             '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
         );
-        return $self->redirect_to('/');
-    }
+        $redirect = 1;
+    };
+    return $self->redirect_to('/') if ($redirect);
 
     $self->_login($user);
     return $self->redirect_to('/');
@@ -74,18 +75,20 @@ sub account ($self) {
                 die 'Ministry appears to not be a valid input value'
                     if ( $form_params{church} and $form_params{church} eq '_NOT_DEFINED' );
 
-                my @math = split( /\s+/, $self->param('math') );
+                my @math = split( /\s+/, $self->param('math') || '' );
+                $math[$_] //= 100 for ( 0 .. 2 );
+
                 my $answer = ( $math[1] eq '+' ) ? $math[0] + $math[2] : $math[0] * $math[2];
-                ( my $captcha = $self->param('captcha') ) =~ s/\D+//g;
+                ( my $captcha = $self->param('captcha') || '' ) =~ s/\D+//g;
                 die q{The math answer provided (used to help verify you're human) is incorrect}
                     if ( $captcha ne $answer );
 
                 $user = $user->create( { %form_params, active => 0 });
                 $user->roles( $self->every_param('role') );
             }
-            catch ($e) {
-                $handle_user_error->($e);
-            }
+            catch {
+                $handle_user_error->($_);
+            };
 
             if ( $user and $user->data ) {
                 my $url = $self->req->url->to_abs;
@@ -104,9 +107,9 @@ sub account ($self) {
                     }
                 );
             }
-            catch ($e) {
-                $handle_user_error->($e);
-            }
+            catch {
+                $handle_user_error->($_);
+            };
         }
     }
 
@@ -160,10 +163,10 @@ sub reset_password ($self) {
                 }
             );
         }
-        catch ($e) {
-            $self->warn( $e->message );
+        catch {
+            $self->warn( $_->message );
             $self->stash( message => 'Unable to locate user account using the input values provided.' );
-        }
+        };
     }
     elsif ( $self->param('form_post') ) {
         $self->stash( message => 'Unable to locate user account using the input values provided.' );
@@ -179,14 +182,14 @@ sub reset_password ($self) {
             $self->session_login;
             $self->stash( new_passwd => $user->data->{passwd} );
         }
-        catch ($e) {
-            $self->warn( $e->message );
+        catch {
+            $self->warn( $_->message );
             $self->stash( message =>
                 'Unable to reset user password. ' .
                 'This is likely due to an expired link in an email. ' .
                 'Please try filling out the form again for a fresh reset link.'
             );
-        }
+        };
     }
 }
 

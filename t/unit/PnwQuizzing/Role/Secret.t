@@ -1,15 +1,15 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
+use exact;
 
 package PnwQuizzing {
-    use Mojo::Base -base, -signatures;
+    use exact -class;
 }
 $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Secret') }, q{new->with_roles('+Secret')} );
-ok( $obj->can($_), "can $_()" ) for ( qw( secret desecret translate transcode ) );
+ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( Bcrypt Database Secret ) );
+can_ok( $obj, qw( secret desecret translate transcode ) );
 
 my $phrase = '__test_pnwquizzing_role_secret_' . $$;
 my $hash;
@@ -21,4 +21,5 @@ is( "embedded $phrase secret", $obj->translate("embedded $hash secret"), 'transl
 is( "embedded $hash secret", $obj->transcode("embedded $phrase secret"), 'transcode()' );
 
 $obj->dq->sql('DELETE FROM secret WHERE phrase = ?')->run($phrase);
+
 done_testing();

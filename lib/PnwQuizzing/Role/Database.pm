@@ -1,16 +1,13 @@
 package PnwQuizzing::Role::Database;
-use Mojo::Base -role, -signatures;
-use Role::Tiny::With;
+
+use exact -role;
+use App::Dest;
 use DBIx::Query;
 use File::Path 'make_path';
-use App::Dest;
-use PnwQuizzing;
-use TryCatch;
 
 with 'PnwQuizzing::Role::Conf';
 
-sub import {
-    my $self     = PnwQuizzing->new;
+class_has dq => sub ($self) {
     my $conf     = $self->conf->get('database');
     my $root_dir = $self->conf->get( qw( config_app root_dir ) );
     my $dir      = join( '/', $root_dir, $conf->{dir} );
@@ -23,14 +20,8 @@ sub import {
         try {
             App::Dest->init;
             App::Dest->update;
-        }
+        };
     }
-}
-
-has dq => sub ($self) {
-    my $conf     = $self->conf->get('database');
-    my $root_dir = $self->conf->get( qw( config_app root_dir ) );
-    my $dir      = join( '/', $root_dir, $conf->{dir} );
 
     my $dq = DBIx::Query->connect(
         'dbi:SQLite:dbname=' . $dir . '/' . $conf->{file},

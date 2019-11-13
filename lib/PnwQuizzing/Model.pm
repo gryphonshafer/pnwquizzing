@@ -1,10 +1,9 @@
 package PnwQuizzing::Model;
-use Mojo::Base 'PnwQuizzing', -signatures;
-use Carp 'croak';
-use TryCatch;
 
-has data => undef;
+use exact 'PnwQuizzing';
+
 has name => undef;
+has data => undef;
 
 sub create ( $self, $data ) {
     croak('Cannot create() without has "name"') unless ( $self->name );
@@ -71,9 +70,9 @@ sub save ( $self, @input ) {
         try {
             $self->prop(@input);
         }
-        catch ($e) {
-            croak( ( $e =~ /^Bad input/ ) ? 'Bad input in call to save()' : $e );
-        }
+        catch {
+            croak( ( /^Bad input/ ) ? 'Bad input in call to save()' : $_ );
+        };
     }
 
     my %data    = %{ $self->data };

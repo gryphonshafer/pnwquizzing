@@ -1,7 +1,6 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
 use Test::MockModule;
+use exact;
 
 my $log = Test::MockModule->new('PnwQuizzing::Role::Logging');
 $log->redefine( 'info', 1 );
@@ -18,14 +17,9 @@ throws_ok(
     'new() throws',
 );
 lives_ok( sub { $obj = PnwQuizzing::Model::Email->new( type => 'verify_email' ) }, 'new( type => $type )' );
-ok( $obj->isa('PnwQuizzing::Model'), 'isa PnwQuizzing::Model' );
-ok( $obj->can($_), "can $_()" ) for ( qw(
-    type
-    subject
-    html
-    new
-    send
-) );
+isa_ok( $obj, 'PnwQuizzing::Model' );
+ok( $obj->does('PnwQuizzing::Role::Template'), 'does Template role' );
+can_ok( $obj, qw( type subject html new send ) );
 
 lives_ok( sub { $obj->send({}) }, 'send()' );
 

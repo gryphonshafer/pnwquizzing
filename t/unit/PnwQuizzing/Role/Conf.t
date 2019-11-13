@@ -1,16 +1,15 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
+use exact;
 
 package PnwQuizzing {
-    use Mojo::Base -base, -signatures;
+    use exact -class;
 }
 $INC{'PnwQuizzing.pm'} = 1;
 
 my $obj;
 lives_ok( sub { $obj = PnwQuizzing->new->with_roles('+Conf') }, q{new->with_roles('+Conf')} );
-
-ok( $obj->can('conf'), 'can conf()' );
+ok( $obj->does('PnwQuizzing::Role::Conf'), 'does Conf role' );
+can_ok( $obj, 'conf' );
 is( ref $obj->conf, 'Config::App', 'conf() is a Config::App' );
 
 ok( $obj->conf($_), "conf exits for: $_" ) for ( qw(

@@ -1,14 +1,12 @@
 package PnwQuizzing::Role::Bcrypt;
-use Mojo::Base -role, -signatures;
-use Role::Tiny::With;
+
+use exact -role;
 use Digest;
 
 with 'PnwQuizzing::Role::Conf';
 
 sub bcrypt ( $self, $input ) {
-    return Digest
-        ->new( 'Bcrypt', %{ $self->conf->get('bcrypt') } )
-        ->add($input)->hexdigest;
+    return Digest->new( 'Bcrypt', %{ $self->conf->get('bcrypt') } )->add($input)->hexdigest;
 }
 
 1;

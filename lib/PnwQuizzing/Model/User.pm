@@ -1,8 +1,9 @@
 package PnwQuizzing::Model::User;
-use Mojo::Base 'PnwQuizzing::Model', -signatures;
-use Carp 'croak';
-use TryCatch;
+
+use exact 'PnwQuizzing::Model';
 use PnwQuizzing::Model::Email;
+
+with 'PnwQuizzing::Role::Bcrypt';
 
 has name => 'user';
 
@@ -124,7 +125,7 @@ sub login ( $self, $username, $passwd ) {
     catch {
         $self->info('Login failure (in model)');
         croak('Failed user login');
-    }
+    };
 
     return $self;
 }

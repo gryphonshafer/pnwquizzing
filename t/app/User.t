@@ -1,12 +1,12 @@
-use Mojo::Base -strict;
-use Config::App;
 use Test::Most;
 use Test::Mojo;
 use Test::MockModule;
+use exact;
 
 $ENV{MOJO_LOG_LEVEL} = 'fatal';
 my $log = Test::MockModule->new('PnwQuizzing::Control');
 $log->redefine( 'setup_access_log', 1 );
+
 my $t = Test::Mojo->new('PnwQuizzing::Control');
 
 $t->get_ok('/user/account')
@@ -24,7 +24,11 @@ $t->post_ok('/user/login' => form => {} )
     ->status_is(302)
     ->header_is( 'Location' => $t->app->url_for('/') );
 
-is( $stash->{'mojo.session'}{new_flash}{message}, 'Login failed. Please try again.', 'login fail message' );
+like(
+    $stash->{'mojo.session'}{new_flash}{message},
+    qr/^Login failed. Please try again./,
+    'login fail message',
+);
 
 $user->redefine( 'login', sub {
     my ($self) = @_;
@@ -47,6 +51,8 @@ $user->redefine( 'verify_email', 1 );
 
 $t->post_ok( '/user/account' => form => {
     form_submit => 1,
+    math        => '2 + 3',
+    captcha     => 5,
 } )
     ->status_is(200)
     ->text_is( 'title' => 'PNWBQ: New User Sign-Up' );
@@ -55,7 +61,7 @@ is( $stash->{message}, 'Failed in automated testing. Please try again.', 'error 
 
 $user->redefine( 'create', sub {
     my ($self) = @_;
-    $self->data({});
+    $self->data( { user_id => 1 } );
     return $self;
 } );
 
@@ -66,6 +72,8 @@ $t->post_ok( '/user/account' => form => {
     last_name   => 'last_name',
     email       => 'email',
     form_submit => 1,
+    math        => '2 + 3',
+    captcha     => 5,
 } )
     ->status_is(200)
     ->text_is( 'title' => 'PNWBQ: Account Created' )

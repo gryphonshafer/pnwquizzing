@@ -1,22 +1,20 @@
 package PnwQuizzing::Role::Template;
-use Mojo::Base -role, -signatures;
-use Role::Tiny::With;
+
+use exact -role;
 use Template;
 
 with 'PnwQuizzing::Role::Conf';
 
-has version => time;
+class_has version => time;
 
-{
-    my $tt;
-    sub tt ( $self, $type = 'web' ) {
-        unless ( $tt->{$type} ) {
-            my $settings = $self->tt_settings($type);
-            $tt->{$type} = Template->new( $settings->{config} );
-            $settings->{context}->( $tt->{$type}->context );
-        }
-        return $tt->{$type};
+my $tt;
+sub tt ( $self, $type = 'web' ) {
+    unless ( $tt->{$type} ) {
+        my $settings = $self->tt_settings($type);
+        $tt->{$type} = Template->new( $settings->{config} );
+        $settings->{context}->( $tt->{$type}->context );
     }
+    return $tt->{$type};
 }
 
 sub tt_settings ( $self, $type = 'web' ) {
@@ -55,20 +53,6 @@ sub tt_settings ( $self, $type = 'web' ) {
 
             $context->define_vmethod( 'scalar', 'commify', sub {
                 return scalar( reverse join( ',', unpack( '(A3)*', scalar( reverse $_[0] ) ) ) );
-            } );
-
-            $context->define_vmethod( 'list', 'sort_by', sub {
-                my ( $arrayref, $sort_by, $sort_order ) = @_;
-                return $arrayref unless ($sort_by);
-
-                return [ sort {
-                    my ( $c, $d ) = ( $a, $b );
-                    ( $c, $d ) = ( $d, $c ) if ( $sort_order and $sort_order eq 'desc' );
-
-                    ( $c->{$sort_by} =~ /^\d+$/ and $d->{$sort_by} =~ /^\d+$/ )
-                        ? $c->{$sort_by} <=> $d->{$sort_by}
-                        : $c->{$sort_by} cmp $d->{$sort_by}
-                } @$arrayref ];
             } );
         },
     };
