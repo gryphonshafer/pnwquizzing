@@ -1,7 +1,5 @@
 #!/usr/bin/env perl
-use Mojo::Base -strict, -signatures;
-use Config::App;
-use Util::CommandLine qw( options pod2usage );
+use exact -cli, -conf;
 use Mojo::File;
 use Text::CSV_XS 'csv';
 use PnwQuizzing;

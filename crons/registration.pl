@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use exact -cli;
+use exact -cli, -conf;
 use PnwQuizzing::Model::Register;
 
 my $settings = options('dryrun|d');

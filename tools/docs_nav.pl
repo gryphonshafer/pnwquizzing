@@ -1,8 +1,6 @@
 #!/usr/bin/env perl
-use Mojo::Base -strict, -signatures;
-use Config::App;
+use exact -cli, -conf;
 use PnwQuizzing;
-use Util::CommandLine 'podhelp';
 
 my $pnw      = PnwQuizzing->new;
 my $docs_nav = $pnw->with_roles('+DocsNav')->generate_docs_nav;

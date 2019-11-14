@@ -1,9 +1,5 @@
 #!/usr/bin/env perl
-use Mojo::Base -strict, -signatures;
-use Config::App;
-use Util::CommandLine qw( options pod2usage );
-use Term::ReadKey 'ReadMode';
-use TryCatch;
+use exact -cli, -conf;
 use PnwQuizzing::Model::User;
 
 my $settings = options( qw( username|u=s password|p=s ) );
@@ -15,7 +11,7 @@ try {
 }
 catch {
     die 'Failed to find user "' . $settings->{username} . '"' . "\n";
-}
+};
 
 unless ( defined $settings->{password} ) {
     ReadMode('noecho');
