@@ -188,6 +188,7 @@ sub save_registration ( $self, $data, $user, $next_meet = undef ) {
                         captain = ?,
                         name = ?,
                         role = ?,
+                        grade = ?,
                         rookie = ?,
                         m_f = ?,
                         attend = ?,
@@ -202,6 +203,7 @@ sub save_registration ( $self, $data, $user, $next_meet = undef ) {
                         captain
                         name
                         role
+                        grade
                         rookie
                         m_f
                         attend
