@@ -156,6 +156,15 @@ sub registration_list ($self) {
     my $list = $self->registration->current_data( $self->stash('user') );
 
     unless ( $self->req->url->path->trailing_slash(0)->to_string =~ /\.(\w+)$/ and lc($1) eq 'csv' ) {
+        my ( $last_team, $bib ) = ( '', 0 );
+        for ( @{ $list->{current_data}{quizzers} } ) {
+            if ( $last_team ne $_->{team} ) {
+                $last_team = $_->{team};
+                $bib = 0;
+            }
+            $_->{bib} = ++$bib;
+        }
+
         $self->stash(%$list);
     }
     else {
