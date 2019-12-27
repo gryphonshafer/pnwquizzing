@@ -61,13 +61,20 @@ shared Google Drive for all officials.
 
 - In CBQZ:
     - Login
-    - **Always** double-check on main page: quiz program, material set, questions set
+    - **Always** double-check on main page the following selections:
+        - Quiz program: CMA Pacific Northwest
+        - Material set: 2019-2020 CMA PNW Hebrews Peter
+        - Questions set: 2019-2020 CMA PNW Hebrews Peter Officials Meet
     - Switch to Quiz Room
     - Set "Meet Name" to the form: "2019-2020 Meet 1" *(with specific values changed for the specific meet)*
     - Set "Room" to correct room
     - Ensure "Official Quiz" is checked
     - Verify "Question Types" setting is correct
+        - The default setting is *probably* correct...
+        - However, verify that it's correct before proceeding
     - Select chapter distribution and weighting of last chapter set
+        - Ensure all chapters up through the current chapter are checked
+        - Ensure that "Chapter Weighting" is set to the same number of chapters that were added to the material since the previous meet, and the weight is set at 50%
 
 ## Remember during the meet...
 
