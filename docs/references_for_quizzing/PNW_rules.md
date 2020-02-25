@@ -12,6 +12,8 @@ The following are rules about questions, questions types, distribution, and rela
 
 ### Key Verses
 
+*(The follow key verses rules does not come into effect until the beginning of the 2020-2021 season.)*
+
 Prior to each season, the Rules Committee or a person or group they appoint for this purpose will define and publish two versions of the upcoming season's Key Verses List (KVL), a public and private version. The public version will be published widely to all quizzing participants. The private version will be made available only to official question writers.
 
 The public KVL will not specify which FTV or Quote sub-types will be used for any given verse; only the private KVL will include this information. For example, the public list will not indicate whether two consecutive verses will be asked as an F2V/Q2V pair or whether they will be two separate FTVs/Quotes.
