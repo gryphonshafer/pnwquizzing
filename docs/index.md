@@ -11,7 +11,9 @@
 We've setup a Bible Quizzing Slack group for both quizzing discussion and
 (hopefully) online, virtual quiz meet activity:
 
+<div class="big_button">
 [Slack Forum for Bible Quizzing](https://join.slack.com/t/biblequizzing/shared_invite/zt-clqpjlua-c2LN_2i3Bs0764cGNM0NAQ)
+</div>
 
 ## What is Bible Quizzing?
 
