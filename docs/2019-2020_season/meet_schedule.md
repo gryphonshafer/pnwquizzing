@@ -34,17 +34,17 @@ The following is the latest schedule for 2019-2020:
 - Lighthouse Christian Center (LH)
 - <a href="https://www.google.com/maps/place/3409+23rd+St+SW,+Puyallup,+WA+98373">3409 23rd St SW, Puyallup, WA 98373</a>
 
-**District Meet 5**
+**Virtual Fun Meet**
 
 - March 27-28
-- Dallas Alliance Church (DAC)
-- <a href="https://www.google.com/maps/place/775+E+Ellendale+Ave,+Dallas,+OR+97338">775 E Ellendale Ave, Dallas, OR 97338</a>
+- "Virtual Dallas"
+- <a href="https://join.slack.com/t/biblequizzing/shared_invite/zt-clqpjlua-c2LN_2i3Bs0764cGNM0NAQ">(Online)</a>
 
-**Great West Invitational (GWI)**
+<strike>**Great West Invitational (GWI)**
 
 - April 3-5
 - Crowsnest Lake Bible Camp
-- <a href="https://www.google.com/maps/place/J8GR%2B6F+Coleman,+Crowsnest+Pass,+AB">J8GR+6F Coleman, Crowsnest Pass, AB</a>
+- <a href="https://www.google.com/maps/place/J8GR%2B6F+Coleman,+Crowsnest+Pass,+AB">J8GR+6F Coleman, Crowsnest Pass, AB</a></strike>
 
 **District Championship (DC)**
 
