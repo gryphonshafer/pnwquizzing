@@ -99,3 +99,29 @@ There are no back-channel conversations permitted between quizzers who are quizz
 Back-channel conversations are permitted between any coaches, inactive (subbed-out) quizzers, and spectators so long as these take place outside the Zoom "room".
 
 Back-channel conversations are permitted between the officials.
+
+## Practical Zoom Instructions for Quizmasters
+
+1. Visit the [Zoom web site](https://zoom.us)
+2. Click "Sign in" near the upper-right of the page
+3. Fill out the form
+    - Email: `room1@pnwquizzing.org` (or `room2@`, `room3@`, etc.)
+    - Password: Ask Gryphon for the password
+4. Click "Host a meeting" (with video on) near the upper-right of the page
+5. Join with computer audio (if presented the choice)
+6. You may need to move your mouse cursor over the video screen to see the menu at the bottom
+7. Click the "Start Video" option in the lower-left of the screen
+8. Click the up arrows to the right of the "Mute" and "Stop Video" buttons and set settings as desired
+9. Click the "Chat" button (to open the chat pane)
+10. Click the "Manage Participants" (to open the participants pane)
+11. Adjust the window and pane sizes to your preference
+12. Set your official name
+    1. In the participants pane, mouse over your account's name
+    2. Select the "More" then "Rename" option (when each appears)
+    3. Change your name as prescribed in the Virtual Quizzing rules
+    4. Turn off "Remember for future meetings" option
+13. Follow any other Virtual Quizzing rules or procedures
+
+It's strongly recommended that the quizmaster enable (in settings) the meeting timer because at 40 minutes, the meeting will end. Be sure to keep the quiz under 40 minutes. When complete with the quiz, be sure to end the meeting, not just exit.
+
+Each time you start a new quiz, be sure to post it's URL to the `#virtual-meet` Slack channel.
