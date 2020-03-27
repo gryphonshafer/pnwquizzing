@@ -6,13 +6,6 @@
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
 
-## Bible Quizzing Slack
-
-We've setup a Bible Quizzing Slack group for both quizzing discussion and
-(hopefully) online, virtual quiz meet activity:
-
-<div class="big_button"><a href="https://join.slack.com/t/biblequizzing/shared_invite/zt-clqpjlua-c2LN_2i3Bs0764cGNM0NAQ">Slack Forum</a></div>
-
 ## What is Bible Quizzing?
 
 Bible Quizzing is a Christian sport in which teams of participants compete on
