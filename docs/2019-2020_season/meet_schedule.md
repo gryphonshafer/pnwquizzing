@@ -44,16 +44,17 @@ The following is the latest schedule for 2019-2020:
 
 - April 3-5
 - Crowsnest Lake Bible Camp
-- <a href="https://www.google.com/maps/place/J8GR%2B6F+Coleman,+Crowsnest+Pass,+AB">J8GR+6F Coleman, Crowsnest Pass, AB</a></strike>
+- <a href="https://www.google.com/maps/place/J8GR%2B6F+Coleman,+Crowsnest+Pass,+AB">J8GR+6F Coleman, Crowsnest Pass, AB</a>
 
 **District Championship (DC)**
 
 - April 17-18
 - Double K Retreat Center (Easton, WA)
-- <a href="https://www.google.com/maps/place/620+Tall+Timber+Trail,+Easton,+WA+98925">620 Tall Timber Trail, Cle Elum, WA 98922</a>
+- <a href="https://www.google.com/maps/place/620+Tall+Timber+Trail,+Easton,+WA+98925">620 Tall Timber Trail, Cle Elum, WA 98922</a></strike>
 
 **International Bible Quizzing (IBQ)**
 
+- *This meet is tenatively still scheduled. It might be cancled at some point over the next few weeks.*
 - July 6-11
 - Crown College (Bonifacius, MN)
 - <a href="https://www.google.com/maps/place/8700+College+View+Dr,+St+Bonifacius,+MN+55375">8700 College View Dr, St Bonifacius, MN 55375</a>
