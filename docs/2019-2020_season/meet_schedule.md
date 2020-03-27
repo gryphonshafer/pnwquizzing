@@ -34,11 +34,11 @@ The following is the latest schedule for 2019-2020:
 - Lighthouse Christian Center (LH)
 - <a href="https://www.google.com/maps/place/3409+23rd+St+SW,+Puyallup,+WA+98373">3409 23rd St SW, Puyallup, WA 98373</a>
 
-**Virtual Fun Meet**
+**Virtual Meet**
 
 - March 27-28
-- "Virtual Dallas"
-- <a href="https://join.slack.com/t/biblequizzing/shared_invite/zt-clqpjlua-c2LN_2i3Bs0764cGNM0NAQ">(Online)</a>
+- Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
 <strike>**Great West Invitational (GWI)**
 
