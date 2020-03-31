@@ -34,23 +34,23 @@ The following is the latest schedule for 2019-2020:
 - Lighthouse Christian Center (LH)
 - <a href="https://www.google.com/maps/place/3409+23rd+St+SW,+Puyallup,+WA+98373">3409 23rd St SW, Puyallup, WA 98373</a>
 
-**Virtual Meet**
+**Virtual District Meet 1**
 
 - March 27-28
-- Slack and Zoom
+- Internet: Slack and Zoom
 - <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
-<strike>**Great West Invitational (GWI)**
-
-- April 3-5
-- Crowsnest Lake Bible Camp
-- <a href="https://www.google.com/maps/place/J8GR%2B6F+Coleman,+Crowsnest+Pass,+AB">J8GR+6F Coleman, Crowsnest Pass, AB</a>
-
-**District Championship (DC)**
+**Virtual District Meet 2**
 
 - April 17-18
-- Double K Retreat Center (Easton, WA)
-- <a href="https://www.google.com/maps/place/620+Tall+Timber+Trail,+Easton,+WA+98925">620 Tall Timber Trail, Cle Elum, WA 98922</a></strike>
+- Internet: Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
+
+**Inter-District Virtual Open Invitational**
+
+- May 1-2 *(Date not yet official; could be +/- a weekend)*
+- Internet: Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
 **International Bible Quizzing (IBQ)**
 
