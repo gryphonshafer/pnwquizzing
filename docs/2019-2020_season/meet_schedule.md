@@ -52,9 +52,8 @@ The following is the latest schedule for 2019-2020:
 - Internet: Slack and Zoom
 - <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
-**International Bible Quizzing (IBQ)**
+**"Virtual International Quizzing Event Thing"**
 
-- *This meet is tenatively still scheduled. It might be cancled at some point over the next few weeks.*
-- July 6-11
-- Crown College (Bonifacius, MN)
-- <a href="https://www.google.com/maps/place/8700+College+View+Dr,+St+Bonifacius,+MN+55375">8700 College View Dr, St Bonifacius, MN 55375</a>
+- Early July *(Date not set; could be +/- a few weeks)*
+- Internet: Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
