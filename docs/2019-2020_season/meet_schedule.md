@@ -48,9 +48,16 @@ The following is the latest schedule for 2019-2020:
 
 **Inter-District Virtual Open Invitational**
 
-- May 1-2 *(Date not yet official; could be +/- a weekend)*
+- May 8-9
 - Internet: Slack and Zoom
 - <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
+- Districts/churches invited:
+    - PNW + Othello
+    - CMD
+    - WCD
+    - Metro
+- To register, teams/quizzers/coaches should email [gryphon@pnwquizzing.org](mailto:gryphon@pnwquizzing.org)
+- PNW will scramble quizzers into "PNW teams"
 
 **"Virtual International Quizzing Event Thing"**
 
