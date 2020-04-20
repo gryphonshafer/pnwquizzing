@@ -46,7 +46,7 @@ The following is the latest schedule for 2019-2020:
 - Internet: Slack and Zoom
 - <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
-**Inter-District Virtual Open Invitational**
+**CMA Open Virtual Inter-District Quiz Using Internet Zoom**
 
 - May 8-9
 - Internet: Slack and Zoom
@@ -58,9 +58,3 @@ The following is the latest schedule for 2019-2020:
     - Metro
 - To register, teams/quizzers/coaches should email [gryphon@pnwquizzing.org](mailto:gryphon@pnwquizzing.org)
 - PNW will scramble quizzers into "PNW teams"
-
-**"Virtual International Quizzing Event Thing"**
-
-- Early July *(Date not set; could be +/- a few weeks)*
-- Internet: Slack and Zoom
-- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
