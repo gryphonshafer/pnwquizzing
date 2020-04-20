@@ -5,7 +5,7 @@ use PnwQuizzing::Model::Register;
 my $settings = options('dryrun|d');
 my $report   = PnwQuizzing::Model::Register->new->send_reminders( $settings->{dryrun} );
 
-if ( $settings->{dryrun} ) {
+if ( $settings->{dryrun} and ref $report eq 'HASH' ) {
     say '       Meet: ', $report->{next_meet}{meet};
     say '   Deadline: ', $report->{next_meet}{deadline};
     say 'Days Before: ', $report->{next_meet}{days_before_deadline};

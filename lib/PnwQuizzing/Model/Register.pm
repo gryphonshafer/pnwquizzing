@@ -358,8 +358,11 @@ sub current_data ( $self, $user ) {
 }
 
 sub send_reminders ( $self, $dry_run = 0 ) {
-    my $email                 = PnwQuizzing::Model::Email->new( type => 'registration_reminder' );
-    my $next_meet             = $self->next_meet;
+    my $email     = PnwQuizzing::Model::Email->new( type => 'registration_reminder' );
+    my $next_meet = $self->next_meet;
+
+    return unless ( ref $next_meet eq 'HASH' and $next_meet->{schedule_id} );
+
     my @registered_church_ids = map { @$_ } @{
         $self->dq->sql(q{
             SELECT church_id
