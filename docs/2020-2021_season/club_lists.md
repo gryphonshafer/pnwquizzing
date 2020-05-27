@@ -8,7 +8,7 @@ You'll notice there are three "difficulties" so to speak, with one shorter list,
 
 ## Parables
 
-**188 verses**
+**193 verses**
 
 Every parable in the material, plus some metaphors and other figures of speech.
 
@@ -30,12 +30,14 @@ Every parable in the material, plus some metaphors and other figures of speech.
     - 20:1-16
     - 21:28-46
     - 22:1-14
-- Meet 5, 26-28 (15 verses)
-    - 26:26-29, 36-46
+- Meet 5, 26-28 (20 verses)
+    - 26:20-29
+    - 27:62-66
+    - 28:16-20
 
 ## Narratives
 
-**227 verses**
+**229 verses**
 
 A sampling of the important stories in Matthew. Great for studying Situation questions.
 
@@ -46,15 +48,15 @@ A sampling of the important stories in Matthew. Great for studying Situation que
 - Meet 2, 8-12 (33 verses)
     - 8:23-34
     - 9:18-38
-- Meet 3, 14-18 (55 verses)
-    - 14:14-36
+- Meet 3, 14-18 (56 verses)
+    - 14:13-36
     - 15:21-39
     - 17:1-13
-- Meet 4, 19-22 (28 verses)
-    - 20:29-34
+- Meet 4, 19-22 (31 verses)
+    - 20:20-28
     - 21:1-22
-- Meet 5, 26-28 (69 verses)
-    - 26:26-29, 36-46
+- Meet 5, 26-28 (67 verses)
+    - 26:6-13, 31-35
     - 27:11-54
     - 28:1-10
 
