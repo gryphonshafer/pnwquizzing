@@ -36,9 +36,6 @@ Once connected to the Zoom room:
     - Quizzers, change to your team name and full name: "**XYZ2 Firstname Lastname**"
     - Officials, change to your job title and full name: "**QM Firstname Lastname**"
     - For everyone else, change to your full name: "**Firstname Lastname**"
-- Quizzers: In the chat pane, change the "To" from "Everyone" to the room's quizmaster only.
-
-Everyone should turn off video and mute audio (except the quizmaster) and all quizzer's should setting their chat messages to go to the quizmaster only. This will dramatically improve reliability of the jump ordering for quizzers who have slow network connections.
 
 ### Quiz Operation
 
