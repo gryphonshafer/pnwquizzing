@@ -10,8 +10,9 @@ The following is the latest schedule for 2020-2021:
 
 **District Meet 1**
 
-- October 16-17
-- *TBD Location*
+- October 23-24
+- Madras (MAD)
+- <a href="https://www.google.com/maps/place/961+S+Adams+Dr,+Madras,+Oregon">961 S Adams Dr, Madras, OR 97741</a>
 
 **District Meet 2**
 
