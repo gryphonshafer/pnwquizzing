@@ -8,13 +8,14 @@ Directors meetings.
 The members, voting and non-voting, of the General Assembly are defined in the
 [bylaws](bylaws.md).
 
-- [Saturday, April 27, 2019](_meeting_minutes/2019-04-27.md) at Kelso Red Lion Inn
 - [Saturday, September 14, 2019](_meeting_minutes/2019-09-14.md) at Alliance Bible Church, Covington
+- [Saturday, April 27, 2019](_meeting_minutes/2019-04-27.md) at Kelso Red Lion Inn
 
 ## Board of Directors Meeting Minutes
 
 The current members of the Board of Directors are listed in
 [the leadership page](../about_us/leadership.md).
 
-- [Sunday, July 28, 2019](_meeting_minutes/2019-07-28.md) via Google Hangouts
+- [Saturday, July 25, 2020](_meeting_minutes/2020-07-25.md) at Portland-Troutdale Airport
 - [Monday, September 2, 2019](_meeting_minutes/2019-09-02.md) via Email
+- [Sunday, July 28, 2019](_meeting_minutes/2019-07-28.md) via Google Hangouts
