@@ -29,16 +29,16 @@ The following is the latest schedule for 2020-2021:
 - February 19-20
 - *TBD Location*
 
-**Great West Invitational (GWI)**
-
-- *TBD Date*
-- *TBD Location, though probably Crowsnest Lake Bible Camp*
-- <a href="https://www.google.com/maps/place/Crowsnest+Pass,+Coleman,+AB+T0K+0M0,+Canada">Crowsnest Pass, Coleman, AB T0K 0M0, Canada</a>
-
 **District Meet 5**
 
 - March 26-27
 - *TBD Location*
+
+**Great West Invitational (GWI)**
+
+- April 9-11
+- Crowsnest Lake Bible Camp
+- <a href="https://www.google.com/maps/place/Crowsnest+Pass,+Coleman,+AB+T0K+0M0,+Canada">Crowsnest Pass, Coleman, AB T0K 0M0, Canada</a>
 
 **District Championships**
 
