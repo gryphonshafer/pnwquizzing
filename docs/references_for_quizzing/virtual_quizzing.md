@@ -20,8 +20,6 @@ Everyone involved in the virtual quiz meet (quizzers, officials, coaches, specta
 
 Once signed in, join the `#virtual-meet` channel. This is a chat location area for the meet itself, almost like room 1 during a break in quizzing. Announcements will happen in the `#virtual-meet` channel. If you need help with anything meet-related, please ask in this channel. Those who are able to render assistance, please do so. Non-meet general chit-chat should happen in the `#general` channel or elsewhere.
 
-There will also be a `#virtual-meet-rooms` channel. This channel will consist of a listing of the current active quiz rooms and links to access each. Please do not write anything into the `#virtual-meet-rooms` channel unless it is to correct any inaccurate or outdated information.
-
 ### Entering Quiz Rooms
 
 Prior to a each quiz starting, a short announcement will be made in `#virtual-meet` (and copied to `#virtual-meet-rooms`) with a link to the Zoom and the teams involved. When the announcement happens, everybody with interest in that quiz should join the Zoom.
@@ -55,7 +53,6 @@ Quizzers: Only click enter if you are actively attempting to win the jump. *(As 
 
 There are some exceptions and special cases rules for virtual quizzing.
 
-- Quizzes are scheduled for 30 minutes in duration.
 - Quizzes should be started on time regardless of whether all participants are in the Zoom conference; however, quiz delays are acceptable if an entire team is still quizzing in another virtual room.
 - Quizzers can come and go from the Zoom meeting without impact to scoring *(i.e. the 20-point starting bonus)* and without need of a timeout or substitution.
 - If a quizzer types enter during the question preamble but prior to the quizmaster typing enter of the question-start dash sequence, the jump will be ignored by the quizmaster.
@@ -113,9 +110,7 @@ A designated official from each virtual "room" (likely but not necessarily the q
         - Allow host to assign participants: On
     - Virtual background: Off
 
-Links to these Zoom conferences should be posted in the `#virtual-meet` channel and kept current in the `#virtual-meet-rooms` channel. It's recommended the room creator/owner post in `#virtual-meet`, and a meet administrator update `#virtual-meet-rooms`. These link posts should include all Zoom connection information including ID and password. An easy way to get this is from within Zoom, select `Manage Participants` and click the `Invite` link followed by the `Copy Invitation` button.
-
-All officials and meet administrators should be part of a private `#officials` channel for any necessary back-channel discussions.
+Links to these Zoom conferences should be posted in the `#virtual-meet` channel. These link posts should include all Zoom connection information including ID and password. An easy way to get this is from within Zoom, select `Manage Participants` and click the `Invite` link followed by the `Copy Invitation` button.
 
 ### Zoom "Room" Setup Instructions
 
