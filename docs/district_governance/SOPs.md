@@ -2,7 +2,7 @@
 
 The following are the Standard Operating Policies, hereinafter referred to as SOPs, of Pacific Northwest Bible Quizzing, hereinafter referred to as PNW.
 
-- SOPs Version: 2019-01-02
+- SOPs Version: 2020-09-23
 
 These SOPs are managed by the Board of Directors of PNW as per the PNW Bylaws.
 
@@ -15,6 +15,17 @@ Whenever possible, these documents should be made public. The exception to this 
 ## Rules Codification
 
 The Rules Subcommittee is responsible for overseeing the rules codification of PNW. Rules codificiation should begin with the Christian and Missionary Alliance (CMA) Bible Quizzing rule book, accepted as the base set of rules. The Rules Subcommittee should then develop a *Pacific Northwest Bible Quizzing Rules* document that provide overrides and adjustments to the CMA rules as deemed necessary and appropriate by the Rules Subcommittee.
+
+## Additional Documents
+
+In addition to this SOP, there are sub-SOP documents that should be considered included as part of PNW's overall SOP. These documents are:
+
+- [Quizzer Behavioral Expectations](behavioral_expectations.md)
+- [Youth Protection Practices](youth_protection_practices.md)
+
+## Quizzer Eligability
+
+PNW Quizzing recognizes that coaches (ministry organization Quizzing program leaders) are the best able due to their proximity to and time with Quizzing participants to determine the appropriateness of eligability of each participant for their Quizzing teams. Therefore, head coaches are the ultimate decision-makers as to any given quizzer's eligability for participation. However, all quizzers will be held to the standards of conduct described in [Quizzer Behavioral Expectations](behavioral_expectations.md).
 
 ## Specific Roles
 
