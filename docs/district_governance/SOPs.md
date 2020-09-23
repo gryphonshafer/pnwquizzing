@@ -23,9 +23,9 @@ In addition to this SOP, there are sub-SOP documents that should be considered i
 - [Quizzer Behavioral Expectations](behavioral_expectations.md)
 - [Youth Protection Practices](youth_protection_practices.md)
 
-## Quizzer Eligability
+## Quizzer Eligibility
 
-PNW Quizzing recognizes that coaches (ministry organization Quizzing program leaders) are the best able due to their proximity to and time with Quizzing participants to determine the appropriateness of eligability of each participant for their Quizzing teams. Therefore, head coaches are the ultimate decision-makers as to any given quizzer's eligability for participation. However, all quizzers will be held to the standards of conduct described in [Quizzer Behavioral Expectations](behavioral_expectations.md).
+PNW Quizzing recognizes that coaches (ministry organization Quizzing program leaders) are the best able due to their proximity to and time with Quizzing participants to determine the appropriateness of eligibility of each participant for their Quizzing teams. Therefore, head coaches are the ultimate decision-makers as to any given quizzer's eligibility for participation. However, all quizzers will be held to the standards of conduct described in [Quizzer Behavioral Expectations](behavioral_expectations.md).
 
 ## Specific Roles
 
