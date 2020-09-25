@@ -5,13 +5,14 @@ The following is the latest schedule for 2020-2021:
 **Invitational Pre-Season Meet**
 
 - September 19
-- Virtual
+- Virtual: Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
 **District Meet 1**
 
 - October 23-24
-- Virtual or Madras (MAD)
-- <a href="https://www.google.com/maps/place/961+S+Adams+Dr,+Madras,+Oregon">961 S Adams Dr, Madras, OR 97741</a>
+- Virtual: Slack and Zoom
+- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
 
 **District Meet 2**
 
