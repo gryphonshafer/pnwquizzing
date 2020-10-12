@@ -6,19 +6,20 @@ The following is the latest schedule for 2020-2021:
 
 - September 19
 - Virtual: Slack and Zoom
-- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **District Meet 1**
 
 - October 23-24
 - Virtual: Slack and Zoom
-- <a href="https://biblequizzing.slack.com">https://biblequizzing.slack.com</a>
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
+- [Schedule, Draw, and Roster](https://docs.google.com/spreadsheets/d/1dkrvEdglKgIKKyVoWZtwGShitZ1vJ4CZ4ABCitXLrr8/edit?usp=sharing)
 
 **District Meet 2**
 
 - December 4-5
 - Virtual or Dallas Alliance Church (DAC)
-- <a href="https://www.google.com/maps/place/775+E+Ellendale+Ave,+Dallas,+OR+97338">775 E Ellendale Ave, Dallas, OR 97338</a>
+- [775 E Ellendale Ave, Dallas, OR 97338](https://www.google.com/maps/place/775+E+Ellendale+Ave,+Dallas,+OR+97338)
 
 **District Meet 3**
 
@@ -39,13 +40,13 @@ The following is the latest schedule for 2020-2021:
 
 - April 9-11
 - Crowsnest Lake Bible Camp
-- <a href="https://www.google.com/maps/place/Crowsnest+Pass,+Coleman,+AB+T0K+0M0,+Canada">Crowsnest Pass, Coleman, AB T0K 0M0, Canada</a>
+- [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/place/Crowsnest+Pass,+Coleman,+AB+T0K+0M0,+Canada)
 
 **District Championships**
 
 - April 23-24
 - Alliance Bible Church (ABC)
-- <a href="https://www.google.com/maps/place/19320+SE+240th+St,+Covington,+WA+98042">19320 SE 240th St., Covington, WA 98042</a>
+- [19320 SE 240th St., Covington, WA 98042](https://www.google.com/maps/place/19320+SE+240th+St,+Covington,+WA+98042)
 
 **Internationals**
 
