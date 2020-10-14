@@ -13,7 +13,7 @@ The following is the latest schedule for 2020-2021:
 - October 23-24
 - Virtual: Slack and Zoom
 - [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
-- [Schedule, Draw, and Roster](https://docs.google.com/spreadsheets/d/1dkrvEdglKgIKKyVoWZtwGShitZ1vJ4CZ4ABCitXLrr8/edit?usp=sharing)
+- [Schedule, Draw, and Roster](https://docs.google.com/spreadsheets/d/1dkrvEdglKgIKKyVoWZtwGShitZ1vJ4CZ4ABCitXLrr8)
 
 **District Meet 2**
 
