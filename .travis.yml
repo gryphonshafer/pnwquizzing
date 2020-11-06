@@ -13,9 +13,7 @@ before_install:
   - git config --global github.user gryphonshafer
 install:
   - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=c HARNESS_TIMER=1
-  - cd tools
   - cpanm -v -n --installdeps .
-  - cd ..
 script:
   - PERL5OPT=-MDevel::Cover=-coverage,statement,branch,condition,path,subroutine prove -lrsv tools/t
   - cover
