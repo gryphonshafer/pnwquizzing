@@ -11,6 +11,8 @@ before_install:
   - perl -V
   - cpanm -v -n -f Test::Pod Test::Pod::Coverage Test::CheckManifest Devel::Cover::Report::Coveralls
   - git config --global github.user gryphonshafer
+  - dest init
+  - dest update
 install:
   - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=c HARNESS_TIMER=1
   - cpanm -v -n --installdeps .
