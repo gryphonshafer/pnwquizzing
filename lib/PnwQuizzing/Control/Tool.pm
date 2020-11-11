@@ -222,7 +222,7 @@ sub registration_list ($self) {
 
                 $_->{house} = ( $_->{house} ) ? 'Yes' : 'No';
 
-                [ map { defined ? $_ : '' } @$_{@fields} ]
+                [ map { (defined) ? $_ : '' } @$_{@fields} ]
             }
             grep { $_->{attend} }
             @{ $list->{current_data}{quizzers} },

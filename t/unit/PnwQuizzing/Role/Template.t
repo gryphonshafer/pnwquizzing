@@ -27,32 +27,38 @@ is(
     'tt() Template context contains version',
 );
 
-$obj->tt->process(
-    \q{
-        BEGIN TEST DATA BLOCK
-        [% name | ucfirst %]
-        [% pi | round %]
-        [% constants.version %]
-        [% time %]
-        [% rand %]
-        [% rand( 9 ) %]
-        [% rand( 9, 1 ) %]
-        [% pick( 'a', 'b' ) %]
-        [% text.lower %]
-        [% text.upper %]
-        [% text.ucfirst %]
-        [% value.commify %]
-        [% thing.ref %]
-        END TEST DATA BLOCK
+my $output;
+lives_ok(
+    sub {
+        $obj->tt->process(
+            \q{
+                BEGIN TEST DATA BLOCK
+                [% name | ucfirst %]
+                [% pi | round %]
+                [% constants.version %]
+                [% time %]
+                [% rand %]
+                [% rand( 9 ) %]
+                [% rand( 9, 1 ) %]
+                [% pick( 'a', 'b' ) %]
+                [% text.lower %]
+                [% text.upper %]
+                [% text.ucfirst %]
+                [% value.commify %]
+                [% thing.ref %]
+                END TEST DATA BLOCK
+            },
+            {
+                name  => 'quizzing',
+                pi    => 3.1415,
+                value => 123456789,
+                text  => 'mIxEd',
+                thing => [],
+            },
+            \$output,
+        ) or die $obj->tt->error;
     },
-    {
-        name  => 'quizzing',
-        pi    => 3.1415,
-        value => 123456789,
-        text  => 'mIxEd',
-        thing => [],
-    },
-    my \$output,
+    'process()',
 );
 
 like( $output, qr/
