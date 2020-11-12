@@ -1,7 +1,7 @@
 # PNW Bible Quizzing
 
-[![Build Status](https://travis-ci.org/gryphonshafer/pnwquizzing.svg)](https://travis-ci.org/gryphonshafer/pnwquizzing)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/pnwquizzing/badge.png)](https://coveralls.io/r/gryphonshafer/pnwquizzing)
+[![build](https://github.com/gryphonshafer/pnwquizzing/workflows/build/badge.svg)](https://github.com/gryphonshafer/pnwquizzing/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/pnwquizzing/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/pnwquizzing)
 
 Web site, documents, statistics, and tools in support of the **PNW Bible
 Quizzing** program.
