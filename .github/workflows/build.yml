@@ -6,21 +6,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        perl-version: [ 32, 30, 28 ]
+        perl-version: [ 32, 30, 28, 26, 24, 22, 20 ]
     container:
       image: perldocker/perl-tester:5.${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v2
       - uses: perl-actions/install-with-cpanm@v1
         env:
-          PERL_CPANM_OPT: --from https://cpan.metacpan.org/
+          PERL_CPANM_OPT: --from https://cpan.metacpan.org/ --notest --force --skip-satisfied
         with:
           sudo: false
           args: --with-develop --with-all-features --installdeps .
           install: |
             Devel::Cover::Report::Codecov
-      # - run: dest init
-      # - run: dest update
-      - run: HARNESS_PERL_SWITCHES=-MDevel::Cover prove --recurse --lib --failures --jobs 4 --timer t/unit/PnwQuizzing/Role/DocsNav.t
-      # - run: CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} cover -report codecov
-      #   if: ${{ matrix.perl-version >= 26 }}
+      - run: dest init
+      - run: dest update
+      - run: HARNESS_PERL_SWITCHES=-MDevel::Cover prove --recurse --lib --failures --jobs 4 --timer t
+      - run: CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} cover -report codecov
+        if: ${{ matrix.perl-version >= 26 }}

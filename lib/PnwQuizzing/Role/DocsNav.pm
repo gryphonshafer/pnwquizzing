@@ -8,6 +8,7 @@ with 'PnwQuizzing::Role::Conf';
 
 sub generate_docs_nav ($self) {
     my $docs_dir = $self->conf->get( qw( config_app root_dir ) ) . '/docs';
+
     my @files;
     find(
         {
@@ -31,7 +32,7 @@ sub generate_docs_nav ($self) {
     my $docs_nav        = [];
 
     for (@files) {
-        next if (m|/_|);
+        next if (m|/_[^_]|);
 
         my $href = substr( $_, $docs_dir_length );
         my @path = ( 'Home Page', map {
