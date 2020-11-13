@@ -10,13 +10,23 @@ sub generate_docs_nav ($self) {
     my $docs_dir = $self->conf->get( qw( config_app root_dir ) ) . '/docs';
 
 
-warn $docs_dir;
-warn $0;
-use FindBin;
-warn $FindBin::Bin;
-warn $FindBin::Script;
-warn $FindBin::RealBin;
-warn $FindBin::RealScript;
+# use FindBin;
+
+# warn $docs_dir;
+# warn $0;
+# warn $FindBin::Bin;
+# warn $FindBin::Script;
+# warn $FindBin::RealBin;
+# warn $FindBin::RealScript;
+
+# $docs_dir;              /__w/pnwquizzing/pnwquizzing/docs
+# $0;                     t/unit/PnwQuizzing/Role/DocsNav.t
+# $FindBin::Bin;          /__w/pnwquizzing/pnwquizzing/t/unit/PnwQuizzing/Role
+# $FindBin::Script;       DocsNav.t
+# $FindBin::RealBin;      /__w/pnwquizzing/pnwquizzing/t/unit/PnwQuizzing/Role
+# $FindBin::RealScript;   DocsNav.t
+
+
 
 
 
@@ -44,6 +54,9 @@ warn $FindBin::RealScript;
     my $docs_nav        = [];
 
     for (@files) {
+
+warn $_;
+
         next if (m|/_|);
 
         my $href = substr( $_, $docs_dir_length );
