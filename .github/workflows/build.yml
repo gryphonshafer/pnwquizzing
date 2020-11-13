@@ -19,8 +19,8 @@ jobs:
           args: --with-develop --with-all-features --installdeps .
           install: |
             Devel::Cover::Report::Codecov
-      - run: dest init
-      - run: dest update
-      - run: HARNESS_PERL_SWITCHES=-MDevel::Cover prove --recurse --lib --failures --jobs 4 --timer t
-      - run: CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} cover -report codecov
-        if: ${{ matrix.perl-version >= 26 }}
+      # - run: dest init
+      # - run: dest update
+      - run: HARNESS_PERL_SWITCHES=-MDevel::Cover prove --recurse --lib --failures --jobs 4 --timer t/unit/PnwQuizzing/Role/DocsNav.t
+      # - run: CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} cover -report codecov
+      #   if: ${{ matrix.perl-version >= 26 }}
