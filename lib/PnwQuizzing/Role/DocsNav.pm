@@ -8,6 +8,19 @@ with 'PnwQuizzing::Role::Conf';
 
 sub generate_docs_nav ($self) {
     my $docs_dir = $self->conf->get( qw( config_app root_dir ) ) . '/docs';
+
+
+warn $docs_dir;
+warn $0;
+use FindBin;
+warn $FindBin::Bin;
+warn $FindBin::Script;
+warn $FindBin::RealBin;
+warn $FindBin::RealScript;
+
+
+
+
     my @files;
     find(
         {
