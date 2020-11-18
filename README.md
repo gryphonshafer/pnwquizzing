@@ -1,6 +1,6 @@
 # PNW Bible Quizzing
 
-[![build](https://github.com/gryphonshafer/pnwquizzing/workflows/build/badge.svg)](https://github.com/gryphonshafer/pnwquizzing/actions?query=workflow%3Abuild)
+[![test](https://github.com/gryphonshafer/pnwquizzing/workflows/test/badge.svg)](https://github.com/gryphonshafer/pnwquizzing/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/pnwquizzing/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/pnwquizzing)
 
 Web site, documents, statistics, and tools in support of the **PNW Bible
