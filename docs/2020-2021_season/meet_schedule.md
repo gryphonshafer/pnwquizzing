@@ -18,23 +18,26 @@ The following is the latest schedule for 2020-2021:
 **District Meet 2**
 
 - December 4-5
-- Virtual or Dallas Alliance Church (DAC)
-- [775 E Ellendale Ave, Dallas, OR 97338](https://www.google.com/maps/place/775+E+Ellendale+Ave,+Dallas,+OR+97338)
+- Virtual: Slack and Zoom
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **District Meet 3**
 
 - January 15-16
-- *TBD Location*
+- Virtual: Slack and Zoom *(may change to in-person if WA/OR policy allows)*
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **District Meet 4**
 
 - February 19-20
-- *TBD Location*
+- Virtual: Slack and Zoom *(may change to in-person if WA/OR policy allows)*
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **District Meet 5**
 
 - March 26-27
-- *TBD Location*
+- Virtual: Slack and Zoom *(may change to in-person if WA/OR policy allows)*
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **Great West Invitational (GWI)**
 
