@@ -4,6 +4,7 @@
 
 - [Pre-Season Meet](/downloads/2020-2021/pre-season.xlsx) Virtual *(Does not count for the year)*
 - [District Meet 1](/downloads/2020-2021/meet_1.xlsx) Virtual
+- [District Meet 2](/downloads/2020-2021/meet_2.xlsx) Virtual
 
 ## Notes
 
