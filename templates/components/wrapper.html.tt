@@ -1,7 +1,8 @@
 [%-
     page = {};
-    DEFAULT page.title = title || '';
-    DEFAULT page.vue   = '';
+    DEFAULT page.title   = title || '';
+    DEFAULT page.vue     = '';
+    DEFAULT page.noindex = 0;
 
     content = BLOCK;
         PROCESS $template;
@@ -18,6 +19,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        [% IF page.noindex %]<meta name="robots" content="noindex">[% END %]
 
         <link rel="shortcut icon" type="image/x-icon"
             href="[% c.url_for('/favicon.ico').query( version => constants.version ) %]">
