@@ -1,6 +1,64 @@
-/local
-/static/app.css
-.dest
-.prove
-cover_db
+# Local Files
+local/
+
+# Temporary Files
+*.tmp
+
+# Archives
+*.gz
+*.tar
+*.tgz
 *.zip
+
+# MacOS
+.DS_Store
+
+# Sublime Projects
+*.sublime-project
+*.sublime-workspace
+
+#-------------------------------------------------------------------------------
+
+# Prove
+.prove
+
+# Devel::Cover
+cover_db/
+
+# Devel::NYTProf
+nytprof/
+nytprof.out
+
+#-------------------------------------------------------------------------------
+
+# Dest Status
+/.dest/
+
+# GitHub Actions
+/src/
+
+#-------------------------------------------------------------------------------
+
+# Dizt::Zilla
+/.build/
+
+# Module::Build
+_build/
+Build
+Build.bat
+
+# Module::Install
+inc/
+
+# ExtUitls::MakeMaker
+/blib/
+/_eumm/
+/Makefile
+/Makefile.old
+/MANIFEST.bak
+/pm_to_blib
+
+#-------------------------------------------------------------------------------
+
+# Application
+/static/app.css
