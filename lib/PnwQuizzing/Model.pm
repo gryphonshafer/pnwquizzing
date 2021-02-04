@@ -71,7 +71,8 @@ sub save ( $self, @input ) {
             $self->prop(@input);
         }
         catch {
-            croak( ( /^Bad input/ ) ? 'Bad input in call to save()' : $_ );
+            my $e = $_ || $@;
+            croak( ( $e =~ /^Bad input/ ) ? 'Bad input in call to save()' : $e );
         };
     }
 

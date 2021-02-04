@@ -87,7 +87,7 @@ sub account ($self) {
                 $user->roles( $self->every_param('role') );
             }
             catch {
-                $handle_user_error->($_);
+                $handle_user_error->( $_ || $@ );
             };
 
             if ( $user and $user->data ) {
@@ -108,7 +108,7 @@ sub account ($self) {
                 );
             }
             catch {
-                $handle_user_error->($_);
+                $handle_user_error->( $_ || $@ );
             };
         }
     }
@@ -164,7 +164,8 @@ sub reset_password ($self) {
             );
         }
         catch {
-            $self->warn( $_->message );
+            my $e = $_ || $@;
+            $self->warn( $e->message );
             $self->stash( message => 'Unable to locate user account using the input values provided.' );
         };
     }
@@ -183,7 +184,8 @@ sub reset_password ($self) {
             $self->stash( new_passwd => $user->data->{passwd} );
         }
         catch {
-            $self->warn( $_->message );
+            my $e = $_ || $@;
+            $self->warn( $e->message );
             $self->stash( message =>
                 'Unable to reset user password. ' .
                 'This is likely due to an expired link in an email. ' .
