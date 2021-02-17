@@ -1,6 +1,6 @@
 package PnwQuizzing::Control;
 
-use exact 'Mojolicious', 'PnwQuizzing';
+use exact -trytiny, 'Mojolicious', 'PnwQuizzing';
 use CSS::Sass;
 use File::Path 'make_path';
 use Mojo::File;
@@ -76,7 +76,15 @@ sub startup ($self) {
         return 0;
     } );
 
-    $users->any('/tool/:action')->to( controller => 'tool' );
+    $users->any( '/tool/' . $_ )->to( controller => 'tool', action => $_ ) for ( qw(
+        hash
+        search
+        email
+        register
+        register_data
+        register_save
+        registration_list
+    ) );
 
     $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list ) );
 

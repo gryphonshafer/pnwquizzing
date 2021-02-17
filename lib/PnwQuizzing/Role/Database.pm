@@ -1,6 +1,6 @@
 package PnwQuizzing::Role::Database;
 
-use exact -role;
+use exact -role, -trytiny;
 use App::Dest;
 use DBIx::Query;
 use File::Path 'make_path';
@@ -21,7 +21,7 @@ class_has dq => sub ($self) {
             App::Dest->init;
             App::Dest->update;
         }
-        catch {}
+        catch {};
     }
 
     my $dq = DBIx::Query->connect(
