@@ -1,6 +1,7 @@
 package PnwQuizzing::Control;
 
-use exact -trytiny, 'Mojolicious', 'PnwQuizzing';
+use exact -notry, 'Mojolicious', 'PnwQuizzing';
+use Try::Tiny;
 use CSS::Sass;
 use File::Path 'make_path';
 use Mojo::File;

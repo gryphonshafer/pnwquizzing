@@ -1,6 +1,7 @@
 package PnwQuizzing::Role::Database;
 
-use exact -role, -trytiny;
+use exact -role, -notry;
+use Try::Tiny;
 use App::Dest;
 use DBIx::Query;
 use File::Path 'make_path';

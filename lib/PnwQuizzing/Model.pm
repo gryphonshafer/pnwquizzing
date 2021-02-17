@@ -1,6 +1,7 @@
 package PnwQuizzing::Model;
 
-use exact -trytiny, 'PnwQuizzing';
+use exact -notry, 'PnwQuizzing';
+use Try::Tiny;
 
 has name => undef;
 has data => undef;

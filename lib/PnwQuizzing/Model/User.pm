@@ -1,6 +1,7 @@
 package PnwQuizzing::Model::User;
 
-use exact -trytiny, 'PnwQuizzing::Model';
+use exact -notry, 'PnwQuizzing::Model';
+use Try::Tiny;
 use PnwQuizzing::Model::Email;
 
 with 'PnwQuizzing::Role::Bcrypt';
