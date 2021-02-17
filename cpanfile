@@ -6,7 +6,6 @@ requires 'Data::Printer', '0.40';
 requires 'Digest::Bcrypt', '1.209';
 requires 'Email::Mailer', '1.17';
 requires 'Encode', '3.08';
-requires 'File::Find', '1.37';
 requires 'File::Path', '2.18';
 requires 'Log::Dispatch', '2.70';
 requires 'Log::Dispatch::Email::Mailer', '1.11';
