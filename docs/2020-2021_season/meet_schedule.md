@@ -40,7 +40,7 @@ The following is the latest schedule for 2020-2021:
 
 **Virtual Great West Invitational (VGWI)**
 
-- April 10-11
+- April 9-10
 - Virtual: Slack and Zoom
 - [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
