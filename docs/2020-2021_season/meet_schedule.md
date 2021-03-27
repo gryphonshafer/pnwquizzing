@@ -46,12 +46,11 @@ The following is the latest schedule for 2020-2021:
 
 **District Championships**
 
-- April 23-24
+- April 30, May 1
 - Virtual: Slack and Zoom
 - [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
 **Internationals**
 
-- July 5-10 *(25% chance this may change to virtual due to US/Canadian policy)*
-- [Crown College](https://www.crown.edu)
-- [8700 College View Drive, Saint Bonifacius, Minnesota 55375](https://www.google.com/maps/place/8700+College+View+Drive%2C+Saint+Bonifacius%2C+Minnesota+55375)
+- July 5-10 *(may be virtual or a "national" championships)*
+- Location TBD
