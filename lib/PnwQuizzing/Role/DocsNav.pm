@@ -14,7 +14,7 @@ sub generate_docs_nav ($self) {
         {
             wanted => sub {
                 push( @files, $File::Find::name ) if (
-                    /\.(?:md|csv|pdf|xls|xlsx|doc|docx|ppt|pptx)$/i
+                    /\.(?:md|csv|pdf|xls|xlsx|xlsm|xlsb|doc|docx|ppt|pptx)$/i
                 );
             },
             preprocess => sub {

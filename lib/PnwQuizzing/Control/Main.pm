@@ -70,6 +70,7 @@ sub content ($self) {
                     ( $ft eq 'docx' ) ? 'file-word'  :
                     ( $ft eq 'xls'  ) ? 'file-excel' :
                     ( $ft eq 'xlsm' ) ? 'file-excel' :
+                    ( $ft eq 'xlsb' ) ? 'file-excel' :
                     ( $ft eq 'xlsx' ) ? 'file-excel' : undef;
 
                 ($icon)

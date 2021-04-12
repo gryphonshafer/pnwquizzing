@@ -8,6 +8,7 @@
 - [District Meet 3](/downloads/2020-2021/meet_3.xlsx) Virtual
 - [District Meet 4](/downloads/2020-2021/meet_4.xlsx) Virtual
 - [District Meet 5](/downloads/2020-2021/meet_5.xlsx) Virtual
+- [Great West Invitational](/downloads/2020-2021/gwi.xlsb) Virtual
 
 ## Cumulative Statistics
 
