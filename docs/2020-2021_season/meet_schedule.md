@@ -50,7 +50,13 @@ The following is the latest schedule for 2020-2021:
 - Virtual: Slack and Zoom
 - [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
 
-**Internationals**
+**Netionals**
 
-- July 5-10 *(may be virtual or a "national" championships)*
-- Location TBD
+- Early July
+- Virtual: Slack and Zoom
+- [https://biblequizzing.slack.com](https://biblequizzing.slack.com)
+
+**US Nationals**
+
+- Early July
+- Somewhere near-ish or around greater western Pennsylvania
