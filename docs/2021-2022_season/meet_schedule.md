@@ -17,19 +17,19 @@ The following is the latest schedule for 2021-2022:
 **District Meet 2**
 
 - Friday and Saturday, November 12-13
-- James 1-5 and Romans 1-3
+- James 1-5 and Romans 1-4
 - Location TBD
 
 **District Meet 3**
 
 - Friday and Saturday, January 7-8
-- James 1-5 and Romans 1-8
+- James 1-5 and Romans 1-9
 - Location TBD
 
 **District Meet 4**
 
 - Friday and Saturday, February 18-19
-- James 1-5 and Romans 1-12
+- James 1-5 and Romans 1-13
 - Location TBD
 
 **District Meet 5**
