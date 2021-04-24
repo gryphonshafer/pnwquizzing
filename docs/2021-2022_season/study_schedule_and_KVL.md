@@ -1,17 +1,17 @@
 <!--% hide_header_photo -->
 
-# 2021-2022 Study Schedule and KVL
+# 2021-2022 Study Schedule and Key Verses List (KVL)
 
 ## Recommended Study Schedule
 
 | Week | Start       | End          | Chapter   | Verses | Sum to Meet | Sum to Date        |
 |-----:|-------------|--------------|-----------|-------:|------------:|-------------------:|
-|    1 | Sun, Aug 22 | Sat, Aug 28  | Roman 1   |     27 |          27 |                 27 |
-|    2 | Sun, Aug 29 | Sat, Sep 4   | Roman 2   |     26 |          53 |                 53 |
-|    3 | Sun, Sep 5  | Sat, Sep 11  | Roman 3   |     18 |          71 |                 71 |
-|    4 | Sun, Sep 12 | Sat, Sep 18  | Roman 4   |     17 |          88 |                 88 |
+|    1 | Sun, Aug 22 | Sat, Aug 28  | James 1   |     27 |          27 |                 27 |
+|    2 | Sun, Aug 29 | Sat, Sep 4   | James 2   |     26 |          53 |                 53 |
+|    3 | Sun, Sep 5  | Sat, Sep 11  | James 3   |     18 |          71 |                 71 |
+|    4 | Sun, Sep 12 | Sat, Sep 18  | James 4   |     17 |          88 |                 88 |
 |    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **<i>Classic</i> Scramble<sup>TM</sup>** ||||
-|    6 | Sun, Sep 26 | Sat, Oct 2   | Roman 5   |     20 |          20 |                108 |
+|    6 | Sun, Sep 26 | Sat, Oct 2   | James 5   |     20 |          20 |                108 |
 |    7 | Sun, Oct 3  | Sat, Oct 9   | *Review* and **District Meet 1**                      ||||
 |    8 | Sun, Oct 10 | Sat, Oct 16  | Romans 1  |     32 |          32 |                140 |
 |    9 | Sun, Oct 17 | Sat, Oct 23  | Romans 2  |     29 |          61 |                169 |
@@ -38,7 +38,7 @@
 |   30 | Sun, Mar 13 | Sat, Mar 19  | *Review*                                              ||||
 |   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **District Meet 5**                      ||||
 
-## Key Verses List
+## Key Verses List (KVL)
 
 | Chapter   | Verses | Key Verses                                                       | Keys |
 |-----------|-------:|------------------------------------------------------------------|-----:|
