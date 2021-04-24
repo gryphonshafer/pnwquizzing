@@ -9,12 +9,6 @@ downloadable forms.
 
 ## Reference Material
 
-- [HTML](https://cbqz.org/materials/2020-2021_cma_pnw_matthew.html)
-- [PDF](https://cbqz.org/materials/2020-2021_cma_pnw_matthew.pdf)
-- [DOCX](https://cbqz.org/materials/2020-2021_cma_pnw_matthew.docx)
-- [XLSX](https://cbqz.org/materials/2020-2021_cma_pnw_matthew.xlsx)
-
-## Key Verses List
-
-- [HTML](https://cbqz.org/materials/2020-2021_cma_pnw_matthew_kvl.html)
-- [PDF](https://cbqz.org/materials/2020-2021_cma_pnw_matthew_kvl.pdf)
+- [HTML](https://cbqz.org/materials/2020-2021_cma_matthew.html)
+- [PDF](https://cbqz.org/materials/2020-2021_cma_matthew.pdf)
+- [DOCX](https://cbqz.org/materials/2020-2021_cma_matthew.docx)

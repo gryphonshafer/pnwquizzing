@@ -78,8 +78,14 @@ sub content ($self) {
                     : "$x$y$z)";
             |eg;
 
-            my $header_photos = $self->stash('header_photos');
-            my $header_photo  = $header_photos->[ rand @$header_photos ];
+            my $directives;
+            $directives->{ lc $1 } = 1 while ( $payload =~ /<!--\s*%\s*(.+?)\s*-->/sg );
+
+            my $header_photo;
+            unless ( $directives->{hide_header_photo} ) {
+                my $header_photos = $self->stash('header_photos');
+                $header_photo     = $header_photos->[ rand @$header_photos ];
+            }
 
             return $self->stash( html => markdown($payload), header_photo => $header_photo );
         }

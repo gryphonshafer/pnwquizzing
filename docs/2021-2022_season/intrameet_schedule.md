@@ -1,7 +1,6 @@
 # Intrameet Schedule
 
-The following is a new intrameet schedule we're going to try out.
-Feedback and criticisms are welcomed.
+The following is a typical intrameet schedule for 2021-2022.
 
 *Note that the Saturday-only Scramble meet schedule is a bit different: registration to start at 8:00 AM, worship/devotions start at 8:30 AM.*
 
@@ -29,6 +28,6 @@ Feedback and criticisms are welcomed.
 | Quizzing: Championships (1 quiz)      |  2:00 PM |  2:20 PM |
 | Awards, Closing                       |  2:20 PM |  2:40 PM |
 
-In addition, there won't be any synchronized quizzing. There will not be any
-posted scheduled start times for quizzes. When a team completes a quiz, it
-should immediately go to the quiz room that will run its next quiz.
+There won't be any synchronized quizzing. There will not be any posted scheduled
+start times for quizzes. When a team completes a quiz, it should immediately go
+to the quiz room that will run its next quiz.
