@@ -4,7 +4,7 @@ The following are the Bible Quizzing Rules, hereinafter referred to as Rules, of
 
 - Rules Version: 2019-01-02
 
-These rules are managed by the PNW Rules Subcommittee as per the PNW Bylaws and Standard Operating Policies (SOPs). Rules codificiation begins with the Christian and Missionary Alliance (CMA) Bible Quizzing rule book, accepted as the base set of rules. The following rules provide overrides and adjustments to the CMA rules as deemed necessary and appropriate by the Rules Subcommittee.
+These rules are managed by the PNW Rules Subcommittee as per the PNW Bylaws and Standard Operating Policies (SOPs). Rules codificiation begins with the IBQ rule book, accepted as the base set of rules. The following rules provide overrides and adjustments to the IBQ rules as deemed necessary and appropriate by the Rules Subcommittee.
 
 ## Questions
 

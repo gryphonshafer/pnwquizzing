@@ -2,9 +2,9 @@
 
 Scorekeeping is a great skill to learn and comes in handy if you are coaching a
 team or want to be an official scorekeeper. Information on scorekeeping can be
-found in the Official CMA Rule Book or in
-[a handy pamphlet](scorekeeper_notes.doc)
-created by Alliance Bible Church. Blank scoresheets are found here.
+found in the Official [IBQ Rule Book](/references_for_quizzing/IBQ_rule_book.md)
+or in [a handy pamphlet](scorekeeper_notes.doc) created by Alliance Bible
+Church. Blank scoresheets are found here.
 
 Accurate scorekeeping is crucial for keeping quizzes moving and the whole meet
 on schedule. Each scorekeeper shares the responsibility (with the quizmaster) of

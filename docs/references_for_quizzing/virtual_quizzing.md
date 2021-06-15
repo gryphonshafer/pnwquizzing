@@ -2,7 +2,7 @@
 
 The purpose of "virtual quizzing" is to support the core mission of Bible Quizzing: encouraging memorization of Scripture. It's a shadow or an echo of in-person Quizzing, missing much of the valuable aspects of in-person quizzing; however, in extrodinary times when it's impractical or impossible to gather together for in-person, traditional quiz meets, virtual quizzing can serve as a "better than nothing" subsitute. Virtual quizzing tries to capture as much of the quizzing experience as possible; however, there's much it can't replicate.
 
-The following are the specific processes and rules that need to be followed for virtual quizzing. These are all considered overlays to the existing processes and rules of traditional quizzing. Begin first with the set of rules for your juristiction. For example, if quizzing at the Internationals level (also referred to as "Internetionals"), begin with the most current [CMA rulebook](CMA_rule_book.md), then apply the following as overrides.
+The following are the specific processes and rules that need to be followed for virtual quizzing. These are all considered overlays to the existing processes and rules of traditional quizzing. Begin first with the set of rules for your juristiction. For example, if quizzing at the Internationals level (also referred to as "Internetionals"), begin with the most current [IBQ rulebook](IBQ_rule_book.md), then apply the following as overrides.
 
 ## Required Equipment
 

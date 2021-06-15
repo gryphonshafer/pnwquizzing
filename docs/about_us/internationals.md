@@ -17,24 +17,15 @@ all do.
 
 ### Life Impact Ministries, headquartered in York, PA
 
-- Jordan York - Event Planner/Ministry Assistant - [Email](mailto:jyork@lifeimpactcma.org)
 - Scott Wakely
 
 [Life Impact Ministries Website](http://www.lifeimpactcma.org/index.html)
 
 ### CMA Bible Quizzing Leadership Team
 
-- Lana Haight - Canadian Midwest - [Email](mailto:jeff.lana.haight@gmail.com)
-- Claudine Campbell - Northeastern - [Email](mailto:claudine@northeasternquizzing.com)
-- Jon Caskey - Central - [Email](mailto:cbssupply@live.com)
-- Aaron Haight
-- Ken Sproul
-- Karen Sinclair
-- Heather Pittman
-- Zach Tinker
-- Life Impact Ministries Representative - Scott Wakely
-
-On April 7, 2015, Dan Wetzel (Vice President Church Ministries C&MA) sent this email regarding a proposal to change the governing structure of C&MA Bible Quizzing:
+On April 7, 2015, Dan Wetzel (Vice President Church Ministries C&MA) sent this
+email regarding a proposal to change the governing structure of C&MA Bible
+Quizzing:
 
 - [PDF of Email](/downloads/internationals/proposal_email.pdf)
 - [PDF of Proposal](/downloads/internationals/proposal.pdf)

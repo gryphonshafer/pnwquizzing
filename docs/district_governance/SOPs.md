@@ -14,7 +14,7 @@ Whenever possible, these documents should be made public. The exception to this 
 
 ## Rules Codification
 
-The Rules Subcommittee is responsible for overseeing the rules codification of PNW. Rules codificiation should begin with the Christian and Missionary Alliance (CMA) Bible Quizzing rule book, accepted as the base set of rules. The Rules Subcommittee should then develop a *Pacific Northwest Bible Quizzing Rules* document that provide overrides and adjustments to the CMA rules as deemed necessary and appropriate by the Rules Subcommittee.
+The Rules Subcommittee is responsible for overseeing the rules codification of PNW. Rules codificiation should begin with the IBQ rule book, accepted as the base set of rules. The Rules Subcommittee should then develop a *Pacific Northwest Bible Quizzing Rules* document that provide overrides and adjustments to the IBQ rules as deemed necessary and appropriate by the Rules Subcommittee.
 
 ## Additional Documents
 

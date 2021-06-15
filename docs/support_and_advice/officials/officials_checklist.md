@@ -45,7 +45,7 @@ shared Google Drive for all officials.
     - Prefer strongest node *(and ask Meet Director for signal strength recommendation)*
     - Prefer 5Ghz to 2.4Ghz if both options are available
 - Open a copies of the:
-    - [CMA Rulebook](/references_for_quizzing/CMA_rule_book.md)
+    - [IBQ Rulebook](/references_for_quizzing/CMA_rule_book.md)
     - [PNW Rulebook](/references_for_quizzing/PNW_rules.md)
 - Verify you are synchronizing Google Drive correctly, or at least, that you can access the Google Drive
   shared folder for officials
@@ -62,11 +62,11 @@ shared Google Drive for all officials.
 - In CBQZ:
     - Login
     - **Always** double-check on main page the following selections:
-        - Quiz program: CMA Pacific Northwest
-        - Material set: 2019-2020 CMA PNW Hebrews Peter
-        - Questions set: 2019-2020 CMA PNW Hebrews Peter Officials Meet
+        - Quiz program
+        - Material set
+        - Questions set
     - Switch to Quiz Room
-    - Set "Meet Name" to the form: "2019-2020 Meet 1" *(with specific values changed for the specific meet)*
+    - Set "Meet Name"
     - Set "Room" to correct room
     - Ensure "Official Quiz" is checked
     - Verify "Question Types" setting is correct
