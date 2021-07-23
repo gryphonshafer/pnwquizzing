@@ -6,14 +6,6 @@ rules](PNW_rules.md) that supersede the IBQ Rule Book for PNW District Meets.
 
 ## Current Version
 
-At the moment, the current version of the rule book is the
-[2018 IBQ Bible Quizzing Rule Book](/downloads/IBQ_rule_book_2018.docx).
-
-## Future Version
-
-The future version of the rule book, likely to be adopted at the Internationals
-quiz meet in July, 2021, is as follows:
-
 ### Minimalist Render
 
 The minimalist render filters all special sections (such as terms, examples, commentary, and logic).
@@ -39,6 +31,7 @@ The full-content render contains all material.
 
 For reference purposes, here are links to past versions of the rule book:
 
+- [2018 IBQ Bible Quizzing Rule Book](/downloads/IBQ_rule_book_2018.docx)
 - [2017 IBQ Bible Quizzing Rule Book](/downloads/IBQ_rule_book_2017.pdf)
 - [2013 IBQ Bible Quizzing Rule Book](/downloads/IBQ_rule_book_2013.pdf)
 

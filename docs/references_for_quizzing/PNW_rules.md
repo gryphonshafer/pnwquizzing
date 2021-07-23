@@ -12,8 +12,6 @@ The following are rules about questions, questions types, distribution, and rela
 
 ### Key Verses
 
-*(The follow key verses rules does not come into effect until the beginning of the 2020-2021 season.)*
-
 Prior to each season, the Rules Committee or a person or group they appoint for this purpose will define and publish two versions of the upcoming season's Key Verses List (KVL), a public and private version. The public version will be published widely to all quizzing participants. The private version will be made available only to official question writers.
 
 The public KVL will not specify which FTV or Quote sub-types will be used for any given verse; only the private KVL will include this information. For example, the public list will not indicate whether two consecutive verses will be asked as an F2V/Q2V pair or whether they will be two separate FTVs/Quotes.
@@ -121,14 +119,6 @@ Final team placements are calculated as follows:
 
 - The team placements at District Championships are the final year placements for teams 1-18
 - The year-to-date team placements after District Meet 5 are the final year team placements for teams 19 and beyond
-
-## Quizmaster Prompts
-
-During the 30-second answering period, the quizmaster prompts rules shall be amended as follows:
-
-- If a quizzer, upon clearly pausing in reply after having attempted a full answer, is missing information required in either the question or answer, the quizmaster will, when the quizzer is not speaking, say, `More.`
-- If a quizzer, upon clearly pausing in reply after having attempted a full answer, has said a word or phrase which is not incorrect but also not yet correct, the quizmaster will, when the quizzer is not speaking, say, `Again.`
-- If a quizzer provided all the information in the answer except the clarification of a pronoun present which is part of the answer, the quizmaster will say, `Clarify PRONOUN.` *(Note that "PRONOUN" should be replaced with the actual pronoun to be clarified. For example, "Clarify 'he.'")*
 
 ## Team On-Time Bonus
 
