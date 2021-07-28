@@ -6,37 +6,37 @@ The following is the latest schedule for 2021-2022:
 
 - Saturday, September 25
 - James 1-4
-- Location TBD
+- [Alliance Bible Church (ABC)](https://www.google.com/maps/dir/Alliance+Bible+Church+covington)
 
 **District Meet 1**
 
 - Friday and Saturday, October 8-9
 - James 1-5
-- Location TBD
+- Location TBD *(Probably: Free Methodist Church, Madras OR)*
 
 **District Meet 2**
 
 - Friday and Saturday, November 12-13
 - James 1-5 and Romans 1-4
-- Location TBD
+- Location TBD *(Probably: Eastridge Baptist Church, Kent WA)*
 
 **District Meet 3**
 
 - Friday and Saturday, January 7-8
 - James 1-5 and Romans 1-9
-- Location TBD
+- Location TBD *(Probably: North Seattle Alliance, Seattle WA)*
 
 **District Meet 4**
 
 - Friday and Saturday, February 18-19
 - James 1-5 and Romans 1-13
-- Location TBD
+- Location TBD *(Probably: Lighthouse, Puyallup WA)*
 
 **District Meet 5**
 
 - Friday and Saturday, March 25-26
 - James 1-5 and Romans 1-16
-- Location TBD
+- [Dallas Alliance Church (DAC)](https://www.google.com/maps/dir/dallas+alliance+church+oregon)
 
 **Great West Invitational**
 
@@ -49,7 +49,7 @@ The following is the latest schedule for 2021-2022:
 
 - Late April or early May
 - James 1-5 and Romans 1-16
-- Location TBD *(though we're looking at Double K Retreat Center, Easton WA)*
+- Location TBD *(Probably: Double K Retreat Center, Easton WA)*
 
 **Internationals**
 
