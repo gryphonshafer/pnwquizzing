@@ -1,12 +1,10 @@
 # PNW Bible Quizzing
 
-<!--
 <iframe
     class="youtube"
-    src="https://www.youtube.com/embed/3kiATsWA9kE"
+    src="https://www.youtube.com/embed/4ZGv3KYFOso"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
--->
 
 ## What is Bible Quizzing?
 
