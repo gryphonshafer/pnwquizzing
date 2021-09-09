@@ -10,14 +10,14 @@
 |    2 | Sun, Aug 29 | Sat, Sep 4   | James 2   |     26 |          53 |                 53 |
 |    3 | Sun, Sep 5  | Sat, Sep 11  | James 3   |     18 |          71 |                 71 |
 |    4 | Sun, Sep 12 | Sat, Sep 18  | James 4   |     17 |          88 |                 88 |
-|    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **<i>Classic</i> Scramble<sup>TM</sup>** ||||
+|    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **<i>Classic</i> Scramble™**             ||||
 |    6 | Sun, Sep 26 | Sat, Oct 2   | James 5   |     20 |          20 |                108 |
-|    7 | Sun, Oct 3  | Sat, Oct 9   | *Review* and **District Meet 1**                      ||||
+|    7 | Sun, Oct 3  | Sat, Oct 9   | *Review* and *"Pivot" District Meet Opportunity*      ||||
 |    8 | Sun, Oct 10 | Sat, Oct 16  | Romans 1  |     32 |          32 |                140 |
 |    9 | Sun, Oct 17 | Sat, Oct 23  | Romans 2  |     29 |          61 |                169 |
 |   10 | Sun, Oct 24 | Sat, Oct 30  | Romans 3  |     31 |          92 |                200 |
 |   11 | Sun, Oct 31 | Sat, Nov 6   | Romans 4  |     25 |         117 |                225 |
-|   12 | Sun, Nov 7  | Sat, Nov 13  | *Review* and **District Meet 2**                      ||||
+|   12 | Sun, Nov 7  | Sat, Nov 13  | *Review* and **Ultrameet™ A**                         ||||
 |   13 | Sun, Nov 14 | Sat, Nov 20  | Romans 5  |     21 |          21 |                246 |
 |   14 | Sun, Nov 21 | Sat, Nov 27  | Romans 6  |     23 |          44 |                269 |
 |   15 | Sun, Nov 28 | Sat, Dec 4   | Romans 7  |     25 |          69 |                294 |
@@ -25,18 +25,18 @@
 |   17 | Sun, Dec 12 | Sat, Dec 18  | Romans 9  |     33 |         141 |                366 |
 |   18 | Sun, Dec 19 | Sat, Dec 25  | *Review*                                              ||||
 |   19 | Sun, Dec 26 | Sat, Jan 1   | *Review*                                              ||||
-|   20 | Sun, Jan 2  | Sat, Jan 8   | *Review* and **District Meet 3**                      ||||
+|   20 | Sun, Jan 2  | Sat, Jan 8   | *Review* and *"Pivot" District Meet Opportunity*      ||||
 |   21 | Sun, Jan 9  | Sat, Jan 15  | Romans 10 |     21 |          21 |                387 |
 |   22 | Sun, Jan 16 | Sat, Jan 22  | Romans 11 |     36 |          57 |                423 |
 |   23 | Sun, Jan 23 | Sat, Jan 29  | Romans 12 |     21 |          78 |                444 |
 |   24 | Sun, Jan 30 | Sat, Feb 5   | Romans 13 |     14 |          92 |                458 |
 |   25 | Sun, Feb 6  | Sat, Feb 12  | *Review*                                              ||||
-|   26 | Sun, Feb 13 | Sat, Feb 19  | *Review* and **District Meet 4**                      ||||
+|   26 | Sun, Feb 13 | Sat, Feb 19  | *Review* and *"Pivot" District Meet Opportunity*      ||||
 |   27 | Sun, Feb 20 | Sat, Feb 26  | Romans 14 |     23 |          23 |                481 |
 |   28 | Sun, Feb 27 | Sat, Mar 5   | Romans 15 |     33 |          56 |                514 |
 |   29 | Sun, Mar 6  | Sat, Mar 12  | Romans 16 |     26 |          82 |                540 |
 |   30 | Sun, Mar 13 | Sat, Mar 19  | *Review*                                              ||||
-|   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **District Meet 5**                      ||||
+|   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **Ultrameet™ B**                         ||||
 
 ## Key Verses List (KVL)
 

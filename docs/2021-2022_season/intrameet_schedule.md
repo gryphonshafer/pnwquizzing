@@ -49,6 +49,10 @@ season. The exact schedule for these may be based on the following template:
 
 ## Ultrameets™
 
+An Ultrameet™ is a 3-day meet located likely in northern Idaho, probably in or
+around Coeur d'Alene. The intent is for teams to arrive Thursday evening and
+return Sunday evening.
+
 ### Friday
 
 | Event                  | Start    | End      |
@@ -72,8 +76,7 @@ season. The exact schedule for these may be based on the following template:
 
 | Event                   | Start    | End      |
 |-------------------------|---------:|---------:|
-| Church Service          |  9:00 AM | 12:00 PM |
+| Church Service          | 10:00 AM | 12:00 PM |
 | Lunch Break and Games   | 12:00 PM |  1:30 PM |
-| Quizzing                |  1:30 PM |  4:30 PM |
-| Quizzing: Championships |  4:30 PM |  5:00 PM |
-| Awards, Closing         |  5:00 PM |  5:30 PM |
+| Quizzing: Championships |  1:30 PM |  2:00 PM |
+| Awards, Closing         |  2:00 PM |  2:30 PM |
