@@ -45,7 +45,7 @@ The following is the current season schedule for 2021-2022:
 
 **District Championships**
 
-- Friday, Saturday, and Sunday, April 22-24
+- Friday, Saturday, and Sunday, April 29-May 1
 - James 1-5 and Romans 1-16
 - [Double K Retreat Center, Easton WA](https://www.google.com/maps/dir/Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
 
