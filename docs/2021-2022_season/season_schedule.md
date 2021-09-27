@@ -8,11 +8,15 @@ The following is the current season schedule for 2021-2022:
 - James 1-4
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
+<!--
+
 *"Pivot" District Meet Opportunity*
 
 - Saturday and Sunday, October 9-10
 - James 1-5
 - [Eastridge Baptist Church, Kent WA](https://www.google.com/maps/dir/Eastridge+Baptist+Church,+12520+SE+240th+St,+Kent,+WA+98031)
+
+-->
 
 **Ultrameet™ A**
 

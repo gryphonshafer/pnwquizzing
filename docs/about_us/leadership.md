@@ -12,4 +12,4 @@
   ([rules@pnwquizzing.org](mailto:rules@pnwquizzing.org))
 - Sharalyn Shafer, PNWTI (Treasurer)
 - Kristine Delamarter, Madras
-- Sarah Davis, Dallas Alliance Church
+- Andrew Borden, Alliance Bible Church

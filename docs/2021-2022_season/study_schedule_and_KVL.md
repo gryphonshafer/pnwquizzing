@@ -12,7 +12,7 @@
 |    4 | Sun, Sep 12 | Sat, Sep 18  | James 4   |     17 |          88 |                 88 |
 |    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **<i>Classic</i> Scramble™**             ||||
 |    6 | Sun, Sep 26 | Sat, Oct 2   | James 5   |     20 |          20 |                108 |
-|    7 | Sun, Oct 3  | Sat, Oct 9   | *Review* and *"Pivot" District Meet Opportunity*      ||||
+|    7 | Sun, Oct 3  | Sat, Oct 9   | *Review*                                              ||||
 |    8 | Sun, Oct 10 | Sat, Oct 16  | Romans 1  |     32 |          32 |                140 |
 |    9 | Sun, Oct 17 | Sat, Oct 23  | Romans 2  |     29 |          61 |                169 |
 |   10 | Sun, Oct 24 | Sat, Oct 30  | Romans 3  |     31 |          92 |                200 |
