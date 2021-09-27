@@ -3,6 +3,7 @@ package PnwQuizzing::Role::DocsNav;
 use exact -role;
 use File::Find 'find';
 use Mojo::File;
+use Encode 'decode_utf8';
 
 with 'PnwQuizzing::Role::Conf';
 
@@ -83,7 +84,7 @@ sub generate_docs_nav ($self) {
             push( @$set, {
                 name  => $name,
                 href  => '/' . $href,
-                title => $title,
+                title => decode_utf8($title),
                 type  => $type,
             } );
         }
