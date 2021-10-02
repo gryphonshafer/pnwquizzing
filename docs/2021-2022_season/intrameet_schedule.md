@@ -21,47 +21,11 @@ there will be more fun and games time throughout.
 | Quizzing: "Championships"        |  4:30 PM |  5:00 PM |
 | Awards, Closing                  |  5:00 PM |  5:30 PM |
 
-## District "Pivot" Meets
+## District Meets
 
-There won't be any "regular" district meets as in past years. Instead, if we
-are able to conduct a WA/OR district meet, these will be "pivot" meets based
-on available host options. It's possible we won't have any "pivot" meets this
-season. The exact schedule for these may be based on the following template:
-
-### Saturday
-
-| Event                 | Start    | End      |
-|-----------------------|---------:|---------:|
-| Announcements         |  8:00 AM |  8:20 AM |
-| Quizzing              |  8:30 AM | 12:00 PM |
-| Lunch Break and Games | 12:00 PM |  1:30 PM |
-| Quizzing              |  1:30 PM |  5:00 PM |
-
-### Sunday
-
-| Event                   | Start    | End      |
-|-------------------------|---------:|---------:|
-| Church Service          |  9:00 AM | 12:00 PM |
-| Lunch Break and Games   | 12:00 PM |  1:30 PM |
-| Quizzing                |  1:30 PM |  4:30 PM |
-| Quizzing: Championships |  4:30 PM |  5:00 PM |
-| Awards, Closing         |  5:00 PM |  5:30 PM |
-
-## Ultrameets™
-
-An Ultrameet™ is a 3-day meet located likely in northern Idaho, probably in or
-around Coeur d'Alene. The intent is for teams to arrive Thursday evening and
-return Sunday evening.
-
-### Friday
-
-| Event                  | Start    | End      |
-|------------------------|---------:|---------:|
-| Announcements          |  9:00 AM |  9:20 AM |
-| Quizzing               |  9:30 AM | 12:00 PM |
-| Lunch Break and Games  | 12:00 PM |  1:30 PM |
-| Quizzing               |  1:30 PM |  5:00 PM |
-| Dinner Break and Games |  5:00 PM |  7:30 PM |
+These are regular district meets that happen 4 times over the season. The exact
+schedule for these may be customized as needed but will generally follow this
+template:
 
 ### Saturday
 
@@ -70,13 +34,31 @@ return Sunday evening.
 | Announcements         |  8:00 AM |  8:20 AM |
 | Quizzing              |  8:30 AM | 12:00 PM |
 | Lunch Break and Games | 12:00 PM |  1:30 PM |
-| Quizzing              |  1:30 PM |  5:00 PM |
+| Quizzing              |  1:30 PM |  4:00 PM |
 
 ### Sunday
 
 | Event                   | Start    | End      |
 |-------------------------|---------:|---------:|
-| Church Service          | 10:00 AM | 12:00 PM |
-| Lunch Break and Games   | 12:00 PM |  1:30 PM |
-| Quizzing: Championships |  1:30 PM |  2:00 PM |
-| Awards, Closing         |  2:00 PM |  2:30 PM |
+| Quizzing                |  1:00 PM |  3:15 PM |
+| Quizzing: Championships |  3:15 PM |  3:45 PM |
+| Awards, Closing         |  3:45 PM |  4:00 PM |
+
+### Sunrise, Sunset
+
+- District Meet 1
+    - Saturday and Sunday, November 13-14
+    - Sunrise: 7:13 AM
+    - Sunset: 4:36 PM
+- District Meet 2
+    - Saturday and Sunday, January 8-9
+    - Sunrise: 7:57 AM
+    - Sunset: 4:38 PM
+- District Meet 3
+    - Saturday and Sunday, February 19-20
+    - Sunrise: 7:09 AM
+    - Sunset: 5:40 PM
+- District Meet 4
+    - Saturday and Sunday, March 26-27
+    - Sunrise: 7:01 AM
+    - Sunset: 7:32 PM

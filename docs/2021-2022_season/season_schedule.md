@@ -8,37 +8,29 @@ The following is the current season schedule for 2021-2022:
 - James 1-4
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-<!--
+**District Meet 1**
 
-*"Pivot" District Meet Opportunity*
-
-- Saturday and Sunday, October 9-10
-- James 1-5
-- [Eastridge Baptist Church, Kent WA](https://www.google.com/maps/dir/Eastridge+Baptist+Church,+12520+SE+240th+St,+Kent,+WA+98031)
-
--->
-
-**Ultrameet™ A**
-
-- Friday, Saturday, and Sunday, November 12-14
+- Saturday and Sunday, November 13-14
 - James 1-5 and Romans 1-4
+- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-*"Pivot" District Meet Opportunity*
+**District Meet 2**
 
 - Saturday and Sunday, January 8-9
 - James 1-5 and Romans 1-9
-- [North Seattle Alliance, Seattle WA](https://www.google.com/maps/dir/North+Seattle+Church,+2150+N+122nd+St,+Seattle,+WA+98133)
+- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-*"Pivot" District Meet Opportunity*
+**District Meet 3**
 
 - Saturday and Sunday, February 19-20
 - James 1-5 and Romans 1-13
-- [Lighthouse, Puyallup WA](https://www.google.com/maps/dir/Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
+- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-**Ultrameet™ B**
+**District Meet 4**
 
-- Friday, Saturday, and Sunday, March 25-27
+- Saturday and Sunday, March 26-27
 - James 1-5 and Romans 1-16
+- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
 **Great West Invitational**
 
