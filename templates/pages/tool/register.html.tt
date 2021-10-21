@@ -1,303 +1,265 @@
 [%
     page.title = 'Registration';
     page.vue   = 'register';
+    no_edit    = next_meet.past_deadline;
+
+    page.inline_js.push( 'var register_data = ' _ register_data );
 %]
 
-<h1>Quiz Meet Team/Staff Registration</h1>
+<h1>Quiz Meet Registration</h1>
 
-[% IF schedule_id %]
-    <ul>
-        <li>Next Quiz Meet: <b>[% meet %]</b></li>
-        <li>Meet Location: <b>[% location %], <a href="[% address_url %]">[% address %]</a></b></li>
-        <li>Start Date: <b>[% start %]</b></li>
-        <li[% IF past_deadline %] style="color: red"[% END %]>Registration Deadline: <b>[% deadline %]</b>
-        <li>Housing: <b>[% (house) ? '' : '<span style="color: red">Not</span> ' %]Available</b></li>
-        <li>Lunch: <b>[% (lunch) ? '' : '<span style="color: red">Not</span> ' %]Available</b></li>
-    </ul>
-[% ELSE %]
-    <p>
-        There doesn't appear to be an upcoming meet scheduled; therefore, it is
-        not currently possible to register.
-    </p>
-[% END %]
+[% INCLUDE next_meet_info.html.tt %]
 
 <p>
-    For hosts and other interested parties, please view the current
-    <b><a href="[% c.url_for('registration_list') %]">Quiz Meet Registration List</a></b>
-    with district-wide registration data.
+    For hosts and other interested parties, please view the
+    <b><a href="[% c.url_for('meet_data') %]">Quiz Meet Registration Data</a></b>
+    page with district-wide registration data.
 </p>
 
 <div id="register" v-cloak>
-    <h2>Quizzers for {{ church.name }}</h2>
+    <fieldset id="personal_registration" class="left">
+        <legend>Your Personal Registration</legend>
 
-    <p v-if="teams.length == 0">
-        There are currently no quizzers registered for {{ church.name }}.
-        [% IF no_edit %]
-            Only coaches, officials, and volunteers can add or edit registration data.
-            <i>(You are not listed as one of these currently.)</i>
-        [% END %]
-    </p>
-
-    <div v-for="( team, team_index ) in teams">
-        <h3>{{ church.acronym }} {{ team_index + 1 }}</h3>
-
-        <div class="register_quizzers">
-            <table>
-                <thead>
-                    <tr>
-                        [% UNLESS no_edit %]<th></th>[% END %]
-                        <th>Bib</th>
-                        <th>Name</th>
-                        <th>Cap</th>
-                        <th>M/F</th>
-                        <th>Grade</th>
-                        <th>Rookie</th>
-                        <th>Attend</th>
-                        [% IF house %]<th>House</th>[% END %]
-                        [% IF lunch %]<th>Lunch</th>[% END %]
-                        <th>Notes</th>
-                        [% UNLESS no_edit %]<th></th>[% END %]
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="( quizzer, person_index ) in team" v-bind:class="{ inactive: ! quizzer.attend }">
-                        [% UNLESS no_edit %]
-                            <td>
-                                <i class="la la-arrow-up" v-on:click="reorder( -1, person_index, team_index )"></i>
-                                <i class="la la-arrow-down" v-on:click="reorder( 1, person_index, team_index )"></i>
-                            </td>
-                        [% END %]
-                        <td class="right">
-                            {{ person_index + 1 }}
-                        </td>
-                        <td>
-                            [% UNLESS no_edit %]
-                                <input type="text" name="name" v-model="quizzer.name">
-                            [% ELSE %]
-                                {{ quizzer.name }}
-                            [% END %]
-                        </td>
-                        <td class="center">
-                            [% UNLESS no_edit %]
-                                <select name="captain" v-model="quizzer.captain">
-                                    <option></option>
-                                    <option>Cap</option>
-                                    <option>CC</option>
-                                </select>
-                            [% ELSE %]
-                                {{ quizzer.captain }}
-                            [% END %]
-                        </td>
-                        <td class="center">
-                            [% UNLESS no_edit %]
-                                <select name="m_f" v-model="quizzer.m_f">
-                                    <option>M</option>
-                                    <option>F</option>
-                                </select>
-                            [% ELSE %]
-                                {{ quizzer.m_f }}
-                            [% END %]
-                        </td>
-                        <td class="right">
-                            [% UNLESS no_edit %]
-                                <input type="text" class="short right"
-                                    name="grade" v-model="quizzer.grade">
-                            [% ELSE %]
-                                {{ quizzer.grade }}
-                            [% END %]
-                        </td>
-                        <td class="checkbox">
-                            [% UNLESS no_edit %]
-                                <input type="checkbox" v-model="quizzer.rookie">
-                            [% ELSE %]
-                                {{ ( quizzer.rookie ) ? "Yes" : "No" }}
-                            [% END %]
-                        </td>
-                        <td class="checkbox">
-                            [% UNLESS no_edit %]
-                                <input type="checkbox" v-model="quizzer.attend">
-                            [% ELSE %]
-                                {{ ( quizzer.attend ) ? "Yes" : "No" }}
-                            [% END %]
-                        </td>
-                        [% IF house %]
-                            <td class="checkbox">
-                                [% UNLESS no_edit %]
-                                    <input type="checkbox" v-model="quizzer.house" v-bind:disabled="! quizzer.attend">
-                                [% ELSE %]
-                                    {{ ( quizzer.house ) ? "Yes" : "No" }}
-                                [% END %]
-                            </td>
-                        [% END %]
-                        [% IF lunch %]
-                            <td class="checkbox">
-                                [% UNLESS no_edit %]
-                                    <input type="checkbox" v-model="quizzer.lunch" v-bind:disabled="! quizzer.attend">
-                                [% ELSE %]
-                                    {{ ( quizzer.lunch ) ? "Yes" : "No" }}
-                                [% END %]
-                        [% END %]
-                        </td>
-                        <td>
-                            [% UNLESS no_edit %]
-                                <input type="text" name="notes" v-model="quizzer.notes">
-                            [% ELSE %]
-                                {{ quizzer.notes }}
-                            [% END %]
-                        </td>
-                        [% UNLESS no_edit %]
-                            <td><i class="la la-trash-o"
-                                v-on:click="delete_person( person_index, team_index )"
-                            ></i></td>
-                        [% END %]
-                    </tr>
-                </tbody>
-                [% UNLESS no_edit %]
-                    <caption align="bottom">
-                        <button v-on:click="add_quizzer(team)">Add a Quizzer</button>
-                    </caption>
-                [% END %]
-            </table>
-        </div>
-    </div>
-
-    [% UNLESS no_edit %]
-        <p><button v-on:click="add_team">Add a Team</button></p>
-    [% END %]
-
-    <h2>Nonquizzers from {{ church.name }}</h2>
-
-    <p v-if="non_quizzers.length == 0">
-        There are currently no nonquizzers registered from {{ church.name }}.
-        [% IF no_edit %]
-            Only coaches can add or edit registration data.
-            <i>(You are not listed as a coach currently.)</i>
-        [% END %]
-    </p>
-
-    <div class="register_non_quizzers" v-if="non_quizzers.length > 0">
-        <table>
-            <thead>
-                <tr>
-                    [% UNLESS no_edit %]<th></th>[% END %]
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>M/F</th>
-                    <th>Attend</th>
-                    <th>Drive</th>
-                    [% IF house %]<th>House</th>[% END %]
-                    [% IF lunch %]<th>Lunch</th>[% END %]
-                    <th>Notes</th>
-                    [% UNLESS no_edit %]<th></th>[% END %]
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="( person, person_index ) in non_quizzers"
-                    v-bind:class="{ inactive: ! person.attend }"
-                >
-                    [% UNLESS no_edit %]
-                        <td>
-                            <i class="la la-arrow-up" v-on:click="reorder( -1, person_index )"></i>
-                            <i class="la la-arrow-down" v-on:click="reorder( 1, person_index )"></i>
-                        </td>
-                    [% END %]
-                    <td>
-                        [% UNLESS no_edit %]
-                            <input type="text" name="name" v-model="person.name">
-                        [% ELSE %]
-                            {{ person.name }}
-                        [% END %]
-                    </td>
-                    <td>
-                        [% UNLESS no_edit %]
-                            <select name="role" v-model="person.role">
-                                <option v-for="role in roles">{{ role.name }}</option>
-                            </select>
-                        [% ELSE %]
-                            {{ person.role }}
-                        [% END %]
-                    </td>
-                    <td class="center">
-                        [% UNLESS no_edit %]
-                            <select name="m_f" v-model="person.m_f">
-                                <option>M</option>
-                                <option>F</option>
-                            </select>
-                        [% ELSE %]
-                            {{ person.m_f }}
-                        [% END %]
-                    </td>
-                    <td class="checkbox">
-                        [% UNLESS no_edit %]
-                            <input type="checkbox" v-model="person.attend">
-                        [% ELSE %]
-                            {{ ( person.attend ) ? "Yes" : "No" }}
-                        [% END %]
-                    </td>
-                    <td class="checkbox">
-                        [% UNLESS no_edit %]
-                            <input type="checkbox" v-model="person.drive" v-bind:disabled="! person.attend">
-                        [% ELSE %]
-                            {{ ( person.drive ) ? "Yes" : "No" }}
-                        [% END %]
-                    </td>
-                    [% IF house %]
-                        <td class="checkbox">
-                            [% UNLESS no_edit %]
-                                <input type="checkbox" v-model="person.house" v-bind:disabled="! person.attend">
-                            [% ELSE %]
-                                {{ ( person.house ) ? "Yes" : "No" }}
-                            [% END %]
-                        </td>
-                    [% END %]
-                    [% IF lunch %]
-                        <td class="checkbox">
-                            [% UNLESS no_edit %]
-                                <input type="checkbox" v-model="person.lunch" v-bind:disabled="! person.attend">
-                            [% ELSE %]
-                                {{ ( person.lunch ) ? "Yes" : "No" }}
-                            [% END %]
-                        </td>
-                    [% END %]
-                    <td>
-                        [% UNLESS no_edit %]
-                            <input type="text" name="notes" v-model="person.notes">
-                        [% ELSE %]
-                            {{ person.notes }}
-                        [% END %]
-                    </td>
-                    [% UNLESS no_edit %]
-                        <td><i class="la la-trash-o" v-on:click="delete_person(person_index)"></i></td>
-                    [% END %]
-                </tr>
-            </tbody>
+        <p>
+            Are you attending <b>[% next_meet.meet_name %]</b>?
             [% UNLESS no_edit %]
-                <caption align="bottom">
-                    <button v-on:click="add_non_quizzer">Add a Nonquizzer</button>
-                </caption>
+                <label><input type="radio" value="1" v-model="attend"> Yes</label>
+                <label><input type="radio" value="0" v-model="attend"> No</label>
+            [% ELSE %]
+                <b>{{ ( attend == 1 ) ? 'Yes' : 'No' }}</b>
             [% END %]
-        </table>
+        </p>
+
+        <div v-if="attend == 1">
+            <fieldset class="left">
+                [% UNLESS no_edit %]
+                    <legend>Your Meet Roles</legend>
+                    <label v-for="role in meet_roles">
+                        <input type="checkbox" v-bind:value="role" v-model="roles">
+                        {{ role }}
+                    </label>
+                [% ELSE %]
+                    <legend>Meet Roles</legend>
+                    <ul>
+                        <li v-for="role in roles">
+                            {{ role }}
+                        </li>
+                    </ul>
+                [% END %]
+            </fieldset>
+
+            [% IF next_meet.house OR next_meet.lunch %]
+                <div style="display: inline-block; padding-left: 1em">
+            [% END %]
+                [% IF next_meet.house %]
+                    <p>
+                        Are you driving a vehicle you could use to transport passengers to a host home?
+                        [% UNLESS no_edit %]
+                            <label><input type="radio" value="1" v-model="drive"> Yes</label>
+                            <label><input type="radio" value="0" v-model="drive"> No</label>
+                        [% ELSE %]
+                            <b>{{ ( drive == 1 ) ? 'Yes' : 'No' }}</b>
+                        [% END %]
+                    </p>
+
+                    <p>
+                        Do you need overnight housing?
+                        [% UNLESS no_edit %]
+                            <label><input type="radio" value="1" v-model="house"> Yes</label>
+                            <label><input type="radio" value="0" v-model="house"> No</label>
+                        [% ELSE %]
+                            <b>{{ ( next_meet.house == 1 ) ? 'Yes' : 'No' }}</b>
+                        [% END %]
+                    </p>
+                [% END %]
+
+                [% IF next_meet.lunch %]
+                    <p>
+                        Would you like host-provided lunch?
+                        [% UNLESS no_edit %]
+                            <label><input type="radio" value="1" v-model="lunch"> Yes</label>
+                            <label><input type="radio" value="0" v-model="lunch"> No</label>
+                        [% ELSE %]
+                            <b>{{ ( next_meet.lunch == 1 ) ? 'Yes' : 'No' }}</b>
+                        [% END %]
+                    </p>
+                [% END %]
+            [% IF next_meet.house OR next_meet.lunch %]
+                </div>
+            [% END %]
+
+            <p>
+                Notes:
+                <input type="text" class="wide" name="notes" v-model="notes">
+            </p>
+        </div>
+    </fieldset>
+
+    <div v-if="can_register_teams">
+        <h2>Quizzers from {{ org.name }}</h2>
+
+        <p v-if="teams.length == 0">
+            There are currently no quizzers registered from {{ org.name }}.
+        </p>
+        <p v-else>
+            The following is the registration data for {{ org.name }} for
+            <b>[% next_meet.meet_name %]</b>.
+        </p>
+
+        <div v-for="( team, team_index ) in teams">
+            <h3>{{ org.acronym }} {{ team_index + 1 }}</h3>
+
+            <div class="register_quizzers">
+                <table>
+                    <thead>
+                        <tr>
+                            [% UNLESS no_edit %]<th></th>[% END %]
+                            <th>Bib</th>
+                            <th>Name</th>
+                            <th>Cap</th>
+                            <th>M/F</th>
+                            <th>Grade</th>
+                            <th>Rookie</th>
+                            <th>Attend</th>
+                            [% IF house %]<th>House</th>[% END %]
+                            [% IF lunch %]<th>Lunch</th>[% END %]
+                            <th>Notes</th>
+                            [% UNLESS no_edit %]<th></th>[% END %]
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="( quizzer, person_index ) in team"
+                            v-bind:class="{ inactive: ! quizzer.attend }"
+                        >
+                            [% UNLESS no_edit %]
+                                <td>
+                                    <i class="la la-arrow-up"
+                                        v-on:click="reorder( -1, person_index, team_index )"></i>
+                                    <i class="la la-arrow-down"
+                                        v-on:click="reorder( 1, person_index, team_index )"></i>
+                                </td>
+                            [% END %]
+                            <td class="right">
+                                {{ person_index + 1 }}
+                            </td>
+                            <td>
+                                [% UNLESS no_edit %]
+                                    <input type="text" name="name" v-model="quizzer.name">
+                                [% ELSE %]
+                                    {{ quizzer.name }}
+                                [% END %]
+                            </td>
+                            <td class="center">
+                                [% UNLESS no_edit %]
+                                    <select name="captain" v-model="quizzer.captain">
+                                        <option></option>
+                                        <option>Cap</option>
+                                        <option>CC</option>
+                                    </select>
+                                [% ELSE %]
+                                    {{ quizzer.captain }}
+                                [% END %]
+                            </td>
+                            <td class="center">
+                                [% UNLESS no_edit %]
+                                    <select name="m_f" v-model="quizzer.m_f">
+                                        <option>M</option>
+                                        <option>F</option>
+                                    </select>
+                                [% ELSE %]
+                                    {{ quizzer.m_f }}
+                                [% END %]
+                            </td>
+                            <td class="right">
+                                [% UNLESS no_edit %]
+                                    <input type="text" class="short right"
+                                        name="grade" v-model="quizzer.grade">
+                                [% ELSE %]
+                                    {{ quizzer.grade }}
+                                [% END %]
+                            </td>
+                            <td class="checkbox">
+                                [% UNLESS no_edit %]
+                                    <input type="checkbox" v-model="quizzer.rookie">
+                                [% ELSE %]
+                                    {{ ( quizzer.rookie ) ? "Yes" : "No" }}
+                                [% END %]
+                            </td>
+                            <td class="checkbox">
+                                [% UNLESS no_edit %]
+                                    <input type="checkbox" v-model="quizzer.attend">
+                                [% ELSE %]
+                                    {{ ( quizzer.attend ) ? "Yes" : "No" }}
+                                [% END %]
+                            </td>
+                            [% IF house %]
+                                <td class="checkbox">
+                                    [% UNLESS no_edit %]
+                                        <input type="checkbox" v-model="quizzer.house"
+                                            v-bind:disabled="! quizzer.attend">
+                                    [% ELSE %]
+                                        {{ ( quizzer.house ) ? "Yes" : "No" }}
+                                    [% END %]
+                                </td>
+                            [% END %]
+                            [% IF lunch %]
+                                <td class="checkbox">
+                                    [% UNLESS no_edit %]
+                                        <input type="checkbox" v-model="quizzer.lunch"
+                                            v-bind:disabled="! quizzer.attend">
+                                    [% ELSE %]
+                                        {{ ( quizzer.lunch ) ? "Yes" : "No" }}
+                                    [% END %]
+                            [% END %]
+                            </td>
+                            <td>
+                                [% UNLESS no_edit %]
+                                    <input type="text" name="notes" v-model="quizzer.notes">
+                                [% ELSE %]
+                                    {{ quizzer.notes }}
+                                [% END %]
+                            </td>
+                            [% UNLESS no_edit %]
+                                <td><i class="la la-trash-o"
+                                    v-on:click="delete_person( person_index, team_index )"
+                                ></i></td>
+                            [% END %]
+                        </tr>
+                    </tbody>
+                    [% UNLESS no_edit %]
+                        <caption align="bottom">
+                            <button v-on:click="add_quizzer(team)">Add a Quizzer</button>
+                        </caption>
+                    [% END %]
+                </table>
+            </div>
+        </div>
+
+        [% UNLESS no_edit %]
+            <p><button v-on:click="add_team">Add a Team</button></p>
+        [% END %]
     </div>
 
     [% UNLESS no_edit %]
-        <p v-if="non_quizzers.length == 0"><button v-on:click="add_non_quizzer">Add a Nonquizzer</button></p>
-    [% END %]
+        <div v-if="changed == 1">
+            <h2>Save Registration Data</h2>
+            <p>
+                You can save registration data as many times as you'd like up
+                until the deadline.
+            </p>
+            <p>
+                <button v-on:click="save_registration">Save Registration Data</button>
+            </p>
 
-    [% UNLESS no_edit %]
-        <h2>Save Registration</h2>
-        <p>
-            You can save registration data as many times as you'd like up until
-            the deadline. At some point prior to the deadline, you need to check
-            the "Final Meet Registration" checkbox below, which indicates that
-            you believe the registration data will not change prior to the meet.
-        </p>
-        <p>
-            <label>
-                <input type="checkbox" name="final" v-model="final_registration">
-                Final Meet Registration
-            </label>
-            <br>
-            <button v-on:click="save_registration">Save Registration Data</button>
-        </p>
+            <form
+                id="register_save"
+                method="post"
+                action="[% c.url_for('/tool/register_save') %]"
+                enctype="multipart/form-data"
+                style="display: none"
+            >
+                <input type="text" name="data" value="">
+            </form>
+        </div>
     [% END %]
 </div>

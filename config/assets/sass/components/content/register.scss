@@ -1,39 +1,56 @@
 div#register {
-    td input[type="text"] {
-        margin: -1px -3px -1px -3px;
-        height: 20px;
-        border-color: transparent;
+    fieldset#personal_registration {
+        p {
+            label {
+                display: block;
+                input {
+                    margin-left: 2em;
+                }
+            }
+        }
     }
 
-    td input[type="text"]:hover {
-        border-color: blue;
-    }
+    td {
+        input[type="text"] {
+            margin: -1px -3px -1px -3px;
+            height: 20px;
+            border-color: transparent;
+        }
 
-    td select {
-        margin: -1px -3px -1px -3px;
-        height: 24px;
-        border-color: transparent;
-    }
+        input[type="text"]:hover {
+            border-color: blue;
+        }
 
-    td select:hover {
-        border-color: blue;
-    }
+        select {
+            margin: -1px -3px -1px -3px;
+            height: 24px;
+            border-color: transparent;
+        }
 
-    td input[type="text"].short {
-        width: 40px;
-    }
+        select:hover {
+            border-color: blue;
+        }
 
-    td.checkbox {
-        padding: 0px;
-        text-align: center;
-    }
+        input[type="text"].short {
+            width: 40px;
+        }
 
-    td.checkbox input[type="checkbox"] {
-        margin-top: 5px;
-    }
+        select, textarea, input[type="text"] {
+            padding-right: 10px;
+        }
 
-    td.checkbox input[type="checkbox"]:hover {
-        outline: 1px solid blue;
+        &.checkbox {
+            padding: 0px;
+            text-align: center;
+        }
+
+        &.checkbox input[type="checkbox"] {
+            margin-top: 5px;
+        }
+
+        &.checkbox input[type="checkbox"]:hover {
+            outline: 1px solid blue;
+        }
     }
 
     i.la {
@@ -63,14 +80,6 @@ div#register {
 
         table {
             min-width: 53.5em;
-        }
-    }
-
-    div.register_non_quizzers {
-        overflow-x: auto;
-
-        table {
-            min-width: 49.9em;
         }
     }
 }

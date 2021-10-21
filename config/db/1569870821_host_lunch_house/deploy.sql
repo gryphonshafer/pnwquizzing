@@ -1,4 +1,0 @@
--- dest.prereq: config/db/1558031082_registration
-
-ALTER TABLE schedule ADD COLUMN house INTEGER NOT NULL DEFAULT 1;
-ALTER TABLE schedule ADD COLUMN lunch INTEGER NOT NULL DEFAULT 1;

@@ -1,36 +1,70 @@
-<title>PNW Quizzing: Registration reminder</title>
+<title>PNW Quizzing: Registration data check reminder</title>
 
-<p>Greetings [% first_name %],</p>
+<style type="text/css">
+    h2 {
+        font-size: 110%;
+    }
+
+    table, th, td {
+        border          : 1px solid silver;
+        padding         : 0px;
+        border-spacing  : 0px;
+        border-collapse : collapse;
+        font-size       : 100%;
+    }
+
+    th {
+        background-color : lightgray;
+        padding          : 2px 5px 2px 5px;
+        text-align       : left;
+        font-weight      : bold;
+    }
+
+    td {
+        padding: 1px 3px 1px 3px;
+    }
+
+    th.right, td.right, tr.right td {
+        text-align: right;
+    }
+
+    th.center, td.center {
+        text-align: center;
+    }
+
+    tr.red td {
+        background-color: #fcc;
+    }
+
+    tr.green td {
+        background-color: #cfc;
+    }
+
+    tr.blue td {
+        background-color: #ccf;
+    }
+
+    tr.bold td {
+        font-family : bold;
+        font-weight : normal;
+    }
+</style>
+
+<p>Greetings [% user.data.first_name %],</p>
 
 <p>
-    This is a registration reminder email. The next quiz meet,
-    <b>[% meet %]</b> hosted at <b>[% location %]</b>, will begin on [% start %].
+    This is a registration data check reminder email. The following will be your
+    registration should you not make any changes prior to the deadline. Should
+    you need to make any changes, visit the
+    <b><a href="[% url %]/tool/register">Meet Registration</a></b>
+    web page.
+    <i>(<a href="[% url %]/tool/register">[% url %]/tool/register</a>)</i>
 </p>
 
-<ul>
-    <li>Meet: <b>[% meet %]</b></li>
-    <li>Location: <b>[% location %]</b></li>
-    <li>Address: <b><a href="[% address_url %]">[% address  %]</a></b></li>
-    <li>Start: <b>[% start %]</b></li>
-</ul>
+[% INCLUDE next_meet_info.html.tt %]
+[% INCLUDE meet_data_tables.html.tt %]
 
 <p>
-    It appears that <b>[% church %] ([% acronym %])</b> has not <i>finalized</i>
-    registration for this upcoming quiz meet. (Meaning, has not clicked the
-    "Final Meet Registration" checkbox before clicking the "Save Registration
-    Data" button for this upcoming quiz meet.)
-
-    [% UNLESS days_before_deadline == 2 %]
-        Please use the link below to finalize your registration:
-    [% ELSE %]
-        Please remind your coach(es) to use the link below to finalize your registration:
-    [% END %]
-</p>
-
-<p><b><a href="[% url %]/tool/register">Online Meet Registration System</a></b></p>
-
-<p>
-    Note there are <b>[% days_before_deadline %]</b> days remaining before the
-    meet registration deadline. The registration deadline is [% deadline %],
-    and the meet start is [% start %].
+    If you have any questions about anything, please email
+    <a href="mailto:contact@pnwquizzing.org">contact@pnwquizzing.org</a>.
 </p>

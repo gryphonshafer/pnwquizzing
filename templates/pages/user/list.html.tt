@@ -1,23 +1,61 @@
-[% page.title = 'Accounts List' %]
+[%
+    page.title = 'Accounts List';
+    page.vue   = 'user_list';
+
+    page.inline_js.push( 'var list_data = ' _ list_data );
+%]
+
 <h1>PNW Quizzing Accounts List</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Church</th>
-            <th>Roles</th>
-        </tr>
-    </thead>
-    <tbody>
-        [% FOR users %]
+<div id="user_list" v-cloak>
+    <form>
+        <fieldset class="left">
+            <legend>Filter List to Roles</legend>
+                <label v-for="role in roles">
+                    <input type="checkbox" v-model="role.selected">
+                    {{ role.name }}
+                </label>
+        </fieldset>
+
+        <fieldset class="left">
+            <legend>Render Display Style</legend>
+
+            <label>
+                <input type="checkbox" v-model="cnp_email_list">
+                Simplified Emails List
+            </label>
+        </fieldset>
+    </form>
+
+    <table v-if="filtered_users.length > 0 && ! cnp_email_list">
+        <thead>
             <tr>
-                <td>[% first_name %] [% last_name %]</td>
-                <td><a href="mailto:[% email %]">[% email %]</a></td>
-                <td>[% church_acronym %] <i>([% church_name %])</i></td>
-                <td>[% roles %]</td>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Organization</th>
+                <th>Roles</th>
             </tr>
-        [% END %]
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <tr v-for="( user, user_index ) in filtered_users">
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td><a v-bind:href="'mailto:' + user.email">{{ user.email }}</a></td>
+                <td v-if="user.org">{{ user.org.name }} ({{ user.org.acronym }})</td>
+                <td v-else>(None)</td>
+                <td>{{ user.roles.join(', ') || '(None)' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="box" v-else-if="filtered_users.length > 0 && cnp_email_list">
+        <template v-for="( user, user_index ) in filtered_users">
+            {{ user.first_name }} {{ user.last_name }}
+            &lt;<a v-bind:href="'mailto:' + user.email">{{ user.email }}</a>&gt;
+            <br>
+        </template>
+    </div>
+
+    <p v-else>
+        There is no data to display.
+    </p>
+</div>

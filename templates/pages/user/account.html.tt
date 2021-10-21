@@ -2,9 +2,9 @@
     [% page.title = ( c.stash.user ) ? 'Account Profile Edit' : 'New User Sign-Up' %]
     <h1>
         [% IF c.stash.user %]
-            PNW Quizzing Site Account Profile Edit
+            PNW Quizzing Account Profile Edit
         [% ELSE %]
-            Sign-Up for New PNW Quizzing Site Account
+            Sign-Up for a New PNW Quizzing Account
         [% END %]
     </h1>
 
@@ -15,7 +15,7 @@
         [% ELSE %]
             sign up for a
         [% END %]
-        PNW Quizzing site account:
+        PNW Quizzing account:
     </p>
 
     [% BLOCK input %]
@@ -25,7 +25,7 @@
                 name="[% field %]"
                 value="[%
                     IF field != 'passwd';
-                        ($field) ? $field : ( c.stash.user ) ? c.stash.user.prop(field) : '';
+                        ($field) ? $field : ( c.stash.user ) ? c.stash.user.data.$field : '';
                     END;
                 %]"
                 placeholder="[% label %]" size="20">
@@ -43,23 +43,28 @@
             [% PROCESS input label = 'Email Address', field = 'email'      %]
 
             <label>
-                Ministry:
-                <select name="church" style="width: 180px">
+                Organization:
+                <select name="org" style="width: 180px">
                     [% UNLESS c.stash.user %]
                         <option value="_NOT_DEFINED"></option>
                     [% END %]
 
-                    [% UNLESS c.stash.user.data.church_id %]
-                        <option value="">New Ministry Not Listed</option>
+                    [% UNLESS c.stash.user.data.org_id %]
+                        <option value="_NEW_ORG">New Organization (Not Listed)</option>
                     [% END %]
 
-                    [% FOR church IN churches %]
+                    [% FOR org IN orgs %]
                         <option
-                            value="[% church.acronym %]"
-                            [% IF church.has_church %]selected[% END %]
-                        >[% church.name %]</option>
+                            value="[% org.org_id %]"
+                            [% IF org.has_org %]selected[% END %]
+                        >[% org.acronym %] ([% org.name %])</option>
                     [% END %]
                 </select>
+
+                [% IF c.stash.user %]
+                    <br>
+                    <a href="[% c.url_for('/user/org') %]">Edit Organization Record</a>
+                [% END %]
             </label>
 
             [% UNLESS c.stash.user %]
@@ -78,7 +83,7 @@
                 [% FOR role IN roles %]
                     <label>
                         <input type="checkbox"
-                            name="role" value="[% role.name %]"
+                            name="roles" value="[% role.name %]"
                             [% IF role.has_role %]checked[% END %]
                         >
                         [% role.name %]
@@ -95,10 +100,10 @@
     </form>
 [% ELSE %]
     [% page.title = 'Account Created' %]
-    <h1>New PNW Quizzing Site Account Created</h1>
+    <h1>New PNW Quizzing Account Created</h1>
 
     <p>
-        Your new site account is created,
+        Your new account is created,
         <b><span class="red">but it is currently inactive</span></b>.
         An email was sent to the email address you supplied.
     </p>

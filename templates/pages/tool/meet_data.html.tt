@@ -1,0 +1,39 @@
+[% page.title = 'Meet Registration Data' %]
+
+<h1>[% page.title %]</h1>
+
+[% INCLUDE next_meet_info.html.tt %]
+[% INCLUDE meet_data_tables.html.tt %]
+
+<h2>Registration Totals</h2>
+
+<ul>
+    <li>
+        Attending:
+        <b>[% totals.attending || 0 %]</b>
+    </li>
+    <li>
+        Organizations:
+        <b>[% totals.organizations.keys.size || 0 %]</b>
+    </li>
+    <li>
+        Teams:
+        <b>[% totals.teams.keys.size || 0 %]</b>
+    </li>
+    <li>
+        Quizzers:
+        <b>[% totals.quizzers || 0 %]</b>
+    </li>
+    <li>
+        Non-Quizzers:
+        <b>[% totals.nonquizzers || 0 %]</b>
+    </li>
+</ul>
+
+[% IF ( org_reg AND org_reg.size > 0 ) OR ( user_reg AND user_reg.size > 0 ) %]
+    <h2>Download CSV Data</h2>
+
+    <form action="[% c.url_for( format => 'csv' ).to_string %]">
+        <input type="submit" value="Download CSV Data" />
+    </form>
+[% END %]

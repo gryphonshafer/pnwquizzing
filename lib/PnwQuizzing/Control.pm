@@ -1,172 +1,34 @@
 package PnwQuizzing::Control;
 
-use exact -notry, 'Mojolicious', 'PnwQuizzing';
-use Try::Tiny;
-use CSS::Sass;
-use File::Path 'make_path';
+use exact -conf, 'Omniframe::Control';
 use Mojo::File;
-use Mojo::Loader 'load_class';
-use MojoX::Log::Dispatch::Simple;
-use PnwQuizzing::Model::User;
-use PnwQuizzing::Model::Register;
-
-with qw( PnwQuizzing::Role::Template PnwQuizzing::Role::DocsNav );
 
 sub startup ($self) {
-    my $root_dir = $self->conf->get( 'config_app', 'root_dir' );
+    $self->setup_mojo_logging;
 
     $self->plugin('RequestBase');
+    $self->sass->build;
 
-    $self->build_css($root_dir);
-    $self->setup_mojo_logging;
-    $self->setup_templating($root_dir);
-    $self->setup_session_login;
+    $self->setup_access_log;
+    $self->setup_templating;
+    $self->setup_static_paths;
+    $self->setup_config;
+    $self->setup_packer;
+    $self->setup_compressor;
+    $self->setup_document;
+    $self->setup_devdocs;
 
-    $self->static->paths->[0] =~ s|/public$|/static|;
-    $self->config( $self->conf->get( 'mojolicious', 'config' ) );
-    $self->secrets( $self->conf->get( 'mojolicious', 'secrets' ) );
-    $self->sessions->cookie_name( $self->conf->get( qw( mojolicious session cookie_name ) ) );
-    $self->sessions->default_expiration( $self->conf->get( qw( mojolicious session default_expiration ) ) );
+    $self->preload_controllers;
 
-    if ( $self->mode eq 'production' ) {
-        load_class( 'PnwQuizzing::Control::' . $_ ) for qw( Main Tool User );
-    }
-
-    $self->hook( 'before_dispatch' => sub ($self) { $self->session_login } );
-
-    $self->hook( 'after_dispatch' => sub ($self) {
-        my $url = $self->req->url->to_string;
-
-        if ( $url =~ m|^/downloads/| ) {
-            my ($type) = lc($url) =~ /\.([^\.\/]+)$/;
-            $type ||= '';
-            my ($filename) = $url =~ /\/([^\/]+)$/;
-
-            $self->res->headers->content_type(
-                ( $self->app->types->type($type) || 'application/x-download' ) . ';name=' . $filename
-            );
-        }
-    } );
-
-    my $docs_nav     = $self->generate_docs_nav;
-    my $registration = PnwQuizzing::Model::Register->new;
-    my $header       = length( $root_dir . '/static' );
-    my $photos       = Mojo::File
+    my $root_dir = conf->get( qw( config_app root_dir ) );
+    my $photos   = Mojo::File
         ->new( $root_dir . '/static/photos' )
         ->list_tree
-        ->map( sub { substr( $_->to_string, $header ) } )
+        ->map( sub { substr( $_->to_string, length( $root_dir . '/static' ) ) } )
         ->grep(qr/\.(?:jpg|png)$/)
         ->to_array;
 
     my $all = $self->routes->under( sub ($self) {
-        $self->stash(
-            docs_nav      => $docs_nav,
-            header_photos => $photos,
-            registration  => $registration,
-        );
-    } );
-
-    my $users = $all->under( sub ($self) {
-        if ( $self->stash('user') ) {
-            $self->stash( noindex => 1 );
-            return 1;
-        }
-        $self->info('Login required but not yet met');
-        $self->flash( message => 'Login required for the previously requested resource.' );
-        $self->redirect_to('/');
-        return 0;
-    } );
-
-    $users->any( '/tool/' . $_ )->to( controller => 'tool', action => $_ ) for ( qw(
-        hash
-        search
-        email
-        register
-        register_data
-        register_save
-        registration_list
-    ) );
-
-    $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list ) );
-
-    $all->any('/user/verify/:verify_user_id/:verify_passwd')->to('user#verify');
-    $all->any('/user/reset_password/:reset_user_id/:reset_passwd')->to('user#reset_password');
-    $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( login account reset_password ) );
-
-    $all->any('/search')->to('tool#search');
-    $all->any('/git/push')->to('main#git_push');
-    $all->any('/')->to('main#home_page');
-    $all->any('/*name')->to('main#content');
-}
-
-sub build_css ( $self, $root_dir ) {
-    Mojo::File->new(
-        $root_dir . '/static/' . $self->conf->get( 'css', 'compile_to' )
-    )->spurt(
-        (
-            CSS::Sass->new(
-                source_comments => 1,
-            )->compile_file(
-                $root_dir . '/' . $self->conf->get( 'css', 'scss_src' )
-            )
-        )[0]
-    );
-}
-
-sub setup_mojo_logging ($self) {
-    my $log_dir = join( '/',
-        $self->conf->get( qw( config_app root_dir ) ),
-        $self->conf->get( qw( logging log_dir ) ),
-    );
-    make_path($log_dir) unless ( -d $log_dir );
-
-    $self->setup_access_log;
-
-    $self->log(
-        MojoX::Log::Dispatch::Simple->new(
-            dispatch  => $self->log_dispatch,
-            level     => $self->conf->get( 'logging', 'log_level', $self->mode ),
-            format_cb => sub { join( '',
-                $self->log_date(shift),
-                ' [' . uc(shift) . '] ',
-                join( "\n", $self->dp( [ @_, '' ], colored => 0 ) ),
-            ) },
-        )
-    );
-
-    for my $level ( $self->log_levels ) {
-        $self->helper( $level => sub {
-            shift;
-            $self->log->$level($_) for ( $self->dp(\@_) );
-            return;
-        } );
-    }
-}
-
-sub setup_access_log ($self) {
-    $self->log->level('error'); # temporarily raise log level to skip AccessLog "warn" status
-    $self->plugin(
-        'AccessLog',
-        {
-            'log' => join( '/',
-                $self->conf->get( 'logging', 'log_dir' ),
-                $self->conf->get( 'mojolicious', 'access_log' ),
-            )
-        },
-    );
-}
-
-sub setup_templating ( $self, $root_dir ) {
-    push( @INC, $root_dir );
-    $self->plugin(
-        'ToolkitRenderer',
-        $self->tt_settings('web'),
-    );
-    $self->renderer->default_handler('tt');
-}
-
-sub setup_session_login ($self) {
-    $self->helper( session_login => sub ($self) {
         if ( my $user_id = $self->session('user_id') ) {
             my $user;
             try {
@@ -178,12 +40,74 @@ sub setup_session_login ($self) {
 
             if ($user) {
                 $self->stash( 'user' => $user );
+
+                return $self->redirect_to('/user/org') if (
+                    not $user->data->{org_id}
+                    and $self->req->url->path ne '/user/org'
+                    and $self->req->url->path ne '/user/logout'
+                );
             }
             else {
                 delete $self->session->{'user_id'};
             }
         }
+
+        $self->stash(
+            docs_nav      => $self->docs_nav( @{ conf->get('docs') }{ qw( dir home_type home_title ) } ),
+            header_photos => $photos,
+        );
     } );
+
+    my $users = $all->under( sub ($self) {
+        return 1 if ( $self->stash('user') );
+        $self->info('Login required but not yet met');
+        $self->flash( message => 'Login required for the previously requested resource.' );
+        $self->redirect_to('/');
+        return 0;
+    } );
+
+    $users->any( '/tool/' . $_ )->to( controller => 'tool', action => $_ ) for ( qw(
+        register
+        register_save
+        meet_data
+    ) );
+    $users->any( '/tool/meet_data' => [ format => 'csv' ] )->to('tool#meet_data');
+    $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list org ) );
+
+    $all->any('/user/verify/:verify_user_id/:verify_passwd')->to('user#verify');
+    $all->any('/user/reset_password/:reset_user_id/:reset_passwd')->to('user#reset_password');
+    $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( account login reset_password ) );
+    $all->any('/search')->to('tool#search');
+    $all->any('/')->to('main#home_page');
+    $all->any('/*name')->to('main#content');
 }
 
 1;
+
+=head1 NAME
+
+PnwQuizzing::Control
+
+=head1 SYNOPSIS
+
+    #!/usr/bin/env perl
+    use MojoX::ConfigAppStart;
+    MojoX::ConfigAppStart->start;
+
+=head1 DESCRIPTION
+
+This class is a subclass of L<Omniframe::Control> and provides an override to
+the C<startup> method such that L<MojoX::ConfigAppStart> (along with its
+required C<mojo_app_lib> configuration key) is sufficient to startup a basic
+(and mostly useless) web application.
+
+=head1 METHODS
+
+=head2 startup
+
+This is a basic, thin startup method for L<Mojolicious>. This method calls
+C<setup> and sets a universal route that renders a basic text message.
+
+=head1 INHERITANCE
+
+L<Omniframe::Control>.

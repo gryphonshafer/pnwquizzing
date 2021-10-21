@@ -104,9 +104,17 @@ div.big_button {
     }
 }
 
+div.box {
+    border           : 1px solid silver;
+    background-color : white;
+    padding          : 3px 5px;
+}
+
+input[type="text"].wide {
+    width: 400px;
+}
+
 & {
-    @import 'content/hash_tool';
-    @import 'content/email_tool';
     @import 'content/home_page';
     @import 'content/content_footer';
     @import 'content/register';

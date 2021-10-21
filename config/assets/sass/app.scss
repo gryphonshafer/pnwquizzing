@@ -1,6 +1,6 @@
-@import 'general/reset';
-@import 'general/base';
-@import 'general/fonts';
-@import 'general/forms';
-@import 'general/tables';
-@import 'page_layout';
+@use 'general/reset';
+@use 'general/base';
+@use 'general/fonts';
+@use 'general/forms';
+@use 'general/tables';
+@use 'page_layout';

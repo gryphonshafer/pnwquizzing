@@ -1,0 +1,49 @@
+[% IF next_meet.meet_name %]
+    [%
+        location =
+            ( next_meet.org_override ) ? next_meet.org_override                                  :
+            (
+                next_meet.acronym AND
+                next_meet.org_name
+            )                          ? ( next_meet.acronym _ ' (' _ next_meet.org_name _ ')' ) :
+            ( next_meet.acronym )      ? next_meet.acronym                                       :
+            ( next_meet.org_name )     ? next_meet.org_name                                      : undef;
+
+        address = next_meet.address_override || next_meet.address;
+    %]
+
+    <ul>
+        <li>Next Quiz Meet: <b>[% next_meet.meet_name %]</b></li>
+
+        [% IF location OR address %]
+            <li>
+                Meet Location:
+                <b>
+                    [% location %][% IF address %],
+                        <a href="https://www.google.com/maps/place/[% address | url %]">[% address %]</a>
+                    [% END %]
+                </b>
+            </li>
+        [% END %]
+
+        <li[% IF next_meet.past_deadline %] style="color: red"[% END %]>
+            Registration Deadline: <b>[% next_meet.deadline_datetime %]</b>
+        </li>
+
+        <li>Start Date and Time: <b>[% next_meet.start_datetime %]</b></li>
+
+        <li>
+            Housing:
+            <b>[% ( next_meet.house ) ? '' : '<span style="color: red">Not</span> ' %]Available</b>
+        </li>
+
+        <li>
+            Lunch:
+            <b>[% ( next_meet.lunch ) ? '' : '<span style="color: red">Not</span> ' %]Available</b>
+        </li>
+    </ul>
+[% ELSE %]
+    <p>
+        There doesn't appear to be an upcoming meet scheduled.
+    </p>
+[% END %]

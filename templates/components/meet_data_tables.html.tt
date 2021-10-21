@@ -1,0 +1,131 @@
+[%
+    totals = {
+        attending     => 0,
+        organizations => {},
+        teams         => {},
+        quizzers      => 0,
+        nonquizzers   => 0,
+    };
+%]
+
+<h2>Quizzers</h2>
+
+[% IF org_reg AND org_reg.size > 0 %]
+    <table>
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Bib</th>
+                <th>Name</th>
+                <th>Cap</th>
+                <th>M/F</th>
+                <th>Grade</th>
+                <th>Rookie</th>
+                [% IF next_meet.house %]<th>House</th>[% END %]
+                [% IF next_meet.lunch %]<th>Lunch</th>[% END %]
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            [% FOR org IN org_reg %]
+                [% FOR team IN org.registration %]
+                    [% team_number = loop.count %]
+                    [% FOR quizzer IN team %]
+                        [% bib = loop.count %]
+                        [% IF quizzer.attend %]
+                            [%
+                                totals.attending = totals.attending + 1;
+                                totals.quizzers  = totals.quizzers  + 1;
+
+                                acronym = org.acronym;
+                                team    = org.acronym _ ' ' _ team_number;
+
+                                totals.organizations.$acronym = 1;
+                                totals.teams.$team = 1;
+                            %]
+
+                            <tr>
+                                <td>[% org.acronym %] [% team_number %]</td>
+                                <td class="right">[% bib %]</td>
+                                <td>[% quizzer.name %]</td>
+                                <td>[% quizzer.captain %]</td>
+                                <td class="center">[% quizzer.m_f %]</td>
+                                <td class="right">[% quizzer.grade %]</td>
+                                <td class="center">[% ( quizzer.rookie ) ? 'Yes' : 'No' %]</td>
+                                [% IF next_meet.house %]
+                                    <td class="center">
+                                        [% ( quizzer.house ) ? 'Yes' : 'No' %]
+                                    </td>
+                                [% END %]
+                                [% IF next_meet.lunch %]
+                                    <td class="center">
+                                        [% ( quizzer.lunch ) ? 'Yes' : 'No' %]
+                                    </td>
+                                [% END %]
+                                <td>[% quizzer.notes %]</td>
+                            </tr>
+                        [% END %]
+                    [% END %]
+                [% END %]
+            [% END %]
+        </tbody>
+    </table>
+[% ELSE %]
+    <p>There are currently no quizzers registered.</p>
+[% END %]
+
+<h2>Non-Quizzers</h2>
+
+[% IF user_reg AND user_reg.size > 0 %]
+    <table>
+        <thead>
+            <tr>
+                <th>Org.</th>
+                <th>Name</th>
+                <th>Role(s)</th>
+                <th>Drive</th>
+                [% IF next_meet.house %]<th>House</th>[% END %]
+                [% IF next_meet.lunch %]<th>Lunch</th>[% END %]
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            [% FOR person IN user_reg %]
+                [% IF person.registration.attend %]
+                    [%
+                        totals.attending   = totals.attending   + 1;
+                        totals.nonquizzers = totals.nonquizzers + 1;
+
+                        acronym = org.acronym;
+                        totals.organizations.$acronym = 1;
+                    %]
+
+                    <tr>
+                        <td>[% person.acronym %]</td>
+                        <td>
+                            <a href="mailto:[% person.email %]">
+                                [% person.first_name %]
+                                [% person.last_name %]
+                            </a>
+                        </td>
+                        <td>[% person.registration.roles.join(', ') %]</td>
+                        <td class="center">[% ( person.registration.drive ) ? 'Yes' : 'No' %]</td>
+                        [% IF next_meet.house %]
+                            <td class="center">
+                                [% ( person.registration.house ) ? 'Yes' : 'No' %]
+                            </td>
+                        [% END %]
+                        [% IF next_meet.lunch %]
+                            <td class="center">
+                                [% ( person.registration.lunch ) ? 'Yes' : 'No' %]
+                            </td>
+                        [% END %]
+                        <td>[% person.registration.notes %]</td>
+                    </tr>
+                [% END %]
+            [% END %]
+        </tbody>
+    </table>
+[% ELSE %]
+    <p>There are currently no non-quizzers registered.</p>
+[% END %]

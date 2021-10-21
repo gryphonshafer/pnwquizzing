@@ -1,80 +1,34 @@
 package PnwQuizzing::Control::User;
 
-use exact -notry, 'Mojolicious::Controller', 'PnwQuizzing';
-use Try::Tiny;
+use exact -conf, 'Mojolicious::Controller';
+use Mojo::JSON 'encode_json';
 use PnwQuizzing::Model::User;
-
-sub login ($self) {
-    my $user = PnwQuizzing::Model::User->new;
-
-    my $redirect;
-    try {
-        $user = $user->login( map { $self->param($_) } qw( username passwd ) );
-    }
-    catch {
-        $self->info('Login failure (in controller)');
-        $self->flash( message =>
-            'Login failed. Please try again, or try the ' .
-            '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
-        );
-        $redirect = 1;
-    };
-    return $self->redirect_to('/') if ($redirect);
-
-    $self->_login($user);
-    return $self->redirect_to('/');
-}
-
-sub _login ( $self, $user ) {
-    $self->info( 'Login success for: ' . $user->prop('username') );
-    $self->session(
-        'user_id'           => $user->id,
-        'last_request_time' => time,
-    );
-}
-
-sub logout ($self) {
-    $self->info(
-        'Logout requested from: ' .
-        ( ( $self->stash('user') ) ? $self->stash('user')->prop('username') : '(Unlogged-in user)' )
-    );
-    $self->session(
-        'user_id'           => undef,
-        'last_request_time' => undef,
-    );
-
-    return $self->redirect_to('/');
-}
+use PnwQuizzing::Model::Org;
 
 sub account ($self) {
-    my $user = PnwQuizzing::Model::User->new;
-
     if ( $self->param('form_submit') ) {
-        my %form_params = map { $_ => $self->param($_) } qw(
-            username
-            passwd
-            first_name
-            last_name
-            email
-            church
-        );
+        my $params = $self->req->params->to_hash;
 
-        my $handle_user_error = sub ($e) {
-            $e =~ s/\s+at\s+(?:(?!\s+at\s+).)*[\r\n]*$//;
-            $e =~ s/^"([^""]+)"/ '"' . join( ' ', map { ucfirst($_) } split( '_', $1 ) ) . '"' /e;
-            $e .= '. Please try again.';
-
-            $self->info('User create failure');
-            $self->stash(
-                message => $e,
-                %form_params,
+        try {
+            die 'Username, password, first and last name, and email fields must be filled in' unless (
+                $params->{username} and
+                $params->{passwd} and
+                $params->{first_name} and
+                $params->{last_name} and
+                $params->{email}
             );
-        };
 
-        unless ( $self->stash('user') ) {
-            try {
-                die 'Ministry appears to not be a valid input value'
-                    if ( $form_params{church} and $form_params{church} eq '_NOT_DEFINED' );
+            die 'Email entry does not appear to be a valid email address'
+                unless ( $params->{email} =~ /\w+@\w+\.\w+/ );
+
+            if ( $params->{org} ) {
+                die 'Organization was not selected and is required'
+                    if ( $params->{org} eq '_NOT_DEFINED' );
+                delete $params->{org} if ( $params->{org} eq '_NEW_ORG' );
+            }
+
+            unless ( $self->stash('user') ) {
+                my $user = PnwQuizzing::Model::User->new;
 
                 my @math = split( /\s+/, $self->param('math') || '' );
                 $math[$_] //= 100 for ( 0 .. 2 );
@@ -84,23 +38,21 @@ sub account ($self) {
                 die q{The math answer provided (used to help verify you're human) is incorrect}
                     if ( $captcha ne $answer );
 
-                $user = $user->create( { %form_params, active => 0 });
-                $user->roles( $self->every_param('role') );
-            }
-            catch {
-                $handle_user_error->( $_ || $@ );
-            };
+                $user = $user->create( { map { $_ => $params->{$_} } qw(
+                    username passwd first_name last_name email org roles
+                ) } );
 
-            if ( $user and $user->data ) {
-                my $url = $self->req->url->to_abs;
-                $user->verify_email( $url->protocol . '://' . $url->host_port );
-                $self->stash( successful_create_user => 1 );
+                if ( $user and $user->data ) {
+                    my $url = $self->req->url->to_abs;
+                    $user->verify_email( $url->protocol . '://' . $url->host_port );
+                    $self->stash( successful_create_user => 1 );
+                }
             }
-        }
-        else {
-            try {
-                $self->stash('user')->edit( \%form_params );
-                $self->stash('user')->roles( $self->every_param('role') );
+            else {
+                $self->stash('user')->save( { map { $_ => $params->{$_} } qw(
+                    username passwd first_name last_name email org roles
+                ) } );
+
                 $self->stash(
                     message => {
                         type => 'success',
@@ -108,16 +60,39 @@ sub account ($self) {
                     }
                 );
             }
-            catch {
-                $handle_user_error->( $_ || $@ );
-            };
+        }
+        catch ($e) {
+            $e =~ s/\s+at\s+(?:(?!\s+at\s+).)*[\r\n]*$//;
+            $e =~ s/^"([^""]+)"/ '"' . join( ' ', map { ucfirst($_) } split( '_', $1 ) ) . '"' /e;
+            $e =~ s/DBD::\w+::st execute failed:\s*//;
+            $e .= '. Please try again.';
+
+            $e = "Value in $1 field is already registered under an existing user account."
+                if ( $e =~ /UNIQUE constraint failed/ );
+
+            $self->info('User CRUD failure');
+            $self->stash( message => $e, %$params );
         }
     }
 
-    $user = $self->stash('user') if ( $self->stash('user') );
+    my $user_org_id = ( $self->stash('user') ) ? $self->stash('user')->data->{org_id} || undef : undef;
+    my $user_roles  = ( $self->stash('user') ) ? $self->stash('user')->data->{roles} || [] : [];
+
     $self->stash(
-        churches => $user->churches,
-        roles    => $user->roles,
+        orgs => [ map {
+            $_->{has_org} = 1 if ( $user_org_id and $user_org_id == $_->{org_id} );
+            $_;
+        } sort { $a->{name} cmp $b->{name} } @{ PnwQuizzing::Model::Org->new->every_data } ],
+
+        roles => [
+            map {
+                my $name = $_;
+                +{
+                    name     => $name,
+                    has_role => scalar( grep { $name eq $_ } @$user_roles ),
+                }
+            } @{ conf->get('roles') }
+        ],
     );
 }
 
@@ -142,8 +117,43 @@ sub verify ($self) {
     return $self->redirect_to('/');
 }
 
-sub list ($self) {
-    $self->stash( users => PnwQuizzing::Model::User->new->all_users_data );
+sub login ($self) {
+    my $user = PnwQuizzing::Model::User->new;
+
+    my $redirect;
+    try {
+        $user = $user->login( map { $self->param($_) } qw( username passwd ) );
+    }
+    catch {
+        $self->info('Login failure (in controller)');
+        $self->flash( message =>
+            'Login failed. Please try again, or try the ' .
+            '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
+        );
+        $redirect = 1;
+    };
+    return $self->redirect_to('/') if ($redirect);
+
+    $self->info( 'Login success for: ' . $user->data->{username} );
+    $self->session(
+        user_id           => $user->id,
+        last_request_time => time,
+    );
+
+    return $self->redirect_to('/');
+}
+
+sub logout ($self) {
+    $self->info(
+        'Logout requested from: ' .
+        ( ( $self->stash('user') ) ? $self->stash('user')->data->{username} : '(Unlogged-in user)' )
+    );
+    $self->session(
+        user_id           => undef,
+        last_request_time => undef,
+    );
+
+    return $self->redirect_to('/');
 }
 
 sub reset_password ($self) {
@@ -180,9 +190,24 @@ sub reset_password ($self) {
                 $self->stash('reset_passwd'),
             );
 
-            $self->_login($user);
-            $self->session_login;
-            $self->stash( new_passwd => $user->data->{passwd} );
+            $self->info( 'Login success for: ' . $user->data->{username} );
+            $self->session(
+                user_id           => $user->id,
+                last_request_time => time,
+            );
+
+            $self->flash(
+                message => {
+                    type => 'success',
+                    text => join( ' ',
+                        'Successfully reset password for this user account.',
+                        'You are now logged in.',
+                        'Visit the "Edit Profile" page to change your password to something new.',
+                    ),
+                }
+            );
+
+            return $self->redirect_to('/');
         }
         catch {
             my $e = $_ || $@;
@@ -196,4 +221,111 @@ sub reset_password ($self) {
     }
 }
 
+sub list ($self) {
+    $self->stash(
+        list_data => encode_json( {
+            roles => [ map { +{ name => $_, selected => 0 } } @{ conf->get('roles') } ],
+            users => [
+                sort {
+                    $a->{org} cmp $b->{org} or
+                    $a->{first_name} cmp $b->{first_name} or
+                    $a->{last_name} cmp $b->{last_name}
+                }
+                map {
+                    $_->{org} = PnwQuizzing::Model::Org->new->load( $_->{org_id} )->data if ( $_->{org_id} );
+                    $_;
+                } PnwQuizzing::Model::User->new->every_data
+            ],
+            cnp_email_list => 0,
+        } ),
+    );
+}
+
+sub org ($self) {
+    my $org = PnwQuizzing::Model::Org->new;
+    $org->load( $self->stash('user')->data->{org_id} ) if ( $self->stash('user')->data->{org_id} );
+
+    unless ( $self->param('form_submit') ) {
+        $self->stash( org => $org );
+    }
+    else {
+        my $params = $self->req->params->to_hash;
+
+        try {
+            die 'Full name, acronym, and address fields must be filled in' unless (
+                $params->{name} and
+                $params->{acronym} and
+                $params->{address}
+            );
+
+            unless ( $org->data ) {
+                $org->create({ map { $_ => $params->{$_} } qw( name acronym address ) });
+                $self->stash('user')->save({ org_id => $org->id });
+            }
+            else {
+                $org
+                    ->load( $self->stash('user')->data->{org_id} )
+                    ->save({ map { $_ => $params->{$_} } qw( name acronym address ) });
+            }
+
+            $self->redirect_to('/user/account');
+        }
+        catch ($e) {
+            $e =~ s/\s+at\s+(?:(?!\s+at\s+).)*[\r\n]*$//;
+            $e =~ s/^"([^""]+)"/ '"' . join( ' ', map { ucfirst($_) } split( '_', $1 ) ) . '"' /e;
+            $e =~ s/DBD::\w+::st execute failed:\s*//;
+            $e .= '. Please try again.';
+
+            $e = "Value in $1 field is already registered under an existing organization."
+                if ( $e =~ /UNIQUE constraint failed/ );
+
+            $self->info('Org CRUD failure');
+            $self->stash( message => $e, %$params );
+        }
+    }
+}
+
 1;
+
+=head1 NAME
+
+PnwQuizzing::Control::User
+
+=head1 DESCRIPTION
+
+This class is a subclass of L<Mojolicious::Controller> and provides handlers
+for "user" actions.
+
+=head1 METHODS
+
+=head2 account
+
+Handler for "account" calls.
+
+=head2 verify
+
+Handler for "verify" calls.
+
+=head2 login
+
+Handler for "login" calls.
+
+=head2 logout
+
+Handler for "logout" calls.
+
+=head2 reset_password
+
+Handler for "reset_password" calls.
+
+=head2 list
+
+Handler for "list" calls.
+
+=head2 org
+
+Handler for "org" calls.
+
+=head1 INHERITANCE
+
+L<Mojolicious::Controller>.

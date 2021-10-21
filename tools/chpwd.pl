@@ -11,7 +11,7 @@ try {
 }
 catch {
     die 'Failed to find user "' . $settings->{username} . '"' . "\n";
-};
+}
 
 unless ( defined $settings->{password} ) {
     ReadMode('noecho');
@@ -31,7 +31,7 @@ unless ( defined $settings->{password} ) {
     die "Passwords entered do not match\n" unless ( $settings->{password} eq $password );
 }
 
-$user->passwd( $settings->{password} );
+$user->save( { passwd => $settings->{password} } );
 
 =head1 NAME
 

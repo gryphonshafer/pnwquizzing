@@ -1,34 +1,32 @@
 $form_borders: 1px solid silver;
 
-form {
-    fieldset {
-        border         : $form_borders;
-        display        : inline-block;
-        padding        : 10px;
-        vertical-align : top;
+fieldset {
+    border         : $form_borders;
+    display        : inline-block;
+    padding        : 10px;
+    vertical-align : top;
 
-        legend {
-            border           : $form_borders;
-            background-color : white;
-            padding          : 0px 3px 0px 3px;
-        }
+    legend {
+        border           : $form_borders;
+        background-color : white;
+        padding          : 0px 3px 0px 3px;
+    }
 
-        label {
-            display    : block;
-            text-align : right;
-        }
+    label {
+        display    : block;
+        text-align : right;
+    }
 
-        &.left label {
-            text-align: left;
-        }
+    &.left label {
+        text-align: left;
+    }
 
-        select,
-        textarea,
-        input[type="text"],
-        input[type="password"] {
-            margin-top    : 1px;
-            margin-bottom : 1px;
-        }
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"] {
+        margin-top    : 1px;
+        margin-bottom : 1px;
     }
 }
 

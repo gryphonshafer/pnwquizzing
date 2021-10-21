@@ -20,7 +20,10 @@
     [% BLOCK nav %]
         [% IF node.name %]
             <a href="[% c.url_for( node.href ) %]"
-                title="[% node.title OR node.folder OR node.name %]"
+                title="[%
+                    title = node.title OR node.folder OR node.name;
+                    title.replace( '<[^>]*>', '' );
+                %]"
             >
                 <span>[%
                     node.title OR node.folder OR node.name

@@ -1,19 +1,14 @@
-use Test::Most;
-use exact;
+use Test2::V0;
+use exact -conf;
+use PnwQuizzing::Control;
 
-use_ok('PnwQuizzing::Control');
+my $mock = mock 'PnwQuizzing::Control' => (
+    override => [ qw( setup_access_log debug info notice warning warn ) ],
+);
 
 my $obj;
-lives_ok( sub { $obj = PnwQuizzing::Control->new }, 'new()' );
-isa_ok( $obj, $_ ) for ( 'Mojolicious', 'PnwQuizzing' );
-ok( $obj->does("PnwQuizzing::Role::$_"), "does $_ role" ) for ( qw( DocsNav Template ) );
-can_ok( $obj, qw(
-    startup
-    build_css
-    setup_mojo_logging
-    setup_access_log
-    setup_templating
-    setup_session_login
-) );
+ok( lives { $obj = PnwQuizzing::Control->new }, 'new' ) or note $@;
+isa_ok( $obj, $_ ) for ( 'Mojolicious', 'Omniframe::Control' );
+can_ok( $obj, 'startup' );
 
-done_testing();
+done_testing;

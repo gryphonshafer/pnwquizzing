@@ -8,29 +8,19 @@ Quizzing** program.
 
 ## Setup
 
-To setup this application in a new environment, you will need to ensure the
-following prerequisites are installed:
+To setup an instance of the web site, first install and setup the
+[Omniframe](https://github.com/gryphonshafer/omniframe) project as per its
+instructions. Then clone this project to a desired location. Typically, this is
+in parallel to the `omniframe` project root directory.
 
-- Perl
-- CPANminus (`cpanm`)
-- SQLite
-- `libsass`
-
-Then perform the following from within the project's root folder:
+Change directory to the project root directory, and run the following:
 
     cpanm -n -f --installdeps .
 
 ## Run
 
-To run the application for a development enviornment with auto-restart on code
-changes, you can perform the following:
-
-    morbo -v -w docs -w config -w lib -w templates app.psgi
-
-To run the application for a production enviornment, you can perform the
-following:
-
-    hypnotoad app.psgi
+To run the web site application, follow the instructions in the `~/app.psgi`
+file within the project's root directory.
 
 ## Photo Optimization
 

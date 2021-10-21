@@ -1,64 +1,48 @@
 ---
 default:
-    base_url: https://pnwquizzing.org
-    logging:
-        log_dir: local
-        log_file: app.log
-        log_level:
-            production: info
-            development: debug
-        alert_email:
-            - admin@pnwquizzing.org
-        alert_email_subject: PNW Quizzing Web Site Alert Log Message
-        filter:
-            - email
-    template:
-        compile_ext: .ttc
-        compile_dir: local/ttc
-        web:
-            wrapper: wrapper.html.tt
-            include_path:
-                - templates/pages
-                - templates/components
-        email:
-            include_path:
-                - templates/emails
-    database:
-        dir: local
-        file: app.sqlite
-        settings:
-            sqlite_see_if_its_a_number: 1
-            sqlite_defensive: 1
-            RaiseError: 1
-            PrintError: 0
+    bcrypt:
+        salt: 24y5Hvo6ke8p251n
+    libs: ../omniframe/lib
     mojo_app_lib: PnwQuizzing::Control
     mojolicious:
-        access_log: access.log
         secrets:
-            - e292116f05ccaa9b0595b40e8608fb45
-            - 2d6f8404c5900080824c90da48593a09
-        config:
-            hypnotoad:
-                proxy: 1
-                workers: 10
-                pid_file: local/hypnotoad.pid
-                listen:
-                    - http://*:3000
+            - 87R6di927OHTk50fFSMy6OMdGI25wPOm
+            - OMdGI25wPOm87R6di927OHTk50fFSMy6
         session:
             cookie_name: pnwquizzing_session
-            default_expiration: 31557600 # 365.25 days
-    css:
-        scss_src: config/assets/sass/app.scss
-        compile_to: app.css
-    bcrypt:
-        cost: 1
-        salt: 0741a5d2c6fdf4bc
+    omniframe: ../omniframe
+    docs:
+        dir: docs
+        home_type: md
+        home_title: PNW Bible Quizzing Home Page
+    roles:
+        - Coach
+        - Quizzer
+        - Parent
+        - Spectator
+        - Quizmaster
+        - Answer Judge
+        - Scorekeeper
+        - Statistician
+        - Volunteer
+        - Board Member
+    meet_roles:
+        - Coach
+        - Parent
+        - Spectator
+        - Quizmaster
+        - Answer Judge
+        - Scorekeeper
+        - Statistician
+        - Volunteer
     email:
-        from: PNW Bible Quizzing <site@pnwquizzing.org>
+        from: PNW Bible Quizzing <contact@pnwquizzing.org>
         active: 0
-+|+|production:
-    logging:
-        filter: ~
-    email:
-        active: 1
+    base_url: https://pnwquizzing.org
+    template:
+        email:
+            include_path:
+                - templates/components
+                - templates/emails
 optional_include: local/config.yaml
+preinclude: ../omniframe/config/app.yaml

@@ -1,9 +1,9 @@
 package PnwQuizzing::Model::Email;
 
-use exact 'PnwQuizzing::Model';
+use exact -conf, -class;
 use Email::Mailer;
 
-with 'PnwQuizzing::Role::Template';
+with qw( Omniframe::Role::Template Omniframe::Role::Logging );
 
 has type    => undef;
 has subject => undef;
@@ -64,3 +64,28 @@ sub send ( $self, $data ) {
 }
 
 1;
+
+=head1 NAME
+
+PnwQuizzing::Model::Email
+
+=head1 DESCRIPTION
+
+This model provides model-level functionality for email objects.
+
+=head1 METHODS
+
+=head2 new
+
+Instantiates an email object based on a C<~/templates/>
+
+    my $email = PnwQuizzing::Model::Email->new( type => 'verify_email' );
+
+=head2 send
+
+Send emails to users with a set of data for the template.
+
+    $email->send({
+        to   => 'user@example.com',
+        data => {},
+    });
