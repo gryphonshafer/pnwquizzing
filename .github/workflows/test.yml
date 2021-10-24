@@ -11,17 +11,26 @@ jobs:
       image: perldocker/perl-tester:5.${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          repository: gryphonshafer/omniframe
+      - uses: actions/checkout@v2
+      - run: |-
+          curl -s -L -o - $(
+            curl -s https://api.github.com/repos/sass/dart-sass/releases/latest | \
+            grep browser_download_url | grep linux-x64 | perl -ne '/:\s+"([^"]+)"/; print "$1\n"'
+          ) | tar -xvpz --strip-components=1
       - uses: perl-actions/install-with-cpanm@v1
         env:
           PERL_CPANM_OPT: --from https://cpan.metacpan.org/ --notest --force --skip-satisfied
         with:
           sudo: false
           args: --with-develop --with-all-features --installdeps .
-          install: |
-            Devel::Cover::Report::Codecov
       - run: dest init
       - run: dest update
-      - run: HARNESS_PERL_SWITCHES=-MDevel::Cover prove --recurse --lib --failures --jobs 4 --timer t
+      - run: |-
+          PATH="$PATH:." \
+          HARNESS_PERL_SWITCHES=-MDevel::Cover \
+          prove --recurse --lib --failures --jobs 4 --timer t
       - run: cover -report codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
