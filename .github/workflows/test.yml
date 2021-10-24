@@ -10,7 +10,7 @@ jobs:
     container:
       image: perldocker/perl-tester:5.${{ matrix.perl-version }}
     steps:
-      - run: git clone https://github.com/gryphonshafer/omniframe.git $GITHUB_WORKSPACE/../.
+      - run: git clone https://github.com/gryphonshafer/omniframe.git $GITHUB_WORKSPACE/../omniframe
       - uses: actions/checkout@v2
       - run: |-
           curl -s -L -o - $(
