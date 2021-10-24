@@ -24,7 +24,7 @@ jobs:
           PERL_CPANM_OPT: --from https://cpan.metacpan.org/ --notest --force --skip-satisfied
         with:
           sudo: false
-          args: --with-develop --with-all-features --installdeps .
+          args: --with-develop --with-all-features --installdeps ../omniframe/.
       - run: dest init
       - run: dest update
       - run: |-
