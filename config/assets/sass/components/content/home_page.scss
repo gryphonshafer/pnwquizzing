@@ -128,7 +128,7 @@ p.social {
         width      : calc( 100vw - 35px );
         height     : calc( ( 100vw - 35px ) * 315 / 560 );
         min-width  : $min_width - 35px;
-        min-height : ( $min_width - 35px ) * 315 / 560;
+        min-height : calc( ( $min_width - 35px ) * 315 / 560 );
     }
 }
 
