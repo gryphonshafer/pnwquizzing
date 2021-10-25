@@ -49,9 +49,10 @@ sub account ($self) {
                 }
             }
             else {
-                $self->stash('user')->save( { map { $_ => $params->{$_} } qw(
-                    username passwd first_name last_name email org roles
-                ) } );
+                $self->stash('user')->save( {
+                    roles => [ ( ref $params->{roles} ) ? @{ $params->{roles} } : $params->{roles} ],
+                    map { $_ => $params->{$_} } qw( username passwd first_name last_name email org ),
+                } );
 
                 $self->stash(
                     message => {

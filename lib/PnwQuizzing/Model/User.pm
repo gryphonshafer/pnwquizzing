@@ -21,13 +21,17 @@ sub freeze ( $self, $data ) {
         $data->{passwd} = $self->bcrypt( $data->{passwd} );
     }
 
-    $data->{roles} = encode_json( $data->{roles} ) if ( $data->{roles} );
+    $data->{roles} = encode_json(
+        [ ( ref $data->{roles} ) ? @{ $data->{roles} } : $data->{roles} ]
+    ) if ( $data->{roles} );
 
     return $data;
 }
 
 sub thaw ( $self, $data ) {
     $data->{roles} = ( $data->{roles} ) ? decode_json( $data->{roles} ) : [];
+    $data->{roles} = [ $data->{roles} ] unless ( ref $data->{roles} );
+
     return $data;
 }
 
