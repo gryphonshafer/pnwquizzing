@@ -31,7 +31,7 @@
 
                 <br>
 
-                [% INCLUDE nav_links.html.tt %]
+                [% PROCESS nav_links.html.tt %]
             </p>
         [% END %]
     </div>

@@ -8,7 +8,7 @@
 
 <h1>Quiz Meet Registration</h1>
 
-[% INCLUDE next_meet_info.html.tt %]
+[% PROCESS next_meet_info.html.tt %]
 
 <p>
     For hosts and other interested parties, please view the

@@ -61,8 +61,8 @@
     <i>(<a href="[% url %]/tool/register">[% url %]/tool/register</a>)</i>
 </p>
 
-[% INCLUDE next_meet_info.html.tt %]
-[% INCLUDE meet_data_tables.html.tt %]
+[% PROCESS next_meet_info.html.tt %]
+[% PROCESS meet_data_tables.html.tt %]
 
 <p>
     If you have any questions about anything, please email

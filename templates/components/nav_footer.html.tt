@@ -8,6 +8,6 @@
             [% END %]
             >Sign-Up</a>
     [% ELSE %]
-        [% INCLUDE nav_links.html.tt, short = 1 %]
+        [% PROCESS nav_links.html.tt, short = 1 %]
     [% END %]
 </div>

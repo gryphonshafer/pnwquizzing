@@ -2,8 +2,8 @@
 
 <h1>[% page.title %]</h1>
 
-[% INCLUDE next_meet_info.html.tt %]
-[% INCLUDE meet_data_tables.html.tt %]
+[% PROCESS next_meet_info.html.tt %]
+[% PROCESS meet_data_tables.html.tt %]
 
 <h2>Registration Totals</h2>
 
