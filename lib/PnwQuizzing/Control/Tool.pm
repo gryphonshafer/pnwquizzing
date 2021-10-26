@@ -104,28 +104,34 @@ sub register ($self) {
 }
 
 sub register_save ($self) {
-    my $meet_id = PnwQuizzing::Model::Meet->next_meet_id;
-    my $data    = decode_json( $self->param('data') );
+    my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
 
-    PnwQuizzing::Model::Entry->new->create({
-        meet_id      => $meet_id,
-        user_id      => $self->stash('user')->id,
-        registration => { map { $_ => $data->{$_} } qw( attend drive house lunch roles notes ) },
-    });
+    unless ( $next_meet->{past_deadline} ) {
+        my $data = decode_json( $self->param('data') );
 
-    PnwQuizzing::Model::Entry->new->create({
-        meet_id      => $meet_id,
-        user_id      => $self->stash('user')->id,
-        org_id       => $self->stash('user')->data->{org_id},
-        registration => $data->{teams},
-    }) if ( $data->{teams} );
+        PnwQuizzing::Model::Entry->new->create({
+            meet_id      => $next_meet->{meet_id},
+            user_id      => $self->stash('user')->id,
+            registration => { map { $_ => $data->{$_} } qw( attend drive house lunch roles notes ) },
+        });
 
-    $self->flash(
-        message => {
-            type => 'success',
-            text => 'Successfully saved registration data.',
-        }
-    );
+        PnwQuizzing::Model::Entry->new->create({
+            meet_id      => $next_meet->{meet_id},
+            user_id      => $self->stash('user')->id,
+            org_id       => $self->stash('user')->data->{org_id},
+            registration => $data->{teams},
+        }) if ( $data->{teams} );
+
+        $self->flash(
+            message => {
+                type => 'success',
+                text => 'Successfully saved registration data.',
+            }
+        );
+    }
+    else {
+        $self->flash( message => 'Unable to register after deadline.' );
+    }
 
     return $self->redirect_to('/tool/meet_data')
 }
