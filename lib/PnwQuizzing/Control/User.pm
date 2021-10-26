@@ -83,7 +83,7 @@ sub account ($self) {
         orgs => [ map {
             $_->{has_org} = 1 if ( $user_org_id and $user_org_id == $_->{org_id} );
             $_;
-        } sort { $a->{name} cmp $b->{name} } @{ PnwQuizzing::Model::Org->new->every_data } ],
+        } sort { $a->{acronym} cmp $b->{acronym} } @{ PnwQuizzing::Model::Org->new->every_data } ],
 
         roles => [
             map {
