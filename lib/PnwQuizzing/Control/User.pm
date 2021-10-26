@@ -228,7 +228,6 @@ sub list ($self) {
             roles => [ map { +{ name => $_, selected => 0 } } @{ conf->get('roles') } ],
             users => [
                 sort {
-                    $a->{org} cmp $b->{org} or
                     $a->{first_name} cmp $b->{first_name} or
                     $a->{last_name} cmp $b->{last_name}
                 }
