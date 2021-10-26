@@ -146,10 +146,16 @@ sub meet_data ($self) {
         $self->app->types->type( 'csv' => [ qw( text/csv application/csv ) ] );
 
         csv( out => \my $csv, in => [
-            [ qw( Org. Team Bib Name Captain M/F Grade Rookie House Lunch Notes Role(s) Drive ) ],
+            map {
+                splice( @$_, 12, 1 ) if ( not $next_meet->{house} );
+                splice( @$_,  9, 1 ) if ( not $next_meet->{lunch} );
+                splice( @$_,  8, 1 ) if ( not $next_meet->{house} );
+                $_;
+            }
+            [ qw( Org. Team Bib Name Captain M/F Grade Rookie House Lunch Notes Role(s) Drive Email ) ],
             (
                 map {
-                    [ @$_{ qw( org team bib name captain m_f grade rookie house lunch notes ) } ];
+                    [ @$_{ qw( org team bib name captain m_f grade rookie house lunch notes email ) } ];
                 }
                 map {
                     my $org      = $_;
@@ -177,23 +183,21 @@ sub meet_data ($self) {
             ),
             (
                 map {
-                    my $person = $_;
-                    $person->{$_} = ( $person->{$_} ) ? 'Yes' : 'No' for ( qw( house lunch drive ) );
-
                     [
-                        $person->{acronym},
+                        $_->{acronym},
                         '',
                         '',
-                        $person->{first_name} . ' ' . $person->{last_name},
+                        $_->{first_name} . ' ' . $_->{last_name},
                         '',
                         '',
                         '',
                         '',
-                        $person->{registration}{house},
-                        $person->{registration}{lunch},
-                        $person->{registration}{notes},
-                        join( ', ', @{ $person->{registration}{roles} } ),
-                        $person->{registration}{drive},
+                        ( ( $_->{registration}{house} ) ? 'Yes' : 'No' ),
+                        ( ( $_->{registration}{lunch} ) ? 'Yes' : 'No' ),
+                        $_->{registration}{notes},
+                        join( ', ', @{ $_->{registration}{roles} } ),
+                        ( ( $_->{registration}{drive} ) ? 'Yes' : 'No' ),
+                        lc( $_->{email} ),
                     ]
                 } grep { $_->{registration}{attend} } @$user_reg
             ),

@@ -83,8 +83,10 @@
                 <th>Org.</th>
                 <th>Name</th>
                 <th>Role(s)</th>
-                <th>Drive</th>
-                [% IF next_meet.house %]<th>House</th>[% END %]
+                [% IF next_meet.house %]
+                    <th>Drive</th>
+                    <th>House</th>
+                [% END %]
                 [% IF next_meet.lunch %]<th>Lunch</th>[% END %]
                 <th>Notes</th>
             </tr>
@@ -109,8 +111,8 @@
                             </a>
                         </td>
                         <td>[% person.registration.roles.join(', ') %]</td>
-                        <td class="center">[% ( person.registration.drive ) ? 'Yes' : 'No' %]</td>
                         [% IF next_meet.house %]
+                            <td class="center">[% ( person.registration.drive ) ? 'Yes' : 'No' %]</td>
                             <td class="center">
                                 [% ( person.registration.house ) ? 'Yes' : 'No' %]
                             </td>

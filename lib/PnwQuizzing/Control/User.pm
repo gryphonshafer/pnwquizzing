@@ -232,6 +232,7 @@ sub list ($self) {
                     $a->{last_name} cmp $b->{last_name}
                 }
                 map {
+                    $_->{email} = lc $_->{email};
                     $_->{org} = PnwQuizzing::Model::Org->new->load( $_->{org_id} )->data if ( $_->{org_id} );
                     $_;
                 } PnwQuizzing::Model::User->new->every_data
