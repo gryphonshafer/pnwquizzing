@@ -114,6 +114,11 @@ input[type="text"].wide {
     width: 400px;
 }
 
+iframe.google_drive {
+    border : none;
+    width  : 100%;
+}
+
 & {
     @import 'content/home_page';
     @import 'content/content_footer';
