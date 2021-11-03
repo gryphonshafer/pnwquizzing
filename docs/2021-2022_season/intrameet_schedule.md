@@ -2,6 +2,8 @@
 
 This season, there will be potentially 3 different intrameet schedules.
 
+<!--
+
 ## *Classic* Scramble™
 
 The
@@ -21,6 +23,8 @@ there will be more fun and games time throughout.
 | Quizzing: "Championships"        |  4:30 PM |  5:00 PM |
 | Awards, Closing                  |  5:00 PM |  5:30 PM |
 
+-->
+
 ## District Meets
 
 These are regular district meets that happen 4 times over the season. The exact
@@ -31,18 +35,19 @@ template:
 
 | Event                 | Start    | End      |
 |-----------------------|---------:|---------:|
-| Announcements         |  8:00 AM |  8:20 AM |
-| Quizzing              |  8:30 AM | 12:00 PM |
-| Lunch Break and Games | 12:00 PM |  1:30 PM |
-| Quizzing              |  1:30 PM |  4:00 PM |
+| Announcements         |  8:30 AM |  9:00 AM |
+| Quizzing              |  9:00 AM | 12:00 PM |
+| Lunch Break and Games | 12:00 PM |  1:00 PM |
+| Quizzing              |  1:00 PM |  4:00 PM |
 
 ### Sunday
 
-| Event                   | Start    | End      |
-|-------------------------|---------:|---------:|
-| Quizzing                |  1:00 PM |  3:15 PM |
-| Quizzing: Championships |  3:15 PM |  3:45 PM |
-| Awards, Closing         |  3:45 PM |  4:00 PM |
+| Event                     | Start    | End      |
+|---------------------------|---------:|---------:|
+| Announcements             |  1:30 AM |  1:40 AM |
+| Quizzing                  |  1:40 PM |  3:00 PM |
+| Quizzing: Championships   |  3:00 PM |  3:20 PM |
+| Awards, Closing, Clean-up |  3:20 PM |  4:00 PM |
 
 ### Sunrise, Sunset
 
