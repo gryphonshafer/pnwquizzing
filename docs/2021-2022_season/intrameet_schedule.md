@@ -44,7 +44,7 @@ template:
 
 | Event                     | Start    | End      |
 |---------------------------|---------:|---------:|
-| Announcements             |  1:30 AM |  1:40 AM |
+| Announcements             |  1:30 PM |  1:40 PM |
 | Quizzing                  |  1:40 PM |  3:00 PM |
 | Quizzing: Championships   |  3:00 PM |  3:20 PM |
 | Awards, Closing, Clean-up |  3:20 PM |  4:00 PM |
