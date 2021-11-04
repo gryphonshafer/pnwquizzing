@@ -62,7 +62,7 @@
 </p>
 
 [% PROCESS next_meet_info.html.tt %]
-[% PROCESS meet_data_tables.html.tt %]
+[% PROCESS meet_data_tables.html.tt, is_web_page = 0 %]
 
 <p>
     If you have any questions about anything, please email

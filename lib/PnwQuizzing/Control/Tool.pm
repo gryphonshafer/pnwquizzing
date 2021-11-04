@@ -171,12 +171,14 @@ sub meet_data ($self) {
                         my $team = $_;
                         my $bib  = 0;
 
+                        $team_int++;
+
                         grep { $_->{attend} }
                         map {
                             my $quizzer = $_;
 
                             $quizzer->{org}  = $org->{acronym};
-                            $quizzer->{team} = $org->{acronym} . ' ' . ++$team_int;
+                            $quizzer->{team} = $org->{acronym} . ' ' . $team_int;
                             $quizzer->{bib}  = ++$bib;
 
                             $quizzer->{$_} = ( $quizzer->{$_} ) ? 'Yes' : 'No'

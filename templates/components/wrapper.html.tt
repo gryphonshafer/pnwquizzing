@@ -53,13 +53,16 @@
         <script type="text/javascript" src="[% c.url_for('/js/search_icon.js') %]"></script>
         [% FOR js_block IN page.inline_js %]<script type="text/javascript">[% js_block %]</script>[% END %]
 
-        [% IF page.vue %]
+        [% IF page.vue OR page.vue_inline %]
             <script type="text/javascript" src="[% c.url_for(
                 ( c.app.mode == 'production' ) ? '/js/vue.min.js' : '/js/vue.js'
             ) %]"></script>
 
-            <script type="text/javascript" src="[% c.url_for('/js/vue-resource.js') %]"></script>
-            <script type="text/javascript" src="[% c.url_for( '/js/' _ page.vue _ '.js' ) %]"></script>
+            [% IF page.vue %]
+                <script type="text/javascript" src="[% c.url_for( '/js/' _ page.vue _ '.js' ) %]"></script>
+            [% END %]
+
+            [% IF page.vue_inline %]<script type="text/javascript">[% page.vue_inline %]</script>[% END %]
         [% END %]
     </body>
 </html>
