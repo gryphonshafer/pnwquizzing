@@ -1,4 +1,4 @@
-[% IF user.data.roles.grep('Quizzer').size == 0 %]
+[% IF user.data.roles.grep('Quizzer').size == 0 AND user.data.dormant == 0 %]
     <a href="[% c.url_for('/tool/register') %]"
         [% IF c.url_for('/tool/register') == c.req.url.to_abs.path %]
             class="current"

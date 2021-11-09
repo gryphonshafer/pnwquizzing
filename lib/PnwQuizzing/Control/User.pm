@@ -50,7 +50,8 @@ sub account ($self) {
             }
             else {
                 $self->stash('user')->save( {
-                    roles => [ ( ref $params->{roles} ) ? @{ $params->{roles} } : $params->{roles} ],
+                    dormant => ( ( $params->{dormant} and $params->{dormant} eq 'on' ) ? 1 : 0 ),
+                    roles   => [ ( ref $params->{roles} ) ? @{ $params->{roles} } : $params->{roles} ],
                     map { $_ => $params->{$_} } qw( username passwd first_name last_name email org ),
                 } );
 
@@ -235,7 +236,7 @@ sub list ($self) {
                     $_->{email} = lc $_->{email};
                     $_->{org} = PnwQuizzing::Model::Org->new->load( $_->{org_id} )->data if ( $_->{org_id} );
                     $_;
-                } PnwQuizzing::Model::User->new->every_data
+                } PnwQuizzing::Model::User->new->every_data({ dormant => 0 })
             ],
             cnp_email_list => 0,
         } ),

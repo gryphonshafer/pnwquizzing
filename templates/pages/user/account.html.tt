@@ -64,6 +64,13 @@
                 [% IF c.stash.user %]
                     <br>
                     <a href="[% c.url_for('/user/org') %]">Edit Organization Record</a>
+
+                    <br>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="dormant" [% IF user.data.dormant %]checked[% END %]>
+                        User account set to "Dormant" status
+                    </label>
                 [% END %]
             </label>
 

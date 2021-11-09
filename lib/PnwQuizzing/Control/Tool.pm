@@ -51,7 +51,10 @@ sub search ($self) {
 }
 
 sub register ($self) {
-    return $self->redirect_to('/') if ( grep { $_ eq 'Quizzer' } @{ $self->stash('user')->data->{roles} } );
+    return $self->redirect_to('/') if (
+        $self->stash('user')->data->{dormant} or
+        grep { $_ eq 'Quizzer' } @{ $self->stash('user')->data->{roles} }
+    );
 
     my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
 
