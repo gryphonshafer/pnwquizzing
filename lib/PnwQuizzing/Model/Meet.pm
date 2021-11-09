@@ -23,6 +23,7 @@ sub next_meet_data ($self) {
             STRFTIME( '%s', m.start ) AS start,
             m.days,
             m.deadline,
+            m.reminder,
             m.house,
             m.lunch,
             o.name AS org_name,
@@ -38,14 +39,16 @@ sub next_meet_data ($self) {
     })->run->first({});
 
     if ($meet) {
+        my $time_zone = conf->get('time_zone');
+
         $meet->{start_datetime} = DateTime->from_epoch(
             epoch     => $meet->{start},
-            time_zone => 'America/Los_Angeles',
+            time_zone => $time_zone,
         )->strftime('%a, %b %e, %Y at %l:%M %p');
 
         my $deadline = DateTime->from_epoch(
             epoch     => $meet->{start},
-            time_zone => 'America/Los_Angeles',
+            time_zone => $time_zone,
         )->subtract( days => $meet->{deadline} );
 
         $deadline = DateTime->new(
@@ -55,11 +58,18 @@ sub next_meet_data ($self) {
             hour      => 9,
             minute    => 0,
             second    => 0,
-            time_zone => 'America/Los_Angeles',
+            time_zone => $time_zone,
         );
 
         $meet->{past_deadline}     = ( $deadline->epoch < time ) ? 1 : 0;
         $meet->{deadline_datetime} = $deadline->strftime('%a, %b %e, %Y at %l:%M %p');
+        $meet->{reminder_day}      = (
+            DateTime->now( time_zone => $time_zone )->ymd eq
+            DateTime->from_epoch(
+                epoch     => $meet->{start},
+                time_zone => $time_zone,
+            )->subtract( days => $meet->{deadline} + $meet->{reminder} )->ymd
+        ) ? 1 : 0;
     }
 
     return $meet;

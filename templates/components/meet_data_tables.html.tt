@@ -22,7 +22,7 @@
 
 <h2>Quizzers</h2>
 
-[% IF org_reg AND org_reg.size > 0 %]
+[% IF org_reg AND org_reg.size > 0 AND org_reg.0.registration.size > 0 %]
     <div id="meet_data">
         [% IF is_web_page %]
             <form>

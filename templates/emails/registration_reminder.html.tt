@@ -5,6 +5,13 @@
         font-size: 110%;
     }
 
+    div#meet_data_tables {
+        margin           : 0.75em 0.75em 0px 0.75em;
+        padding          : 0px 1.25em 1.25em 1.25em;
+        border           : 1px solid silver;
+        background-color : ghostwhite;
+    }
+
     table, th, td {
         border          : 1px solid silver;
         padding         : 0px;
@@ -21,7 +28,8 @@
     }
 
     td {
-        padding: 1px 3px 1px 3px;
+        padding          : 1px 3px 1px 3px;
+        background-color : white;
     }
 
     th.right, td.right, tr.right td {
@@ -53,18 +61,27 @@
 <p>Greetings [% user.data.first_name %],</p>
 
 <p>
-    This is a registration data check reminder email. The following will be your
-    registration should you not make any changes prior to the deadline. Should
-    you need to make any changes, visit the
+    This is a registration data check reminder email sent prior to the
+    registration deadline for the following meet:
+</p>
+
+[% PROCESS next_meet_info.html.tt %]
+
+<p>
+    Please review the following data. If it is correct, you don't need to do
+    anything. If it is incorrect, please update it via the
     <b><a href="[% url %]/tool/register">Meet Registration</a></b>
     web page.
     <i>(<a href="[% url %]/tool/register">[% url %]/tool/register</a>)</i>
 </p>
 
-[% PROCESS next_meet_info.html.tt %]
-[% PROCESS meet_data_tables.html.tt, is_web_page = 0 %]
+<div id="meet_data_tables">
+    [% PROCESS meet_data_tables.html.tt, is_web_page = 0 %]
+</div>
 
 <p>
-    If you have any questions about anything, please email
-    <a href="mailto:contact@pnwquizzing.org">contact@pnwquizzing.org</a>.
+    The above will be your registration data should you not make any changes
+    prior to the deadline. If you have any questions about anything, please
+    email:
+    <a href="mailto:[% from_email %]">[% from_email %]</a>
 </p>

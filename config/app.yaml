@@ -44,5 +44,6 @@ default:
             include_path:
                 - templates/components
                 - templates/emails
+    time_zone: America/Los_Angeles
 optional_include: local/config.yaml
 preinclude: ../omniframe/config/app.yaml
