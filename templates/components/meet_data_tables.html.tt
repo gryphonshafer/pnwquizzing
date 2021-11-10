@@ -22,7 +22,23 @@
 
 <h2>Quizzers</h2>
 
-[% IF org_reg AND org_reg.size > 0 AND org_reg.0.registration.size > 0 %]
+[%
+    quizzer_data_exists = 0;
+    FOR org IN org_reg;
+        FOR team IN org.registration;
+            FOR quizzer IN team;
+                IF quizzer.attend;
+                    quizzer_data_exists = 1;
+                END;
+                LAST IF quizzer_data_exists;
+            END;
+            LAST IF quizzer_data_exists;
+        END;
+        LAST IF quizzer_data_exists;
+    END;
+%]
+
+[% IF quizzer_data_exists %]
     <div id="meet_data">
         [% IF is_web_page %]
             <form>
