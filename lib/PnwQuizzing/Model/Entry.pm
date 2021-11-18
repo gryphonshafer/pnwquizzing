@@ -2,6 +2,7 @@ package PnwQuizzing::Model::Entry;
 
 use exact -conf, -class;
 use Mojo::JSON qw( encode_json decode_json );
+use DateTime;
 
 with 'Omniframe::Role::Model';
 
@@ -22,7 +23,21 @@ sub _decode_registrations ($entries) {
     } @$entries ];
 }
 
-sub user_registrations ( $self, $meet_id, $user_id = undef ) {
+sub _season_break_timestamp {
+    my $now = DateTime->now->set_time_zone( conf->get('time_zone') );
+
+    my $season_break = DateTime->new(
+        %{ conf->get('season_break') },
+        year      => $now->year,
+        time_zone => conf->get('time_zone'),
+    );
+
+    $season_break->subtract( years => 1 ) if ( $now->epoch < $season_break->epoch );
+
+    return $season_break->set_time_zone('Zulu') . '.000Z';
+}
+
+sub user_registrations ( $self, $user_id = undef ) {
     return _decode_registrations $self->dq->sql(q{
         SELECT
             e.user_id,
@@ -38,7 +53,7 @@ sub user_registrations ( $self, $meet_id, $user_id = undef ) {
         FROM (
             SELECT user_id, registration, created
             FROM entry
-            WHERE meet_id = ? AND org_id IS NULL } . (
+            WHERE org_id IS NULL AND created >= ? } . (
                 ($user_id)
                     ? ( 'AND user_id = ' . $self->dq->quote($user_id) )
                     : ''
@@ -47,13 +62,13 @@ sub user_registrations ( $self, $meet_id, $user_id = undef ) {
         ) AS e
         JOIN user AS u USING (user_id)
         LEFT JOIN org AS o ON u.org_id = o.org_id AND o.active
-        WHERE u.active
+        WHERE u.active AND NOT u.dormant
         GROUP BY user_id
         ORDER BY o.acronym, u.first_name, u.last_name
-    })->run($meet_id)->all({});
+    })->run( _season_break_timestamp )->all({});
 }
 
-sub org_registrations ( $self, $meet_id, $org_id = undef ) {
+sub org_registrations ( $self, $org_id = undef ) {
     return _decode_registrations $self->dq->sql(q{
         SELECT
             e.org_id,
@@ -64,7 +79,7 @@ sub org_registrations ( $self, $meet_id, $org_id = undef ) {
         FROM (
             SELECT org_id, registration, created
             FROM entry
-            WHERE meet_id = ? AND } . (
+            WHERE created >= ? AND } . (
                 ($org_id)
                     ? ( 'org_id = ' . $self->dq->quote($org_id) )
                     : 'org_id IS NOT NULL'
@@ -75,7 +90,7 @@ sub org_registrations ( $self, $meet_id, $org_id = undef ) {
         WHERE o.active
         GROUP BY org_id
         ORDER BY o.acronym
-    })->run($meet_id)->all({});
+    })->run( _season_break_timestamp )->all({});
 }
 
 1;

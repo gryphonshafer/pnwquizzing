@@ -45,5 +45,8 @@ default:
                 - templates/components
                 - templates/emails
     time_zone: America/Los_Angeles
+    season_break:
+        month: 8
+        day: 1
 optional_include: local/config.yaml
 preinclude: ../omniframe/config/app.yaml

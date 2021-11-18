@@ -56,17 +56,8 @@ sub register ($self) {
         grep { $_ eq 'Quizzer' } @{ $self->stash('user')->data->{roles} }
     );
 
-    my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
-
-    my $user_reg = PnwQuizzing::Model::Entry->user_registrations(
-        $next_meet->{meet_id},
-        $self->stash('user')->id,
-    );
-
-    my $org_reg = PnwQuizzing::Model::Entry->org_registrations(
-        $next_meet->{meet_id},
-        $self->stash('user')->data->{org_id},
-    );
+    my $user_reg = PnwQuizzing::Model::Entry->user_registrations( $self->stash('user')->id             );
+    my $org_reg  = PnwQuizzing::Model::Entry->org_registrations ( $self->stash('user')->data->{org_id} );
 
     $self->stash(
         next_meet     => PnwQuizzing::Model::Meet->next_meet_data,
@@ -141,8 +132,8 @@ sub register_save ($self) {
 
 sub meet_data ($self) {
     my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
-    my $org_reg   = PnwQuizzing::Model::Entry->org_registrations ( $next_meet->{meet_id} );
-    my $user_reg  = PnwQuizzing::Model::Entry->user_registrations( $next_meet->{meet_id} );
+    my $org_reg   = PnwQuizzing::Model::Entry->org_registrations;
+    my $user_reg  = PnwQuizzing::Model::Entry->user_registrations;
 
     unless ( $self->req->url->path->trailing_slash(0)->to_string =~ /\.(\w+)$/ and lc($1) eq 'csv' ) {
         $self->stash(
