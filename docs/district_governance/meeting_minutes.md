@@ -22,3 +22,7 @@ The current members of the Board of Directors are listed in
 - [Saturday, July 25, 2020](_meeting_minutes/2020-07-25.md) at Portland-Troutdale Airport
 - [Monday, September 2, 2019](_meeting_minutes/2019-09-02.md) via Email
 - [Sunday, July 28, 2019](_meeting_minutes/2019-07-28.md) via Google Hangouts
+
+## Rules Committee Meeting Minutes
+
+- [Saturday, December 11, 2021](_meeting_minutes/2021-12-11.md) via Zoom

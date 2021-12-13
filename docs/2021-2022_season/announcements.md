@@ -12,3 +12,4 @@ notices, changes, and decisions for PNW Quizzing for the 2021-2022 season.
     - Adopt [the Ultrameet™ proposal](/district_governance/_meeting_minutes/2021-08-25.md#theultrameetproposal)
 - [2021-09-25 General Assembly meeting minutes](/district_governance/_meeting_minutes/2021-09-25.md)
 - 2021-10-01: The board voted unanimously to approve the purchase of tents and heaters to support outdoor quizzing operations.
+- [2021-12-11 Rules Committee meeting minutes](/district_governance/_meeting_minutes/2021-12-11.md)
