@@ -26,9 +26,13 @@ if ( $next_meet->{reminder_day} or $settings->{force} ) {
                 user       => $user,
                 url        => conf->get('base_url'),
                 next_meet  => $next_meet,
-                user_reg   => PnwQuizzing::Model::Entry->user_registrations( $user->id ),
-                org_reg    => PnwQuizzing::Model::Entry->org_registrations( $user->data->{org_id} ),
                 from_email => $from_email,
+                user_reg   => PnwQuizzing::Model::Entry->user_registrations( $user->id ),
+                org_reg    => (
+                    ( $user->data->{org_id} )
+                        ? PnwQuizzing::Model::Entry->org_registrations( $user->data->{org_id} )
+                        : [],
+                ),
             },
         });
     }
