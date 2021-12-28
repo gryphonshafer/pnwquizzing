@@ -1,7 +1,7 @@
 [%
     page.title = 'Registration';
     page.vue   = 'register';
-    no_edit    = next_meet.past_deadline;
+    no_edit    = next_meet.past_deadline AND NOT c.session.become;
 
     page.inline_js.push( 'var register_data = ' _ register_data );
 %]

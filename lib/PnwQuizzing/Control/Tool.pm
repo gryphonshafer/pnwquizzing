@@ -100,7 +100,7 @@ sub register ($self) {
 sub register_save ($self) {
     my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
 
-    unless ( $next_meet->{past_deadline} ) {
+    unless ( $next_meet->{past_deadline} and not $self->session('become') ) {
         my $data = decode_json( $self->param('data') );
 
         PnwQuizzing::Model::Entry->new->create({

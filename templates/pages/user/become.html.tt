@@ -1,0 +1,38 @@
+[% page.title = 'Become User' %]
+
+<h1>Become a User (via Administrator Authorization)</h1>
+
+<p>
+    Select the user to become.
+    <b class="red">
+        Remember to exit ths user, logout, or close the browser when done
+        impersonating the user.
+    </b>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Active</th>
+            <th>Dormant</th>
+            <th>Last Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        [% FOR this_user IN users %]
+            <tr>
+                <td>[% this_user.first_name %] [% this_user.last_name %]</td>
+                <td>
+                    <a href="[%
+                        c.url_for('/user/become').query( username => this_user.username )
+                    %]">[% this_user.username %]</a>
+                </td>
+                <td>[% ( this_user.active ) ? 'Active' : 'Inactive' %]</td>
+                <td>[% ( this_user.dormant ) ? 'Dormant' : 'Non-Dormant' %]</td>
+                <td>[% this_user.last_login OR 'No Login' %]</td>
+            </tr>
+        [% END %]
+    </tbody>
+</table>

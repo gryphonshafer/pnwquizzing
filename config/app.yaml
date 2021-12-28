@@ -48,5 +48,6 @@ default:
     season_break:
         month: 8
         day: 1
+    admins:
 optional_include: local/config.yaml
 preinclude: ../omniframe/config/app.yaml

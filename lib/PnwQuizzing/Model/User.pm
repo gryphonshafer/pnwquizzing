@@ -117,6 +117,19 @@ sub reset_password ( $self, $user_id, $passwd ) {
     return $user->save( { passwd => $new_passwd, active => 1 } );
 }
 
+sub is_admin ( $self, $user_id = undef ) {
+    croak('Must have loaded user data or pass in a user ID') unless ( $self->data or $user_id );
+
+    my $username = ( $self->data )
+        ? $self->data->{username}
+        : $self->dq->sql(q{
+            SELECT username FROM user WHERE active AND NOT dormant AND user_id = ?
+        })->run($user_id)->value;
+
+    return 0 unless ($username);
+    return ( grep { $username eq $_ } map { $_ || '' } @{ conf->get('admins') || [] } ) ? 1 : 0;
+}
+
 1;
 
 =head1 NAME

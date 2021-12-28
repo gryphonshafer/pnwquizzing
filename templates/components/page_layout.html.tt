@@ -27,7 +27,11 @@
         [% ELSE %]
             <p>
                 Logged in as: <b>[% user.data.username | html %]</b>
-                (<a href="[% c.url_for('/user/logout') %]">Logout</a>)
+                (<a href="[% c.url_for('/user/logout') %]">Logout</a>[%
+                    IF c.session.become %] | <a href="[% c.url_for('/user/unbecome')
+                        %]"><b class="red">Unbecome</b></a>[%
+                    ELSIF user.is_admin %] | <a href="[% c.url_for('/user/become')
+                        %]">Become</a>[% END %])
 
                 <br>
 

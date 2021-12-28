@@ -287,6 +287,28 @@ sub org ($self) {
     }
 }
 
+sub become ($self) {
+    unless ( $self->param('username') ) {
+        $self->stash( users => [
+            sort {
+                $b->{active} <=> $a->{active} or
+                $a->{dormant} <=> $b->{dormant} or
+                $a->{first_name} cmp $b->{first_name} or
+                $a->{last_name} cmp $b->{last_name}
+            } PnwQuizzing::Model::User->every_data
+        ] );
+    }
+    else {
+        $self->session( become => $self->param('username') );
+        $self->redirect_to('/user/account');
+    }
+}
+
+sub unbecome ($self) {
+    $self->session( become => undef );
+    $self->redirect_to('/user/account');
+}
+
 1;
 
 =head1 NAME

@@ -31,18 +31,33 @@ sub startup ($self) {
     my $all = $self->routes->under( sub ($self) {
         if ( my $user_id = $self->session('user_id') ) {
             my $user;
-            try {
-                $user = PnwQuizzing::Model::User->new->load($user_id);
+
+            unless ( my $become = $self->session('become') ) {
+                try {
+                    $user = PnwQuizzing::Model::User->new->load($user_id);
+                }
+                catch {
+                    $self->notice( 'Failed user load based on session "user_id" value: "' . $user_id . '"' );
+                };
             }
-            catch {
-                $self->notice( 'Failed user load based on session "user_id" value: "' . $user_id . '"' );
-            };
+            else {
+                try {
+                    $user = PnwQuizzing::Model::User->new->load({ username => $become });
+                }
+                catch {
+                    $self->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
+                    $self->flash( message => 'Failed to become user: "' . $become . '"' );
+                    $self->session( become => undef );
+                    $self->redirect_to('/user/account');
+                };
+            }
 
             if ($user) {
                 $self->stash( 'user' => $user );
 
                 return $self->redirect_to('/user/org') if (
-                    not $user->data->{org_id}
+                    not $self->session('become')
+                    and not $user->data->{org_id}
                     and $self->req->url->path ne '/user/org'
                     and $self->req->url->path ne '/user/logout'
                 );
@@ -72,7 +87,15 @@ sub startup ($self) {
         meet_data
     ) );
     $users->any( '/tool/meet_data' => [ format => 'csv' ] )->to('tool#meet_data');
-    $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list org ) );
+    $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list org unbecome ) );
+
+    $users->under( sub ($self) {
+        return 1 if ( $self->stash('user')->is_admin );
+        $self->info('Admin required but not met');
+        $self->flash( message => 'Administrator access required for the previously requested resource.' );
+        $self->redirect_to('/');
+        return 0;
+    } )->any('/user/become')->to('user#become');
 
     $all->any('/user/verify/:verify_user_id/:verify_passwd')->to('user#verify');
     $all->any('/user/reset_password/:reset_user_id/:reset_passwd')->to('user#reset_password');
