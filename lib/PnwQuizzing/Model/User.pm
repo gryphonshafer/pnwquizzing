@@ -169,3 +169,9 @@ Send a reset password email to a user.
 =head2 reset_password
 
 Reset a user's password in resposne to a reset password email response.
+
+=head2 is_admin
+
+Returns 1 or 0 whether the loaded user is an administrator, defined by the
+"admins" array of usernames in the configuration. This method also optionally
+accepts a user ID.

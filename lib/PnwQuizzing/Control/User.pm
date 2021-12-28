@@ -350,6 +350,15 @@ Handler for "list" calls.
 
 Handler for "org" calls.
 
+=head2 become
+
+Administrator users can become another user.
+
+=head2 unbecome
+
+After becoming a user via C<become>, this returns the user to their original
+state.
+
 =head1 INHERITANCE
 
 L<Mojolicious::Controller>.
