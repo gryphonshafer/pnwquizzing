@@ -14,6 +14,13 @@
                 el   : '#meet_data',
                 data : {
                     meet_data_toggle : 'table'
+                },
+                watch : {
+                    meet_data_toggle : function () {
+                        this.\$nextTick( function () {
+                            nav_content_align.align();
+                        } );
+                    }
                 }
             });
         ";
