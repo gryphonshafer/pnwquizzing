@@ -1,12 +1,10 @@
 # Virtual Quizzing
 
-The purpose of "virtual quizzing" is to support the core mission of Bible Quizzing: encouraging memorization of Scripture. It's a shadow or an echo of in-person Quizzing, missing much of the valuable aspects of in-person quizzing; however, in extrodinary times when it's impractical or impossible to gather together for in-person, traditional quiz meets, virtual quizzing can serve as a "better than nothing" subsitute. Virtual quizzing tries to capture as much of the quizzing experience as possible; however, there's much it can't replicate.
-
-The following are the specific processes and rules that need to be followed for virtual quizzing. These are all considered overlays to the existing processes and rules of traditional quizzing. Begin first with the set of rules for your juristiction. For example, if quizzing at the Internationals level (also referred to as "Internetionals"), begin with the most current [IBQ rulebook](IBQ_rule_book.md), then apply the following as overrides.
+The following are the specific processes and rules for virtual quizzing. These are all considered overlays to the existing processes and rules of traditional quizzing. Begin first with the set of rules for your juristiction. For example, if quizzing at the Internationals level (also referred to as "Internetionals"), begin with the most current [IBQ rulebook](IBQ_rule_book.md), then apply the following as overrides. If quizzing at the PNW Quizzing level, begin with the [IBQ rulebook](IBQ_rule_book.md), then apply [PNW rules](PNW_rules.md), then apply the following as overrides.
 
 ## Required Equipment
 
-To participate, **each quizzer** most use a desktop or laptop with a mic. 2 or more quizzers cannot effectively share the same device. It's strongly recommended though not required that each quizzer use some sort of headphones or audio ear pieces. It's theoretically possible to use a smart phone or tablet as a quizzer, but it's significantly more difficult.
+To participate, quizzers must use a computer with a speakers, mic, and the ability to load Slack and Zoom. It's strongly recommended though not required that each quizzer use some sort of headphones or audio ear pieces. It's theoretically possible to use a smart phone or tablet as a quizzer, but it's significantly more difficult.
 
 Coaches are encouraged to use their own devices; however, if a coach is in the same physical location as a quizzer on the coach's team, it's theoretically possible for the coach to share the quizzer's device, though this will require the coach and quizzer to work out a means by which the coach can quickly unmute to call a timeout or substitution.
 
@@ -16,13 +14,13 @@ For spectators, any web-enabled device should work fine.
 
 ### Meet Coordination and Discussion
 
-Everyone involved in the virtual quiz meet (quizzers, officials, coaches, spectators, etc.) should join the [Bible Quizzing Slack forum](https://biblequizzing.slack.com). If you need an invitation for access, [contact Gryphon](mailto:gryphon@pnwquizzing.org). Change your **display name** in Slack to "**Firstname Lastname (DISTRICT)**". For example: "Gryphon Shafer (PNW)".
+Everyone involved in the virtual quiz meet (quizzers, officials, coaches, spectators, etc.) should join the [Bible Quizzing Slack forum](https://biblequizzing.slack.com). If you need an invitation for access, [contact Gryphon](mailto:gryphon@pnwquizzing.org). Change your **display name** in Slack to "**Firstname Lastname (DISTRICT OR TEAM NAME)**". For example: "Gryphon Shafer (PNW)" or "Evie Shafer (MAD1)".
 
-Once signed in, join the `#virtual-meet` channel. This is a chat location area for the meet itself, almost like room 1 during a break in quizzing. Announcements will happen in the `#virtual-meet` channel. If you need help with anything meet-related, please ask in this channel. Those who are able to render assistance, please do so. Non-meet general chit-chat should happen in the `#general` channel or elsewhere.
+Once signed in, join the primary meet channel, which for PNW is: `#pnw-quiz-meet`. This is a chat location area for the meet itself, almost like room 1 during a break in quizzing. Announcements will happen in the `#pnw-quiz-meet` channel. If you need help with anything meet-related, please ask in this channel. Those who are able to render assistance, please do so. Non-meet general chit-chat should happen in the `#general` channel or elsewhere.
 
 ### Entering Quiz Rooms
 
-Prior to a each quiz starting, a short announcement will be made in `#virtual-meet` (and copied to `#virtual-meet-rooms`) with a link to the Zoom and the teams involved. When the announcement happens, everybody with interest in that quiz should join the Zoom.
+Prior to a each quiz starting, a short announcement will be made in `#pnw-quiz-meet` with a link to the Zoom and the teams involved. When the announcement happens, everybody with interest in that quiz should join the Zoom.
 
 Once connected to the Zoom room:
 
@@ -43,6 +41,7 @@ Everyone should turn off video and mute audio (except the quizmaster) and all qu
 Prior to each question:
 
 - All quizzers should type their bib number into the chat window text entry field, but don't click enter.
+- Select from the chat dropdown the option to send your text only to the quizmaster.
 - The quizmaster should type a series of dashes, but not type enter.
 
 During the question preamble, the quizmaster will press enter upon the final call of "question". When a quizzer wants to signal a jump, they press enter (which will result in their bib number displaying to the quizmaster). The quizmaster's display ordering is the only official ordering for jump win criteria.
