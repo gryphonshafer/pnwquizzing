@@ -38,8 +38,8 @@
 |   30 | Sun, Mar 13 | Sat, Mar 19  | *Review*                                              ||||
 |   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **District Meet 3**                      ||||
 
-Constult the [season schedule](season_schedule.md) for additional meets of 
-the season not listed here.
+Constult the [season schedule](season_schedule.md) for additional meets of the
+season not listed here.
 
 ## Key Verses List (KVL)
 

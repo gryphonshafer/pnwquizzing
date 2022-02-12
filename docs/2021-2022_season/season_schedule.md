@@ -34,13 +34,13 @@ The following is the current season schedule for 2021-2022:
 
 **(Tentative) District Meet 4**
 
-- Saturday and Sunday, April 9-10
+- Saturday and Sunday, April 9-10 *(or alternatively March 12-13)*
 - James 1-5 and Romans 1-16
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
 **(Tentative) Great West Invitational**
 
-- Date TBD *(Probably: Early April)*
+- Friday, Saturday, and Sunday, April 8-10
 - James 1-5 and Romans 1-16
 - [Crowsnest Lake Bible Camp](https://www.crowcamp.ca/)
 - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/place/Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
