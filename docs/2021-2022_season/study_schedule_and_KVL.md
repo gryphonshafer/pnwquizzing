@@ -25,18 +25,21 @@
 |   17 | Sun, Dec 12 | Sat, Dec 18  | Romans 9  |     33 |         141 |                366 |
 |   18 | Sun, Dec 19 | Sat, Dec 25  | *Review*                                              ||||
 |   19 | Sun, Dec 26 | Sat, Jan 1   | *Review*                                              ||||
-|   20 | Sun, Jan 2  | Sat, Jan 8   | *Review* and **District Meet 2**                      ||||
+|   20 | Sun, Jan 2  | Sat, Jan 8   | *Review* and **Virtual District Meet**                ||||
 |   21 | Sun, Jan 9  | Sat, Jan 15  | Romans 10 |     21 |          21 |                387 |
 |   22 | Sun, Jan 16 | Sat, Jan 22  | Romans 11 |     36 |          57 |                423 |
 |   23 | Sun, Jan 23 | Sat, Jan 29  | Romans 12 |     21 |          78 |                444 |
 |   24 | Sun, Jan 30 | Sat, Feb 5   | Romans 13 |     14 |          92 |                458 |
 |   25 | Sun, Feb 6  | Sat, Feb 12  | *Review*                                              ||||
-|   26 | Sun, Feb 13 | Sat, Feb 19  | *Review* and **District Meet 3**                      ||||
+|   26 | Sun, Feb 13 | Sat, Feb 19  | *Review* and **District Meet 2**                      ||||
 |   27 | Sun, Feb 20 | Sat, Feb 26  | Romans 14 |     23 |          23 |                481 |
 |   28 | Sun, Feb 27 | Sat, Mar 5   | Romans 15 |     33 |          56 |                514 |
 |   29 | Sun, Mar 6  | Sat, Mar 12  | Romans 16 |     26 |          82 |                540 |
 |   30 | Sun, Mar 13 | Sat, Mar 19  | *Review*                                              ||||
-|   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **District Meet 4**                      ||||
+|   31 | Sun, Mar 20 | Sat, Mar 26  | *Review* and **District Meet 3**                      ||||
+
+Constult the [season schedule](season_schedule.md) for additional meets of 
+the season not listed here.
 
 ## Key Verses List (KVL)
 

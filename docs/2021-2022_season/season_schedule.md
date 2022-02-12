@@ -14,25 +14,31 @@ The following is the current season schedule for 2021-2022:
 - James 1-5 and Romans 1-4
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-**District Meet 2**
+**Virtual District Meet**
 
 - Saturday and Sunday, January 8-9
 - James 1-5 and Romans 1-9
-- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
+- Slack and Zoom
 
-**District Meet 3**
+**District Meet 2**
 
 - Saturday and Sunday, February 19-20
 - James 1-5 and Romans 1-13
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-**District Meet 4**
+**District Meet 3**
 
 - Saturday and Sunday, March 26-27
 - James 1-5 and Romans 1-16
 - [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
 
-**Great West Invitational**
+**(Tentative) District Meet 4**
+
+- Saturday and Sunday, April 9-10
+- James 1-5 and Romans 1-16
+- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
+
+**(Tentative) Great West Invitational**
 
 - Date TBD *(Probably: Early April)*
 - James 1-5 and Romans 1-16
@@ -47,6 +53,6 @@ The following is the current season schedule for 2021-2022:
 
 **Internationals**
 
-- Date TBD *(Probably: Early July)*
+- Tuesday through Saturday, July 19-23
 - James 1-5 and Romans 1-16
-- Location TBD
+- [Crown College](https://crown.edu)
