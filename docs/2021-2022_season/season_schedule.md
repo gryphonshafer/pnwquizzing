@@ -30,15 +30,9 @@ The following is the current season schedule for 2021-2022:
 
 - Saturday and Sunday, March 26-27
 - James 1-5 and Romans 1-16
-- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
+- *Location to be determined/announced*
 
-**(Tentative) District Meet 4**
-
-- Saturday and Sunday, April 9-10 *(or alternatively March 12-13)*
-- James 1-5 and Romans 1-16
-- [Alliance Bible Church (ABC), Covington WA](https://www.google.com/maps/dir/Alliance+Bible+Church,+19320+SE+240th+St,+Covington,+WA+98042)
-
-**(Tentative) Great West Invitational**
+**Great West Invitational**
 
 - Friday, Saturday, and Sunday, April 8-10
 - James 1-5 and Romans 1-16
@@ -49,7 +43,8 @@ The following is the current season schedule for 2021-2022:
 
 - Friday, Saturday, and Sunday, April 29-May 1
 - James 1-5 and Romans 1-16
-- [Double K Retreat Center, Easton WA](https://www.google.com/maps/dir/Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
+- [Double K Retreat Center](https://www.doublek.org)
+- [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir/Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
 
 **Internationals**
 
