@@ -28,7 +28,7 @@ The following is the current season schedule for 2021-2022:
 
 **District Meet 3**
 
-- Saturday and Sunday, March 26-27
+- Saturday, March 26
 - James 1-5 and Romans 1-16
 - *Location to be determined/announced*
 
