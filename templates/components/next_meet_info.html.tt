@@ -20,7 +20,7 @@
                 Meet Location:
                 <b>
                     [% location %][% IF address %],
-                        <a href="https://www.google.com/maps/place/[% address | url %]">[% address %]</a>
+                        <a href="https://www.google.com/maps/dir//[% address | url %]">[% address %]</a>
                     [% END %]
                 </b>
             </li>
