@@ -137,6 +137,16 @@
             <div v-show="meet_data_toggle == 'cbqz'">
                 [% FOR org IN org_reg %]
                     [% FOR team IN org.registration %]
+                        [%
+                            display = 0;
+                            FOR quizzer IN team;
+                                IF quizzer.attend;
+                                    display = 1;
+                                END;
+                            END;
+                            NEXT UNLESS display == 1;
+                        %]
+
                         <p>
                             <b>[% org.acronym %] [% loop.count %]</b><br>
                             [% FOR quizzer IN team %]
@@ -156,6 +166,14 @@
                     teams = [];
                     FOR org IN org_reg;
                         FOR team IN org.registration;
+                            display = 0;
+                            FOR quizzer IN team;
+                                IF quizzer.attend;
+                                    display = 1;
+                                END;
+                            END;
+                            NEXT UNLESS display == 1;
+
                             teams.push( org.acronym _ ' ' _ loop.count );
                         END;
                     END;
