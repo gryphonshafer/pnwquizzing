@@ -2,6 +2,10 @@
 
 The following are entries in a changelog for Bible Quizzing rules as adopted by Pacific Northwest Bible Quizzing. This page and its content are provided for reference purposes but are not the canonical source for rules. The canonical sources are first the [IBQ Rule Book](IBQ_rule_book.md) followed by the [PNW Rules](PNW_rules.md) document.
 
+## April 27, 2022
+
+Removed the "Quizmaster Prompts" section of the PNW rules since the [IBQ Rule Book](IBQ_rule_book.md) (as of the 2021-2022 season version) matches the prompts PNW should use. *(Although this has been followed in PNW throughout the 2021-2022 season, this change to this documentation is only now getting implemented due to not realizing it needed to be implemented until now.)*
+
 ## February 20, 2020
 
 *(The follow rule change, while accepted on the date above, does not come into effect until the beginning of the 2020-2021 season.)*
