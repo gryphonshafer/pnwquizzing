@@ -2,7 +2,7 @@
 
 The following is the current season schedule for 2021-2022:
 
-**<i>Classic</i> Scramble™**
+**Classic Scramble™**
 
 - Saturday, September 25
 - James 1-4

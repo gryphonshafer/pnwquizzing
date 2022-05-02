@@ -10,7 +10,7 @@
 |    2 | Sun, Aug 29 | Sat, Sep 4   | James 2   |     26 |          53 |                 53 |
 |    3 | Sun, Sep 5  | Sat, Sep 11  | James 3   |     18 |          71 |                 71 |
 |    4 | Sun, Sep 12 | Sat, Sep 18  | James 4   |     17 |          88 |                 88 |
-|    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **<i>Classic</i> Scramble™**             ||||
+|    5 | Sun, Sep 19 | Sat, Sep 25  | *Review* and **Classic Scramble™**                    ||||
 |    6 | Sun, Sep 26 | Sat, Oct 2   | James 5   |     20 |          20 |                108 |
 |    7 | Sun, Oct 3  | Sat, Oct 9   | *Review*                                              ||||
 |    8 | Sun, Oct 10 | Sat, Oct 16  | Romans 1  |     32 |          32 |                140 |

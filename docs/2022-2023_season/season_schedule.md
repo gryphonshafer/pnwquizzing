@@ -3,7 +3,7 @@
 The following is the current *(rough outline of a)* season schedule for 2022-2023:
 
 - Pre-Season
-    - <i>Classic</i> Scramble™: September
+    - Classic Scramble™: September
 - Regular Season
     - District Meet 1: October
     - District Meet 2: November
@@ -20,7 +20,7 @@ The following is the current *(rough outline of a)* season schedule for 2022-202
 The following are the proposed and currently unconfirmed dates and locations for
 meets in the 2022-2023 season:
 
-### <i>Classic</i> Scramble™
+### Classic Scramble™
 
 - **Dates**: Saturday, September 17, 2022
 - **Location:** *TBD*

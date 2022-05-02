@@ -1,7 +1,7 @@
-# <i>Classic</i> Scramble™
+# Classic Scramble™
 
 The following is the plan for team formation, officials selection, and schedule
-for the <i>Classic</i> Scramble™ meet.
+for the Classic Scramble™ meet.
 
 ## Team Formation
 
