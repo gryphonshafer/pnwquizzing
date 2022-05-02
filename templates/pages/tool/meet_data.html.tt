@@ -3,41 +3,44 @@
 <h1>[% page.title %]</h1>
 
 [% PROCESS next_meet_info.html.tt %]
-[% PROCESS meet_data_tables.html.tt, is_web_page = 1 %]
 
-<h2>Registration Totals</h2>
+[% IF next_meet.meet_name %]
+    [% PROCESS meet_data_tables.html.tt, is_web_page = 1 %]
 
-<ul>
-    <li>
-        Attending:
-        <b>[% totals.attending || 0 %]</b>
-    </li>
-    <li>
-        Organizations:
-        <b>[% totals.organizations.keys.size || 0 %]</b>
-    </li>
-    <li>
-        Teams:
-        <b>[% totals.teams.keys.size || 0 %]</b>
-    </li>
-    <li>
-        Quizzers:
-        <b>[% totals.quizzers || 0 %]</b>
-    </li>
-    <li>
-        Rookies:
-        <b>[% totals.rookies || 0 %]</b>
-    </li>
-    <li>
-        Non-Quizzers:
-        <b>[% totals.nonquizzers || 0 %]</b>
-    </li>
-</ul>
+    <h2>Registration Totals</h2>
 
-[% IF ( org_reg AND org_reg.size > 0 ) OR ( user_reg AND user_reg.size > 0 ) %]
-    <h2>Download CSV Data</h2>
+    <ul>
+        <li>
+            Attending:
+            <b>[% totals.attending || 0 %]</b>
+        </li>
+        <li>
+            Organizations:
+            <b>[% totals.organizations.keys.size || 0 %]</b>
+        </li>
+        <li>
+            Teams:
+            <b>[% totals.teams.keys.size || 0 %]</b>
+        </li>
+        <li>
+            Quizzers:
+            <b>[% totals.quizzers || 0 %]</b>
+        </li>
+        <li>
+            Rookies:
+            <b>[% totals.rookies || 0 %]</b>
+        </li>
+        <li>
+            Non-Quizzers:
+            <b>[% totals.nonquizzers || 0 %]</b>
+        </li>
+    </ul>
 
-    <form action="[% c.url_for( format => 'csv' ).to_string %]">
-        <input type="submit" value="Download CSV Data" />
-    </form>
+    [% IF ( org_reg AND org_reg.size > 0 ) OR ( user_reg AND user_reg.size > 0 ) %]
+        <h2>Download CSV Data</h2>
+
+        <form action="[% c.url_for( format => 'csv' ).to_string %]">
+            <input type="submit" value="Download CSV Data" />
+        </form>
+    [% END %]
 [% END %]
