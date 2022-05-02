@@ -30,7 +30,7 @@ At each Assembly meeting, the Assembly will appoint one of its attendees to be S
 
 ## Article 3 - Board of Directors
 
-The PNW Board of Directors, hereinafter referred to as the Board, shall consist of 5 people appointed by the Assembly for annual terms.  Of 5 Board positions, 3 are explicitly tied to a role:
+The PNW Board of Directors, hereinafter referred to as the Board, shall consist of 5 people appointed by the Assembly for annual terms. Of 5 Board positions, 3 are explicitly tied to a role:
 
 - District Coordinator, Chair
 - Rules Subcommittee Leader, Vice-Chair

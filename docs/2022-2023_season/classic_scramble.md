@@ -1,8 +1,7 @@
 # <i>Classic</i> Scramble™
 
 The following is the plan for team formation, officials selection, and schedule
-for the <i>Classic</i> Scramble™ meet. This is not set in stone, but it's
-rather a plan that may need adjustments in real-time at the meet.
+for the <i>Classic</i> Scramble™ meet.
 
 ## Team Formation
 
@@ -43,9 +42,9 @@ during the pre-quizzing 20-minute team formation period.
 
 ## Schedule Generation
 
-There will be either 2 or 3 "rooms" (outdoors), though likely 2. When each
-"room" has concluded quizzing, it will immediately begin setup for their next
-quiz by selecting teams and officials.
+There will be some number of "rooms" (outdoors). When each "room" has concluded
+quizzing, it will immediately begin setup for their next quiz by selecting teams
+and officials.
 
 Teams will be selected by the following algorithm:
 

@@ -8,10 +8,11 @@ Directors meetings.
 The members, voting and non-voting, of the General Assembly are defined in the
 [bylaws](bylaws.md).
 
+- [Saturday, April 30, 2022](_meeting_minutes/2022-04-30.md) at Double K Christian Camp and Retreat Center, Easton
 - [Saturday, September 25, 2021](_meeting_minutes/2021-09-25.md) at Alliance Bible Church, Covington
 - [Wednesday, August 25, 2020](_meeting_minutes/2021-08-25.md) via Zoom *(Unofficial)*
 - [Saturday, September 14, 2019](_meeting_minutes/2019-09-14.md) at Alliance Bible Church, Covington
-- [Saturday, April 27, 2019](_meeting_minutes/2019-04-27.md) at Kelso Red Lion Inn
+- [Saturday, April 27, 2019](_meeting_minutes/2019-04-27.md) at Red Lion Inn, Kelso
 
 ## Board of Directors Meeting Minutes
 
