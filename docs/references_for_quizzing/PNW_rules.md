@@ -121,3 +121,17 @@ Final team placements are calculated as follows:
 ## Team On-Time Bonus
 
 For the purposes of awarding the starting 20-point team bonus, the officials will consider a quiz's scheduled start time to be 3 minutes after the close of any previous quiz in which any team in the upcoming quiz participates.
+
+## Eligablity
+
+A ministry organization (typically but not always a church) is eligable to
+sponsor teams of quizzers to participate in PNW Quizzing provided that
+organization be theologically traditional Christian.
+(See [our bylaws](/district_governance/bylaws.md) for more information.)
+
+Any youth who will be 18 or younger at any point during the quiz season and
+has adequately to their local ministry organization's head coach demonstrated
+maturity sufficient to be a quizzer may participate.
+(See
+[our quizzer behavioral expectations document](/district_governance/behavioral_expectations.md)
+for more information.)

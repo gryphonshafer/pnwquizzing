@@ -1,12 +1,11 @@
 # Frequently Asked Questions (FAQ)
 
 What is Bible Quizzing?
-: Christian & Missionary Alliance Bible Quizzing is a scripture memory
-and competition program for teens in grades 6-12. Each year a portion of the
-New Testament is designated as the "material" which constitutes the competition
-material. This material follows an 8-year rotation. The competition takes place
-in the form of "meets" where all quizzers compete against each other in "quiz"
-format.
+: Christian & Missionary Alliance Bible Quizzing is a scripture memory and
+competition program for youth. Each year a portion of the New Testament is
+designated as the "material" which constitutes the competition material. This
+material follows an 8-year rotation. The competition takes place in the form of
+"meets" where all quizzers compete against each other in "quiz" format.
 
 What are the benefits of Bible Quizzing?
 : You gain many great things from quizzing:
@@ -22,17 +21,10 @@ situations, and team work.
   give back once your quizzing eligibility is exhausted.
 - The opportunity to invite and be a witness and friend to non-believing friends.
 
-What is the PNW Bible Quizzing Program like?
-: There are approximately 24 districts with Quizzing Programs across
-the US and Canada in the C&MA Quizzing Program. The PNW District is comprised
-of teams from Washington and Oregon, typically around 15 churches and 125
-quizzers. PNW prides itself on providing an environment that teaches and
-nurtures young and experienced quizzers, is encouraging and edifying to all,
-and that fosters a high level of competition.
-
 Who is eligible to quiz?
-: 6th-12th graders are eligible for quizzing, with a few rare
-exceptions.
+: Any youth who will be 18 or younger at any point during the quiz season and
+has adequately to their local ministry organization's head coach demonstrated
+maturity sufficient to be a quizzer may participate.
 
 What is the yearly format?
 : The PNW Quizzing Calendar is as follows: Introductory Scramble Meet
