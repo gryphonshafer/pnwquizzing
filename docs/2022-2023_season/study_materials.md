@@ -9,6 +9,9 @@ downloadable forms.
 
 ## Reference Material
 
-- [HTML](https://cbqz.org/materials/2022-2023_cma_acts.html)
-- [PDF](https://cbqz.org/materials/2022-2023_cma_acts.pdf)
-- [DOCX](https://cbqz.org/materials/2022-2023_cma_acts.docx)
+- [Color HTML](https://cbqz.org/materials/2022-2023_pnw_acts_color.html)
+- [Color PDF](https://cbqz.org/materials/2022-2023_pnw_acts_color.pdf)
+- [Color DOCX](https://cbqz.org/materials/2022-2023_pnw_acts_color.docx)
+- [Mono HTML](https://cbqz.org/materials/2022-2023_pnw_acts_mono.html)
+- [Mono PDF](https://cbqz.org/materials/2022-2023_pnw_acts_mono.pdf)
+- [Mono DOCX](https://cbqz.org/materials/2022-2023_pnw_acts_mono.docx)

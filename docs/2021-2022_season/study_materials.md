@@ -9,6 +9,9 @@ downloadable forms.
 
 ## Reference Material
 
-- [HTML](https://cbqz.org/materials/2021-2022_cma_james_romans.html)
-- [PDF](https://cbqz.org/materials/2021-2022_cma_james_romans.pdf)
-- [DOCX](https://cbqz.org/materials/2021-2022_cma_james_romans.docx)
+- [Color HTML](https://cbqz.org/materials/2021-2022_cma_romans_james_color.html)
+- [Color PDF](https://cbqz.org/materials/2021-2022_cma_romans_james_color.pdf)
+- [Color DOCX](https://cbqz.org/materials/2021-2022_cma_romans_james_color.docx)
+- [Mono HTML](https://cbqz.org/materials/2021-2022_cma_romans_james_mono.html)
+- [Mono PDF](https://cbqz.org/materials/2021-2022_cma_romans_james_mono.pdf)
+- [Mono DOCX](https://cbqz.org/materials/2021-2022_cma_romans_james_mono.docx)
