@@ -12,7 +12,6 @@ sub account ($self) {
         try {
             die 'Username, password, first and last name, and email fields must be filled in' unless (
                 $params->{username} and
-                $params->{passwd} and
                 $params->{first_name} and
                 $params->{last_name} and
                 $params->{email}
@@ -52,8 +51,10 @@ sub account ($self) {
                 $self->stash('user')->save( {
                     dormant => ( ( $params->{dormant} and $params->{dormant} eq 'on' ) ? 1 : 0 ),
                     roles   => [ ( ref $params->{roles} ) ? @{ $params->{roles} } : $params->{roles} ],
-                    map { $_ => $params->{$_} } qw( username passwd first_name last_name email org ),
+                    map { $_ => $params->{$_} } qw( username first_name last_name email org ),
                 } );
+
+                $self->stash('user')->save( { passwd => $params->{passwd} } ) if ( $params->{passwd} );
 
                 $self->stash(
                     message => {
