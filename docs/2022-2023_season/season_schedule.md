@@ -1,24 +1,7 @@
 # 2022-2023 Season Schedule
 
-The following is the current *(rough outline of a)* season schedule for 2022-2023:
-
-- Pre-Season
-    - Classic Scramble™: September
-- Regular Season
-    - District Meet 1: October
-    - District Meet 2: November
-    - District Meet 3: January
-    - District Meet 4: February
-    - District Meet 5: March
-- Post-Season
-    - Great West Invitational (GWI): April
-    - District Championships (DC): May
-    - International Bible Quizzing Championships (IBQ): July
-
-## Proposed/Unconfirmed Dates and Locations for Meets
-
-The following are the proposed and currently unconfirmed dates and locations for
-meets in the 2022-2023 season:
+The following are the **proposed and currently unconfirmed** dates and
+locations for meets in the 2022-2023 season:
 
 ### Classic Scramble™
 
