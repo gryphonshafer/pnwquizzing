@@ -11,7 +11,7 @@ locations for meets in the 2022-2023 season:
 ### District Meet 1
 
 - **Dates**: Saturday, October 15, 2022
-- **Location:** *TBD*
+- **Location:** [Free Methodist Church, Madras OR](https://www.google.com/maps/place/Free+Methodist+Church/@44.6217113,-121.1347669,17z/data=!3m1!4b1!4m5!3m4!1s0x54bee98b441ddc0b:0x931ce3bd3a44dd6d!8m2!3d44.6217119!4d-121.1302261)
 
 ### District Meet 2
 
@@ -26,7 +26,7 @@ locations for meets in the 2022-2023 season:
 ### District Meet 4
 
 - **Dates**: Saturday, February 11, 2023
-- **Location:** *TBD*
+- **Location:** [Lighthouse Christian Center, Puyallup WA](https://www.google.com/maps/place/Lighthouse+Christian+Center/@47.1593379,-122.3225589,17z/data=!3m1!4b1!4m5!3m4!1s0x5490fdcabd76e0a5:0x6ab770a148edeecb!8m2!3d47.1593379!4d-122.3203649)
 
 ### District Meet 5
 
