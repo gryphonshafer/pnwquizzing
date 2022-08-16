@@ -16,7 +16,7 @@ locations for meets in the 2022-2023 season:
 ### District Meet 2
 
 - **Dates**: Saturday, November 19, 2022
-- **Location:** *TBD*
+- **Location:** [Lighthouse Christian Center, Puyallup WA](https://www.google.com/maps/place/Lighthouse+Christian+Center/@47.1593379,-122.3225589,17z/data=!3m1!4b1!4m5!3m4!1s0x5490fdcabd76e0a5:0x6ab770a148edeecb!8m2!3d47.1593379!4d-122.3203649)
 
 ### District Meet 3
 
