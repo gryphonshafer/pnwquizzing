@@ -17,8 +17,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>[% page.title %]</title>
+
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" type="image/x-icon"
             href="[% c.url_for('/favicon.ico').query( version => constants.version ) %]">
@@ -32,17 +35,13 @@
         <link href="https://github.com/gryphonshafer/pnwquizzing/commits/master.atom"
             rel="alternate" title="Recent Commits to pnwquizzing:master" type="application/atom+xml">
 
-        <title>[% page.title %]</title>
-
         [% IF c.app.mode == 'production' %]
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3112573-14"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDZXWFNCVL"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag( "js", new Date() );
-                gtag( "config", "UA-3112573-14" );
+                function gtag() { dataLayer.push(arguments); }
+                gtag( 'js', new Date() );
+                gtag( 'config', 'G-MDZXWFNCVL' );
             </script>
         [% END %]
     </head>
