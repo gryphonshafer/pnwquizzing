@@ -21,7 +21,7 @@ locations for meets in the 2022-2023 season:
 ### District Meet 3
 
 - **Dates**: Saturday, January 14, 2023
-- **Location:** *TBD*
+- **Location:** [Eastridge Baptist Church, Kend WA](https://www.google.com/maps/place/Eastridge+Baptist+Church/@47.3881503,-122.1909789,15z/data=!4m12!1m6!3m5!1s0x54905e8e37a4357b:0x44f8138019d91935!2sEastridge+Baptist+Church!8m2!3d47.3881597!4d-122.1740699!3m4!1s0x54905e8e37a4357b:0x44f8138019d91935!8m2!3d47.3881597!4d-122.1740699)
 
 ### District Meet 4
 
