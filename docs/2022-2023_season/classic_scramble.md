@@ -42,7 +42,7 @@ during the pre-quizzing 20-minute team formation period.
 
 ## Schedule Generation
 
-There will be some number of "rooms" (outdoors). When each "room" has concluded
+There will be some number of rooms. When each room has concluded
 quizzing, it will immediately begin setup for their next quiz by selecting teams
 and officials.
 
