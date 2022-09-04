@@ -1,7 +1,7 @@
 # Frequently Asked Questions (FAQ)
 
 What is Bible Quizzing?
-: Christian & Missionary Alliance Bible Quizzing is a scripture memory and
+: Bible Quizzing is a scripture memory and
 competition program for youth. Each year a portion of the New Testament is
 designated as the "material" which constitutes the competition material. This
 material follows an 8-year rotation. The competition takes place in the form of
