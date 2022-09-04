@@ -17,15 +17,15 @@
 |    9 | Sun, Oct 16 | Sat, Oct 22 | Acts 7  |     60 |          60 |         253 |
 |   10 | Sun, Oct 23 | Sat, Oct 29 | Acts 8  |     40 |         100 |         293 |
 |   11 | Sun, Oct 30 | Sat, Nov 5  | Acts 9  |     43 |         143 |         336 |
-|   12 | Sun, Nov 6  | Sat, Nov 12 | **Review**                                   ||||
+|   12 | Sun, Nov 6  | Sat, Nov 12 | Review                                       ||||
 |   13 | Sun, Nov 13 | Sat, Nov 19 | **District Meet 2**                          ||||
 |   14 | Sun, Nov 20 | Sat, Nov 26 | Acts 10 |     48 |          48 |         384 |
 |   15 | Sun, Nov 27 | Sat, Dec 3  | Acts 11 |     30 |          78 |         414 |
 |   16 | Sun, Dec 4  | Sat, Dec 10 | Acts 12 |     25 |         103 |         439 |
 |   17 | Sun, Dec 11 | Sat, Dec 17 | Acts 13 |     52 |         155 |         491 |
-|   18 | Sun, Dec 18 | Sat, Dec 24 | **Review**                                   ||||
-|   19 | Sun, Dec 25 | Sat, Dec 31 | **Review**                                   ||||
-|   20 | Sun, Jan 1  | Sat, Jan 7  | **Review**                                   ||||
+|   18 | Sun, Dec 18 | Sat, Dec 24 | Review                                       ||||
+|   19 | Sun, Dec 25 | Sat, Dec 31 | Review                                       ||||
+|   20 | Sun, Jan 1  | Sat, Jan 7  | Review                                       ||||
 |   21 | Sun, Jan 8  | Sat, Jan 14 | **District Meet 3**                          ||||
 |   22 | Sun, Jan 15 | Sat, Jan 21 | Acts 14 |     28 |          28 |         519 |
 |   23 | Sun, Jan 22 | Sat, Jan 28 | Acts 15 |     41 |          69 |         560 |
@@ -35,7 +35,7 @@
 |   27 | Sun, Feb 19 | Sat, Feb 25 | Acts 18 |     28 |          62 |         662 |
 |   28 | Sun, Feb 26 | Sat, Mar 4  | Acts 19 |     40 |         102 |         702 |
 |   29 | Sun, Mar 5  | Sat, Mar 11 | Acts 20 |     38 |         140 |         740 |
-|   30 | Sun, Mar 12 | Sat, Mar 18 | **Review**                                   ||||
+|   30 | Sun, Mar 12 | Sat, Mar 18 | Review                                       ||||
 |   31 | Sun, Mar 19 | Sat, Mar 25 | **District Meet 5**                          ||||
 
 Constult the [season schedule](season_schedule.md) for additional meets of the
