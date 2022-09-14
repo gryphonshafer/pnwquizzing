@@ -40,7 +40,9 @@ The following are the dates and locations for meets in the 2022-2023 season:
 ### District Meet 5
 
 - **Dates**: Saturday, March 25, 2023
-- **Location:** *TBD*
+- **Location:**
+    - [Alliance Bible Church](https://abctahoma.org)
+    - [19320 SE 240th St, Covington WA 98042](https://www.google.com/maps/dir//Alliance+Bible+Church,+19320+SE+240th+St,+Covington+WA+98042)
 
 ### Great West Invitational
 
