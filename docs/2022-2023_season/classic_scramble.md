@@ -25,7 +25,7 @@ Quizzers will be given "ID sheets" where they will record:
 - Adult without quizzing XP Y/N
 
 Quizzers will have 20 minutes to self-organize into teams. Once formed, teams
-fill out 2 roster sheets and hand them to the meet director.
+fill out roster sheets to provide officials during the meet.
 
 During the lunch break, teams may trade quizzers between each other.
 
@@ -37,22 +37,11 @@ The following are the eligibility requirements for Scramble meet officials:
 - Scorekeepers: Anyone
 - Answer Judges: Anyone with quizmastering experience
 
-Everyone wanting to officiate should adds their name to an official's roster
-during the pre-quizzing 20-minute team formation period.
+Everyone wanting to officiate should chat with the seated officials in a given
+room about picking up the officiating of the next quiz.
 
 ## Schedule Generation
 
-There will be some number of rooms. When each room has concluded
-quizzing, it will immediately begin setup for their next quiz by selecting teams
-and officials.
-
-Teams will be selected by the following algorithm:
-
-1. Filter currently-quizzing teams.
-2. Sort teams by number of quizzes quizzed ascending, then random.
-3. Select first-sorted team.
-4. Select next-sorted teams that have faced selected teams the least.
-
-To select officials, sort the officials list randomly, then find the first
-person on the  list that has not yet officiated in a role they would like, then
-assign them that role for 2 consecutive quizzes.
+There's no schedule. Teams should place their rosters on the officials' table
+in a given room, in arrival order. The officials will call teams to quiz based
+on the arrival order of their rosters.
