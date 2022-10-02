@@ -1,7 +1,8 @@
 [%
     page.title = 'Registration';
     page.vue   = 'register';
-    no_edit    = next_meet.past_deadline AND NOT c.session.become;
+    became     = c.session.become;
+    no_edit    = next_meet.past_deadline AND NOT became;
 
     page.inline_js.push( 'var register_data = ' _ register_data );
 %]
@@ -49,10 +50,10 @@
                     [% END %]
                 </fieldset>
 
-                [% IF next_meet.house OR next_meet.lunch %]
+                [% IF next_meet.house OR next_meet.lunch OR became %]
                     <div style="display: inline-block; padding-left: 1em">
                 [% END %]
-                    [% IF next_meet.house %]
+                    [% IF next_meet.house OR became %]
                         <p>
                             Are you driving a vehicle you could use to transport passengers to a host home?
                             [% UNLESS no_edit %]
@@ -69,30 +70,30 @@
                                 <label><input type="radio" value="1" v-model="house"> Yes</label>
                                 <label><input type="radio" value="0" v-model="house"> No</label>
                             [% ELSE %]
-                                <b>{{ ( next_meet.house == 1 ) ? 'Yes' : 'No' }}</b>
+                                <b>{{ ( house == 1 ) ? 'Yes' : 'No' }}</b>
                             [% END %]
                         </p>
                     [% END %]
 
-                    [% IF next_meet.lunch %]
+                    [% IF next_meet.lunch OR became %]
                         <p>
                             Would you like host-provided lunch?
                             [% UNLESS no_edit %]
                                 <label><input type="radio" value="1" v-model="lunch"> Yes</label>
                                 <label><input type="radio" value="0" v-model="lunch"> No</label>
                             [% ELSE %]
-                                <b>{{ ( next_meet.lunch == 1 ) ? 'Yes' : 'No' }}</b>
+                                <b>{{ ( lunch == 1 ) ? 'Yes' : 'No' }}</b>
                             [% END %]
                         </p>
                     [% END %]
-                [% IF next_meet.house OR next_meet.lunch %]
+                [% IF next_meet.house OR next_meet.lunch OR became %]
                     </div>
                 [% END %]
 
                 <p>
                     Notes:
                     [% UNLESS no_edit %]
-                        <input type="text" class="wide" name="notes" v-model="notes">
+                        <textarea name="notes" v-model="notes"></textarea>
                     [% ELSE %]
                         <b>{{ notes }}</b>
                     [% END %]
