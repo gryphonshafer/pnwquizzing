@@ -55,9 +55,9 @@ sub next_meet_data ($self) {
             year      => $deadline->year,
             month     => $deadline->month,
             day       => $deadline->day,
-            hour      => 9,
-            minute    => 0,
-            second    => 0,
+            hour      => 23,
+            minute    => 59,
+            second    => 59,
             time_zone => $time_zone,
         );
 
