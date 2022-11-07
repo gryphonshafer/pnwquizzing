@@ -127,8 +127,8 @@
                                 <th>Grade</th>
                                 <th>Rookie</th>
                                 <th>Attend</th>
-                                [% IF house %]<th>House</th>[% END %]
-                                [% IF lunch %]<th>Lunch</th>[% END %]
+                                [% IF next_meet.house %]<th>House</th>[% END %]
+                                [% IF next_meet.lunch %]<th>Lunch</th>[% END %]
                                 <th>Notes</th>
                                 [% UNLESS no_edit %]<th></th>[% END %]
                             </tr>
@@ -198,7 +198,7 @@
                                         {{ ( quizzer.attend ) ? "Yes" : "No" }}
                                     [% END %]
                                 </td>
-                                [% IF house %]
+                                [% IF next_meet.house %]
                                     <td class="checkbox">
                                         [% UNLESS no_edit %]
                                             <input type="checkbox" v-model="quizzer.house"
@@ -208,7 +208,7 @@
                                         [% END %]
                                     </td>
                                 [% END %]
-                                [% IF lunch %]
+                                [% IF next_meet.lunch %]
                                     <td class="checkbox">
                                         [% UNLESS no_edit %]
                                             <input type="checkbox" v-model="quizzer.lunch"
