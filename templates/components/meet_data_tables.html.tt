@@ -6,7 +6,7 @@
         quizzers      => 0,
         rookies       => 0,
         nonquizzers   => 0,
-        housing       => 0,
+        house         => 0,
         lunch         => 0,
     };
 
@@ -107,8 +107,8 @@
                                     totals.organizations.$acronym = 1;
                                     totals.teams.$team = 1;
 
-                                    totals.housing = totals.housing + ( ( quizzer.house ) ? 1 : 0 );
-                                    totals.lunch   = totals.lunch   + ( ( quizzer.house ) ? 1 : 0 );
+                                    totals.house = totals.house + ( ( quizzer.house ) ? 1 : 0 );
+                                    totals.lunch = totals.lunch + ( ( quizzer.lunch ) ? 1 : 0 );
                                 %]
 
                                 <tr>
@@ -226,8 +226,8 @@
                         acronym = org.acronym;
                         totals.organizations.$acronym = 1;
 
-                        totals.housing = totals.housing + ( ( person.registration.house ) ? 1 : 0 );
-                        totals.lunch   = totals.lunch   + ( ( person.registration.lunch ) ? 1 : 0 );
+                        totals.house = totals.house + ( ( person.registration.house ) ? 1 : 0 );
+                        totals.lunch = totals.lunch + ( ( person.registration.lunch ) ? 1 : 0 );
                     %]
 
                     <tr>

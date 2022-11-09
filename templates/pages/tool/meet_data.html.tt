@@ -36,8 +36,8 @@
         </li>
         [% IF next_meet.house %]
             <li>
-                Housing:
-                <b>[% totals.housing || 0 %]</b>
+                House:
+                <b>[% totals.house || 0 %]</b>
             </li>
         [% END %]
         [% IF next_meet.lunch %]
