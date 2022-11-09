@@ -34,6 +34,18 @@
             Non-Quizzers:
             <b>[% totals.nonquizzers || 0 %]</b>
         </li>
+        [% IF next_meet.house %]
+            <li>
+                Housing:
+                <b>[% totals.housing || 0 %]</b>
+            </li>
+        [% END %]
+        [% IF next_meet.lunch %]
+            <li>
+                Lunch:
+                <b>[% totals.lunch || 0 %]</b>
+            </li>
+        [% END %]
     </ul>
 
     [% IF ( org_reg AND org_reg.size > 0 ) OR ( user_reg AND user_reg.size > 0 ) %]

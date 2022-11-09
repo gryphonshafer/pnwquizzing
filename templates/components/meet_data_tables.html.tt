@@ -6,6 +6,8 @@
         quizzers      => 0,
         rookies       => 0,
         nonquizzers   => 0,
+        housing       => 0,
+        lunch         => 0,
     };
 
     IF is_web_page;
@@ -104,6 +106,9 @@
 
                                     totals.organizations.$acronym = 1;
                                     totals.teams.$team = 1;
+
+                                    totals.housing = totals.housing + ( ( quizzer.house ) ? 1 : 0 );
+                                    totals.lunch   = totals.lunch   + ( ( quizzer.house ) ? 1 : 0 );
                                 %]
 
                                 <tr>
@@ -220,6 +225,9 @@
 
                         acronym = org.acronym;
                         totals.organizations.$acronym = 1;
+
+                        totals.housing = totals.housing + ( ( person.registration.house ) ? 1 : 0 );
+                        totals.lunch   = totals.lunch   + ( ( person.registration.lunch ) ? 1 : 0 );
                     %]
 
                     <tr>
