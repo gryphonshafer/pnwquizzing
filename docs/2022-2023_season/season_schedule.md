@@ -46,7 +46,7 @@ The following are the dates and locations for meets in the 2022-2023 season:
 
 ### Great West Invitational
 
-- **Dates**: *TBD (April, probably)*
+- **Dates**: Thursday-Sunday, April 13-16, 2023
 - **Location:**
     - [Crowsnest Lake Bible Camp](https://www.crowcamp.ca/)
     - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/dir//Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
