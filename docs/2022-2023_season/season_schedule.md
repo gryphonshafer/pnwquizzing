@@ -51,14 +51,14 @@ The following are the dates and locations for meets in the 2022-2023 season:
     - [Crowsnest Lake Bible Camp](https://www.crowcamp.ca/)
     - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/dir//Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
 
-### District Championships (DC)
+### District Championship (DC)
 
 - **Dates:** Friday-Sunday, May 19-21, 2023
 - **Location:**
     - [Double K Retreat Center](https://www.doublek.org)
     - [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
 
-### International Bible Quizzing Championships (IBQ)
+### Christian Bible Quizzing (CBQZ) International Open Championship (IOC)
 
-- **Dates**: *TBD (July, probably)*
+- **Dates**: *TBD (TBD, but likely some set of 3 days between July 5 and July 16)*
 - **Location:** *TBD*
