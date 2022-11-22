@@ -2,6 +2,10 @@
 
 The following are entries in a changelog for Bible Quizzing rules as adopted by Pacific Northwest Bible Quizzing. This page and its content are provided for reference purposes but are not the canonical source for rules. The canonical sources are first the [IBQ Rule Book](IBQ_rule_book.md) followed by the [PNW Rules](PNW_rules.md) document.
 
+## November 19, 2022
+
+There will be no multi-verse Q/F type questions allowed, such as FTN, Q2V, and F2V.
+
 ## May 5, 2022
 
 Added an "Eligablity" section to describe what was already policy with regard to eligablity of ministry orgnaizations (i.e. churches) and youth.
