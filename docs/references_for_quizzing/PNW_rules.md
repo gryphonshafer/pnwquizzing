@@ -92,9 +92,12 @@ Quizzer individual averages are computed as follows:
 - Within a given quiz meet:
     - 6 prelim quizzes (the number of which may change without notice) + any Bracket quizzes through Quiz I
     - Tiebreakers and Finals do not count towards individual averages
+    - All other quizzes (Final 9 Bracket or Consolation Bracket) count at 100%
+<!--
     - Final 9 Bracket scores are weighted at 100%
     - Consolation A Bracket scores are weighted at 70%
     - Consolation B Bracket scores are weighted at 50%
+-->
 - Within a given quiz season:
     - Meets 1-3: drop the lowest, the remaining 2 count 10% each
     - Meet 4: 20%
