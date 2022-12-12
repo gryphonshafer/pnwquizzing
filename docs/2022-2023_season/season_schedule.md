@@ -60,5 +60,5 @@ The following are the dates and locations for meets in the 2022-2023 season:
 
 ### Christian Bible Quizzing (CBQZ) International Open Championship (IOC)
 
-- **Dates**: *TBD (TBD, but likely some set of 3 days between July 5 and July 16)*
-- **Location:** *TBD*
+- **Dates**: *TBD but will be 3 days between July 10 and July 16, likely early in the week*
+- **Location:** *TBD but will be in the Puget Sound region*
