@@ -60,5 +60,7 @@ The following are the dates and locations for meets in the 2022-2023 season:
 
 ### Christian Bible Quizzing (CBQZ) International Open Championship (IOC)
 
-- **Dates**: *TBD but will be 3 days between July 10 and July 16, likely early in the week*
-- **Location:** *TBD but will be in the Puget Sound region*
+- **Dates**: Tuesday-Thursday, July 11-13, 2023
+- **Location:**
+    - [Seattle Pacific University](https://spu.edu)
+    - [3307 3rd Ave West, Seattle WA 98119](https://www.google.com/maps/dir//Seattle+Pacific+University,+3307+3rd+Ave+West,+Seattle+WA+98119)
