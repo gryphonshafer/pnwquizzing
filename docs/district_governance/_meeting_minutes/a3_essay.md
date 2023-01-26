@@ -34,7 +34,7 @@ Quizzing has gone through what I’ve been calling 2 “ages.”
 
 ### The “First Age” of Quizzing
 
-The “First Age” of Quizzing began with its invention in the late 1940s. It came out of the Youth For Christ (“YFC”) movement, which itself started in 1940. Quizzing was designed as a Christian sport for youth, and it was one of the popular youth events at YFC rallies. YFC rallies typically averaged 350 youth. Teams were organized by high school. Participation grew over the following 20 years. Then starting in the early 1960s, participation in YFC rallies declined, and thus so did Quizzing. By the mid-1960s, YFC reorganized with an leadership council overseeing international operations, and Quizzing was abandoned.
+The “First Age” of Quizzing began with its invention in the late 1940s. It came out of the Youth For Christ (“YFC”) movement, which itself started in 1940. Quizzing was designed as a Christian sport for youth, and it was one of the popular youth events at YFC rallies. YFC rallies typically averaged 350 youth. Teams were organized by high school. Participation grew over the following 20 years. Then starting in the early 1960s, participation in YFC rallies declined, and thus so did Quizzing. By the mid-1960s, YFC reorganized with a leadership council overseeing international operations, and Quizzing was abandoned.
 
 ### The “Second Age” of Quizzing
 
@@ -62,7 +62,7 @@ We don’t make it easy for unmentored, unquizzed regions to startup. Part of th
 
 There’s a minimum memorization investment bar required of all would-be quizzers before they can meaningfully participate, and this minimum investment is beyond the willingness of most modern youth to even consider.
 
-We’re organized around a denominational model that worked reasonably well in the 1970s through the early 1990s but since then is at best stagnant and ineffective at effecting Quizzing growth. We have some church and denominational leadership who are antagonistic to Quizzing, some who even go so far as to persecute Quizzing; but the majority are simply ambivalent and apathetic to Quizzing. Some denominations, in a vain attempt to maintain the illusion of control, disenfranchise all participants from outside their denomination into a “second class” with limited voice, regardless of their number or contribution to Quizzing.
+We’re organized around a denominational model that worked reasonably well in the 1970s through the early 1990s but since then is at best stagnant and ineffective at encouraging Quizzing growth. We have some church and denominational leadership who are antagonistic to Quizzing, some who even go so far as to persecute Quizzing; but the majority are simply ambivalent and apathetic to Quizzing. Some denominations, in a vain attempt to maintain the illusion of control, disenfranchise all participants from outside their denomination into a “second class” with limited voice, regardless of their number or contribution to Quizzing.
 
 We often don’t consider modern, distributed translation preferences. The NIV is a popular and well-used translation, but its readers represent less than 20% of all Bible readers. By not supporting concurrent multiple translations, we’re eliminating over 80% of Bible readers from participating. As an example, there’s a private Christian school with curriculum based on the NASB. They’ve expressed interest in Bible Quizzing, but encouraging their students to memorize the NIV is a non-starter. They don’t want to encourage their students to study one translation for school and another for Quizzing. If we support concurrent multiple translations, we increase our opportunity for growth 5 fold.
 
@@ -147,9 +147,9 @@ The sooner a Second Age organization joins the Third Age, the sooner they will h
 
 ## Call for a Vote
 
-You are the current stewards of PNW Quizzing, so I’m asking you now to prayerfully consider voting to switch PNW Quizzing’s participation from IBQ to this A3-IBQ of step 4, path B above.
+You are the current stewards of PNW Quizzing, so I’m asking you now to prayerfully consider voting to switch PNW Quizzing’s participation from IBQ to the new championships meet referenced in step 4, path B above.
 
-Please pray about this. Feel free to talk about it with other leaders. If you have any questions about anything, please email me, and I’ll be prompt in my replies. My intent is to host a leadership meeting over the lunch break at the Lighthouse meet this month, during which we can discuss this, answer any lingering questions, and then vote.
+Please pray about this. Feel free to talk about it with other leaders. If you have any questions about anything, please email me, and I’ll be prompt in my replies. My intent is to host a leadership meeting over the lunch break at the next district meet this month, during which we can discuss this, answer any lingering questions, and then vote.
 
 J. Gryphon Shafer<br>PNW Quizzing District Coordinator
 
@@ -169,7 +169,7 @@ Scott Peterson<br>Former PNW Quizzing District Coordinator
 
 > Quizzing is an extraordinary ministry that changed the lives of my wife and I. We don’t just want it to still be around when my kids are old enough to participate — we _need_ it to be around. And we don’t just need it to be around — it needs to _thrive_. And yet, I see before me a rapidly shrinking program in which fewer and fewer volunteers devote more and more enthusiasm per person to keeping it alive. I’m tired of throwing all my energy at just keeping the lights on… I want Quizzing to soar. To make it soar, we need to rethink the structure which has clipped its wings. We need to gather together like-minded Christians who share our enthusiasm for this ministry, break down the denominational barriers (which in the CMA’s case is much more like a ball and chain), and make a plan of attack to recruit the many tribes within Christendom who have yet to hear of the value of Quizzing. Gryphon has even laid out the beginnings of the philosophy of this plan of attack in this very proposal. I wholeheartedly endorse both the philosophy of this proposal and the strategy to bring it about.
 
-Jeremy Swingle<br>CMA Quizzing Leadership Team (CQLT) Board Member<br>Former PNW Quizzing Coach and Board Member, Current PNW Quizzing Official
+Jeremy Swingle<br>CMA Quizzing Leadership Team (CQLT) Board Member<br>Former PNW Quizzing Coach and Board Member; Current PNW Quizzing Official
 
 ### Cutty Welt
 
