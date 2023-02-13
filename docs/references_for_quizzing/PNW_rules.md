@@ -108,6 +108,7 @@ Quizzer individual averages are computed as follows:
 
 The top 5 yearly rookies are determined by year-to-date average post District Meet 5.
 
+<!--
 ### Team Placements
 
 Team placements are computed as follows:
@@ -131,6 +132,7 @@ Final team placements are calculated as follows:
 
 - The team placements at District Championships are the final year placements for teams 1-18
 - The year-to-date team placements after District Meet 5 are the final year team placements for teams 19 and beyond
+-->
 
 ## Team On-Time Bonus
 

@@ -2,6 +2,10 @@
 
 The following are entries in a changelog for Bible Quizzing rules as adopted by Pacific Northwest Bible Quizzing. This page and its content are provided for reference purposes but are not the canonical source for rules. The canonical sources are first the [IBQ Rule Book](IBQ_rule_book.md) followed by the [PNW Rules](PNW_rules.md) document.
 
+## February 13, 2023
+
+Removed the entire "Team Placements" section from the [PNW Rules](PNW_rules.md) document.
+
 ## November 28, 2022
 
 In terms of calculated scoring averages for individuals, all quizzes at a meet except meet finals quizzes will count at 100%.
