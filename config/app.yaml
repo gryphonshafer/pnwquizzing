@@ -15,6 +15,7 @@ default:
         dir: docs
         home_type: md
         home_title: PNW Bible Quizzing Home Page
+        home_name: Home Page
     roles:
         - Coach
         - Quizzer

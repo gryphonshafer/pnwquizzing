@@ -68,7 +68,7 @@ sub startup ($self) {
         }
 
         $self->stash(
-            docs_nav      => $self->docs_nav( @{ conf->get('docs') }{ qw( dir home_type home_title ) } ),
+            docs_nav      => $self->docs_nav( @{ conf->get('docs') }{ qw( dir home_type home_name home_title ) } ),
             header_photos => $photos,
         );
     } );

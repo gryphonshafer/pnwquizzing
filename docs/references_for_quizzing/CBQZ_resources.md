@@ -4,19 +4,12 @@
 a site dedicated to providing tools and resources to support Christian Bible
 Quizzing in various forms worldwide. The goal of the site is to provide:
 
-- [Materials references](https://cbqz.org/#materials) for quizzing
-- Hosted [quizzing software](https://cbqz.org/#app) (for quizmasters, scorekeepers, and coaches)
-- Publish the "[Inside Quizzing](https://cbqz.org/#podcast)" podcast
+- Hosted [quizzing software](https://cbqz.org/app) (for quizmasters, scorekeepers, and coaches)
 
 ## Materials References
 
-Bible Quizzing materials are made available on the CBQZ web site.
-Note that the data found therein is more easily accessible and usable from within
-the [CBQZ application](https://cbqz.org/app).
-
-<div class="big_button">
-    <a href="https://cbqz.org/#materials" title="CBQZ Materials as Downloadable Files">
-    <span>CBQZ Materials as Downloadable Files</span></a></div>
+Bible Quizzing materials are made available from within the
+[CBQZ application](https://cbqz.org/app).
 
 ## CBQZ Bible Quizzing Application
 

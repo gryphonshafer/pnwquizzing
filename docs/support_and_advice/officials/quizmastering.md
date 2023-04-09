@@ -11,8 +11,6 @@ attending the meets. However, most quizmasters do devote a lot of their time.
 
 ## Questions
 
-Write quiz questions in [CBQZ](http://cbqz.org/app).
-
 I have found the way to get great questions is to write them yourself,
 incorporate many other lists, and constantly seek feedback from other
 experienced and trusted question writers. I continually find invalid or
