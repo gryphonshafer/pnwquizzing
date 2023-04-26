@@ -59,6 +59,7 @@ sub user_registrations ( $self, $user_id = undef ) {
                     : ''
             ) . q{
             ORDER BY created DESC
+            LIMIT 9223372036854775807 -- hack to force SQLite to respect DESC
         ) AS e
         JOIN user AS u USING (user_id)
         LEFT JOIN org AS o ON u.org_id = o.org_id AND o.active
@@ -85,6 +86,7 @@ sub org_registrations ( $self, $org_id = undef ) {
                     : 'org_id IS NOT NULL'
             ) . q{
             ORDER BY created DESC
+            LIMIT 9223372036854775807 -- hack to force SQLite to respect DESC
         ) AS e
         JOIN org AS o USING (org_id)
         WHERE o.active
