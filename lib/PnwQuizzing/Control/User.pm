@@ -235,7 +235,10 @@ sub list ($self) {
                 }
                 map {
                     $_->{email} = lc $_->{email};
-                    $_->{org} = PnwQuizzing::Model::Org->new->load( $_->{org_id} )->data if ( $_->{org_id} );
+
+                    $_->{org} = PnwQuizzing::Model::Org->new
+                        ->load( $_->{org_id}, 'include_inactive' )->data if ( $_->{org_id} );
+
                     $_;
                 } PnwQuizzing::Model::User->new->every_data({ dormant => 0 })
             ],
