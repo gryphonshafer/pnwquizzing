@@ -1,7 +1,7 @@
 # Classic Scramble™
 
-The following is the plan for team formation, officials selection, and schedule
-for the Classic Scramble™ meet.
+The following explains team formation, officials selection, and schedule
+for Classic Scramble™ meets.
 
 ## Team Formation
 
@@ -10,12 +10,10 @@ Scramble, regardless of normal quizzing eligibility) self-organize into teams.
 They are incentivized to build diverse teams via the following scoring
 alterations:
 
-- Teams will receive +20 score every quiz for each of the following:
+- Teams will receive +2 points at the start of every quiz for each of the following:
     - Teams with quizzers from at least 2 churches
     - Teams with at least 1 rookie (non-adult)
     - Teams with at least 1 adult who didn't quiz as a youth
-- 3rd quizzer bonuses are worth +20
-- 4th quizzer bonuses are worth +40
 
 Quizzers will be given "ID sheets" where they will record:
 
@@ -33,9 +31,8 @@ During the lunch break, teams may trade quizzers between each other.
 
 The following are the eligibility requirements for Scramble meet officials:
 
-- Quizmasters: Any adult, or any quizzer in their senior year
+- QMs: Any adult, or any quizzer in their senior year
 - Scorekeepers: Anyone
-- Answer Judges: Anyone with quizmastering experience
 
 Everyone wanting to officiate should chat with the seated officials in a given
 room about picking up the officiating of the next quiz.

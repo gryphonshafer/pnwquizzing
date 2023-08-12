@@ -27,13 +27,14 @@ God will return empty."
 
 ## What is PNW Bible Quizzing?
 
-Pacific Northwest (PNW) Bible Quizzing is a Christin youth ministry in the
-Pacific Northwest of the United States, primarily in the states of Washington
-and Oregon. The ministry proves teens with an opportunity to be involved in the
-systematic study and application of God's Word. Through this and the competition
-at regular Quiz Meets, the program builds character, instills self-discipline,
-and encourages prayer and unity. It equips youth with the capacity to serve in
-other areas of ministry, and it prepares them well for their future adult lives.
+Pacific Northwest (PNW) Bible Quizzing is a Christian youth ministry in the
+Pacific Northwest of the United States, primarily in the states of Washington,
+Oregon, and Idaho. The ministry proves teens with an opportunity to be involved
+in the systematic study and application of God's Word. Through this and the
+competition at regular Quiz Meets, the program builds character, instills
+self-discipline, and encourages prayer and unity. It equips youth with the
+capacity to serve in other areas of ministry, and it prepares them well for
+their future adult lives.
 
 **Learn more about PNW Bible Quizzing by reading our
 [Frequently Asked Questions (FAQ) page](about_us/FAQ.md).**

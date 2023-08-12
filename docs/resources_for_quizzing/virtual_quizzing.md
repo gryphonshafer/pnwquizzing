@@ -1,6 +1,6 @@
 # Virtual Quizzing
 
-The following are the specific processes and rules for virtual quizzing. These are all considered overlays to the existing processes and rules of traditional quizzing. Begin first with the set of rules for your juristiction. For example, if quizzing at the Internationals level (also referred to as "Internetionals"), begin with the most current [IBQ rulebook](IBQ_rule_book.md), then apply the following as overrides. If quizzing at the PNW Quizzing level, begin with the [IBQ rulebook](IBQ_rule_book.md), then apply [PNW rules](PNW_rules.md), then apply the following as overrides.
+The following are the specific processes and rules for virtual quizzing. These are all considered overlays to the existing processes and rules of Quizzing. Begin first with the set of rules for your jurisdiction, then apply the following as overrides.
 
 ## Required Equipment
 
@@ -26,57 +26,39 @@ Once connected to the Zoom room:
 
 - Chat pane open
 - Participants pane open
-- Mute audio *(unless you're the quizmaster)*
-- Video off *(unless you're the quizmaster)*
+- Mute audio *(unless you're the QM)*
+- Video off *(unless you're the QM)*
 - In the participants pane, change your name:
     - Quizzers, change to your team name and full name: "**XYZ2 Firstname Lastname**"
     - Officials, change to your job title and full name: "**QM Firstname Lastname**"
     - For everyone else, change to your full name: "**Firstname Lastname**"
-- Quizzers: In the chat pane, change the "To" from "Everyone" to the room's quizmaster only.
+- Quizzers: In the chat pane, change the "To" from "Everyone" to the room's QM only.
 
-Everyone should turn off video and mute audio (except the quizmaster) and all quizzer's should setting their chat messages to go to the quizmaster only. This will dramatically improve reliability of the jump ordering for quizzers who have slow network connections.
+Everyone should turn off video and mute audio (except the QM) and all quizzer's should setting their chat messages to go to the QM only. This will dramatically improve reliability of the trigger ordering for quizzers who have slow network connections.
 
 ### Quiz Operation
 
-Prior to each question:
+Prior to each query:
 
-- All quizzers should type their bib number into the chat window text entry field, but don't click enter.
-- Select from the chat dropdown the option to send your text only to the quizmaster.
-- The quizmaster should type a series of dashes, but not type enter.
+- All quizzers should type a character into the chat window text entry field, but don't click enter.
+- Select from the chat dropdown the option to send your text only to the QM.
+- The QM should type a series of dashes, but not type enter.
 
-During the question preamble, the quizmaster will press enter upon the final call of "question". When a quizzer wants to signal a jump, they press enter (which will result in their bib number displaying to the quizmaster). The quizmaster's display ordering is the only official ordering for jump win criteria.
+During the query preamble, the QM will press enter upon saying, "Ready. Begin." When a quizzer wants to signal a trigger, they press enter. The QM's display ordering is the only official ordering for trigger win criteria.
 
-Quizzers: Only click enter if you are actively attempting to win the jump. *(As in, don't jump a second after the first jump, just to signal that you're participating.)*
+Quizzers: Only click enter if you are actively attempting to win the trigger. *(As in, don't trigger a second after the first trigger, just to signal that you're participating.)*
 
 ## Rules
 
 There are some exceptions and special cases rules for virtual quizzing.
 
 - Quizzes should be started on time regardless of whether all participants are in the Zoom conference; however, quiz delays are acceptable if an entire team is still quizzing in another virtual room.
-- Quizzers can come and go from the Zoom meeting without impact to scoring *(i.e. the 20-point starting bonus)* and without need of a timeout or substitution.
-- If a quizzer types enter during the question preamble but prior to the quizmaster typing enter of the question-start dash sequence, the jump will be ignored by the quizmaster.
-- Normal jump fouls are in effect.
-- Questions will not be redone and challenges will not be accepted for equipment malfunction or network/software problems.
-- An error-out does not require the quizzer to do anything other than stay on mute.
-- A coach may call for substitutions as normal. Captains may also call for substitutions as if they were coaches.
-
-Bonus Questions
-: Bonus questions will be jumping team bonus questions. Consequently, coaches are not required to prepare and submit team lineups.
-
-Acting Captains
-: If a captain is not connected to the Zoom or is unable due to a technical problem to speak in the Zoom, the co-captain is acting captain. If both captain and co-captain are such a state, any other quizzer on the team may act as captain.
+- Quizzers can come and go from the Zoom meeting without impact to scoring and without need of a timeout.
+- If a quizzer types enter during the query preamble but prior to the QM typing enter of the query-start dash sequence, the trigger will be ignored by the QM.
+- Queries will not be redone for equipment malfunction or network/software problems.
 
 Timeouts
-: A quizmaster will use the breakout rooms feature in Zoom to allow for timeouts.
-
-Substitutions
-: Substitutions requiring a timeout may happen between questions in the same way as an error-out or quiz-out substitution happens. In other words, there is no requirement to call a timeout, though the option to do so still exists.
-
-Challenging
-: To challenge, the quizzer acting as captain should unmute and say "challenge" every second until recognized by the quizmaster. This is purely a signal to the quizmaster of the intent to consider challenging. It's not a challenge in and of itself. The quizmaster gives the quizzer time to consider the challenge, and the quizzer may then elect to ask "may I challenge" or respond with "withdraw". A withdrawn "challenge" signal is not considered a challenge.
-
-Protests
-: Protests are allowed as normal with the exception of anything related to equipment malfunction or network/software problems. A coach may protest following the ruling on a challenge and prior to the next question type being called.
+: A QM will use the breakout rooms feature in Zoom to allow for timeouts.
 
 ### Back-Channel Conversations
 
@@ -86,15 +68,9 @@ Back-channel conversations are permitted between any coaches, inactive (subbed-o
 
 Back-channel conversations are permitted (and encouraged) between the officials.
 
-### Quizmaster is Master of the Quiz
-
-Though virtual quiz meets have been repeatedly successful, their implementation is still new. We are all still learning. Therefore, there may be unforeseen situations in that arise in a quiz when a quizmaster will need to make up a rule change on the spot to resolve matters. Quizmasters are granted that authority but are cautioned to use it sparingly if at all and with extreme care toward fairness.
-
-It's encouraged but not mandated that quizmasters attempt to resolve all rulings solo for time efficiency.
-
 ## Officials' Technical Setup
 
-A designated official from each virtual "room" (likely but not necessarily the quizmaster) will be responsible for setting up a Zoom conference for each quiz in his or her virtual "room." The following are the recommended settings for the Zoom user account (set in settings under the user account):
+A designated official from each virtual "room" (likely but not necessarily the QM) will be responsible for setting up a Zoom conference for each quiz in his or her virtual "room." The following are the recommended settings for the Zoom user account (set in settings under the user account):
 
 - Meeting
     - Host video: On
@@ -136,10 +112,10 @@ The meet administrators will provide each room staff with credentials to a Zoom 
     3. Assign quizzers to these sub-rooms as they arrive
 14. Follow any other Virtual Quizzing rules or procedures
 
-Quizmasters, as quizzers arrive:
+QMs, as quizzers arrive:
 
 - Check the roster versus participants pane to confirm present status
 - Ask each quizzer to unmute and say hello to confirm audio functionality; this can also be done with an audio test akin to an in-person meet lights test
-- Consider running a practice jump or two if time permits
+- Consider running a practice trigger or two if time permits
 
 It's recommended that the official that manages the Zoom room enable (in settings) the meeting timer because at 40 minutes, the meeting will end. Be sure to keep the quiz under 40 minutes. When complete with the quiz, be sure to end the meeting, not just exit.

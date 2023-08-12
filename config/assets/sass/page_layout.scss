@@ -67,11 +67,6 @@ html {
 
         div#content {
             min-height: calc( 100vh - #{ $header_height + $div_body_padding * 2 } );
-
-
-            // overflow: auto;
-
-
             grid-area: content;
             @import 'components/content';
         }
@@ -89,6 +84,10 @@ html {
 
         div#nav {
             display: none;
+        }
+
+        div#content_footer {
+            width: calc( 100vw - $div_body_padding - 8px ) !important;
         }
     }
 

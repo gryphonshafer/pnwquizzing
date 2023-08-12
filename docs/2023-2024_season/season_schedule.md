@@ -1,67 +1,70 @@
-# 2023-2024 Proposed Season Schedule
+# 2023-2024 Season Schedule
 
-The following are the **proposed** dates and material ranges for meets in the 2023-2024 season.
-
-*This proposed schedule assumes quizzers will start memorizing after Labor Day at a rate of 1 chapter per week, with 1 week of review prior to the first 3 district meets and 2 weeks of review prior to district meets 4 and 5. Note that the book sequence is reordered to make it possible to have fewer intra-book material breaks at the meets.*
+The following are the dates and material ranges for meets in the 2023-2024 season.
 
 ### Classic Scramble™
 
 - **Date**: Saturday, September 23, 2023
 - **New Material**: Ephesians 1-3
+- **Location**: *(to be confirmed)*
+    - [Tacoma Christian Academy](https://tcak12.com)
+    - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
 
 ### District Meet 1
 
-- **Date Range**: October 20-21, 2023
+- **Date Range**: Friday-Saturday, October 20-21, 2023
+    - Arrive Friday for dinner and fellowship time
+    - Quizzing will run all-day Saturday, starting early
 - **New Material**: Ephesians 4-6
+- **Location**:
+    - [Juniper Community Church](https://www.junipercc.com)
+    - [976 S Adams Dr, Madras, OR 97741](https://www.google.com/maps/dir//976+S+Adams+Dr,+Madras,+OR+97741)
 
 ### District Meet 2
 
-- **Date Range**: December 1-3, 2023
-- **New Material**: Colossians 1-4
+- **Date Range**: Saturday, December 2, 2023
+- **New Material**: Galatians 1-4
+- **Location**: *(to be confirmed)*
+    - [Lighthouse Christian Center](http://www.lighthousehome.org)
+    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
 
 ### District Meet 3
 
-- **Date Range**: January 12-14, 2024
-- **New Material**: Philippians 1-4
+- **Date Range**: Saturday, January 13, 2024
+- **New Material**: Galatians 5-6, Philippians 1-2
+- **Location**: *(to be confirmed)*
+    - [Tacoma Christian Academy](https://tcak12.com)
+    - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
 
 ### District Meet 4
 
-- **Date Range**: February 16-18, 2024
+- **Date Range**: Saturday, February 17, 2024
 - **New Material**: Galatians 1-3
+- **Location**: *(to be confirmed)*
+    - [Lighthouse Christian Center](http://www.lighthousehome.org)
+    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
 
 ### District Meet 5
 
-- **Date Range**: March 22-24, 2024
+- **Date Range**: Saturday, March 23, 2024
 - **New Material**: Galatians 4-6
+- **Location**:
+    - [Alliance Bible Church](https://abctahoma.org)
+    - [19320 SE 240th St, Covington WA 98042](https://www.google.com/maps/dir//Alliance+Bible+Church,+19320+SE+240th+St,+Covington+WA+98042)
 
 ### Great West Invitational (GWI)
 
-- **Dates**: a Thursday through Sunday in April
+- **Dates**: a Thursday-Sunday in April, 2024
+- **Location**:
+    - [Crowsnest Lake Bible Camp](https://www.crowcamp.ca/)
+    - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/dir//Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
 
 ### District Championships (DC)
 
-- **Date Range**: May 17-19
+- **Date Range**: Friday-Sunday, May 17-19, 2024
+- **Location**: *(to be determined)*
 
-## Adult League
+### International Open Championship (IOC)
 
-*The following are proposed dates for an adult league. We may conduct these virtually or in-person based on interest and opportunity. And we may conduct 1 or more adult league quizzes with full material at District Championships.*
-
-### League Meet 1
-
-- **Date**: Saturday, October 27, 2023
-- **New Material**: Ephesians 1-6
-
-### League Meet 2
-
-- **Date**: Saturday, December 16, 2023
-- **New Material**: Colossians 1-4
-
-### League Meet 3
-
-- **Date**: Saturday, January 27, 2024
-- **New Material**: Philippians 1-4
-
-### League Meet 4
-
-- **Date**: Saturday, March 16, 2024
-- **New Material**: Galatians 1-6
+- **Dates**: June, 2024
+- **Location**: *(to be determined)*

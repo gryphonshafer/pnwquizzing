@@ -85,7 +85,7 @@ The Rules Subcommittee is a permanent subcommittee of the Board of Directors res
 - Set and make adjustments as necessary to the quizzing rules of PNW
 - Recruit, train, and oversee all meet officials: quizmasters, answer judges, scorekeepers, and statisticians
 
-The Rules Subcommittee is chaired by the Rules Subcommittee Leader. All meet officials who are active in the current quizzing season sit on the subcommittee, but only those meet officials who have attended at least 50% of the quiz meets in the previous 12 months are voting members. The Rules Subcommittee Leader is a voting member regardless of meet attendance. Quorum will be considered >50% of all current subcommittee members or >50% voting subcommittee members, whichever is fulfilled first.
+The Rules Subcommittee is chaired by the Rules Subcommittee Leader. All meet officials who are active in the current quizzing season sit on the subcommittee, but only those meet officials who have attended at least 50% of the quiz meets in the previous 12 months are voting members. The Rules Subcommittee Leader is a voting member regardless of meet attendance. Quorum will be considered &gt;50% of all current subcommittee members or &gt;50% voting subcommittee members, whichever is fulfilled first.
 
 ## Article 6 - Treasurer
 

@@ -193,9 +193,8 @@ you feel you are entitled to. Undoubtedly this attitude, and the way I was quizz
 sentiment of Colossians 3:23, "Whatever you do, work at it with all your heart, as working for the Lord, not
 for human masters." If quizzing was ever more than an afterthought, I was simply checking off boxes. I gave no
 thought to the beauty of the quizzing program and what a blessing quizzing was. Shoot, I hardly even meditated
-on what I memorized. Just check a box and move on.
-
-**I was quizzing wrong**, even if at times I looked like I knew what I was doing.
+on what I memorized. Just check a box and move on. I was quizzing wrong, even if at times I looked like I knew
+what I was doing.
 
 I can make no promises about how my quizzing will be in the future. Maybe I will error out in every quiz I
 ever participate in. Maybe I will blow it like it has never been blown before. Maybe all my challenges will be
