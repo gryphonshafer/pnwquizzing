@@ -28,16 +28,16 @@ sub startup ($self) {
         ->grep(qr/\.(?:jpg|png)$/)
         ->to_array;
 
-    my $all = $self->routes->under( sub ($self) {
-        if ( my $user_id = $self->session('user_id') ) {
+    my $all = $self->routes->under( sub ($c) {
+        if ( my $user_id = $c->session('user_id') ) {
             my $user;
 
-            unless ( my $become = $self->session('become') ) {
+            unless ( my $become = $c->session('become') ) {
                 try {
                     $user = PnwQuizzing::Model::User->new->load($user_id);
                 }
                 catch {
-                    $self->notice( 'Failed user load based on session "user_id" value: "' . $user_id . '"' );
+                    $c->notice( 'Failed user load based on session "user_id" value: "' . $user_id . '"' );
                 };
             }
             else {
@@ -45,39 +45,39 @@ sub startup ($self) {
                     $user = PnwQuizzing::Model::User->new->load({ username => $become });
                 }
                 catch {
-                    $self->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
-                    $self->flash( message => 'Failed to become user: "' . $become . '"' );
-                    $self->session( become => undef );
-                    $self->redirect_to('/user/account');
+                    $c->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
+                    $c->flash( message => 'Failed to become user: "' . $become . '"' );
+                    $c->session( become => undef );
+                    $c->redirect_to('/user/account');
                 };
             }
 
             if ($user) {
-                $self->stash( 'user' => $user );
+                $c->stash( 'user' => $user );
 
-                return $self->redirect_to('/user/org') if (
-                    not $self->session('become')
+                return $c->redirect_to('/user/org') if (
+                    not $c->session('become')
                     and not $user->data->{org_id}
-                    and $self->req->url->path ne '/user/org'
-                    and $self->req->url->path ne '/user/logout'
+                    and $c->req->url->path ne '/user/org'
+                    and $c->req->url->path ne '/user/logout'
                 );
             }
             else {
-                delete $self->session->{'user_id'};
+                delete $c->session->{'user_id'};
             }
         }
 
-        $self->stash(
-            docs_nav      => $self->docs_nav( @{ conf->get('docs') }{ qw( dir home_type home_name home_title ) } ),
+        $c->stash(
+            docs_nav      => $c->docs_nav( @{ conf->get('docs') }{ qw( dir home_type home_name home_title ) } ),
             header_photos => $photos,
         );
     } );
 
-    my $users = $all->under( sub ($self) {
-        return 1 if ( $self->stash('user') );
-        $self->info('Login required but not yet met');
-        $self->flash( message => 'Login required for the previously requested resource.' );
-        $self->redirect_to('/');
+    my $users = $all->under( sub ($c) {
+        return 1 if ( $c->stash('user') );
+        $c->info('Login required but not yet met');
+        $c->flash( message => 'Login required for the previously requested resource.' );
+        $c->redirect_to('/');
         return 0;
     } );
 
@@ -89,11 +89,11 @@ sub startup ($self) {
     $users->any( '/tool/meet_data' => [ format => 'csv' ] )->to('tool#meet_data');
     $users->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( logout list org unbecome ) );
 
-    $users->under( sub ($self) {
-        return 1 if ( $self->stash('user')->is_admin );
-        $self->info('Admin required but not met');
-        $self->flash( message => 'Administrator access required for the previously requested resource.' );
-        $self->redirect_to('/');
+    $users->under( sub ($c) {
+        return 1 if ( $c->stash('user')->is_admin );
+        $c->info('Admin required but not met');
+        $c->flash( message => 'Administrator access required for the previously requested resource.' );
+        $c->redirect_to('/');
         return 0;
     } )->any('/user/become')->to('user#become');
 

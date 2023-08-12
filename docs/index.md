@@ -22,8 +22,7 @@ spread to the Dominican Republic, Jordan, and far beyond.
 Bible Quizzing is a powerful ministry that claims God's promise that "No word of
 God will return empty."
 
-**Read more about the Bible Quizzing program on our
-[mission and purpose](about_us/mission.md) page.**
+**Read more about [Christian Bible Quizzing](https://cbqz.org).**
 
 ## What is PNW Bible Quizzing?
 

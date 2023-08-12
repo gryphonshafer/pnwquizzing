@@ -57,6 +57,12 @@ sub content ($self) {
             return $payload;
         },
     );
+
+    if ( $self->res->code and $self->res->code == 404 ) {
+        $self->stash( 'mojo.finished' => 0 );
+        $self->flash( message => 'Unable to find the resource previously requested. Redirected to home page.' );
+        $self->redirect_to('/');
+    }
 }
 
 1;
