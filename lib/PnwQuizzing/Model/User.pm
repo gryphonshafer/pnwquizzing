@@ -71,10 +71,10 @@ sub login ( $self, $username, $passwd ) {
         $self->load( { username => $username, passwd => $passwd, active => 1 } );
         $self->save( { last_login => \q{ DATETIME('NOW') } } );
     }
-    catch {
+    catch ($e) {
         $self->info('Login failure (in model)');
         croak('Failed user login');
-    };
+    }
 
     return $self;
 }

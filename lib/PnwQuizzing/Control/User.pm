@@ -127,14 +127,14 @@ sub login ($self) {
     try {
         $user = $user->login( map { $self->param($_) } qw( username passwd ) );
     }
-    catch {
+    catch ($e) {
         $self->info('Login failure (in controller)');
         $self->flash( message =>
             'Login failed. Please try again, or try the ' .
             '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
         );
         $redirect = 1;
-    };
+    }
     return $self->redirect_to('/') if ($redirect);
 
     $self->info( 'Login success for: ' . $user->data->{username} );
@@ -177,8 +177,7 @@ sub reset_password ($self) {
                 }
             );
         }
-        catch {
-            my $e = $_ || $@;
+        catch ($e) {
             $self->warn( $e->message );
             $self->stash( message => 'Unable to locate user account using the input values provided.' );
         };
@@ -212,8 +211,7 @@ sub reset_password ($self) {
 
             return $self->redirect_to('/');
         }
-        catch {
-            my $e = $_ || $@;
+        catch ($e) {
             $self->warn( $e->message );
             $self->stash( message =>
                 'Unable to reset user password. ' .

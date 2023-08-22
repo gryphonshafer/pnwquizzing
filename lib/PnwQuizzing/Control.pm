@@ -36,7 +36,7 @@ sub startup ($self) {
                 try {
                     $user = PnwQuizzing::Model::User->new->load($user_id);
                 }
-                catch {
+                catch ($e) {
                     $c->notice( 'Failed user load based on session "user_id" value: "' . $user_id . '"' );
                 };
             }
@@ -44,7 +44,7 @@ sub startup ($self) {
                 try {
                     $user = PnwQuizzing::Model::User->new->load({ username => $become });
                 }
-                catch {
+                catch ($e) {
                     $c->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
                     $c->flash( message => 'Failed to become user: "' . $become . '"' );
                     $c->session( become => undef );

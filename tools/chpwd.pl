@@ -9,7 +9,7 @@ my $user;
 try {
     $user = PnwQuizzing::Model::User->new->load( { username => $settings->{username} } );
 }
-catch {
+catch ($e) {
     die 'Failed to find user "' . $settings->{username} . '"' . "\n";
 }
 
