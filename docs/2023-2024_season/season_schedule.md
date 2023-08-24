@@ -24,9 +24,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 - **Date Range**: Saturday, December 2, 2023
 - **New Material**: Galatians 1-4
-- **Location**: *(to be confirmed)*
-    - [Lighthouse Christian Center](http://www.lighthousehome.org)
-    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
+- **Location**: *(to be determined)*
 
 ### District Meet 3
 
