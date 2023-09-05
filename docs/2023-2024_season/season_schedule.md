@@ -6,9 +6,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 - **Date**: Saturday, September 23, 2023
 - **New Material**: Ephesians 1-3
-- **Location**: *(to be confirmed)*
-    - [Tacoma Christian Academy](https://tcak12.com)
-    - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
+- **Location**: *(to be determined)*
 
 ### District Meet 1
 
