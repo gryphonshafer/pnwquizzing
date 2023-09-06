@@ -1,5 +1,3 @@
-<!--% hide_header_photo -->
-
 # 2023-2024 Club Lists
 
 Club lists are published lists of verses that will have queries asked from them
