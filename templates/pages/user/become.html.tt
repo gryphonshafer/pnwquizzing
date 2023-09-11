@@ -18,6 +18,7 @@
             <th>Active</th>
             <th>Dormant</th>
             <th>Last Login</th>
+            <th>Roles</th>
         </tr>
     </thead>
     <tbody>
@@ -30,8 +31,9 @@
                     %]">[% this_user.username %]</a>
                 </td>
                 <td>[% ( this_user.active ) ? 'Active' : 'Inactive' %]</td>
-                <td>[% ( this_user.dormant ) ? 'Dormant' : 'Non-Dormant' %]</td>
+                <td>[% ( this_user.dormant ) ? 'Dormant' : 'Current' %]</td>
                 <td>[% this_user.last_login OR 'No Login' %]</td>
+                <td>[% this_user.roles.join(', ') %]</td>
             </tr>
         [% END %]
     </tbody>

@@ -297,7 +297,7 @@ sub become ($self) {
                 $a->{dormant} <=> $b->{dormant} or
                 $a->{first_name} cmp $b->{first_name} or
                 $a->{last_name} cmp $b->{last_name}
-            } PnwQuizzing::Model::User->every_data
+            } PnwQuizzing::Model::User->every_data({ active => \q( IS NOT NULL ) })
         ] );
     }
     else {
