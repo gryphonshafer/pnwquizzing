@@ -6,7 +6,9 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 - **Date**: Saturday, September 23, 2023
 - **New Material**: Ephesians 1-3
-- **Location**: *(to be determined)*
+- **Location**:
+    - [Lighthouse Christian Center](http://www.lighthousehome.org)
+    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
 
 ### District Meet 1
 
@@ -22,13 +24,13 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 - **Date Range**: Saturday, December 2, 2023
 - **New Material**: Galatians 1-4
-- **Location**: *(to be determined)*
+- **Location**: <span style="color: red">*(to be determined)*</span>
 
 ### District Meet 3
 
 - **Date Range**: Saturday, January 13, 2024
 - **New Material**: Galatians 5-6, Philippians 1-2
-- **Location**: *(to be confirmed)*
+- **Location**: <span style="color: red">*(to be confirmed)*</span>
     - [Tacoma Christian Academy](https://tcak12.com)
     - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
 
@@ -58,9 +60,9 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 ### District Championships (DC)
 
 - **Date Range**: Friday-Sunday, May 17-19, 2024
-- **Location**: *(to be determined)*
+- **Location**: <span style="color: red">*(to be determined)*</span>
 
 ### International Open Championship (IOC)
 
 - **Dates**: June, 2024
-- **Location**: *(to be determined)*
+- **Location**: <span style="color: red">*(to be determined)*</span>
