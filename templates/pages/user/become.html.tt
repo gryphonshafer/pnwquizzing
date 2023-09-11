@@ -14,7 +14,6 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Username</th>
             <th>Active</th>
             <th>Dormant</th>
             <th>Last Login</th>
@@ -24,11 +23,14 @@
     <tbody>
         [% FOR this_user IN users %]
             <tr>
-                <td>[% this_user.first_name %] [% this_user.last_name %]</td>
                 <td>
-                    <a href="[%
-                        c.url_for('/user/become').query( username => this_user.username )
-                    %]">[% this_user.username %]</a>
+                    [% IF this_user.active %]
+                        <a href="[%
+                            c.url_for('/user/become').query( username => this_user.username )
+                        %]">[% this_user.first_name %] [% this_user.last_name %]</a>
+                    [% ELSE %]
+                        [% this_user.first_name %] [% this_user.last_name %]
+                    [% END %]
                 </td>
                 <td>[% ( this_user.active ) ? 'Active' : 'Inactive' %]</td>
                 <td>[% ( this_user.dormant ) ? 'Dormant' : 'Current' %]</td>
