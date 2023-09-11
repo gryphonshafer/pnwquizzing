@@ -17,16 +17,14 @@ default:
         home_title: PNW Bible Quizzing Home Page
         home_name: Home Page
     roles:
-        - Coach
         - Quizzer
+        - Coach
         - Parent
-        - Spectator
-        - Quizmaster
-        - Answer Judge
-        - Scorekeeper
-        - Statistician
-        - Volunteer
+        - Official
         - Board Member
+        - Pastor
+        - Volunteer
+        - Spectator
     meet_roles:
         - Coach
         - Parent
