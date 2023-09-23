@@ -37,7 +37,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 ### District Meet 4
 
 - **Date Range**: Saturday, February 17, 2024
-- **New Material**: Galatians 1-3
+- **New Material**: Philippians 3-4, Colossians 1
 - **Location**:
     - [Lighthouse Christian Center](http://www.lighthousehome.org)
     - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
@@ -45,7 +45,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 ### District Meet 5
 
 - **Date Range**: Saturday, March 23, 2024
-- **New Material**: Galatians 4-6
+- **New Material**: Colossians 2-4
 - **Location**:
     - [Alliance Bible Church](https://abctahoma.org)
     - [19320 SE 240th St, Covington WA 98042](https://www.google.com/maps/dir//Alliance+Bible+Church,+19320+SE+240th+St,+Covington+WA+98042)
