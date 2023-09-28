@@ -47,8 +47,8 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 - **Date Range**: Saturday, March 23, 2024
 - **New Material**: Colossians 2-4
 - **Location**:
-    - [Alliance Bible Church](https://abctahoma.org)
-    - [19320 SE 240th St, Covington WA 98042](https://www.google.com/maps/dir//Alliance+Bible+Church,+19320+SE+240th+St,+Covington+WA+98042)
+    - [Seattle Vietnamese Christian Church](https://httlseattle.org)
+    - [157 SW 116th Street, Seattle WA 98146](https://www.google.com/maps/dir//Seattle+Vietnamese+Christian+Church,+157+SW+116th+Street,+Seattle+WA+98146)
 
 ### Great West Invitational (GWI)
 
