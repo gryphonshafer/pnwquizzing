@@ -57,16 +57,12 @@
                     Full Data Table
                 </label>
                 <label>
-                    <input type="radio" v-model="meet_data_toggle" value="cbqz">
-                    CBQZ Roster
+                    <input type="radio" v-model="meet_data_toggle" value="roster">
+                    Roster
                 </label>
                 <label>
                     <input type="radio" v-model="meet_data_toggle" value="teams">
                     Teams List
-                </label>
-                <label>
-                    <input type="radio" v-model="meet_data_toggle" value="random">
-                    Randomized Teams
                 </label>
             </form>
         [% END %]
@@ -75,9 +71,8 @@
             <thead>
                 <tr>
                     <th>Team</th>
-                    <th>Bib</th>
                     <th>Name</th>
-                    <th>Cap</th>
+                    <th>Bible</th>
                     <th>M/F</th>
                     <th>Grade</th>
                     <th>Rookie</th>
@@ -91,7 +86,6 @@
                     [% FOR team IN org.registration %]
                         [% team_number = loop.count %]
                         [% FOR quizzer IN team %]
-                            [% bib = loop.count %]
                             [% IF quizzer.attend %]
                                 [%
                                     totals.attending = totals.attending + 1;
@@ -113,9 +107,8 @@
 
                                 <tr>
                                     <td>[% org.acronym %] [% team_number %]</td>
-                                    <td class="right">[% bib %]</td>
                                     <td>[% quizzer.name %]</td>
-                                    <td>[% quizzer.captain %]</td>
+                                    <td>[% quizzer.bible %]</td>
                                     <td class="center">[% quizzer.m_f %]</td>
                                     <td class="right">[% quizzer.grade %]</td>
                                     <td class="center">[% ( quizzer.rookie ) ? 'Yes' : 'No' %]</td>
@@ -139,7 +132,7 @@
         </table>
 
         [% IF is_web_page %]
-            <div v-show="meet_data_toggle == 'cbqz'">
+            <div v-show="meet_data_toggle == 'roster'">
                 [% FOR org IN org_reg %]
                     [% FOR team IN org.registration %]
                         [%
@@ -155,10 +148,8 @@
                         <p>
                             <b>[% org.acronym %] [% loop.count %]</b><br>
                             [% FOR quizzer IN team %]
-                                [% bib = loop.count %]
                                 [% IF quizzer.attend %]
-                                    [% bib %]. [% quizzer.name %]
-                                    [% UNLESS loop.last %]<br>[% END %]
+                                    [% quizzer.name %] [% quizzer.bible %][% UNLESS loop.last %]<br>[% END %]
                                 [% END %]
                             [% END %]
                         </p>
@@ -184,12 +175,6 @@
                     END;
                 %]
                 [% FOR team IN teams %]
-                    [% team %][% UNLESS loop.last %]<br>[% END %]
-                [% END %]
-            </p>
-
-            <p v-show="meet_data_toggle == 'random'">
-                [% FOR team IN teams.randomize %]
                     [% team %][% UNLESS loop.last %]<br>[% END %]
                 [% END %]
             </p>

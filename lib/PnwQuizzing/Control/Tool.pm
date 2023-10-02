@@ -63,6 +63,7 @@ sub register ($self) {
         next_meet     => PnwQuizzing::Model::Meet->next_meet_data,
         register_data => encode_json( {
             meet_roles    => conf->get('meet_roles'),
+            bibles        => conf->get('bibles'),
             profile_coach => ( grep { $_ eq 'Coach' } @{ $self->stash('user')->data->{roles} } ) ? 1 : 0,
             changed       => 0,
             org           => (

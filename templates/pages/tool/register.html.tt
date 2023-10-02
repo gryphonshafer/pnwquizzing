@@ -120,9 +120,8 @@
                         <thead>
                             <tr>
                                 [% UNLESS no_edit %]<th></th>[% END %]
-                                <th>Bib</th>
                                 <th>Name</th>
-                                <th>Cap</th>
+                                <th>Bible</th>
                                 <th>M/F</th>
                                 <th>Grade</th>
                                 <th>Rookie</th>
@@ -145,9 +144,6 @@
                                             v-on:click="reorder( 1, person_index, team_index )"></i>
                                     </td>
                                 [% END %]
-                                <td class="right">
-                                    {{ person_index + 1 }}
-                                </td>
                                 <td>
                                     [% UNLESS no_edit %]
                                         <input type="text" name="name" v-model="quizzer.name">
@@ -157,13 +153,15 @@
                                 </td>
                                 <td class="center">
                                     [% UNLESS no_edit %]
-                                        <select name="captain" v-model="quizzer.captain">
-                                            <option></option>
-                                            <option>Cap</option>
-                                            <option>CC</option>
+                                        <select name="bible" v-model="quizzer.bible">
+                                            <option v-for="bible in bibles" v-bind:value="
+                                                ( bible.constructor === Array ) ? bible[0] : bible
+                                            ">{{
+                                                ( bible.constructor === Array ) ? bible[1] : bible
+                                            }}</option>
                                         </select>
                                     [% ELSE %]
-                                        {{ quizzer.captain }}
+                                        {{ quizzer.bible }}
                                     [% END %]
                                 </td>
                                 <td class="center">

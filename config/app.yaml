@@ -28,12 +28,24 @@ default:
     meet_roles:
         - Coach
         - Parent
-        - Spectator
-        - Quizmaster
-        - Answer Judge
-        - Scorekeeper
-        - Statistician
+        - Official
         - Volunteer
+        - Spectator
+    bibles:
+        - NIV
+        - [ 'NASB1995', 'NASB (1995)'    ]
+        - [ 'NASB',     'NASB (Current)' ]
+        - ESV
+        - AKJV
+        - AMP
+        - BSB
+        - HCSB
+        - KJ21
+        - KJV
+        - NKJV
+        - NLT
+        - NRSVA
+        - RSV
     email:
         from: PNW Bible Quizzing <contact@pnwquizzing.org>
         active: 0
