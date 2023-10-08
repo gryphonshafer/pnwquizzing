@@ -22,9 +22,11 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 2
 
-- **Date Range**: Saturday, December 2, 2023
+- **Date Range**: Saturday, December 2 or 9, 2023 <span style="color: red">*(exact date to be confirmed)*</span>
 - **New Material**: Galatians 1-4
-- **Location**: <span style="color: red">*(to be determined)*</span>
+- **Location**:
+    - [Eastridge Baptist Church](https://www.eastridgebaptist.org)
+    - [12520 SE 240th St, Kent, WA 98031](https://www.google.com/maps/dir//12520+SE+240th+St,+Kent,+WA+98031)
 
 ### District Meet 3
 
