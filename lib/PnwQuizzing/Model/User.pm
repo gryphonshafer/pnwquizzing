@@ -104,17 +104,14 @@ sub reset_password_email ( $self, $username = '', $email = '', $url = undef ) {
     return;
 }
 
-sub reset_password ( $self, $user_id, $passwd ) {
+sub reset_password_check ( $self, $user_id, $passwd ) {
     croak('Unable to locate active user given user ID and password provided') unless (
         $self->dq->sql(q{
             SELECT COUNT(*) FROM user WHERE user_id = ? AND passwd LIKE ? AND active
         })->run( $user_id, $passwd . '%' )->value
     );
 
-    my $user = PnwQuizzing::Model::User->new->load($user_id);
-    my $new_passwd = substr( $self->bcrypt( $$ . time() . rand() ), 0, 12 );
-
-    return $user->save( { passwd => $new_passwd, active => 1 } );
+    return PnwQuizzing::Model::User->new->load($user_id);
 }
 
 sub is_admin ( $self, $user_id = undef ) {
@@ -166,9 +163,9 @@ User login.
 
 Send a reset password email to a user.
 
-=head2 reset_password
+=head2 reset_password_check
 
-Reset a user's password in resposne to a reset password email response.
+Check validity of a reset password link from a reset password email.
 
 =head2 is_admin
 

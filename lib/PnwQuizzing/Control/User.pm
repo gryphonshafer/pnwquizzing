@@ -160,7 +160,21 @@ sub logout ($self) {
 }
 
 sub reset_password ($self) {
-    return $self->redirect_to('/') if ( $self->stash('user') );
+    my $redirect = sub {
+        $self->flash(
+            message => {
+                type => 'success',
+                text => join( ' ',
+                    'You are now logged in; however, your password is not yet reset.',
+                    'Use the edit profile page to change your password to something new.',
+                ),
+            }
+        );
+
+        return $self->redirect_to('/user/account');
+    };
+
+    return $redirect->() if ( $self->stash('user') );
 
     if ( $self->param('username') or $self->param('email') ) {
         my $url = $self->req->url->to_abs;
@@ -187,7 +201,7 @@ sub reset_password ($self) {
     }
     elsif ( $self->stash('reset_user_id') and $self->stash('reset_passwd') ) {
         try {
-            my $user = PnwQuizzing::Model::User->new->reset_password(
+            my $user = PnwQuizzing::Model::User->new->reset_password_check(
                 $self->stash('reset_user_id'),
                 $self->stash('reset_passwd'),
             );
@@ -198,25 +212,13 @@ sub reset_password ($self) {
                 last_request_time => time,
             );
 
-            $self->flash(
-                message => {
-                    type => 'success',
-                    text => join( ' ',
-                        'Successfully reset password for this user account.',
-                        'You are now logged in.',
-                        'Visit the "Edit Profile" page to change your password to something new.',
-                    ),
-                }
-            );
-
-            return $self->redirect_to('/');
+            return $redirect->();
         }
         catch ($e) {
             $self->warn( $e->message );
             $self->stash( message =>
-                'Unable to reset user password. ' .
-                'This is likely due to an expired link in an email. ' .
-                'Please try filling out the form again for a fresh reset link.'
+                'Unable to verify user account for reset user password action. ' .
+                'Note the time and email site administration for assistance.'
             );
         };
     }
