@@ -107,7 +107,7 @@
 
                                 <tr>
                                     <td>[% org.acronym %] [% team_number %]</td>
-                                    <td>[% quizzer.name %]</td>
+                                    <td style="white-space: nowrap">[% quizzer.name %]</td>
                                     <td>[% quizzer.bible %]</td>
                                     <td class="center">[% quizzer.m_f %]</td>
                                     <td class="right">[% quizzer.grade %]</td>
@@ -217,7 +217,7 @@
 
                     <tr>
                         <td>[% person.acronym %]</td>
-                        <td>
+                        <td style="white-space: nowrap">
                             <a href="mailto:[% person.email %]">
                                 [% person.first_name %]
                                 [% person.last_name %]
@@ -236,6 +236,34 @@
                             </td>
                         [% END %]
                         <td>[% person.registration.notes %]</td>
+                    </tr>
+                [% END %]
+
+                [% FOR nonquizzer IN person.registration.nonquizzers %]
+                    [%
+                        totals.attending   = totals.attending   + 1;
+                        totals.nonquizzers = totals.nonquizzers + 1;
+
+                        totals.house = totals.house + ( ( nonquizzer.registration.house ) ? 1 : 0 );
+                        totals.lunch = totals.lunch + ( ( nonquizzer.registration.lunch ) ? 1 : 0 );
+                    %]
+
+                    <tr>
+                        <td>[% person.acronym %]</td>
+                        <td style="white-space: nowrap">[% nonquizzer.name %]</td>
+                        <td></td>
+                        [% IF next_meet.house %]
+                            <td></td>
+                            <td class="center">
+                                [% ( nonquizzer.house ) ? 'Yes' : 'No' %]
+                            </td>
+                        [% END %]
+                        [% IF next_meet.lunch %]
+                            <td class="center">
+                                [% ( nonquizzer.lunch ) ? 'Yes' : 'No' %]
+                            </td>
+                        [% END %]
+                        <td>[% nonquizzer.notes %]</td>
                     </tr>
                 [% END %]
             [% END %]

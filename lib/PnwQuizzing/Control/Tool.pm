@@ -72,18 +72,26 @@ sub register ($self) {
                     : undef
             ),
 
+            attend      => 0,
+            roles       => [],
+            drive       => 0,
+            house       => 0,
+            lunch       => 0,
+            notes       => '',
+            nonquizzers => [],
             %{
                 (
                     $user_reg and
                     $user_reg->[0] and
                     $user_reg->[0]{registration}
                 ) ? $user_reg->[0]{registration} : {
-                    attend => 0,
-                    roles  => [],
-                    drive  => 0,
-                    house  => 0,
-                    lunch  => 0,
-                    notes  => '',
+                    attend      => 0,
+                    roles       => [],
+                    drive       => 0,
+                    house       => 0,
+                    lunch       => 0,
+                    notes       => '',
+                    nonquizzers => [],
                 }
             },
 
@@ -107,7 +115,9 @@ sub register_save ($self) {
         PnwQuizzing::Model::Entry->new->create({
             meet_id      => $next_meet->{meet_id},
             user_id      => $self->stash('user')->id,
-            registration => { map { $_ => $data->{$_} } qw( attend drive house lunch roles notes ) },
+            registration => { map { $_ => $data->{$_} } qw(
+                attend drive house lunch roles notes nonquizzers
+            ) },
         });
 
         PnwQuizzing::Model::Entry->new->create({
@@ -185,24 +195,45 @@ sub meet_data ($self) {
                 } @$org_reg
             ),
             (
+                grep { defined }
                 map {
-                    [
-                        $_->{acronym},
+                    my $person = $_;
+                    ( ( $person->{registration}{attend} ) ? [
+                        $person->{acronym},
                         '',
                         '',
-                        $_->{first_name} . ' ' . $_->{last_name},
+                        $person->{first_name} . ' ' . $person->{last_name},
                         '',
                         '',
                         '',
                         '',
-                        ( ( $_->{registration}{house} ) ? 'Yes' : 'No' ),
-                        ( ( $_->{registration}{lunch} ) ? 'Yes' : 'No' ),
-                        $_->{registration}{notes},
-                        join( ', ', @{ $_->{registration}{roles} } ),
-                        ( ( $_->{registration}{drive} ) ? 'Yes' : 'No' ),
-                        lc( $_->{email} ),
-                    ]
-                } grep { $_->{registration}{attend} } @$user_reg
+                        ( ( $person->{registration}{house} ) ? 'Yes' : 'No' ),
+                        ( ( $person->{registration}{lunch} ) ? 'Yes' : 'No' ),
+                        $person->{registration}{notes},
+                        join( ', ', @{ $person->{registration}{roles} } ),
+                        ( ( $person->{registration}{drive} ) ? 'Yes' : 'No' ),
+                        lc( $person->{email} ),
+                    ] : undef ),
+                    map {
+                        my $nonquizzer = $_;
+                        [
+                            $person->{acronym},
+                            '',
+                            '',
+                            $nonquizzer->{name},
+                            '',
+                            '',
+                            '',
+                            '',
+                            ( ( $nonquizzer->{house} ) ? 'Yes' : 'No' ),
+                            ( ( $nonquizzer->{lunch} ) ? 'Yes' : 'No' ),
+                            $nonquizzer->{notes},
+                            '',
+                            '',
+                            '',
+                        ]
+                    } $person->{registration}{nonquizzers}->@*;
+                } @$user_reg
             ),
         ] );
 

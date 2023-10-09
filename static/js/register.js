@@ -30,6 +30,12 @@ var vm = new Vue({
             this.nav_content_align();
         },
 
+        add_nonquizzer : function (team) {
+            var nonquizzer = { house : true, lunch : true };
+            this.nonquizzers.push(nonquizzer);
+            this.nav_content_align();
+        },
+
         add_watch : function (record) {
             this.$watch(
                 function () {
@@ -81,13 +87,18 @@ var vm = new Vue({
             if ( this.teams[team_index].length == 0 ) this.teams.splice( team_index, 1 );
         },
 
-        delete_person : function ( person_index, team_index ) {
+        delete_quizzer : function ( person_index, team_index ) {
             var registration_id = this.teams[team_index][person_index].registration_id || 0;
             if (registration_id) this.deleted_persons.push(registration_id);
 
             this.teams[team_index].splice( person_index, 1 );
             if ( this.teams[team_index].length == 0 ) this.teams.splice( team_index, 1 );
 
+            this.nav_content_align();
+        },
+
+        delete_nonquizzer : function (person_index) {
+            this.nonquizzers.splice( person_index, 1 );
             this.nav_content_align();
         },
 

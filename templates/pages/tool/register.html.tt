@@ -104,6 +104,13 @@
         <div v-if="can_register_teams">
             <h2>Quizzers from {{ org.name }}</h2>
 
+            <p>
+                Use this section to provide quizzer and team registration
+                information only. Please provide as much information per quizzer
+                as possible. (Don't include non-quizzer registration information
+                here.)
+            </p>
+
             <p v-if="teams.length == 0">
                 There are currently no quizzers registered from {{ org.name }}.
             </p>
@@ -225,7 +232,7 @@
                                 </td>
                                 [% UNLESS no_edit %]
                                     <td><i class="la la-trash-o"
-                                        v-on:click="delete_person( person_index, team_index )"
+                                        v-on:click="delete_quizzer( person_index, team_index )"
                                     ></i></td>
                                 [% END %]
                             </tr>
@@ -243,6 +250,81 @@
                 <p><button v-on:click="add_team">Add a Team</button></p>
             [% END %]
         </div>
+        <div v-else>
+            <p>
+                Only coaches are allowed to register quizzers and teams. If you
+                are a coach, select the coach role above.
+            </p>
+        </div>
+
+        <h2>Non-Quizzers from {{ org.name }}</h2>
+
+        <p>
+            Use this secton to provide registration information for any non-you
+            non-quizzers. Please coordinate with your non-quizzers to ensure
+            there won't be duplicate registrations for them that will appear on
+            the <b><a href="[% c.url_for('meet_data') %]">Quiz Meet Registration
+            Data</a></b> page.
+        </p>
+
+        <table v-if="nonquizzers.length">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    [% IF next_meet.house %]<th>House</th>[% END %]
+                    [% IF next_meet.lunch %]<th>Lunch</th>[% END %]
+                    <th>Notes</th>
+                    [% UNLESS no_edit %]<th></th>[% END %]
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="( nonquizzer, person_index ) in nonquizzers">
+                    <td>
+                        [% UNLESS no_edit %]
+                            <input type="text" name="name" v-model="nonquizzer.name">
+                        [% ELSE %]
+                            {{ nonquizzer.name }}
+                        [% END %]
+                    </td>
+                    [% IF next_meet.house %]
+                        <td class="checkbox">
+                            [% UNLESS no_edit %]
+                                <input type="checkbox" v-model="nonquizzer.house">
+                            [% ELSE %]
+                                {{ ( nonquizzer.house ) ? "Yes" : "No" }}
+                            [% END %]
+                        </td>
+                    [% END %]
+                    [% IF next_meet.lunch %]
+                        <td class="checkbox">
+                            [% UNLESS no_edit %]
+                                <input type="checkbox" v-model="nonquizzer.lunch">
+                            [% ELSE %]
+                                {{ ( nonquizzer.lunch ) ? "Yes" : "No" }}
+                            [% END %]
+                    [% END %]
+                    </td>
+                    <td>
+                        [% UNLESS no_edit %]
+                            <input type="text" name="notes" v-model="nonquizzer.notes">
+                        [% ELSE %]
+                            {{ nonquizzer.notes }}
+                        [% END %]
+                    </td>
+                    [% UNLESS no_edit %]
+                        <td><i class="la la-trash-o"
+                            v-on:click="delete_nonquizzer(person_index)"
+                        ></i></td>
+                    [% END %]
+                </tr>
+            </tbody>
+            [% UNLESS no_edit %]
+                <caption align="bottom">
+                    <button v-on:click="add_nonquizzer()">Add a Non-Quizzer</button>
+                </caption>
+            [% END %]
+        </table>
+        <p v-else><button v-on:click="add_nonquizzer()">Add a Non-Quizzer</button></p>
 
         [% UNLESS no_edit %]
             <div v-if="changed == 1">
