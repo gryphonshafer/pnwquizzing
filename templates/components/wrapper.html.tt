@@ -48,17 +48,23 @@
     <body[% IF page.body_class %] class="[% page.body_class %]"[% END %]>
         [% PROCESS page_layout.html.tt %]
 
-        <script type="text/javascript" src="[% c.url_for('/js/nav_content_align.js') %]"></script>
-        <script type="text/javascript" src="[% c.url_for('/js/search_icon.js') %]"></script>
+        <script type="text/javascript" src="[%
+            c.url_for('/js/nav_content_align.js').query( version => version )
+        %]"></script>
+        <script type="text/javascript" src="[%
+            c.url_for('/js/search_icon.js').query( version => version )
+        %]"></script>
         [% FOR js_block IN page.inline_js %]<script type="text/javascript">[% js_block %]</script>[% END %]
 
         [% IF page.vue OR page.vue_inline %]
             <script type="text/javascript" src="[% c.url_for(
                 ( c.app.mode == 'production' ) ? '/js/vue.min.js' : '/js/vue.js'
-            ) %]"></script>
+            ).query( version => version ) %]"></script>
 
             [% IF page.vue %]
-                <script type="text/javascript" src="[% c.url_for( '/js/' _ page.vue _ '.js' ) %]"></script>
+                <script type="text/javascript" src="[%
+                    c.url_for( '/js/' _ page.vue _ '.js' ).query( version => version )
+                %]"></script>
             [% END %]
 
             [% IF page.vue_inline %]<script type="text/javascript">[% page.vue_inline %]</script>[% END %]
