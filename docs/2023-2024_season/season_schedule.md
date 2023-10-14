@@ -22,7 +22,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 2
 
-- **Date Range**: Saturday, December 2 or 9, 2023 <span style="color: red">*(exact date to be confirmed)*</span>
+- **Date Range**: Saturday, December 2, 2023
 - **New Material**: Galatians 1-4
 - **Location**:
     - [Eastridge Baptist Church](https://www.eastridgebaptist.org)
