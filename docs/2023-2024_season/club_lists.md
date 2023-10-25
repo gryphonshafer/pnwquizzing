@@ -86,11 +86,11 @@ The club lists will be weighted as follows:
     - Club 100: weight of 1 (thus 40% probability a query is unique to this set)
     - Club 250: weight of 2 (thus 35% probability a query is unique to this set)
     - Full Material: weight of 3 (thus 25% probability a query is unique to this set)
-- Top 9 positional quizzes and finals quizzes are:
+- "Top-9" positional quizzes and finals/championships quizzes are:
     - Club 100: weight of 0 (thus 20% probability a query is unique to this set)
     - Club 250: weight of 0 (thus 30% probability a query is unique to this set)
     - Full Material: weight of 1 (thus 50% probability a query is unique to this set)
-- Weighted score sum quizzes are:
+- Auxiliary score sum quizzes are:
     - Club 100: weight of 3 (thus 67% probability a query is unique to this set)
     - Club 250: weight of 2 (thus 25% probability a query is unique to this set)
     - Full Material: weight of 1 (thus 8% probability a query is unique to this set)
