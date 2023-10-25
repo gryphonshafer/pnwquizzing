@@ -59,7 +59,7 @@ Tie-breaking for individual quizzer standings (both at a meet and across the sea
 
 ## Great West Invitational (GWI) Qualification
 
-We will invite quizzers by year-to-date average, but we will now require quizzers to be eligible by their track of their memorization and assurance they've memorize at least 50% of the material at the synonymous quality level or better. Coaches will have the final say as to whether a quizzers of theirs has fulfilled this requirement.
+We invite quizzers by year-to-date average, but we require quizzers to be eligible by their tracking of their memorization of at least 50% of the material at the synonymous quality level or better. Coaches will have the final say as to whether a quizzers of theirs has fulfilled this requirement.
 
 ## Meet Cancellation due to Inclement Weather
 
