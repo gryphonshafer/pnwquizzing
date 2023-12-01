@@ -33,12 +33,16 @@ The club lists will be weighted as follows:
 
 Quizzer individual averages for a meet are computed as follows:
 
-- Preliminary score sum and "top-9" positional are summed and divided by the number of these quizzes
-- Finals/championships quiz scores do not count toward individual averages
-- Auxiliary score sum quiz scores do not count toward individual averages
+- Preliminary score sum are summed and divided by the number of these quizzes
+- The following quiz scores do not count toward individual averages:
+    - "Top-9" positional
+    - Finals/championships
+    - Auxiliary score sum
 
 <!--
 
+- Preliminary score sum and "top-9" positional are summed and divided by the number of these quizzes
+- Finals/championships quiz scores do not count toward individual averages
 - Auxiliary score sum quiz scores are summed and divided by the number of these quizzes and weighted at 1 standard distribution left-shifted of the "top-9" positional relative total score
 
 -->
