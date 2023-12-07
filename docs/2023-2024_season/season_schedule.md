@@ -32,17 +32,17 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 - **Date Range**: Saturday, January 13, 2024
 - **New Material**: Galatians 5-6, Philippians 1-2
-- **Location**: <span style="color: red">*(to be confirmed)*</span>
-    - [Tacoma Christian Academy](https://tcak12.com)
-    - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
+- **Location**:
+    - [Lighthouse Christian Center](http://www.lighthousehome.org)
+    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
 
 ### District Meet 4
 
 - **Date Range**: Saturday, February 17, 2024
 - **New Material**: Philippians 3-4, Colossians 1
 - **Location**:
-    - [Lighthouse Christian Center](http://www.lighthousehome.org)
-    - [3409 23rd St SW, Puyallup, WA 98373](https://www.google.com/maps/dir//Lighthouse+Christian+Center,+3409+23rd+St+SW,+Puyallup,+WA+98373)
+    - [Tacoma Christian Academy](https://tcak12.com)
+    - [2014 S 15th St, Tacoma, WA 98405](https://www.google.com/maps/dir//2014+S+15th+St,+Tacoma,+WA+98405)
 
 ### District Meet 5
 
