@@ -149,7 +149,7 @@
                             <b>[% org.acronym %] [% loop.count %]</b><br>
                             [% FOR quizzer IN team %]
                                 [% IF quizzer.attend %]
-                                    [% quizzer.name %] [% quizzer.bible %][% UNLESS loop.last %]<br>[% END %]
+                                    [% quizzer.name %] [% quizzer.bible %][% IF quizzer.rookie %] (Rookie)[% END %][% UNLESS loop.last %]<br>[% END %]
                                 [% END %]
                             [% END %]
                         </p>
