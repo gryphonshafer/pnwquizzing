@@ -54,7 +54,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### Great West Invitational (GWI)
 
-- **Dates**: a Thursday-Sunday in April, 2024
+- **Dates**: Thursday-Sunday, April 11-14, 2024
 - **Location**:
     - [Crowsnest Lake Bible Camp](https://www.crowcamp.ca/)
     - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://www.google.com/maps/dir//Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
