@@ -8,6 +8,8 @@ with qw( Omniframe::Role::Model Omniframe::Role::Bcrypt );
 
 class_has active => 1;
 
+my $min_passwd_length = 6;
+
 before 'create' => sub ( $self, $params ) {
     $params->{active} //= 0;
 };
@@ -15,9 +17,9 @@ before 'create' => sub ( $self, $params ) {
 sub freeze ( $self, $data ) {
     $data->{org_id} = delete $data->{org} if ( exists $data->{org} );
 
-    if ( $data->{passwd} ) {
-        croak('Password supplied is not at least 6 characters in length')
-            unless ( length $data->{passwd} >= 6 );
+    if ( $self->is_dirty( 'passwd', $data ) ) {
+        croak("Password supplied is not at least $min_passwd_length characters in length")
+            unless ( length $data->{passwd} >= $min_passwd_length );
         $data->{passwd} = $self->bcrypt( $data->{passwd} );
     }
 
