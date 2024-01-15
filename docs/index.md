@@ -57,4 +57,4 @@ who have participated in PNW Bible Quizzing.**
 If you have any questions, would like to participate in quizzing, or would like
 assistance starting a quiz program, please email us:
 [contact@pnwquizzing.org](mailto:contact@pnwquizzing.org).
-<i class="la la-envelope"></i>
+<i class="fa-regular fa-envelope"></i>

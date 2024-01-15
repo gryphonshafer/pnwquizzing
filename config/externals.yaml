@@ -1,0 +1,7 @@
+---
+font_awesome:
+    dest: static/font-awesome
+    parts:
+        - webfonts
+        - css/all.css
+        - css/all.min.css

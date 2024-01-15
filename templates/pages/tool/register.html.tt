@@ -145,9 +145,9 @@
                             >
                                 [% UNLESS no_edit %]
                                     <td>
-                                        <i class="la la-arrow-up"
+                                        <i class="fa-solid fa-arrow-up"
                                             v-on:click="reorder( -1, person_index, team_index )"></i>
-                                        <i class="la la-arrow-down"
+                                        <i class="fa-solid fa-arrow-down"
                                             v-on:click="reorder( 1, person_index, team_index )"></i>
                                     </td>
                                 [% END %]
@@ -231,7 +231,7 @@
                                     [% END %]
                                 </td>
                                 [% UNLESS no_edit %]
-                                    <td><i class="la la-trash-o"
+                                    <td><i class="fa-solid fa-trash"
                                         v-on:click="delete_quizzer( person_index, team_index )"
                                     ></i></td>
                                 [% END %]
@@ -312,7 +312,7 @@
                         [% END %]
                     </td>
                     [% UNLESS no_edit %]
-                        <td><i class="la la-trash-o"
+                        <td><i class="fa-solid fa-trash"
                             v-on:click="delete_nonquizzer(person_index)"
                         ></i></td>
                     [% END %]

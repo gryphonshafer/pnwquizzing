@@ -39,7 +39,7 @@ sub content ($self) {
                         ( $ft eq 'xlsx' ) ? 'file-excel' : undef;
 
                     ($icon)
-                        ? ( qq{$x$y) <i class="la la-} . $icon . q{-o"></i>} )
+                        ? ( qq{$x$y) <i class="fa-regular fa-} . $icon . q{"></i>} )
                         : "$x$y$z)";
                 |eg;
 

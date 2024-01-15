@@ -8,7 +8,7 @@
     </div>
 
     <div id="header_user">
-        <i id="search_icon" class="la la-search"></i>
+        <i id="search_icon" class="fa-solid fa-magnifying-glass"></i>
         <form id="search_form" method="get" action="[% c.url_for('/search') %]">
             <input type="text" name="for">
         </form>

@@ -30,20 +30,14 @@
             href="[% c.url_for('/app.css').query( version => version ) %]">
 
         <link rel="stylesheet" type="text/css"
-            href="[% c.url_for('/line-awesome/css/line-awesome.min.css') %]">
+            href="[%
+                c.url_for(
+                    '/font-awesome/css/all' _ ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
+                ).query( version => version )
+            %]">
 
         <link href="https://github.com/gryphonshafer/pnwquizzing/commits/master.atom"
             rel="alternate" title="Recent Commits to pnwquizzing:master" type="application/atom+xml">
-
-        [% IF c.app.mode == 'production' %]
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDZXWFNCVL"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag( 'js', new Date() );
-                gtag( 'config', 'G-MDZXWFNCVL' );
-            </script>
-        [% END %]
     </head>
     <body[% IF page.body_class %] class="[% page.body_class %]"[% END %]>
         [% PROCESS page_layout.html.tt %]

@@ -24,14 +24,6 @@
         title="Bible Quizzing Slack Forum">
         <span>Bible Quizzing Slack Forum</span></a></div>
 
-    <h2>Social Media</h2>
-
-    <p class="social">
-        <a href="https://www.facebook.com/groups/110424762306800"><i class="la la-facebook-official"></i></a>
-        <a href="https://twitter.com/pnwquizzing"><i class="la la-twitter-square"></i></a>
-        <a href="https://instagram.com/pnw_biblequizzing"><i class="la la-instagram"></i></a>
-    </p>
-
     [% BLOCK nav %]
         [% IF node.name %]
             <a href="[% c.url_for( node.href ) %]"

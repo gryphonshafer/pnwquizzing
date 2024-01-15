@@ -5,7 +5,7 @@
         margin-right  : $div_body_padding * -1;
         margin-bottom : 18px;
 
-        width  : calc( 100vw + #{ $div_body_padding * 2 } - 48px );
+        width  : calc( 100vw + #{ $div_body_padding * 2 } - 49px );
         height : 400px;
 
         background-image    : url( graphics/quizzing_header_background.jpg );
@@ -100,18 +100,6 @@ iframe.youtube {
     height     : calc( 100vw * 0.5 * 315 / 560 );
     max-width  : 560px;
     max-height : 315px;
-}
-
-p.social {
-    a {
-        font-size       : 64px;
-        text-decoration : none;
-        color           : black;
-    }
-
-    a:hover {
-        color : blue;
-    }
 }
 
 @media (max-width: 810px) {

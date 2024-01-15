@@ -1,4 +1,4 @@
-div#register {
+#register {
     fieldset#personal_registration {
         p {
             label {
@@ -58,13 +58,11 @@ div#register {
         }
     }
 
-    i.la {
-        padding-right: 0.01em;
+    i.fa-solid, i.fa-regular {
+        padding: 0 0.2em;
     }
 
-    i.la:hover {
-        padding-right: 0px;
-
+    i.fa-solid:hover, i.fa-regular:hover {
         font-weight: bold;
         color: blue;
         cursor: pointer;
