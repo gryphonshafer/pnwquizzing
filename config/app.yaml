@@ -33,8 +33,8 @@ default:
         - Spectator
     bibles:
         - NIV
-        - [ 'NASB1995', 'NASB (1995)'    ]
-        - [ 'NASB',     'NASB (Current)' ]
+        - [ 'NASB5', 'NASB (1995)'    ]
+        - [ 'NASB',  'NASB (Current)' ]
         - ESV
         - AKJV
         - AMP
