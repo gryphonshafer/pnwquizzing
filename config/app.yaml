@@ -1,4 +1,5 @@
 ---
+preinclude: ../omniframe/config/app.yaml
 default:
     bcrypt:
         salt: 24y5Hvo6ke8p251n
@@ -12,10 +13,10 @@ default:
             cookie_name: pnwquizzing_session
     omniframe: ../omniframe
     docs:
-        dir: docs
-        home_type: md
+        dir       : docs
+        home_type : md
         home_title: PNW Bible Quizzing Home Page
-        home_name: Home Page
+        home_name : Home Page
     roles:
         - Quizzer
         - Coach
@@ -47,8 +48,7 @@ default:
         - NRSVA
         - RSV
     email:
-        from: PNW Bible Quizzing <contact@pnwquizzing.org>
-        active: 0
+        from: PNW Bible Quizzing <example@example.org>
     base_url: https://pnwquizzing.org
     template:
         email:
@@ -58,7 +58,11 @@ default:
     time_zone: America/Los_Angeles
     season_break:
         month: 8
-        day: 1
+        day  : 1
     admins:
+www:
+    logging:
+        filter: ~
+    email:
+        active: 1
 optional_include: local/config.yaml
-preinclude: ../omniframe/config/app.yaml

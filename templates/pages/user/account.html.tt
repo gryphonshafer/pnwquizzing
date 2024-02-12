@@ -1,5 +1,9 @@
 [% UNLESS successful_create_user %]
-    [% page.title = ( c.stash.user ) ? 'Account Profile Edit' : 'New User Sign-Up' %]
+    [%
+        page.title         = ( c.stash.user ) ? 'Account Profile Edit' : 'New User Sign-Up';
+        recaptcha_site_key = c.app.conf.get( 'recaptcha', 'site_key' );
+    %]
+
     <h1>
         [% IF c.stash.user %]
             PNW Quizzing Account Profile Edit
@@ -35,7 +39,25 @@
         </label>
     [% END %]
 
-    <form method="post" action="[% c.url_for('/user/account') %]">
+    [% IF NOT c.stash.user AND recaptcha_site_key %]
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function g_recaptcha_cb(token) {
+                document.getElementById('create_new_user_form').submit();
+            }
+        </script>
+        <style>
+            .grecaptcha-badge {
+                bottom: 90px !important;
+            }
+        </style>
+    [% END %]
+
+    <form method="post" action="[% c.url_for('/user/account') %]"
+        [% IF NOT c.stash.user %]
+            id="create_new_user_form"
+        [% END %]
+    >
         <fieldset>
             <legend>User Account Information</legend>
 
@@ -76,15 +98,6 @@
                     </label>
                 [% END %]
             </label>
-
-            [% UNLESS c.stash.user %]
-                <label>
-                    [% math = [ rand(10), pick( '+', 'x' ), rand(10) ] %]
-                    What is [% math.join %]?
-                    <input type="hidden" name="math" value="[% math.join %]">
-                    <input type="text" name="captcha" placeholder="Math Answer" size="20">
-                <label>
-            [% END %]
         </fieldset>
 
         [% IF roles %]
@@ -104,7 +117,14 @@
 
         <div>
             <input type="submit"
-                value="[% IF c.stash.user %]Save Changes to[% ELSE %]Create[% END %] User Account">
+                value="[% IF c.stash.user %]Save Changes to[% ELSE %]Create[% END %] User Account"
+                [% IF recaptcha_site_key %]
+                    class="g-recaptcha"
+                    data-sitekey="[% recaptcha_site_key %]"
+                    data-callback="g_recaptcha_cb"
+                    data-action="create_new_user"
+                [% END %]
+            >
         </div>
         <input type="hidden" name="form_submit" value="1">
     </form>
