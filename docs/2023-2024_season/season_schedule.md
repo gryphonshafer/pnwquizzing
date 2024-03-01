@@ -62,9 +62,11 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 ### District Championships (DC)
 
 - **Date Range**: Friday-Sunday, May 17-19, 2024
-- **Location**: <span style="color: red">*(to be determined)*</span>
+- **Location:**
+    - [Double K Retreat Center](https://www.doublek.org)
+    - [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
 
 ### International Open Championship (IOC)
 
-- **Dates**: June, 2024
+- **Dates**: Early July, 2024
 - **Location**: <span style="color: red">*(to be determined)*</span>
