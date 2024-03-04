@@ -68,5 +68,5 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### International Open Championship (IOC)
 
-- **Dates**: Early July, 2024
-- **Location**: <span style="color: red">*(to be determined)*</span>
+- **Dates**: <span style="color: red">*(to be determined, but probably July 22-23, 26-27, or 29-30)*</span>
+- **Location**: <span style="color: red">*(to be determined, but probably Puyallup WA)*</span>
