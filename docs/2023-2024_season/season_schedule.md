@@ -12,7 +12,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 1
 
-- **Date Range**: Friday-Saturday, October 20-21, 2023
+- **Dates**: Friday-Saturday, October 20-21, 2023
     - Arrive Friday for dinner and fellowship time
     - Quizzing will run all-day Saturday, starting early
 - **New Material**: Ephesians 4-6
@@ -22,7 +22,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 2
 
-- **Date Range**: Saturday, December 2, 2023
+- **Date**: Saturday, December 2, 2023
 - **New Material**: Galatians 1-4
 - **Location**:
     - [Eastridge Baptist Church](https://www.eastridgebaptist.org)
@@ -30,7 +30,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 3
 
-- **Date Range**: Saturday, January 13, 2024
+- **Date**: Saturday, January 13, 2024
 - **New Material**: Galatians 5-6, Philippians 1-2
 - **Location**:
     - [Lighthouse Christian Center](http://www.lighthousehome.org)
@@ -38,7 +38,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 4
 
-- **Date Range**: Saturday, February 17, 2024
+- **Date**: Saturday, February 17, 2024
 - **New Material**: Philippians 3-4, Colossians 1
 - **Location**:
     - [Tacoma Christian Academy](https://tcak12.com)
@@ -46,7 +46,7 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Meet 5
 
-- **Date Range**: Saturday, March 23, 2024
+- **Date**: Saturday, March 23, 2024
 - **New Material**: Colossians 2-4
 - **Location**:
     - [Seattle Vietnamese Christian Church](https://httlseattle.org)
@@ -61,12 +61,14 @@ The following are the dates and material ranges for meets in the 2023-2024 seaso
 
 ### District Championships (DC)
 
-- **Date Range**: Friday-Sunday, May 17-19, 2024
+- **Dates**: Friday-Sunday, May 17-19, 2024
 - **Location:**
     - [Double K Retreat Center](https://www.doublek.org)
     - [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
 
 ### International Open Championship (IOC)
 
-- **Dates**: <span style="color: red">*(to be determined, but probably July 22-23, 26-27, or 29-30)*</span>
-- **Location**: <span style="color: red">*(to be determined, but probably Puyallup WA)*</span>
+- **Dates**: Friday-Saturday, July 26-27, 2024
+- **Location**:
+    - [Cascade Christian Schools High School](https://www.cascadechristian.org/)
+    - [811 21st St SE, Puyallup, WA 98372](https://www.google.com/maps/dir//811+21st+St+SE,+Puyallup,+WA+98372)
