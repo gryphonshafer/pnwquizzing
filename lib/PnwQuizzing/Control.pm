@@ -102,6 +102,7 @@ sub startup ($self) {
     $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( account login reset_password ) );
     $all->any('/search')->to('tool#search');
     $all->any('/')->to('main#home_page');
+    $all->any('/captcha')->to('main#captcha');
     $all->any('/*name')->to('main#content');
 }
 

@@ -27,7 +27,7 @@ sub account ($self) {
             }
 
             unless ( $self->stash('user') ) {
-                $self->_recaptcha;
+                $self->_captcha;
 
                 my $user = PnwQuizzing::Model::User->new->create( { map { $_ => $params->{$_} } qw(
                     username passwd first_name last_name email org roles
@@ -169,7 +169,7 @@ sub reset_password ($self) {
     return $redirect->() if ( $self->stash('user') );
 
     if ( $self->param('username') or $self->param('email') ) {
-        $self->_recaptcha;
+        $self->_captcha;
 
         my $url = $self->req->url->to_abs;
         try {
@@ -307,27 +307,22 @@ sub unbecome ($self) {
     $self->redirect_to('/user/account');
 }
 
-sub _recaptcha ($self) {
-    if ( my $recaptcha_secret_key = $self->app->conf->get( qw( recaptcha secret_key ) ) ) {
-        my $site_verify = $self->ua->post(
-            'https://www.google.com/recaptcha/api/siteverify',
-            form => {
-                secret   => $recaptcha_secret_key,
-                response => $self->param('g-recaptcha-response'),
-            },
-        )->result->json;
+{
+    ( my $contact_email = conf->get( qw( email from ) ) )
+        =~ s/(<|>)/ ( $1 eq '<' ) ? '&lt;' : '&gt;' /eg;
 
-        $self->info( 'Recaptcha site verify score: ' . ( $site_verify->{score} // '>>undef<<' ) );
+    sub _captcha ($self) {
+        my $captcha = $self->param('captcha') // '';
+        $captcha =~ s/\D//g;
 
-        die 'Human-verification score too low. Please wait for the page to fully low, then try again'
-            unless (
-                $site_verify and
-                $site_verify->{score} and
-                $site_verify->{score} > $self->app->conf->get( qw( recaptcha min_score ) ) // 0.5
-            );
+        die join( ' ',
+            'The captcha sequence provided does not match the captcha sequence in the captcha image.',
+            'If the problem persists, email <b>' . $contact_email . '</b> for help',
+        ) unless ( $captcha and $self->session('captcha') and $captcha eq $self->session('captcha') );
+
+        delete $self->session->{captcha};
+        return;
     }
-
-    return;
 }
 
 1;

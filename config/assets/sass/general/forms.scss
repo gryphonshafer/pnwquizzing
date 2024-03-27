@@ -80,3 +80,12 @@ select,
 button {
     font-size: 14px;
 }
+
+div.captcha {
+    margin-top: 5px;
+    text-align: right;
+}
+
+img.captcha {
+    border: $form_borders;
+}
