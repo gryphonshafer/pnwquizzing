@@ -1,6 +1,6 @@
 <!--% hide_header_photo -->
 
-# Recommended 2023-2024 Study Schedule
+# 2023-2024 Study Schedule
 
 | Week | Start       | End         | Chapter | Verses | Sum to Meet | Sum to Date |
 |-----:|-------------|-------------|---------|-------:|------------:|------------:|

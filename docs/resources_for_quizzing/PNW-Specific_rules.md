@@ -17,35 +17,25 @@ There will be at least 1 but possibly multiple finals/championships quizzes of t
 The club lists will be weighted as follows:
 
 - Preliminary score sum quizzes are:
-    - Club 100: weight of 1 (thus 40% probability a query is unique to this set)
-    - Club 250: weight of 2 (thus 35% probability a query is unique to this set)
-    - Full Material: weight of 3 (thus 25% probability a query is unique to this set)
-- "Top-9" positional quizzes and finals/championships quizzes are:
-    - Club 100: weight of 0 (thus 20% probability a query is unique to this set)
-    - Club 250: weight of 0 (thus 30% probability a query is unique to this set)
-    - Full Material: weight of 1 (thus 50% probability a query is unique to this set)
+    - Club 100: weight of 1
+    - Club 300: weight of 2
+    - Full Material: weight of 3
+- “Top-9” positional quizzes and finals/championships quizzes are:
+    - Club 100: weight of 0
+    - Club 300: weight of 1
+    - Full Material: weight of 1
 - Auxiliary score sum quizzes are:
-    - Club 100: weight of 3 (thus 67% probability a query is unique to this set)
-    - Club 250: weight of 2 (thus 25% probability a query is unique to this set)
-    - Full Material: weight of 1 (thus 8% probability a query is unique to this set)
+    - Club 100: weight of 3
+    - Club 300: weight of 2
+    - Full Material: weight of 1
 
 ## Individual Averages
 
 Quizzer individual averages for a meet are computed as follows:
 
-- Preliminary score sum are summed and divided by the number of these quizzes
-- The following quiz scores do not count toward individual averages:
-    - "Top-9" positional
-    - Finals/championships
-    - Auxiliary score sum
-
-<!--
-
-- Preliminary score sum and "top-9" positional are summed and divided by the number of these quizzes
+- Each bracket's quizzes are averaged *(with exceptions; see next)*
 - Finals/championships quiz scores do not count toward individual averages
-- Auxiliary score sum quiz scores are summed and divided by the number of these quizzes and weighted at 1 standard distribution left-shifted of the "top-9" positional relative total score
-
--->
+- Auxiliary score sum quizzes have their averages reduced by 50%
 
 Quizzer individual averages for a season are computed as follows:
 
@@ -55,11 +45,15 @@ Quizzer individual averages for a season are computed as follows:
 - For meet 5: count at 25%
 - District Championships: count at 35%
 
+<!--
+
 Tie-breaking for individual quizzer standings (both at a meet and across the season):
 
 1. Total quizzer points
 2. Most quizzes in which the quizzer earned points
 3. Standard deviation of quiz scores
+
+-->
 
 ## Great West Invitational (GWI) Qualification
 
