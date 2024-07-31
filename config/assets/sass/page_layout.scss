@@ -10,11 +10,11 @@ html {
         grid-template-columns : $nav_width auto;
         grid-template-areas   : "header header" "nav content";
 
+        min-width: $min_width;
+
         @media (max-width: 650px) {
             grid-template-areas: "header header" "content content";
         }
-
-        min-width: $min_width;
 
         div#header {
             grid-area : header;
