@@ -32,9 +32,9 @@ The full material for the season is: **Luke 1-3:23, 9-11, 13-19, 21-24**.
 |   23 | Sun, Jan 12 | Sat, Jan 18 | Luke 18             |     43 |          43 |         525 |
 |   24 | Sun, Jan 19 | Sat, Jan 25 | Luke 19             |     48 |          91 |         573 |
 |   25 | Sun, Jan 26 | Sat, Feb 1  | Luke 21             |     38 |         129 |         611 |
-|   26 | Sun, Feb 2  | Sat, Feb 8  | **District Meet 4** |        |             |             |
-|   27 | Sun, Feb 9  | Sat, Feb 15 | Luke 22:1-38        |     38 |          38 |         649 |
-|   28 | Sun, Feb 16 | Sat, Feb 22 | Luke 22:39-71       |     33 |          71 |         682 |
+|   26 | Sun, Feb 2  | Sat, Feb 8  | *Review*            |        |             |             |
+|   27 | Sun, Feb 9  | Sat, Feb 15 | **District Meet 4** |        |             |             |
+|   28 | Sun, Feb 16 | Sat, Feb 22 | Luke 22             |     71 |          71 |         682 |
 |   29 | Sun, Feb 23 | Sat, Mar 1  | Luke 23             |     55 |         126 |         737 |
 |   30 | Sun, Mar 2  | Sat, Mar 8  | Luke 24             |     53 |         179 |         790 |
 |   31 | Sun, Mar 9  | Sat, Mar 15 | *Review*            |        |             |             |

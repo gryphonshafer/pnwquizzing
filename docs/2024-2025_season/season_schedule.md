@@ -32,7 +32,7 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 ### District Meet 4
 
-- **Date**: Saturday, February 8, 2025
+- **Date**: Saturday, February 15, 2025
 - **New Material**: Luke 18-19, 21
 - **Location**: *TBD*
 
