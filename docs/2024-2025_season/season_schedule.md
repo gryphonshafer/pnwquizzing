@@ -60,7 +60,5 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 ### International Open Championship (IOC)
 
-- **Dates**: To be determined, but likely late June or mid-to-late July
-- **Location**:
-    - [Firmly Planted Family Home School Resource Center (FPFHSR)](https://www.firmlyplantedfamily.com/)
-    - [14001 SE 1st St, Vancouver, WA 98684](https://www.google.com/maps/dir//14001+SE+1st+St,+Vancouver,+WA+98684)
+- **Dates**: To be determined, but likely sometime between mid-June and early July
+- **Location**: Salem, Oregon area
