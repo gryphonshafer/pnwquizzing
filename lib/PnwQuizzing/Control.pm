@@ -4,21 +4,7 @@ use exact -conf, 'Omniframe::Control';
 use Mojo::File;
 
 sub startup ($self) {
-    $self->setup_mojo_logging;
-
-    $self->plugin('RequestBase');
-    $self->sass->build;
-
-    $self->setup_access_log;
-    $self->setup_templating;
-    $self->setup_static_paths;
-    $self->setup_config;
-    $self->setup_packer;
-    $self->setup_compressor;
-    $self->setup_document;
-    $self->setup_devdocs;
-
-    $self->preload_controllers;
+    $self->setup( skip => ['sockets'] );
 
     my $root_dir = conf->get( qw( config_app root_dir ) );
     my $photos   = Mojo::File
