@@ -60,5 +60,5 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 ### International Open Championship (IOC)
 
-- **Dates**: To be determined, but likely sometime between mid-June and early July
-- **Location**: Salem, Oregon area
+- **Dates**: To be determined, but likely sometime between mid-June and mid-July; possibly July 11-12
+- **Location**: To be determined, but likely either Portland or Salem, Oregon
