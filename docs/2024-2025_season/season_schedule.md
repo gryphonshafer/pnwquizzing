@@ -16,7 +16,7 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 - **New Material**: Luke 1-3:23
 - **Location**:
     - [Juniper Community Church](https://www.junipercc.com)
-    - [976 S Adams Dr, Madras, OR 97741](https://www.google.com/maps/dir//976+S+Adams+Dr,+Madras,+OR+97741)
+    - [976 S Adams Dr, Madras OR 97741](https://www.google.com/maps/dir//976+S+Adams+Dr,+Madras+OR+97741)
 
 ### District Meet 2
 
@@ -40,7 +40,9 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 - **Date**: Saturday, March 22, 2025
 - **New Material**: Luke 22-24
-- **Location**: *TBD*
+- **Location**:
+    - [Fruitland Community Church](https://www.fruitlandcommunitychurch.org)
+    - [6252 Fruitland Rd NE, Salem OR 97317](https://www.google.com/maps/dir//6252+Fruitland+Rd+NE,+Salem+OR+97317)
 
 ### Great West Invitational (GWI)
 
@@ -56,7 +58,7 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
     - Quizzing continues Saturday and concludes with finals prior to dinner
 - **Location:**
     - [Double K Retreat Center](https://www.doublek.org)
-    - [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton,+WA+98925)
+    - [620 Tall Timber Trail, Easton WA 98925](https://www.google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton+WA+98925)
 
 ### International Open Championship (IOC)
 
