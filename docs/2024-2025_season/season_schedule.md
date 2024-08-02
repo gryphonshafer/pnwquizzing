@@ -34,15 +34,15 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 - **Date**: Saturday, February 15, 2025
 - **New Material**: Luke 18-19, 21
-- **Location**: *TBD*
+- **Location**:
+    - [Fruitland Community Church](https://www.fruitlandcommunitychurch.org)
+    - [6252 Fruitland Rd NE, Salem OR 97317](https://www.google.com/maps/dir//6252+Fruitland+Rd+NE,+Salem+OR+97317)
 
 ### District Meet 5
 
 - **Date**: Saturday, March 22, 2025
 - **New Material**: Luke 22-24
-- **Location**:
-    - [Fruitland Community Church](https://www.fruitlandcommunitychurch.org)
-    - [6252 Fruitland Rd NE, Salem OR 97317](https://www.google.com/maps/dir//6252+Fruitland+Rd+NE,+Salem+OR+97317)
+- **Location**: *TBD*
 
 ### Great West Invitational (GWI)
 
