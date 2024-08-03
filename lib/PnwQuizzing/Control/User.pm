@@ -258,7 +258,7 @@ sub org ($self) {
                 $params->{address}
             );
 
-            unless ( $org->data ) {
+            unless ( $org->data->%* ) {
                 $org->create({ map { $_ => $params->{$_} } qw( name acronym address ) });
                 $self->stash('user')->save({ org_id => $org->id });
             }
