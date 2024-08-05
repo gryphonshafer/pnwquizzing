@@ -10,7 +10,7 @@ The following are the dates and material ranges for meets in the 2024-2025 seaso
 
 ### District Meet 1
 
-- **Dates**: Friday-Saturday, October 20-21, 2024
+- **Dates**: Friday-Saturday, October 18-19, 2024
     - Arrive Friday for dinner and fellowship time
     - Quizzing will run all-day Saturday, starting early
 - **New Material**: Luke 1-3:23
