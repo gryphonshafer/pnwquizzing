@@ -24,7 +24,9 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 - **Date**: Saturday, December 7, 2024
 - **New Material**: Luke 9-11, 13
-- **Location**: *TBD*
+- **Location**:
+    - [Elk Plain Community Church](http://elkplain.org/)
+    - [4115 224th St E, Spanaway WA 98387](https://google.com/maps/dir//4115+224th+St+E,+Spanaway+WA+98387)
 
 ### District Meet 3
 
