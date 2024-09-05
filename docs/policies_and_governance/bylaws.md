@@ -66,7 +66,7 @@ A season (“Season”) is the annual term between August 1 through July 31.
     - Recruitment and training of meet officials
     - Material label translations
     - Direction
-- The Chancellor shall cause either by direct action or delegation the creation and maintenance of the Organization's web site and a publicly subscribable email distribution service.
+- The Coordinator shall cause either by direct action or delegation the creation and maintenance of the Organization's web site and a publicly subscribable email distribution service.
 - The Coordinator may resign at any time, in which case the Board may temporarily appoint a replacement who must be confirmed by the General Assembly at the next General Assembly meeting.
 - The Coordinator may be removed at any time by unanimous vote of the Board or a majority vote of the General Assembly.
 
