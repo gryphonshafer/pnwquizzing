@@ -68,6 +68,6 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 ### International Open Championship (IOC)
 
-- **Dates**: Fri-Sat, June 20-21, 2025
+- **Dates**: Friday-Saturday, June 20-21, 2025
 - **Location**: [Multnomah Holiness Camp](http://multnomahholiness.org)
 - **Address**: [10801 SE Holgate Blvd, Portland OR 97266](https://google.com/maps/dir/10801+SE+Holgate+Blvd,+Portland+OR+97266)
