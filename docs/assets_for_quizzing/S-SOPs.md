@@ -41,7 +41,7 @@ Quizzer individual averages for a season are computed as follows:
 - For meets 1, 2, and 3: drop the lowest score of these, then the remaining 2 count 10% each
 - For meet 4: count at 20%
 - For meet 5: count at 25%
-- District Championships: count at 35%
+- Championships: count at 35%
 
 ## Great West Individual and Team Specifics
 
@@ -50,7 +50,7 @@ The default pattern for quizzer selection to the Great West Individual (GWI) wil
 - Invite quizzers based on:
     - Year-to-date balanced-weighted individual scoring average
     - Coach-confirmed memorization of at least 50% of the material at synonymous quality
-- Maximum number of quizzers invited will be no greater than 20% of the district or 20 quizzers, whichever is lower
+- Maximum number of quizzers invited will be no greater than 20% of the region or 20 quizzers, whichever is lower
 
 As far as team formation:
 
@@ -58,7 +58,7 @@ As far as team formation:
 - PNW teams 1 and 2 are "stacked"
 - PNW teams 3-5 are "snaked"
 
-Any changes to these policies will be decided by the Board of Directors and must be before District Meet 5.
+Any changes to these policies will be decided by the Board of Directors and must be before Meet 5.
 
 ## Weather Minimums
 
@@ -81,12 +81,12 @@ The following are the weather-related meet policies:
 
 For individuals missing a meet due to weather:
 
-- If missing one of the first 3 meets or District Championships, the individual will receive a 0 average for that meet
-- If missing District Meet 4, the individual will receive a 0 for 10% of that meet and 10% weight applied to District Meet 5
-- If missing District Meet 5, the individual will receive a 0 for 10% of that meet and 15% weight applied to District Championships
+- If missing one of the first 3 meets or Championships, the individual will receive a 0 average for that meet
+- If missing Meet 4, the individual will receive a 0 for 10% of that meet and 10% weight applied to Meet 5
+- If missing Meet 5, the individual will receive a 0 for 10% of that meet and 15% weight applied to Championships
 
 For teams missing a meet due to weather:
 
-- If missing District Meet 3, the team will receive Last Place for 15% of that meet and 10% weight applied to District Meet 4
-- If missing District Meet 4, the team will receive Last Place for 25% of that meet and 10% weight applied to District Meet 5
-- If missing District Meets 1, 2, 5, or District Championships, the team will receive Last Place for that meet
+- If missing Meet 3, the team will receive Last Place for 15% of that meet and 10% weight applied to Meet 4
+- If missing Meet 4, the team will receive Last Place for 25% of that meet and 10% weight applied to Meet 5
+- If missing Meets 1, 2, 5, or Championships, the team will receive Last Place for that meet

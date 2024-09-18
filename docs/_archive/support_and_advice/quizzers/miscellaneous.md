@@ -67,25 +67,25 @@ level of quizzing follows a similar path every year.
   that some quizzers are not able to keep up with. For those that do keep
   studying hard, this meet is target #1 to raise your average in a big way.
 - **Meet #5:** Counter-intuitively, this meet is a fairly good meet. This stems
-  from A) Quizzers wanting to help their team qualify for District
+  from A) Quizzers wanting to help their team qualify for Region
   Championships, and B) Quizzers wanting to qualify individually for Great
   West Invitational. Add in the 25% weight of this meet and averages are
   usually quite good.
 - **Great West Invitational:** Because of the drastically increased level of
   competition, averages for this meet are usually less than 1/2 of Year-To-
-  Date individual averages. This meet does not count towards District
+  Date individual averages. This meet does not count towards Region
   individual averages. Quizzers that succeed at GWI are those that have been
   to GWI or Internationals before, or are often in tough quizzes in the
-  District (e.g. Quiz D, and Finals).
-- **District Championships:** Common logic would think that a meet including
+  Region (e.g. Quiz D, and Finals).
+- **Region Championships:** Common logic would think that a meet including
   only the best 18 teams would make things tougher for everyone. However, this
   meet has traditionally seen most of the better quizzers raise their average.
   This is because there are a large number of good quizzers who, because they
   do no have a shot at Internationals individually, and do not have a shot at
-  a high District Championships Team Placement, let their studying lapse.
+  a high Region Championships Team Placement, let their studying lapse.
   Also, the 35% weight encourages the best quizzers to study extremely hard in
   a final push to make Internationals. Additionally, there has been no new
-  material since District Meet #5.
+  material since Region Meet #5.
 
 ## Adversity
 

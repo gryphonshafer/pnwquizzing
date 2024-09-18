@@ -15,7 +15,7 @@
     <p>
         For hosts and other interested parties, please view the
         <b><a href="[% c.url_for('meet_data') %]">Quiz Meet Registration Data</a></b>
-        page with district-wide registration data.
+        page with region-wide registration data.
     </p>
 
     <div id="register" v-cloak>

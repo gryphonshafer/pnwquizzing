@@ -31,10 +31,10 @@ What is the yearly format?
 
 Isn't Bible Quizzing a large time commitment?
 : Not as much as you'd think. It's far less time required than a typical high school sport. Besides the
-regular season district meets, the time commitment can vary from quizzer to quizzer. The
+regular season region meets, the time commitment can vary from quizzer to quizzer. The
 very best quizzers will likely be putting in a minimum of 3+ hours of studying
 each week, while the less-serious or "social" quizzers may put in that much in
-a month. PNW District has no studying requirement. Some churches
+a month. PNW Region has no studying requirement. Some churches
 choose to institute a memorization requirement or have quizzers set goals at
 the beginning of the year, but this is handled on a church-by-church basis.
 

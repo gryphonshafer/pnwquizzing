@@ -16,7 +16,7 @@ possible.
 Here are a bunch of documents to help you:
 
 - [Letter to host homes](/downloads/hosting/host_letter.doc) (also letter to quizzers being housed)
-- [Letter to the person at the church organizing housing](/downloads/hosting/district_housing_instructions.doc)
+- [Letter to the person at the church organizing housing](/downloads/hosting/region_housing_instructions.doc)
 - [Sign-up sheet](/downloads/hosting/host_homes_sign-up_sheet.doc)
 - [Quiz Meet Bulletin Insert](/downloads/hosting/quiz_meet_bulletin_insert.pdf)*
 - [Quiz Meet Snack Signup](/downloads/hosting/quiz_meet_snack_signup.pdf)*

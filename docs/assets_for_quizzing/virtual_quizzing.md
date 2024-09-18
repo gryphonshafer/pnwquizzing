@@ -14,7 +14,7 @@ For spectators, any web-enabled device should work fine.
 
 ### Meet Coordination and Discussion
 
-Everyone involved in the virtual quiz meet (quizzers, officials, coaches, spectators, etc.) should join the [Bible Quizzing Slack forum](https://biblequizzing.slack.com). If you need an invitation for access, [contact Gryphon](mailto:gryphon@pnwquizzing.org). Change your **display name** in Slack to "**Firstname Lastname (DISTRICT OR TEAM NAME)**". For example: "Gryphon Shafer (PNW)" or "Evie Shafer (MAD1)".
+Everyone involved in the virtual quiz meet (quizzers, officials, coaches, spectators, etc.) should join the [Bible Quizzing Slack forum](https://biblequizzing.slack.com). If you need an invitation for access, [contact Gryphon](mailto:gryphon@pnwquizzing.org). Change your **display name** in Slack to "**Firstname Lastname (REGION OR TEAM NAME)**". For example: "Gryphon Shafer (PNW)" or "Evie Shafer (MAD1)".
 
 Once signed in, join the primary meet channel, which for PNW is: `#pnw-quiz-meet`. This is a chat location area for the meet itself, almost like room 1 during a break in quizzing. Announcements will happen in the `#pnw-quiz-meet` channel. If you need help with anything meet-related, please ask in this channel. Those who are able to render assistance, please do so. Non-meet general chit-chat should happen in the `#general` channel or elsewhere.
 

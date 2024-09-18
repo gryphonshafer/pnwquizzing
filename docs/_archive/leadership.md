@@ -1,6 +1,6 @@
-# PNW District Coordinators and Quizmasters
+# PNW Coordinators and Quizmasters
 
-## District Coordinators (in reverse chronological order)
+## Coordinators (in reverse chronological order)
 
 - Gryphon Shafer
 - Scott Peterson

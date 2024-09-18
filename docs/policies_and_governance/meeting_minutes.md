@@ -19,9 +19,6 @@ The members, voting and non-voting, of the General Assembly are defined in the
 
 ## Board of Directors Meeting Minutes
 
-The current members of the Board of Directors are listed in
-[the leadership page](../about_us/leadership.md).
-
 - [Tuesday, April 13, 2021](_meeting_minutes/2021-04-13.md) via Zoom
 - [Saturday, July 25, 2020](_meeting_minutes/2020-07-25.md) at Portland-Troutdale Airport
 - [Monday, September 2, 2019](_meeting_minutes/2019-09-02.md) via Email

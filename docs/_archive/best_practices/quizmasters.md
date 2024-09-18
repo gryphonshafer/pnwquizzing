@@ -4,7 +4,7 @@ What follows are quizmaster best practices that overlay the rules and policies d
 
 ## Rules and Material Acquaintance
 
-All quizmasters must be thoroughly acquainted with all rules relevant to the conduct of quizzes. This includes but is not limited to any and all governing rule books, district-specific rules, and local policies. A quizmaster should know the relevant, current rules sufficient enough to accurately describe them without reference to documentation.
+All quizmasters must be thoroughly acquainted with all rules relevant to the conduct of quizzes. This includes but is not limited to any and all governing rule books, region-specific rules, and local policies. A quizmaster should know the relevant, current rules sufficient enough to accurately describe them without reference to documentation.
 
 All quizmasters should be acquainted enough with the season's material such that they recognize unique phrases throughout.
 

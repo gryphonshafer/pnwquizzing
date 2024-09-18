@@ -10,8 +10,8 @@ Coaches are the best able due to their proximity to and time with Quizzing parti
 
 The following are the fees associated with quiz meet attendance:
 
-- There is a fee of $20 per quizzer per meet for every regular District Meet.
-- The cost of District Championships is based on direct, no-markup costs to host the meet on a per-person basis.
+- There is a fee of $20 per quizzer per meet for every regular Region Meet.
+- The cost of Championships is based on direct, no-markup costs to host the meet on a per-person basis.
 
 For clarification:
 

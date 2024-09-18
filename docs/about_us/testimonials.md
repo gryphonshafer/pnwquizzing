@@ -139,12 +139,12 @@ Caylee Bammer and Jonathan Van Schenck will always rank high on my list of favor
 And perhaps the most amazing part of my quizzing experience (so far) came the following year in eighth grade,
 when I discovered the magic of actually quoting what I memorized (instead of my previous strategy of
 memorizing and then forgetting).  This revolutionary tactic facilitated a jump from an average of 45.22 at
-District Meet 4, to an average of 72.67 at District Meet 5, guaranteeing me my first finish in the top 5. This
+Region Meet 4, to an average of 72.67 at Region Meet 5, guaranteeing me my first finish in the top 5. This
 was even more astonishing since it came on the heels of a 21st place finish at DM 4, and a 19th place year-to-
 date ranking (prior to DM 5). After Meet 5, I had another incredible experience at Great West (shout out to
 teammates Hannah Stuart, Emma Madsen, and Jamie Rand, and coach Kim Fisher!), including a team finish in the
 top nine, loads of fun, and a higher than expected personal average. Yet God was not done with this year of
-quizzing, and at District Championships I got a perfect 90. I look back on this with fond memories, but I do
+quizzing, and at Region Championships I got a perfect 90. I look back on this with fond memories, but I do
 not boast in it, for I know that it was not just, or even primarily, my doing. While I certainly knew the
 material better than I had before, a perfect 90 was an undeserved blessing.
 
@@ -184,7 +184,7 @@ notion of dealing with an exchange rate. I needed to behold quizzing for what it
 program which I could never be worthy of.
 
 And yet I didn't know that that's what I needed. Until last weekend that is. For some reason, last weekend,
-right after District Meet 5, God opened my eyes to what I was missing. Suddenly it hit me like an exhaustive
+right after Region Meet 5, God opened my eyes to what I was missing. Suddenly it hit me like an exhaustive
 list of Interrogatives: I was viewing quizzing the wrong way. I had lost my sense of wonder. I was not amazed
 at quizzing anymore! Quizzing was not a blessing, I had earned it I (subconsciously) told myself.
 

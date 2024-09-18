@@ -46,7 +46,7 @@ This trend continued for the next 20 years.
 
 ### Existential Crisis
 
-Quizzing is now facing an existential crisis. Many Quizzing districts are at the brink of collapse. If radical change doesn’t happen, I predict we’ll see between a third to half of the current Quizzing districts collapse over the next 5 years. PNW Quizzing has not been immune to this universal decline. We’re surprisingly healthy relative to most other districts, but we too will also collapse if we don’t radically change. The math is inescapable. Doing what we’ve been doing the past 20 years will not lead to growth.
+Quizzing is now facing an existential crisis. Many Quizzing regions are at the brink of collapse. If radical change doesn’t happen, I predict we’ll see between a third to half of the current Quizzing regions collapse over the next 5 years. PNW Quizzing has not been immune to this universal decline. We’re surprisingly healthy relative to most other regions, but we too will also collapse if we don’t radically change. The math is inescapable. Doing what we’ve been doing the past 20 years will not lead to growth.
 
 So why is the Second Age of Quizzing in decline and nearing an inevitable death?
 
@@ -100,7 +100,7 @@ So what are some of the components that lead toward success of this Third Age?
     - Non-denominational; incorporated with bylaws to protect all voices (and protect Quizzing from self-interested saboteurs)
     - All participants must be treated as equals; all voices matter equally (enforced in bylaws)
     - 100% transparency by default (enforced in bylaws)
-    - Autonomy at every level: family, church, region, district, nation, and global
+    - Autonomy at every level: family, church, region, nation, and global
     - Encourage volunteerism through a volunteer coordination framework
 - Draft simplified rules without losing the essence of what Quizzing is
     - Evaluate rules as a tapestry (rules in the context of each other)
@@ -116,7 +116,7 @@ So what are some of the components that lead toward success of this Third Age?
     - Establish an engagement growth path that lifts a first-meet rookie to an excited, engaged proponent
     - Make starting a quiz program anywhere in the US and Canada trivially easy and hyper-cheap (or effectively free)
     - Make equipment and technology free (ideally) or at least hyper-cheap
-- Provide financial support for new churches and districts
+- Provide financial support for new churches and regions
 
 ## Migration to the Third Age (“A3”)
 
@@ -149,9 +149,9 @@ The sooner a Second Age organization joins the Third Age, the sooner they will h
 
 You are the current stewards of PNW Quizzing, so I’m asking you now to prayerfully consider voting to switch PNW Quizzing’s participation from IBQ to the new championships meet referenced in step 4, path B above.
 
-Please pray about this. Feel free to talk about it with other leaders. If you have any questions about anything, please email me, and I’ll be prompt in my replies. My intent is to host a leadership meeting over the lunch break at the next district meet this month, during which we can discuss this, answer any lingering questions, and then vote.
+Please pray about this. Feel free to talk about it with other leaders. If you have any questions about anything, please email me, and I’ll be prompt in my replies. My intent is to host a leadership meeting over the lunch break at the next region meet this month, during which we can discuss this, answer any lingering questions, and then vote.
 
-J. Gryphon Shafer<br>PNW Quizzing District Coordinator
+J. Gryphon Shafer<br>PNW Quizzing Coordinator
 
 ----
 
@@ -163,7 +163,7 @@ The following are endorsements of this proposal from a handful of past and prese
 
 > As we look to the future of Bible Quizzing, it’s clear to me that change is necessary to keep Quizzing alive. The change likely won’t be simple, easy, or quick. The details laid out in Gryphon’s proposal display the exact sort of change that is necessary. Change focusing on making Quizzing simpler and easier to join; change allowing for a wider variety of motivations to find fulfillment in Quizzing. Changes such as moving away from IBQ, or not using the CMA umbrella, are changes towards a Quizzing future that is easier to join, easier to understand, simpler and cheaper to run, and far more sustainable.
 
-Scott Peterson<br>Former PNW Quizzing District Coordinator
+Scott Peterson<br>Former PNW Quizzing Coordinator
 
 ### Jeremy Swingle
 
@@ -179,7 +179,7 @@ Cutty Welt<br>Official at PNW Quizzing, Great West Invitational (GWI), and Inter
 
 ### David Swindler
 
-> The ministry of quizzing is incredibly important to me. I was discipled, trained, and taught to lead by this ministry, and now, I am able to raise up the next generation through my work as a Christian school teacher. There is a deep need in all of our hearts, not simply to read the Bible, but to soak in its truth. To seek God to the best of our ability, to build each other up in the Gospel, and to be diligent in application. But right now, those needs are rapidly becoming harder to meet with our current quizzing programs. Resources and support are lacking as prices rise, which cripple current programs and provide a massive barrier of entry to new ones. Our friends and partner districts are being sidelined, forgotten, or forced to go it alone. Leaving us unable to remain unified, hampering our love and service of one another. Biblical morals are not being followed by those in the highest ranks of our leadership. The shepherds of this ministry have chosen to leave behind the sheep they were entrusted to serve. Brothers and sisters, these things ought not to be so, and they will not change without great effort. I pray that no matter what, this ministry will use the time that God gives it. That may be 1 year or 1,000, but we should seek to use our time well, to honor God’s word, and to join in worship with as many as might come into our midst. I believe this proposal seeks to do just that, and with much prayer, counting on God’s will to be done, I endorse this proposal and the strategies therein.
+> The ministry of quizzing is incredibly important to me. I was discipled, trained, and taught to lead by this ministry, and now, I am able to raise up the next generation through my work as a Christian school teacher. There is a deep need in all of our hearts, not simply to read the Bible, but to soak in its truth. To seek God to the best of our ability, to build each other up in the Gospel, and to be diligent in application. But right now, those needs are rapidly becoming harder to meet with our current quizzing programs. Resources and support are lacking as prices rise, which cripple current programs and provide a massive barrier of entry to new ones. Our friends and partner regions are being sidelined, forgotten, or forced to go it alone. Leaving us unable to remain unified, hampering our love and service of one another. Biblical morals are not being followed by those in the highest ranks of our leadership. The shepherds of this ministry have chosen to leave behind the sheep they were entrusted to serve. Brothers and sisters, these things ought not to be so, and they will not change without great effort. I pray that no matter what, this ministry will use the time that God gives it. That may be 1 year or 1,000, but we should seek to use our time well, to honor God’s word, and to join in worship with as many as might come into our midst. I believe this proposal seeks to do just that, and with much prayer, counting on God’s will to be done, I endorse this proposal and the strategies therein.
 
 David Swindler<br>Official at PNW Quizzing and International Bible Quizzing (IBQ)
 
