@@ -8,6 +8,7 @@ Directors meetings.
 The members, voting and non-voting, of the General Assembly are defined in the
 [bylaws](bylaws.md).
 
+- [Saturday, September 14, 2024](_meeting_minutes/2024-09-14.md) at Lighthouse Christian Center, Puyallup
 - [Thursday, August 10, 2023](_meeting_minutes/2023-08-10.md) via Zoom
 - [Saturday, November 19, 2022](_meeting_minutes/2022-11-19.md) at Lighthouse Christian Center, Puyallup
 - [Saturday, September 17, 2022](_meeting_minutes/2022-09-17.md) at Grace Bible Church, Port Orchard
