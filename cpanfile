@@ -1,1 +1,1 @@
-requires 'GD', '2.78';
+requires 'GD', '2.83';
