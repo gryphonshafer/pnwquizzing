@@ -11,8 +11,8 @@ div#content {
             }
 
             textarea {
-                width  : 100%;
-                height : 100px;
+                width : calc( 100% - 8px );
+                height: 100px;
             }
         }
 
@@ -83,7 +83,49 @@ div#content {
             overflow-x: auto;
 
             table {
-                min-width: 53.5em;
+                td input {
+                    padding-right: 0.25em;
+                }
+
+                select {
+                    background-color: transparent;
+                }
+
+                tr {
+                    td:nth-of-type(1) {
+                        min-width: 40px;
+                    }
+
+                    @media (max-width: 1070px) {
+                        td {
+                            input[name="name"],
+                            input[name="notes"] {
+                                width: 70px;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 870px) {
+                        td {
+                            input[name="grade"] {
+                                width: 16px;
+                            }
+                        }
+
+                        th:nth-of-type(5),
+                        th:nth-of-type(6),
+                        th:nth-of-type(7),
+                        th:nth-of-type(8),
+                        th:nth-of-type(9) {
+                            width         : 8px;
+                            min-width     : 8px;
+                            max-width     : 8px;
+                            writing-mode  : vertical-rl;
+                            padding       : 0.3em 1em 0.3em 0px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
             }
         }
     }
