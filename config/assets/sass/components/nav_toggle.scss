@@ -1,3 +1,7 @@
+$header_height   : 44px  !default;
+$nav_width       : 200px !default;
+$div_body_padding: 20px  !default;
+
 input#nav_toggle,
 label.nav_toggle {
     display: none;
@@ -58,7 +62,7 @@ label.nav_toggle {
     @include nav_toggle;
 }
 
-&.no_nav {
+.no_nav {
     @include nav_toggle;
 }
 

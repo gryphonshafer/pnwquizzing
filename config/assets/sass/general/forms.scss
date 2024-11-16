@@ -1,4 +1,4 @@
-$form_borders: 1px solid silver;
+$form_borders: 1px solid silver !default;
 
 fieldset {
     border         : $form_borders;

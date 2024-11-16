@@ -1,7 +1,11 @@
-$header_height    : 44px;
-$div_body_padding : 20px;
-$nav_width        : 200px;
-$min_width        : 365px;
+@use 'components/nav_toggle';
+@use 'components/message';
+@use 'components/content';
+
+$header_height   : 44px  !default;
+$div_body_padding: 20px  !default;
+$nav_width       : 200px !default;
+$min_width       : 365px !default;
 
 html {
     body {
@@ -62,13 +66,9 @@ html {
             }
         }
 
-        @import 'components/nav_toggle';
-        @import 'components/message';
-
         div#content {
             min-height: calc( 100vh - #{ $header_height + $div_body_padding * 2 } );
             grid-area: content;
-            @import 'components/content';
         }
 
         @media (max-width: 650px) {
@@ -109,5 +109,3 @@ html {
         }
     }
 }
-
-@import 'page_style';

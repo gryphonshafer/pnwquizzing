@@ -1,44 +1,47 @@
-$footer_height: 60px;
+$footer_height   : 60px !default;
+$div_body_padding: 20px !default;
 
-div#content_footer_buffer {
-    height: $footer_height;
-}
-
-div#content_footer {
-    position         : absolute;
-    bottom           : 0px;
-    margin-left      : $div_body_padding * -1 - 5px;
-    padding-left     : 20px;
-    font-size        : 13px;
-    line-height      : 13px;
-    background-color : #333;
-    color            : lightgray;
-    width            : calc( 100vw - $div_body_padding - 209px );
-
-    p {
-        display        : table-cell;
-        vertical-align : middle;
-        height         : $footer_height;
-        padding-right  : 40px;
-
-        a {
-            text-decoration : none;
-            color           : ghostwhite;
-
-            &:hover {
-                text-decoration : underline;
-                color           : yellow;
-            }
-        }
-    }
-}
-
-@media print {
+div#content {
     div#content_footer_buffer {
-        display: none;
+        height: $footer_height;
     }
 
     div#content_footer {
-        display: none;
+        position         : absolute;
+        bottom           : 0px;
+        margin-left      : $div_body_padding * -1 - 5px;
+        padding-left     : 20px;
+        font-size        : 13px;
+        line-height      : 13px;
+        background-color : #333;
+        color            : lightgray;
+        width            : calc( 100vw - $div_body_padding - 209px );
+
+        p {
+            display        : table-cell;
+            vertical-align : middle;
+            height         : $footer_height;
+            padding-right  : 40px;
+
+            a {
+                text-decoration : none;
+                color           : ghostwhite;
+
+                &:hover {
+                    text-decoration : underline;
+                    color           : yellow;
+                }
+            }
+        }
+    }
+
+    @media print {
+        div#content_footer_buffer {
+            display: none;
+        }
+
+        div#content_footer {
+            display: none;
+        }
     }
 }
