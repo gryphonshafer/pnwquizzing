@@ -10,6 +10,7 @@
         padding          : 0px 1.25em 1.25em 1.25em;
         border           : 1px solid silver;
         background-color : ghostwhite;
+        min-width        : 33em;
     }
 
     table, th, td {

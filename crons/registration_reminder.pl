@@ -5,9 +5,11 @@ use PnwQuizzing::Model::User;
 use PnwQuizzing::Model::Meet;
 use PnwQuizzing::Model::Entry;
 
-my $settings = options( qw( user|u=s email|e=s force|f ) );
-
+my $settings  = options( qw( user|u=s email|e=s force|f ) );
 my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
+my $email     = PnwQuizzing::Model::Email->new( type => 'registration_reminder' );
+
+$email->log_level('warning');
 
 if ( $next_meet->{reminder_day} or $settings->{force} ) {
     ( my $from_email = conf->get( qw( email from ) ) ) =~ s/^[^<]*<([^>]+)>.*$/$1/;
@@ -16,7 +18,7 @@ if ( $next_meet->{reminder_day} or $settings->{force} ) {
         next if ( grep { $_ and $_ eq 'Quizzer' } @{ $user->data->{roles} } );
         next if ( $settings->{user} and $user->data->{username} ne $settings->{user} );
 
-        PnwQuizzing::Model::Email->new( type => 'registration_reminder' )->send({
+        $email->send({
             to => sprintf(
                 '%s %s <%s>',
                 ( map { $user->data->{$_} } qw( first_name last_name ) ),
