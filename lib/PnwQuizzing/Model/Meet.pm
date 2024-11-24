@@ -70,6 +70,14 @@ sub next_meet_data ($self) {
                 time_zone => $time_zone,
             )->subtract( days => $meet->{deadline} + $meet->{reminder} )->ymd
         ) ? 1 : 0;
+
+        $meet->{prev_meet_end} = $self->dq->sql(q{
+            SELECT STRFTIME( '%s', m.start ) + ( ( m.days - 1 ) * 60 * 60 * 24 ) AS end
+            FROM meet AS m
+            WHERE DATETIME( m.start ) < DATETIME('NOW')
+            ORDER BY m.start DESC
+            LIMIT 1
+        })->run->value;
     }
 
     return $meet;

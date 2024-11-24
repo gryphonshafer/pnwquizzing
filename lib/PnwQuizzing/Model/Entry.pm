@@ -76,7 +76,8 @@ sub org_registrations ( $self, $org_id = undef ) {
             e.registration,
             e.created,
             o.name,
-            o.acronym
+            o.acronym,
+            o.address
         FROM (
             SELECT org_id, registration, created
             FROM entry

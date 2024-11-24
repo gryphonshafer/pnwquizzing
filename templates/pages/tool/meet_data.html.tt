@@ -1,4 +1,7 @@
-[% page.title = 'Meet Registration Data' %]
+[%
+    USE date;
+    page.title = 'Meet Registration Data';
+%]
 
 <h1>[% page.title %]</h1>
 
@@ -15,16 +18,17 @@
             <b>[% totals.attending || 0 %]</b>
         </li>
         <li>
-            Organizations:
-            <b>[% totals.organizations.keys.size || 0 %]</b>
+            Quizzers:
+            <b>[% totals.quizzers || 0 %]</b>
         </li>
         <li>
             Teams:
             <b>[% totals.teams.keys.size || 0 %]</b>
         </li>
         <li>
-            Quizzers:
-            <b>[% totals.quizzers || 0 %]</b>
+            Organizations:
+            <b>[% totals.organizations.keys.size || 0 %]</b>
+            (based on Quizzers/Teams)
         </li>
         <li>
             Rookies:
@@ -54,5 +58,53 @@
         <form action="[% c.url_for( format => 'csv' ).to_string %]">
             <input type="submit" value="Download CSV Data" />
         </form>
+    [% END %]
+
+    [% IF org_reg.size > 0 %]
+        <br>
+        <h2>Latest Registration Submissions</h2>
+
+        <table>
+            <thead>
+                <th>Org.</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Time</th>
+            </thead>
+            <tbody>
+                [% FOR org IN org_reg %]
+                    <tr>
+                        <td>[% org.acronym %]</td>
+                        <td>[% org.name %]</td>
+                        <td>[% org.address %]</td>
+                        <td class="right"
+                            [% IF date.format( org.created, '%s' ) > next_meet.prev_meet_end %]
+                                style="color: green"
+                            [% ELSE %]
+                                style="color: red"
+                            [% END %]
+                        >
+                            <time datetime="[% org.created %]">
+                                [% date.format( org.created, '%b %-e, %Y' ) %]
+                            </time>
+                        </td>
+                        <td class="right"
+                            [% IF date.format( org.created, '%s' ) > next_meet.prev_meet_end %]
+                                style="color: green"
+                            [% ELSE %]
+                                style="color: red"
+                            [% END %]
+                        >
+                            <time datetime="[% org.created %]">
+                                [% date.format( org.created, '%-I:%M %p' ) %]
+                            </time>
+                        </td>
+                    </tr>
+                [% END %]
+            </tbody>
+        </table>
+
+        <p>Last Day of Previous Meet: <b>[% date.format( next_meet.prev_meet_end, '%b %-e, %Y' ) %]</b></p>
     [% END %]
 [% END %]

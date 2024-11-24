@@ -208,9 +208,6 @@
                         totals.attending   = totals.attending   + 1;
                         totals.nonquizzers = totals.nonquizzers + 1;
 
-                        acronym = org.acronym;
-                        totals.organizations.$acronym = 1;
-
                         totals.house = totals.house + ( ( person.registration.house ) ? 1 : 0 );
                         totals.lunch = totals.lunch + ( ( person.registration.lunch ) ? 1 : 0 );
                     %]
