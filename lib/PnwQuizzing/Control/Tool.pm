@@ -151,6 +151,8 @@ sub meet_data ($self) {
             next_meet => $next_meet,
             org_reg   => $org_reg,
             user_reg  => $user_reg,
+
+            org_reg_sort_by_created => [ sort { $b->{created} cmp $a->{created} } @$org_reg ],
         );
     }
     else {

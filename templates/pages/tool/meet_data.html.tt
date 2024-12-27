@@ -73,7 +73,7 @@
                 <th>Time</th>
             </thead>
             <tbody>
-                [% FOR org IN org_reg %]
+                [% FOR org IN org_reg_sort_by_created %]
                     <tr>
                         <td>[% org.acronym %]</td>
                         <td>[% org.name %]</td>
