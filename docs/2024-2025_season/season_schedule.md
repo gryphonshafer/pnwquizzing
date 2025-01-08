@@ -59,7 +59,7 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
     - [Crowsnest Lake Bible Camp](https://crowcamp.ca)
     - [Crowsnest Pass, Coleman, AB T0K 0M0, Canada](https://google.com/maps/dir//Crowsnest+Lake+Bible+Camp/@49.6255545,-114.661002,17z)
 
-### Championships (DC)
+### Championships
 
 - **Dates**: Friday-Sunday, May 2-4, 2025
     - Arrive Friday for dinner followed by Quizzing that evening
