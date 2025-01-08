@@ -48,7 +48,9 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 - **Date**: Saturday, March 22, 2025
 - **New Material**: Luke 22-24
-- **Location**: *Post Falls, ID has called dibs. They're working on the exact location.*
+- **Location**:
+    - [Heart Church](https://heartchurchnw.org)
+    - [655 Sixth Ave, Fox Island WA 98333](https://google.com/maps/dir//655+Sixth+Ave,+Fox+Island+WA+98333)
 
 ### Great West Invitational (GWI)
 

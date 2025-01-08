@@ -1,7 +1,7 @@
 # 2024-2025 Club Lists
 
 Club lists are published lists of verses that will have queries asked from them
-more frequently.
+more frequently. The full material for the season is: **Luke 1-3:23, 9-11, 13-19, 21-24**.
 
 ## Club 100
 
