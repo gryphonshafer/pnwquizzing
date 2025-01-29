@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Org;
 
-use exact -conf, -class;
+use exact -class;
 
 with 'Omniframe::Role::Model';
 

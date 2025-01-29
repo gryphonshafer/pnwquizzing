@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Meet;
 
-use exact -conf, -class;
+use exact -class, -conf;
 use DateTime;
 
 with 'Omniframe::Role::Model';

@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Email;
 
-use exact -conf, -class;
+use exact -class, -conf;
 use Email::Mailer;
 
 with qw( Omniframe::Role::Template Omniframe::Role::Logging );
@@ -19,9 +19,9 @@ sub new ( $self, @params ) {
     croak('Failed new() because "type" must be defined') unless ( $self->type );
 
     $settings ||= $self->tt_settings('email');
-    $root_dir ||= $self->conf->get( 'config_app', 'root_dir' );
+    $root_dir ||= conf->get( 'config_app', 'root_dir' );
     $mailer   ||= Email::Mailer->new(
-        from    => $self->conf->get( qw( email from ) ),
+        from    => conf->get( qw( email from ) ),
         process => sub {
             my ( $template, $data ) = @_;
             my $content;
@@ -53,7 +53,7 @@ sub send ( $self, $data ) {
     $data->{subject} = \$self->subject;
     $data->{html}    = \$self->html;
 
-    return undef unless ( $self->conf->get( 'email', 'active' ) );
+    return undef unless ( conf->get( 'email', 'active' ) );
     $self->info(
         'Sent email "' . $self->type . '"' . (
             ( $data->{to} and not ref $data->{to} ) ? ' to: ' . $data->{to}               :

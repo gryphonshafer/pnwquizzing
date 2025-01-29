@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::User;
 
-use exact -conf, -class;
+use exact -class, -conf;
 use Mojo::JSON qw( encode_json decode_json );
 use PnwQuizzing::Model::Email;
 
@@ -39,7 +39,7 @@ sub thaw ( $self, $data ) {
 
 sub verify_email ( $self, $url = undef ) {
     croak('Cannot verify_email() because user data not loaded in user object') unless ( $self->data );
-    $url ||= $self->conf->get('base_url');
+    $url ||= conf->get('base_url');
     $url .= '/user/verify/' . $self->id . '/' . substr( $self->data->{passwd}, 0, 12 );
 
     PnwQuizzing::Model::Email->new( type => 'verify_email' )->send({
@@ -92,7 +92,7 @@ sub reset_password_email ( $self, $username = '', $email = '', $url = undef ) {
 
     my $user = PnwQuizzing::Model::User->new->load($user_id);
 
-    $url ||= $self->conf->get('base_url');
+    $url ||= conf->get('base_url');
     $url .= '/user/reset_password/' . $user->id . '/' . substr( $user->data->{passwd}, 0, 12 );
 
     PnwQuizzing::Model::Email->new( type => 'reset_password' )->send({
