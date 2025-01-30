@@ -1,5 +1,5 @@
 [%
-    USE date;
+    PROCESS macros;
     page.title = 'Meet Registration Data';
 %]
 
@@ -84,22 +84,14 @@
                             [% ELSE %]
                                 style="color: red"
                             [% END %]
-                        >
-                            <time datetime="[% org.created %]">
-                                [% date.format( org.created, '%b %-e, %Y' ) %]
-                            </time>
-                        </td>
+                        >[% time( org.created, '%b %-e, %Y' ) %]</td>
                         <td class="right"
                             [% IF date.format( org.created, '%s' ) > next_meet.prev_meet_end %]
                                 style="color: green"
                             [% ELSE %]
                                 style="color: red"
                             [% END %]
-                        >
-                            <time datetime="[% org.created %]">
-                                [% date.format( org.created, '%-I:%M %p' ) %]
-                            </time>
-                        </td>
+                        >[% time( org.created, '%-I:%M %p' ) %]</td>
                     </tr>
                 [% END %]
             </tbody>
