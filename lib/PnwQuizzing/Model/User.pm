@@ -2,9 +2,10 @@ package PnwQuizzing::Model::User;
 
 use exact -class, -conf;
 use Mojo::JSON qw( encode_json decode_json );
+use Omniframe::Util::Bcrypt 'bcrypt';
 use PnwQuizzing::Model::Email;
 
-with qw( Omniframe::Role::Model Omniframe::Role::Bcrypt );
+with 'Omniframe::Role::Model';
 
 class_has active => 1;
 
@@ -20,7 +21,7 @@ sub freeze ( $self, $data ) {
     if ( $self->is_dirty( 'passwd', $data ) ) {
         croak("Password supplied is not at least $min_passwd_length characters in length")
             unless ( length $data->{passwd} >= $min_passwd_length );
-        $data->{passwd} = $self->bcrypt( $data->{passwd} );
+        $data->{passwd} = bcrypt( $data->{passwd} );
     }
 
     $data->{roles} = encode_json(
@@ -67,7 +68,7 @@ sub login ( $self, $username, $passwd ) {
         croak( qq{"$_" appears to not be a valid input value} ) unless ( length $_ );
     }
 
-    $passwd = $self->bcrypt($passwd);
+    $passwd = bcrypt($passwd);
 
     try {
         $self->load( { username => $username, passwd => $passwd, active => 1 } );
