@@ -27,12 +27,12 @@
             href="[% c.url_for('/favicon.ico').query( version => version ) %]">
 
         <link rel="stylesheet" type="text/css"
-            href="[% c.url_for('/app.css').query( version => version ) %]">
+            href="[% c.url_for('/build/app.css').query( version => version ) %]">
 
         <link rel="stylesheet" type="text/css"
             href="[%
                 c.url_for(
-                    '/font-awesome/css/all' _ ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
+                    '/externals/font_awesome/css/all' _ ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
                 ).query( version => version )
             %]">
 

@@ -1,6 +1,6 @@
 ---
 font_awesome:
-    dest: static/font-awesome
+    dest: static/externals/font_awesome
     parts:
         - webfonts
         - css/all.css
