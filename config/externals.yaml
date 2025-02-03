@@ -1,7 +1,9 @@
 ---
+dart_sass:
+    dest: local/externals/dart_sass
 font_awesome:
     dest: static/externals/font_awesome
     parts:
-        - webfonts
+        - webfonts/*
         - css/all.css
         - css/all.min.css
