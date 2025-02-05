@@ -1,1 +1,1 @@
-requires 'GD', '2.83';
+requires 'Mojolicious::Plugin::CaptchaPNG';
