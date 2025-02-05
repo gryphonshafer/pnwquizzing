@@ -7,3 +7,8 @@ font_awesome:
         - webfonts/*
         - css/all.css
         - css/all.min.css
+vue:
+    dest: static/externals/vue
+    libs:
+        vue/dist/vue.global.js     : vue.global.js
+        vue/dist/vue.global.prod.js: vue.global.prod.js

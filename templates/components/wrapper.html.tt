@@ -32,7 +32,8 @@
         <link rel="stylesheet" type="text/css"
             href="[%
                 c.url_for(
-                    '/externals/font_awesome/css/all' _ ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
+                    '/externals/font_awesome/css/all' _
+                        ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
                 ).query( version => version )
             %]">
 
@@ -52,7 +53,9 @@
 
         [% IF page.vue OR page.vue_inline %]
             <script type="text/javascript" src="[% c.url_for(
-                ( c.app.mode == 'production' ) ? '/js/vue.min.js' : '/js/vue.js'
+                ( c.app.mode == 'production' )
+                    ? '/externals/vue/vue.global.prod.js'
+                    : '/externals/vue/vue.global.js'
             ).query( version => version ) %]"></script>
 
             [% IF page.vue %]

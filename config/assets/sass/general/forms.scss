@@ -17,8 +17,12 @@ fieldset {
         text-align : right;
     }
 
-    &.left label {
-        text-align: left;
+    &.left {
+        margin-right: 1em;
+
+        label {
+            text-align: left;
+        }
     }
 
     select,

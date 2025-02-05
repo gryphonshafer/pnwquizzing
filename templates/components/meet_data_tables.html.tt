@@ -12,19 +12,20 @@
 
     IF is_web_page;
         page.vue_inline = "
-            new Vue({
-                el   : '#meet_data',
-                data : {
-                    meet_data_toggle : 'table'
-                },
-                watch : {
-                    meet_data_toggle : function () {
-                        this.\$nextTick( function () {
-                            nav_content_align.align();
-                        } );
+            Vue
+                .createApp({
+                    data() {
+                        return { meet_data_toggle: 'table' };
+                    },
+                    watch: {
+                        meet_data_toggle : function () {
+                            this.\$nextTick( function () {
+                                nav_content_align.align();
+                            } );
+                        }
                     }
-                }
-            });
+                })
+                .mount('#meet_data');
         ";
     END;
 %]
