@@ -27,7 +27,7 @@ sub account ($self) {
             }
 
             unless ( $self->stash('user') ) {
-                $self->_captcha;
+                $self->_captcha_check;
 
                 my $user = PnwQuizzing::Model::User->new->create( { map { $_ => $params->{$_} } qw(
                     username passwd first_name last_name email org roles
@@ -169,7 +169,7 @@ sub reset_password ($self) {
     return $redirect->() if ( $self->stash('user') );
 
     if ( $self->param('username') or $self->param('email') ) {
-        $self->_captcha;
+        $self->_captcha_check;
 
         my $url = $self->req->url->to_abs;
         try {
@@ -311,16 +311,16 @@ sub unbecome ($self) {
     ( my $contact_email = conf->get( qw( email from ) ) )
         =~ s/(<|>)/ ( $1 eq '<' ) ? '&lt;' : '&gt;' /eg;
 
-    sub _captcha ($self) {
+    sub _captcha_check ($self) {
         my $captcha = $self->param('captcha') // '';
         $captcha =~ s/\D//g;
 
         die join( ' ',
             'The captcha sequence provided does not match the captcha sequence in the captcha image.',
-            'If the problem persists, email <b>' . $contact_email . '</b> for help',
-        ) unless ( $captcha and $self->session('captcha') and $captcha eq $self->session('captcha') );
+            'Please try again.',
+            'If the problem persists, email <b>' . $contact_email . '</b> for help.',
+        ) unless ( $self->check_captcha_value($captcha) );
 
-        delete $self->session->{captcha};
         return;
     }
 }

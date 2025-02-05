@@ -2,9 +2,14 @@ package PnwQuizzing::Control;
 
 use exact -conf, 'Omniframe::Control';
 use Mojo::File;
+use Omniframe::Util::File 'opath';
 
 sub startup ($self) {
     $self->setup( skip => ['sockets'] );
+
+    my $captcha_conf = conf->get('captcha');
+    $captcha_conf->{ttf} = opath( $captcha_conf->{ttf} );
+    $self->plugin( CaptchaPNG => $captcha_conf );
 
     my $root_dir = conf->get( qw( config_app root_dir ) );
     my $photos   = Mojo::File
@@ -88,7 +93,6 @@ sub startup ($self) {
     $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( account login reset_password ) );
     $all->any('/search')->to('tool#search');
     $all->any('/')->to('main#home_page');
-    $all->any('/captcha')->to('main#captcha');
     $all->any('/*name')->to('main#content');
 }
 
