@@ -51,6 +51,16 @@
         %]"></script>
         [% FOR js_block IN page.inline_js %]<script type="text/javascript">[% js_block %]</script>[% END %]
 
+        [% memo = memo || c.session.flash.memo %]
+        [% IF memo %]
+            <script type="text/javascript" src="[%
+                c.url_for('/js/util/memo.js').query( version => version )
+            %]"></script>
+            <script type="text/javascript">
+                window.addEventListener( "load", () => omniframe.memo( [% memo.json %] ) );
+            </script>
+        [% END %]
+
         [% IF page.vue OR page.vue_inline %]
             <script type="text/javascript" src="[% c.url_for(
                 ( c.app.mode == 'production' )

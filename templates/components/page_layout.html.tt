@@ -75,36 +75,6 @@
     [% PROCESS nav_footer.html.tt %]
 </div>
 
-[%
-    IF user AND NOT c.req.url.to_abs.path.to_string.search('^/tool/register');
-        UNLESS message OR c.session.flash.message;
-            message = registration.show_notice( user, c.url_for('/tool/register') );
-        END;
-    END;
-%]
-
-[% IF message OR c.session.flash.message %]
-    [% fv = (message) ? message : c.session.flash.message %]
-    <input id="message_toggle" type="checkbox" name="[% time %]">
-    <div id="message" class="[% fv.type || 'error' %]">
-        [% UNLESS fv.ref %]
-            [% fv %]
-        [% ELSIF fv.ref == 'HASH' %]
-            [% IF fv.text %][% fv.text %][% END %]
-            [% IF fv.errors %]
-                There [% IF fv.errors.size > 1 %]were[% ELSE %]was[% END %]
-                [% fv.errors.size %] form error[% IF fv.errors.size > 1 %]s[% END %].
-            [% END %]
-
-            [% FOREACH message IN fv.messages %]
-                [% message.text %]
-            [% END %]
-        [% END %]
-
-        <label for="message_toggle" class="message_toggle">X</label>
-    </div>
-[% END %]
-
 <div id="content">
     [% content %]
     [% PROCESS content_footer.html.tt %]
