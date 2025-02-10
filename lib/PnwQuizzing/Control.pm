@@ -37,7 +37,10 @@ sub startup ($self) {
                 }
                 catch ($e) {
                     $c->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
-                    $c->flash( message => 'Failed to become user: "' . $become . '"' );
+                    $c->flash( memo => {
+                        class   => 'error',
+                        message => 'Failed to become user: "' . $become . '"',
+                    } );
                     $c->session( become => undef );
                     $c->redirect_to('/user/account');
                 };
@@ -67,7 +70,10 @@ sub startup ($self) {
     my $users = $all->under( sub ($c) {
         return 1 if ( $c->stash('user') );
         $c->info('Login required but not yet met');
-        $c->flash( message => 'Login required for the previously requested resource.' );
+        $c->flash( memo => {
+            class   => 'error',
+            message => 'Login required for the previously requested resource.',
+        } );
         $c->redirect_to('/');
         return 0;
     } );
@@ -83,7 +89,10 @@ sub startup ($self) {
     $users->under( sub ($c) {
         return 1 if ( $c->stash('user')->is_admin );
         $c->info('Admin required but not met');
-        $c->flash( message => 'Administrator access required for the previously requested resource.' );
+        $c->flash( memo => {
+            class   => 'error',
+            message => 'Administrator access required for the previously requested resource.',
+        } );
         $c->redirect_to('/');
         return 0;
     } )->any('/user/become')->to('user#become');

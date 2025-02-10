@@ -128,14 +128,14 @@ sub register_save ($self) {
         }) if ( $data->{teams} );
 
         $self->flash(
-            message => {
-                type => 'success',
-                text => 'Successfully saved registration data.',
+            memo => {
+                class   => 'success',
+                message => 'Successfully saved registration data.',
             }
         );
     }
     else {
-        $self->flash( message => 'Unable to register after deadline.' );
+        $self->flash( memo => { class => 'error', message => 'Unable to register after deadline.' } );
     }
 
     return $self->redirect_to('/tool/meet_data')

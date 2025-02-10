@@ -49,9 +49,9 @@ sub account ($self) {
                 $self->stash('user')->save( { passwd => $params->{passwd} } ) if ( $params->{passwd} );
 
                 $self->stash(
-                    message => {
-                        type => 'success',
-                        text => 'Successfully edited site account profile.',
+                    memo => {
+                        class   => 'success',
+                        message => 'Successfully edited site account profile.',
                     }
                 );
             }
@@ -66,7 +66,7 @@ sub account ($self) {
                 if ( $e =~ /UNIQUE constraint failed/ );
 
             $self->info('User CRUD failure');
-            $self->stash( message => $e, %$params );
+            $self->stash( memo => { class => 'error', message => $e }, %$params );
         }
     }
 
@@ -99,14 +99,17 @@ sub verify ($self) {
         )
     ) {
         $self->flash(
-            message => {
-                type => 'success',
-                text => 'Successfully verified this user account. Please now login with your credentials.',
+            memo => {
+                class   => 'success',
+                message => 'Successfully verified this user account. Please now login with your credentials.',
             }
         );
     }
     else {
-        $self->flash( message => 'Unable to verify user account using the link provided.' );
+        $self->flash( memo => {
+            class   => 'error',
+            message => 'Unable to verify user account using the link provided.',
+        } );
     }
 
     return $self->redirect_to('/');
@@ -121,10 +124,11 @@ sub login ($self) {
     }
     catch ($e) {
         $self->info('Login failure (in controller)');
-        $self->flash( message =>
-            'Login failed. Please try again, or try the ' .
-            '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.'
-        );
+        $self->flash( memo => {
+            class   => 'error',
+            message => 'Login failed. Please try again, or try the ' .
+                '<a href="' . $self->url_for('/user/reset_password') . '">Reset Password page</a>.',
+        } );
         $redirect = 1;
     }
     return $self->redirect_to('/') if ($redirect);
@@ -154,9 +158,9 @@ sub logout ($self) {
 sub reset_password ($self) {
     my $redirect = sub {
         $self->flash(
-            message => {
-                type => 'success',
-                text => join( ' ',
+            memo => {
+                class   => 'success',
+                message => join( ' ',
                     'You are now logged in; however, your password is not yet reset.',
                     'Use the edit profile page to change your password to something new.',
                 ),
@@ -179,19 +183,25 @@ sub reset_password ($self) {
                 $url->protocol . '://' . $url->host_port,
             );
             $self->stash(
-                message => {
-                    type => 'success',
-                    text => 'Successfully send a reset password confirmation email.',
+                memo => {
+                    class   => 'success',
+                    message => 'Successfully send a reset password confirmation email.',
                 }
             );
         }
         catch ($e) {
             $self->warn( $e->message );
-            $self->stash( message => 'Unable to locate user account using the input values provided.' );
+            $self->stash( memo => {
+                class   => 'error',
+                message => 'Unable to locate user account using the input values provided.',
+            } );
         };
     }
     elsif ( $self->param('form_post') ) {
-        $self->stash( message => 'Unable to locate user account using the input values provided.' );
+        $self->stash( memo => {
+            class   => 'error',
+            message => 'Unable to locate user account using the input values provided.',
+        } );
     }
     elsif ( $self->stash('reset_user_id') and $self->stash('reset_passwd') ) {
         try {
@@ -210,10 +220,11 @@ sub reset_password ($self) {
         }
         catch ($e) {
             $self->warn( $e->message );
-            $self->stash( message =>
-                'Unable to verify user account for reset user password action. ' .
-                'Note the time and email site administration for assistance.'
-            );
+            $self->stash( memo => {
+                class   => 'error',
+                message => 'Unable to verify user account for reset user password action. ' .
+                    'Note the time and email site administration for assistance.',
+            } );
         };
     }
 }
@@ -280,7 +291,7 @@ sub org ($self) {
                 if ( $e =~ /UNIQUE constraint failed/ );
 
             $self->info('Org CRUD failure');
-            $self->stash( message => $e, %$params );
+            $self->stash( memo => { class => 'error', message => $e }, %$params );
         }
     }
 }
