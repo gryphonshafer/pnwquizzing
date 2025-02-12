@@ -49,6 +49,7 @@ sub _decode_token ($token) {
         $data = decode_json( decrypt( b64_decode($token) ) );
     }
     catch ($e) {}
+
     return (
         $data and $data->[0] and $data->[1] and
         $data->[1] < time + conf->get('token_expiration')
