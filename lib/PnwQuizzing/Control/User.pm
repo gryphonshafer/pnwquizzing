@@ -92,12 +92,7 @@ sub account ($self) {
 }
 
 sub verify ($self) {
-    if (
-        PnwQuizzing::Model::User->new->verify(
-            $self->stash('verify_user_id'),
-            $self->stash('verify_passwd'),
-        )
-    ) {
+    if ( PnwQuizzing::Model::User->new->verify( $self->stash('token') ) ) {
         $self->flash(
             memo => {
                 class   => 'success',
@@ -173,10 +168,10 @@ sub reset_password ($self) {
     return $redirect->() if ( $self->stash('user') );
 
     if ( $self->param('username') or $self->param('email') ) {
-        $self->_captcha_check;
-
-        my $url = $self->req->url->to_abs;
         try {
+            $self->_captcha_check;
+            my $url = $self->req->url->to_abs;
+
             PnwQuizzing::Model::User->new->reset_password_email(
                 $self->param('username'),
                 $self->param('email'),
@@ -190,10 +185,12 @@ sub reset_password ($self) {
             );
         }
         catch ($e) {
-            $self->warn( $e->message );
+            $self->warn( deat $e->message );
             $self->stash( memo => {
                 class   => 'error',
-                message => 'Unable to locate user account using the input values provided.',
+                message => ( $e->message =~ /\bcaptcha\b/i )
+                    ? deat( $e->message )
+                    : 'Unable to locate user account using the input values provided.',
             } );
         };
     }
@@ -203,12 +200,9 @@ sub reset_password ($self) {
             message => 'Unable to locate user account using the input values provided.',
         } );
     }
-    elsif ( $self->stash('reset_user_id') and $self->stash('reset_passwd') ) {
+    elsif ( $self->stash('token') ) {
         try {
-            my $user = PnwQuizzing::Model::User->new->reset_password_check(
-                $self->stash('reset_user_id'),
-                $self->stash('reset_passwd'),
-            );
+            my $user = PnwQuizzing::Model::User->new->reset_password_check( $self->stash('token') );
 
             $self->info( 'Login success for: ' . $user->data->{username} );
             $self->session(

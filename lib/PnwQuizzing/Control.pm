@@ -97,8 +97,7 @@ sub startup ($self) {
         return 0;
     } )->any('/user/become')->to('user#become');
 
-    $all->any('/user/verify/:verify_user_id/:verify_passwd')->to('user#verify');
-    $all->any('/user/reset_password/:reset_user_id/:reset_passwd')->to('user#reset_password');
+    $all->any("/user/$_/:token")->to("user#$_") for ( qw( verify reset_password ) );
     $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( account login reset_password ) );
     $all->any('/search')->to('tool#search');
     $all->any('/')->to('main#home_page');
