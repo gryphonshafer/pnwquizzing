@@ -1,1 +1,1 @@
-requires 'Mojolicious::Plugin::CaptchaPNG';
+requires 'Mojolicious::Plugin::CaptchaPNG', '1.03';
