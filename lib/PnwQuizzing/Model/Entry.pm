@@ -1,6 +1,6 @@
 package PnwQuizzing::Model::Entry;
 
-use exact -conf, -class;
+use exact -class, -conf;
 use Mojo::JSON qw( encode_json decode_json );
 use DateTime;
 

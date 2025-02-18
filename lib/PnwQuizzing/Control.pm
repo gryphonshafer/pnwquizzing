@@ -2,9 +2,14 @@ package PnwQuizzing::Control;
 
 use exact -conf, 'Omniframe::Control';
 use Mojo::File;
+use Omniframe::Util::File 'opath';
 
 sub startup ($self) {
     $self->setup( skip => ['sockets'] );
+
+    my $captcha_conf = conf->get('captcha');
+    $captcha_conf->{ttf} = opath( $captcha_conf->{ttf} );
+    $self->plugin( CaptchaPNG => $captcha_conf );
 
     my $root_dir = conf->get( qw( config_app root_dir ) );
     my $photos   = Mojo::File
@@ -32,7 +37,10 @@ sub startup ($self) {
                 }
                 catch ($e) {
                     $c->notice( 'Failed user load based on "become" username value: "' . $become . '"' );
-                    $c->flash( message => 'Failed to become user: "' . $become . '"' );
+                    $c->flash( memo => {
+                        class   => 'error',
+                        message => 'Failed to become user: "' . $become . '"',
+                    } );
                     $c->session( become => undef );
                     $c->redirect_to('/user/account');
                 };
@@ -62,7 +70,10 @@ sub startup ($self) {
     my $users = $all->under( sub ($c) {
         return 1 if ( $c->stash('user') );
         $c->info('Login required but not yet met');
-        $c->flash( message => 'Login required for the previously requested resource.' );
+        $c->flash( memo => {
+            class   => 'error',
+            message => 'Login required for the previously requested resource.',
+        } );
         $c->redirect_to('/');
         return 0;
     } );
@@ -78,17 +89,18 @@ sub startup ($self) {
     $users->under( sub ($c) {
         return 1 if ( $c->stash('user')->is_admin );
         $c->info('Admin required but not met');
-        $c->flash( message => 'Administrator access required for the previously requested resource.' );
+        $c->flash( memo => {
+            class   => 'error',
+            message => 'Administrator access required for the previously requested resource.',
+        } );
         $c->redirect_to('/');
         return 0;
     } )->any('/user/become')->to('user#become');
 
-    $all->any('/user/verify/:verify_user_id/:verify_passwd')->to('user#verify');
-    $all->any('/user/reset_password/:reset_user_id/:reset_passwd')->to('user#reset_password');
+    $all->any("/user/$_/:token")->to("user#$_") for ( qw( verify reset_password ) );
     $all->any( '/user/' . $_ )->to( 'user#' . $_ ) for ( qw( account login reset_password ) );
     $all->any('/search')->to('tool#search');
     $all->any('/')->to('main#home_page');
-    $all->any('/captcha')->to('main#captcha');
     $all->any('/*name')->to('main#content');
 }
 

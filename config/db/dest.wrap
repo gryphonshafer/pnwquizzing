@@ -5,7 +5,7 @@ use Mojo::Util 'decode';
 use Omniframe;
 
 my $obj = Omniframe->new->with_roles('+Database');
-$obj->conf->put( qw( database settings sqlite_allow_multiple_statements ) => 1 );
+conf->put( qw( database settings sqlite_allow_multiple_statements ) => 1 );
 
 my $dq  = $obj->dq;
 my $sql = decode( 'UTF-8', path( $ARGV[0] )->slurp );

@@ -1,7 +1,14 @@
 ---
+dart_sass:
+    dest: local/externals/dart_sass
 font_awesome:
-    dest: static/font-awesome
+    dest: static/externals/font_awesome
     parts:
-        - webfonts
+        - webfonts/*
         - css/all.css
         - css/all.min.css
+vue:
+    dest: static/externals/vue
+    libs:
+        vue/dist/vue.global.js     : vue.global.js
+        vue/dist/vue.global.prod.js: vue.global.prod.js

@@ -3,6 +3,9 @@ preinclude: ../omniframe/config/app.yaml
 default:
     bcrypt:
         salt: 24y5Hvo6ke8p251n
+    crypt:
+        pass: 4FjvcTJD54XYZdnG
+        salt: 56789a01234
     libs: ../omniframe/lib
     mojo_app_lib: PnwQuizzing::Control
     mojolicious:
@@ -13,18 +16,9 @@ default:
             cookie_name: pnwquizzing_session
     omniframe: ../omniframe
     captcha:
-        width      : 216
-        height     : 50
-        size       : 20
-        ttf        : static/fonts/Roboto/Roboto-Bold.ttf
-        rotation   : 7
-        x          : 13
-        y_base     : 35
-        y_rotate   : 100
-        noise      : 1000
-        background : [ 255, 255, 255 ]
-        text_color : [ 'rand(128)', 'rand(128)', 'rand(128)' ]
-        noise_color: [ 'rand(128) + 128', 'rand(128) + 128', 'rand(128) + 128' ]
+        ttf: static/fonts/Roboto/Roboto-Bold.ttf
+    min_passwd_length: 8
+    token_expiration : 86400 # 1 day
     docs:
         dir       : docs
         home_type : md

@@ -1,14 +1,15 @@
 package PnwQuizzing::Model::User;
 
-use exact -conf, -class;
+use exact -class, -conf;
 use Mojo::JSON qw( encode_json decode_json );
+use Mojo::Util qw( b64_encode b64_decode );
+use Omniframe::Util::Bcrypt 'bcrypt';
+use Omniframe::Util::Crypt qw( encrypt decrypt );
 use PnwQuizzing::Model::Email;
 
-with qw( Omniframe::Role::Model Omniframe::Role::Bcrypt );
+with 'Omniframe::Role::Model';
 
 class_has active => 1;
-
-my $min_passwd_length = 6;
 
 before 'create' => sub ( $self, $params ) {
     $params->{active} //= 0;
@@ -17,10 +18,11 @@ before 'create' => sub ( $self, $params ) {
 sub freeze ( $self, $data ) {
     $data->{org_id} = delete $data->{org} if ( exists $data->{org} );
 
+    my $min_passwd_length = conf->get('min_passwd_length');
     if ( $self->is_dirty( 'passwd', $data ) ) {
         croak("Password supplied is not at least $min_passwd_length characters in length")
             unless ( length $data->{passwd} >= $min_passwd_length );
-        $data->{passwd} = $self->bcrypt( $data->{passwd} );
+        $data->{passwd} = bcrypt( $data->{passwd} );
     }
 
     $data->{roles} = encode_json(
@@ -37,10 +39,27 @@ sub thaw ( $self, $data ) {
     return $data;
 }
 
+sub _encode_token ($user_id) {
+    return b64_encode( encrypt( encode_json( [ $user_id, time ] ) ) );
+}
+
+sub _decode_token ($token) {
+    my $data;
+    try {
+        $data = decode_json( decrypt( b64_decode($token) ) );
+    }
+    catch ($e) {}
+
+    return (
+        $data and $data->[0] and $data->[1] and
+        $data->[1] < time + conf->get('token_expiration')
+    ) ? $data->[0] : undef;
+}
+
 sub verify_email ( $self, $url = undef ) {
     croak('Cannot verify_email() because user data not loaded in user object') unless ( $self->data );
-    $url ||= $self->conf->get('base_url');
-    $url .= '/user/verify/' . $self->id . '/' . substr( $self->data->{passwd}, 0, 12 );
+    $url ||= conf->get('base_url');
+    $url .= '/user/verify/' . _encode_token( $self->id );
 
     PnwQuizzing::Model::Email->new( type => 'verify_email' )->send({
         to   => sprintf( '%s %s <%s>', map { $self->data->{$_} } qw( first_name last_name email ) ),
@@ -53,13 +72,12 @@ sub verify_email ( $self, $url = undef ) {
     return;
 }
 
-sub verify ( $self, $user_id, $passwd ) {
-    my $verified = $self->dq->sql(q{
-        SELECT COUNT(*) FROM user WHERE user_id = ? AND passwd LIKE ?
-    })->run( $user_id, $passwd . '%' )->value;
+sub verify ( $self, $token ) {
+    my $user_id = _decode_token($token);
+    return unless ($user_id);
 
-    $self->dq->sql('UPDATE user SET active = 1 WHERE user_id = ?')->run($user_id) if ($verified);
-    return $verified;
+    $self->dq->sql('UPDATE user SET active = 1 WHERE user_id = ?')->run($user_id);
+    return $user_id;
 }
 
 sub login ( $self, $username, $passwd ) {
@@ -67,7 +85,7 @@ sub login ( $self, $username, $passwd ) {
         croak( qq{"$_" appears to not be a valid input value} ) unless ( length $_ );
     }
 
-    $passwd = $self->bcrypt($passwd);
+    $passwd = bcrypt($passwd);
 
     try {
         $self->load( { username => $username, passwd => $passwd, active => 1 } );
@@ -92,8 +110,8 @@ sub reset_password_email ( $self, $username = '', $email = '', $url = undef ) {
 
     my $user = PnwQuizzing::Model::User->new->load($user_id);
 
-    $url ||= $self->conf->get('base_url');
-    $url .= '/user/reset_password/' . $user->id . '/' . substr( $user->data->{passwd}, 0, 12 );
+    $url ||= conf->get('base_url');
+    $url .= '/user/reset_password/' . _encode_token( $user->id );
 
     PnwQuizzing::Model::Email->new( type => 'reset_password' )->send({
         to   => sprintf( '%s %s <%s>', map { $user->data->{$_} } qw( first_name last_name email ) ),
@@ -106,13 +124,9 @@ sub reset_password_email ( $self, $username = '', $email = '', $url = undef ) {
     return;
 }
 
-sub reset_password_check ( $self, $user_id, $passwd ) {
-    croak('Unable to locate active user given user ID and password provided') unless (
-        $self->dq->sql(q{
-            SELECT COUNT(*) FROM user WHERE user_id = ? AND passwd LIKE ? AND active
-        })->run( $user_id, $passwd . '%' )->value
-    );
-
+sub reset_password_check ( $self, $token ) {
+    my $user_id = _decode_token($token);
+    croak('Unable to locate active user') unless ($user_id);
     return PnwQuizzing::Model::User->new->load($user_id);
 }
 

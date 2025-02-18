@@ -17,8 +17,12 @@ fieldset {
         text-align : right;
     }
 
-    &.left label {
-        text-align: left;
+    &.left {
+        margin-right: 1em;
+
+        label {
+            text-align: left;
+        }
     }
 
     select,
@@ -88,4 +92,6 @@ div.captcha {
 
 img.captcha {
     border: $form_borders;
+    width : 230px;
+    height: 50px;
 }

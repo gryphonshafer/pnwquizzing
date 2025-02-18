@@ -27,12 +27,13 @@
             href="[% c.url_for('/favicon.ico').query( version => version ) %]">
 
         <link rel="stylesheet" type="text/css"
-            href="[% c.url_for('/app.css').query( version => version ) %]">
+            href="[% c.url_for('/build/app.css').query( version => version ) %]">
 
         <link rel="stylesheet" type="text/css"
             href="[%
                 c.url_for(
-                    '/font-awesome/css/all' _ ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
+                    '/externals/font_awesome/css/all' _
+                        ( ( c.app.mode == 'production' ) ? '.min' : '' ) _ '.css'
                 ).query( version => version )
             %]">
 
@@ -50,9 +51,21 @@
         %]"></script>
         [% FOR js_block IN page.inline_js %]<script type="text/javascript">[% js_block %]</script>[% END %]
 
+        [% memo = memo || c.session.flash.memo %]
+        [% IF memo %]
+            <script type="text/javascript" src="[%
+                c.url_for('/js/util/memo.js').query( version => version )
+            %]"></script>
+            <script type="text/javascript">
+                window.addEventListener( "load", () => omniframe.memo( [% memo.json %] ) );
+            </script>
+        [% END %]
+
         [% IF page.vue OR page.vue_inline %]
             <script type="text/javascript" src="[% c.url_for(
-                ( c.app.mode == 'production' ) ? '/js/vue.min.js' : '/js/vue.js'
+                ( c.app.mode == 'production' )
+                    ? '/externals/vue/vue.global.prod.js'
+                    : '/externals/vue/vue.global.js'
             ).query( version => version ) %]"></script>
 
             [% IF page.vue %]

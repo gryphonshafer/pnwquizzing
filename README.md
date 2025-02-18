@@ -6,21 +6,16 @@
 Web site, documents, statistics, and tools in support of the **PNW Bible
 Quizzing** program.
 
-## Setup
+## Installation and Setup
 
-To setup an instance of the web site, first install and setup the
-[Omniframe](https://github.com/gryphonshafer/omniframe) project as per its
-instructions. Then clone this project to a desired location. Typically, this is
-in parallel to the `omniframe` project root directory.
+This project requires the [Omniframe](https://github.com/gryphonshafer/omniframe)
+project, which is expected to be deployed in a parallel directory. Follow the
+instructions in the Omniframe README "Installation" and "Project Setup" sections.
 
-Change directory to the project root directory, and run the following:
+## Run Application
 
-    cpanm -n -f --installdeps .
-
-## Run
-
-To run the web site application, follow the instructions in the `~/app.psgi`
-file within the project's root directory.
+To run the project application, follow the instructions in the `~/app.psgi`
+file within this project's root directory.
 
 ## Photo Optimization
 
