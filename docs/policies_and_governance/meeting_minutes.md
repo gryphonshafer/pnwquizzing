@@ -20,6 +20,7 @@ The members, voting and non-voting, of the General Assembly are defined in the
 
 ## Asset and Governance Board Meeting Minutes
 
+- [Friday, March 21, 2025](_meeting_minutes/2025-03-21.md) via Zoom
 - [Wednesday, September 25, 2024](_meeting_minutes/2024-09-25.md) via Zoom
 - [Tuesday, April 13, 2021](_meeting_minutes/2021-04-13.md) via Zoom
 - [Saturday, July 25, 2020](_meeting_minutes/2020-07-25.md) at Portland-Troutdale Airport
