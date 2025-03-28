@@ -1,7 +1,7 @@
 package PnwQuizzing::Model::User;
 
 use exact -class, -conf;
-use Mojo::JSON qw( encode_json decode_json );
+use Mojo::JSON qw( to_json from_json );
 use Mojo::Util qw( b64_encode b64_decode );
 use Omniframe::Util::Bcrypt 'bcrypt';
 use Omniframe::Util::Crypt qw( encrypt decrypt );
@@ -25,7 +25,7 @@ sub freeze ( $self, $data ) {
         $data->{passwd} = bcrypt( $data->{passwd} );
     }
 
-    $data->{roles} = encode_json(
+    $data->{roles} = to_json(
         [ ( ref $data->{roles} ) ? @{ $data->{roles} } : $data->{roles} ]
     ) if ( $data->{roles} );
 
@@ -33,20 +33,20 @@ sub freeze ( $self, $data ) {
 }
 
 sub thaw ( $self, $data ) {
-    $data->{roles} = ( $data->{roles} ) ? decode_json( $data->{roles} ) : [];
+    $data->{roles} = ( $data->{roles} ) ? from_json( $data->{roles} ) : [];
     $data->{roles} = [ $data->{roles} ] unless ( ref $data->{roles} );
 
     return $data;
 }
 
 sub _encode_token ($user_id) {
-    return b64_encode( encrypt( encode_json( [ $user_id, time ] ) ) );
+    return b64_encode( encrypt( to_json( [ $user_id, time ] ) ) );
 }
 
 sub _decode_token ($token) {
     my $data;
     try {
-        $data = decode_json( decrypt( b64_decode($token) ) );
+        $data = from_json( decrypt( b64_decode($token) ) );
     }
     catch ($e) {}
 

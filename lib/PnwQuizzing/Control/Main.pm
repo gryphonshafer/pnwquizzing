@@ -3,7 +3,6 @@ package PnwQuizzing::Control::Main;
 use exact -conf, 'Mojolicious::Controller';
 use Mojo::Asset::File;
 use Mojo::File 'path';
-use Mojo::Util 'decode';
 use Text::MultiMarkdown 'markdown';
 
 sub home_page ($self) {
@@ -15,7 +14,7 @@ sub home_page ($self) {
         ),
     );
 
-    my $payload = decode( 'UTF-8', $asset->slurp );
+    my $payload = $asset->slurp('UTF-8');
     my $title   = ( $payload =~ s/^#\s*([^#]+?)\s*$//ms ) ? $1 : '';
 
     $self->stash( payload => markdown($payload), title => $title );

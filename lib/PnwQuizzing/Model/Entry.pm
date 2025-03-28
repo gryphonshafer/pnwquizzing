@@ -1,24 +1,24 @@
 package PnwQuizzing::Model::Entry;
 
 use exact -class, -conf;
-use Mojo::JSON qw( encode_json decode_json );
+use Mojo::JSON qw( to_json from_json );
 use DateTime;
 
 with 'Omniframe::Role::Model';
 
 sub freeze ( $self, $data ) {
-    $data->{registration} = encode_json( $data->{registration} );
+    $data->{registration} = to_json( $data->{registration} );
     return $data;
 }
 
 sub thaw ( $self, $data ) {
-    $data->{registration} = ( $data->{registration} ) ? decode_json( $data->{registration} ) : undef;
+    $data->{registration} = ( $data->{registration} ) ? from_json( $data->{registration} ) : undef;
     return $data;
 }
 
 sub _decode_registrations ($entries) {
     return [ map {
-        $_->{registration} = decode_json $_->{registration};
+        $_->{registration} = from_json $_->{registration};
         $_;
     } @$entries ];
 }

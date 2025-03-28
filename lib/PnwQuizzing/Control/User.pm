@@ -1,7 +1,7 @@
 package PnwQuizzing::Control::User;
 
 use exact -conf, 'Mojolicious::Controller';
-use Mojo::JSON 'encode_json';
+use Mojo::JSON 'to_json';
 use PnwQuizzing::Model::User;
 use PnwQuizzing::Model::Org;
 
@@ -225,7 +225,7 @@ sub reset_password ($self) {
 
 sub list ($self) {
     $self->stash(
-        list_data => encode_json( {
+        list_data => to_json( {
             roles => [ map { +{ name => $_, selected => 0 } } @{ conf->get('roles') } ],
             users => [
                 sort {

@@ -2,7 +2,7 @@ package PnwQuizzing::Control::Tool;
 
 use exact -conf, 'Mojolicious::Controller';
 use File::Find 'find';
-use Mojo::JSON qw( encode_json decode_json );
+use Mojo::JSON qw( to_json from_json );
 use Text::CSV_XS 'csv';
 use PnwQuizzing::Model::Meet;
 use PnwQuizzing::Model::Org;
@@ -43,7 +43,7 @@ sub search ($self) {
                     ],
                 }
             } grep {
-                my $content = Mojo::File->new($_)->slurp;
+                my $content = Mojo::File->new($_)->slurp('UTF-8');
                 $content =~ /$for/msi;
             } @files
         ],
@@ -61,7 +61,7 @@ sub register ($self) {
 
     $self->stash(
         next_meet     => PnwQuizzing::Model::Meet->next_meet_data,
-        register_data => encode_json( {
+        register_data => to_json( {
             meet_roles    => conf->get('meet_roles'),
             bibles        => conf->get('bibles'),
             profile_coach => ( grep { $_ eq 'Coach' } @{ $self->stash('user')->data->{roles} } ) ? 1 : 0,
@@ -110,7 +110,7 @@ sub register_save ($self) {
     my $next_meet = PnwQuizzing::Model::Meet->next_meet_data;
 
     unless ( $next_meet->{past_deadline} and not $self->session('become') ) {
-        my $data = decode_json( $self->param('data') );
+        my $data = from_json( $self->param('data') );
 
         PnwQuizzing::Model::Entry->new->create({
             meet_id      => $next_meet->{meet_id},
