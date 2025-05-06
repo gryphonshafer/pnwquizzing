@@ -98,7 +98,7 @@ The following are the current weights of lists per bracket. These weights may be
 | Club 100            | 100 |     |     |        1 |    33.3% | 33.3% |       |       |
 | Club 300            | 100 | 200 |     |        1 |    33.3% | 11.1% | 22.2% |       |
 | Full Material (694) | 100 | 200 | 394 |        1 |    33.3% |  4.8% |  9.6% | 18.9% |
-|                     |     |     |     |          |        3 | 49.2% | 31.8% | 18.9% |
+|                     |     |     |     |        3 |          | 49.2% | 31.8% | 18.9% |
 |                     |     |     |     |          |          |   5.9 |   3.8 |   2.2 |
 
 ### Top-9 Bracket Weights
@@ -108,5 +108,5 @@ The following are the current weights of lists per bracket. These weights may be
 | Club 100            | 100 |     |     |        1 |    16.6% | 16.6% |       |       |
 | Club 300            | 100 | 200 |     |        2 |    33.3% | 11.1% | 22.2% |       |
 | Full Material (694) | 100 | 200 | 394 |        3 |      50% |  7.2% | 14.4% | 28.3% |
-|                     |     |     |     |          |        6 | 34.9% | 36.6% | 28.3% |
+|                     |     |     |     |        6 |          | 34.9% | 36.6% | 28.3% |
 |                     |     |     |     |          |          |   4.1 |   4.3 |   3.4 |
