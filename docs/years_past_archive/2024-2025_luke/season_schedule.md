@@ -1,8 +1,6 @@
 # 2024-2025 Season Schedule
 
-The following are the dates and material ranges for meets in the 2024-2025 season.
-
-Unless otherwise noted, quizzing will start Saturday early morning and conclude with awards in the mid-to-late afternoon. Teams traveling considerable driving distances to a meet will likely arrive Friday and be billetted by the host.
+The following were the dates and material ranges for meets in the 2024-2025 season.
 
 ### Scramble
 

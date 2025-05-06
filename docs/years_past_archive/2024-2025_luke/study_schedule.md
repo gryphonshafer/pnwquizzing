@@ -2,8 +2,8 @@
 
 # 2024-2025 Study Schedule
 
-The following is a recommended study schedule for the 2024-2025 Luke season.
-The full material for the season is: **Luke 1-3:23, 9-11, 13-19, 21-24**.
+The following was a recommended study schedule for the 2024-2025 Luke season.
+The full material for the season was: **Luke 1-3:23, 9-11, 13-19, 21-24**.
 
 | Week | Start       | End         | References        | Verses | Sum to Meet | Sum to Date |
 | ---: | ----------- | ----------- | ----------------- | -----: | ----------: | ----------: |

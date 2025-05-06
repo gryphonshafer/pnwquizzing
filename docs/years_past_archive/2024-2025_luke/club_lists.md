@@ -1,7 +1,7 @@
 # 2024-2025 Club Lists
 
 Club lists are published lists of verses that will have queries asked from them
-more frequently. The full material for the season is: **Luke 1-3:23, 9-11, 13-19, 21-24**.
+more frequently. The full material for the season was: **Luke 1-3:23, 9-11, 13-19, 21-24**.
 
 ## Club 100
 
@@ -71,17 +71,17 @@ more frequently. The full material for the season is: **Luke 1-3:23, 9-11, 13-19
 
 ## Club List Weighting
 
-The club lists will be weighted as follows:
+The club lists were weighted as follows:
 
-- Preliminary score sum quizzes are:
+- Preliminary score sum quizzes were:
     - Club 100: weight of 1
     - Club 300: weight of 2
     - Full Material: weight of 3
-- “Top-9” positional quizzes and finals/championships quizzes are:
+- “Top-9” positional quizzes and finals/championships quizzes were:
     - Club 100: weight of 0
     - Club 300: weight of 1
     - Full Material: weight of 1
-- Auxiliary score sum quizzes are:
+- Auxiliary score sum quizzes were:
     - Club 100: weight of 3
     - Club 300: weight of 2
     - Full Material: weight of 1
