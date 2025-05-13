@@ -7,7 +7,7 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 ### Scramble
 
 - **Date**: Saturday, September 13, 2025 *(Possible; Not Yet Confirmed)*
-- **New Material**: 1 Corinthians 1-3
+- **Material**: 1 Corinthians 1-3
 - **Location** *(Possible; Not Yet Confirmed)*:
     - [Lighthouse Christian Center](https://lighthousehome.org)
     - [3409 23rd St SW, Puyallup WA 98373](https://google.com/maps/dir//3409+23rd+St+SW,+Puyallup+WA+98373)
@@ -15,7 +15,7 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 ### Meet 1
 
 - **Dates**: Saturday, October 11, 2025 *(Possible; Not Yet Confirmed)*
-- **New Material**: Luke 1-3:23
+- **Material**: 1 Corinthians 1-6
 - **Location** *(Possible; Not Yet Confirmed)*:
     - [Juniper Community Church](https://junipercc.com)
     - [976 S Adams Dr, Madras OR 97741](https://google.com/maps/dir//976+S+Adams+Dr,+Madras+OR+97741)
@@ -23,7 +23,7 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 ### Meet 2
 
 - **Date**: Saturday, November 22, 2025 *(Possible; Not Yet Confirmed)*
-- **New Material**: Luke 9-11, 13
+- **New Material**: 1 Corinthians 7-12
 - **Location** *(Possible; Not Yet Confirmed)*:
     - [Elk Plain Community Church](http://elkplain.org/)
     - [4115 224th St E, Spanaway WA 98387](https://google.com/maps/dir//4115+224th+St+E,+Spanaway+WA+98387)
@@ -31,19 +31,19 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 ### Meet 3
 
 - **Date**: Saturday, January 3, 2026 *(Possible; Not Yet Confirmed)*
-- **New Material**: Luke 14-17
+- **New Material**: 1 Corinthians 13-15
 - **Location** *(To be determined...)*
 
 ### Meet 4
 
 - **Date**: Saturday, February 7 or 21, 2026 *(Possible; Not Yet Confirmed)*
-- **New Material**: Luke 18-19, 21
+- **New Material**: 1 Corinthians 16; 2 Corinthians 1-7
 - **Location** *(To be determined...)*
 
 ### Meet 5
 
 - **Date**: Saturday, March 21, 2026 *(Possible; Not Yet Confirmed)*
-- **New Material**: Luke 22-24
+- **New Material**: 2 Corinthians 8-13
 - **Location** *(To be determined...)*
 
 ### Great West Invitational (GWI)
