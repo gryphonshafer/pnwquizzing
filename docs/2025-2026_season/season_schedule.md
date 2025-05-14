@@ -4,13 +4,19 @@ The following are the dates and material ranges for meets in the 2025-2026 seaso
 
 Unless otherwise noted, quizzing will start Saturday early morning and conclude with awards in the mid-to-late afternoon. Teams traveling considerable driving distances to a meet will likely arrive Friday and be billeted by the host.
 
-### Scramble
+### Scramble West
 
 - **Date**: Saturday, September 13, 2025 *(Possible; Not Yet Confirmed)*
 - **Material**: 1 Corinthians 1-3
 - **Location** *(Possible; Not Yet Confirmed)*:
     - [Lighthouse Christian Center](https://lighthousehome.org)
     - [3409 23rd St SW, Puyallup WA 98373](https://google.com/maps/dir//3409+23rd+St+SW,+Puyallup+WA+98373)
+
+### Scramble East
+
+- **Date**: Saturday, September 20, 2025
+- **Material**: 1 Corinthians 1-4
+- **Location**: *(To be determined...)*
 
 ### Meet 1
 
