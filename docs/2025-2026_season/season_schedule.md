@@ -50,7 +50,9 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 - **Date**: Saturday, March 21, 2026 *(Possible; Not Yet Confirmed)*
 - **New Material**: 2 Corinthians 8-13
-- **Location** *(To be determined...)*
+- **Location** *(Possible; Not Yet Confirmed)*:
+    - [Highlands Community Church](https://highlandscc.org)
+    - [3031 NE Tenth St, Renton WA 98056](https://google.com/maps/dir//3031+NE+Tenth+St,+Renton+WA+98056)
 
 ### Great West Invitational (GWI)
 
