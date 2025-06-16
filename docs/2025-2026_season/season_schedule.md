@@ -42,9 +42,11 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 ### Meet 4
 
-- **Date**: Saturday, February 7 or 21, 2026 *(Possible; Not Yet Confirmed)*
+- **Date**: Saturday, February 7, 2026 *(Possible; Not Yet Confirmed)*
 - **New Material**: 1 Corinthians 16; 2 Corinthians 1-7
-- **Location** *(To be determined...)*
+- **Location** *(Possible; Not Yet Confirmed)*:
+    - [Burley Bible Church](https://bbcol.org)
+    - [14687 Olympic Dr SE, Port Orchard WA 98367](https://google.com/maps/dir//14687+Olympic+Dr+SE,+Port+Orchard+WA+98367)
 
 ### Meet 5
 
