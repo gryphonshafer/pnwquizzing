@@ -57,6 +57,8 @@ sub account ($self) {
             }
         }
         catch ($e) {
+            $self->info( 'User CRUD failure: ' . $e );
+
             $e =~ s/\s+at\s+(?:(?!\s+at\s+).)*[\r\n]*$//;
             $e =~ s/^"([^""]+)"/ '"' . join( ' ', map { ucfirst($_) } split( '_', $1 ) ) . '"' /e;
             $e =~ s/DBD::\w+::st execute failed:\s*//;
@@ -65,7 +67,6 @@ sub account ($self) {
             $e = "Value in $1 field is already registered under an existing user account."
                 if ( $e =~ /UNIQUE constraint failed/ );
 
-            $self->info('User CRUD failure');
             $self->stash( memo => { class => 'error', message => $e }, %$params );
         }
     }
