@@ -4,7 +4,13 @@ The following are the dates and material ranges for meets in the 2025-2026 seaso
 
 Unless otherwise noted, quizzing will start Saturday early morning and conclude with awards in the mid-to-late afternoon. Teams traveling considerable driving distances to a meet will likely arrive Friday and be billeted by the host.
 
-### Scramble West
+### Scramble Oregon
+
+- **Date**: Saturday, September 6, 2025
+- **Material**: 1 Corinthians 1-2
+- **Location**: *(To be determined...)*
+
+### Scramble Western Washington
 
 - **Date**: Saturday, September 13, 2025 *(Possible; Not Yet Confirmed)*
 - **Material**: 1 Corinthians 1-3
@@ -12,7 +18,7 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
     - [Lighthouse Christian Center](https://lighthousehome.org)
     - [3409 23rd St SW, Puyallup WA 98373](https://google.com/maps/dir//3409+23rd+St+SW,+Puyallup+WA+98373)
 
-### Scramble East
+### Scramble Inland Northwest
 
 - **Date**: Saturday, September 20, 2025
 - **Material**: 1 Corinthians 1-4
@@ -20,9 +26,9 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 ### Meet 1
 
-- **Dates**: Saturday, October 11, 2025 *(Possible; Not Yet Confirmed)*
+- **Dates**: Saturday, October 11, 2025
 - **Material**: 1 Corinthians 1-6
-- **Location** *(Possible; Not Yet Confirmed)*:
+- **Location**:
     - [Juniper Community Church](https://junipercc.com)
     - [976 S Adams Dr, Madras OR 97741](https://google.com/maps/dir//976+S+Adams+Dr,+Madras+OR+97741)
 
@@ -42,17 +48,17 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 
 ### Meet 4
 
-- **Date**: Saturday, February 7, 2026 *(Possible; Not Yet Confirmed)*
+- **Date**: Saturday, February 7, 2026
 - **New Material**: 1 Corinthians 16; 2 Corinthians 1-7
-- **Location** *(Possible; Not Yet Confirmed)*:
+- **Location**
     - [Burley Bible Church](https://bbcol.org)
     - [14687 Olympic Dr SE, Port Orchard WA 98367](https://google.com/maps/dir//14687+Olympic+Dr+SE,+Port+Orchard+WA+98367)
 
 ### Meet 5
 
-- **Date**: Saturday, March 21, 2026 *(Possible; Not Yet Confirmed)*
+- **Date**: Saturday, March 21, 2026
 - **New Material**: 2 Corinthians 8-13
-- **Location** *(Possible; Not Yet Confirmed)*:
+- **Location**:
     - [Highlands Community Church](https://highlandscc.org)
     - [3031 NE Tenth St, Renton WA 98056](https://google.com/maps/dir//3031+NE+Tenth+St,+Renton+WA+98056)
 
@@ -71,8 +77,3 @@ Unless otherwise noted, quizzing will start Saturday early morning and conclude 
 - **Location:**
     - [Double K Retreat Center](https://doublek.org)
     - [620 Tall Timber Trail, Easton WA 98925](https://google.com/maps/dir//Double+K+Retreat+Center,+620+Tall+Timber+Trail,+Easton+WA+98925)
-
-### International Open Championship (IOC)
-
-- **Dates**: *(To be determined...)*
-- **Location**: *(To be determined...)*
